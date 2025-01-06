@@ -5,6 +5,22 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --did-color:#0578B9;
+  --blue:#2947A9;
+  --blue900:#1212E0;
+  --blue800:#1254E0;
+  --blue700:#5D87E0;
+  --blue600:#045787;
+  --blue500:#E8F7FF;
+  --primary:#12D6E0;
+  --purple:#5512E0;
+  --purple100:#8D66DE;
+  --dark:#212121;
+  --secondary:#595959;
+  --secondary900:#878787;
+  --secondary800:#B0B0B0;
+  --secondary700:#D9D9D9;
+  --accent:#F44E77;
 }
 
 @media (prefers-color-scheme: dark) {
