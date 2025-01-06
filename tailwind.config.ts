@@ -1,6 +1,9 @@
 import type { Config } from "tailwindcss";
 
 export default {
+  corePlugins: {
+    opacity: true, 
+  },
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,6 +14,23 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        blue: "rgb(var(--blue) / <alpha-value>)",
+        blue900: "rgb(var(--blue900) / <alpha-value>)",
+        blue800: "rgb(var(--blue800) / <alpha-value>)",
+        blue700: "rgb(var(--blue700) / <alpha-value>)",
+        blue600: "rgb(var(--blue600) / <alpha-value>)",
+        blue500: "rgb(var(--blue500) / <alpha-value>)",
+        purple: "rgb(var(--purple) / <alpha-value>)",
+        green100: "rgb(var(--green100) / <alpha-value>)",
+        purple10: "rgb(var(--purple100) / <alpha-value>)",
+        dark: "rgb(var(--dark) / <alpha-value>)",
+        secondary: "rgb(var(--secondary) / <alpha-value>)",
+        secondary900: "rgb(var(--secondary900) / <alpha-value>)",
+        secondary800: "rgb(var(--secondary800) / <alpha-value>)",
+        secondary700: "rgb(var(--secondary700) / <alpha-value>)",
+        accent: "rgb(var(--accent) / <alpha-value>)",
+        did: "rgb(var(--did) / <alpha-value>)",
+        
       },
     },
   },
