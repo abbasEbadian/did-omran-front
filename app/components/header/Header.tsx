@@ -3,6 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import Search from '@/app/components/icons/search.svg'
 import Cart from '@/app/components/icons/cart-1.svg'
+import Logo from '@/app/components/icons/Logo-blue.svg'
 import GlobeIcon from '@/app/components/icons/globe.svg'
 
 function Header() {
@@ -14,7 +15,7 @@ function Header() {
            
           <Link href="#1" className='flex items-center gap-2'>
             <Image
-              src="/img/Logo-blue.svg ss"
+              src={Logo}
               alt="logo did omran"
               width={46}
               height={46} />
