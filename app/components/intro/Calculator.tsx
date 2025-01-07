@@ -10,7 +10,7 @@ function Calculator() {
         محاسبه گر نمره آزمون
         </span>
       </div>
-        <div className="bg-secondary700 p-6 rounded-lg shadow-md z-0 -mb-4">
+        <div className="bg-secondary700 p-6 rounded-lg shadow-md z-0 -mt-4">
           <h2 className="font-semibold mb-4 text-dark text-xs">جهت محاسبه نمره لطفا موارد زیر را تکمیل نمایید</h2>
           
          <div className="grid grid-cols-2 gap-4">

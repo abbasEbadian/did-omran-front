@@ -16,7 +16,7 @@ function Intro() {
                </div>
             </div>
             <div className="col-span-3">
-                <div className="">
+                <div className="flex flex-col gap-4">
                     <Calculator/>
                     <UpcomingEvent/>
                 </div>

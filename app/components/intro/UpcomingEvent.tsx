@@ -1,8 +1,13 @@
 import React from 'react'
+import Events from '../Events'
 
 function UpcomingEvent() {
   return (
-    <div>UpcomingEvent</div>
+    <>
+    <div className="">
+      <Events/>
+    </div>
+    </>
   )
 }
 
