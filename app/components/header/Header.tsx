@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Search from '@/app/components/icons/search.svg'
 import Cart from '@/app/components/icons/cart-1.svg'
 import Logo from '@/app/components/icons/Logo-blue.svg'
-import GlobeIcon from '@/app/components/icons/globe.svg'
+
 
 function Header() {
   return (
