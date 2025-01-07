@@ -4,13 +4,13 @@ import Processor from '@/app/components/icons/processor.svg'
 function Calculator() {
   return (
     <>
-    <div className="">
-      <div className="">
+    <div className="relative">
+      <div className="bg-did text-white text-center py-2 rounded-2xl  z-10 text-2xl font-bold  border-white border-2">
         <span className="">
         محاسبه گر نمره آزمون
         </span>
       </div>
-        <div className="bg-secondary700 p-6 rounded-lg shadow-md">
+        <div className="bg-secondary700 p-6 rounded-lg shadow-md z-0 -mb-4">
           <h2 className="font-semibold mb-4 text-dark text-xs">جهت محاسبه نمره لطفا موارد زیر را تکمیل نمایید</h2>
           
          <div className="grid grid-cols-2 gap-4">
@@ -48,7 +48,7 @@ function Calculator() {
                 <span className="text-xs text-dark">
                 نمره اکتسابی شما:
                 </span>
-                <span className="Ttext-white text-2xl bg-did  rounded-2xl font-medium px-6     py-1">
+                <span className="Ttext-white text-2xl bg-did  rounded-2xl font-medium px-6 w-full mx-auto py-1">
                   99.8
                 </span>
               </div>
