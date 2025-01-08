@@ -32,6 +32,11 @@ export default {
         did: "rgb(var(--did) / <alpha-value>)",
         
       },
+      boxShadow: {
+        'custom-drop-shadow': '0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+   
+        'custom-shadow': 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
+      },
     },
   },
   plugins: [],

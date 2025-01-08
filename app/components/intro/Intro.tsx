@@ -3,6 +3,7 @@ import IntroLinks from './IntroLinks'
 import News from './News'
 import Calculator from './Calculator'
 import UpcomingEvent from './UpcomingEvent'
+import Consultation from '../Consultation'
 
 function Intro() {
   return (
@@ -19,6 +20,7 @@ function Intro() {
                 <div className="flex flex-col gap-4">
                     <Calculator/>
                     <UpcomingEvent/>
+                    <Consultation/>
                 </div>
             </div>
         </div>

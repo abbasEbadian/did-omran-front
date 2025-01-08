@@ -3,6 +3,8 @@ import Link from 'next/link'
 import React from 'react'
 import ChevronLeft from '@/app/components/icons/chevron-left.svg'
 import Trophy from '@/app/components/icons/trophy.svg'
+import eventsImg from '@/public/img/events.png'
+
 
 function Events() {
   return (
@@ -29,15 +31,23 @@ function Events() {
         </div>
         <div className="col-span-2">
            <div className="">
-            <div className="">
-              <span className="">
+            <div className="flex flex-row gap-2">
+              <span className="text-dark text-xs">
               لورم ایپسوم متن ساختگی با تولیدسادگی
               </span>
               <Image
-                    src={ChevronLeft}
+                    src={Trophy}
                     alt="logo did omran"
                     width={24}
                     height={24} />
+            </div>
+            <div className="w-full">
+            <Image
+                    src={eventsImg}
+                    alt="logo did omran"
+                    width={200}
+                    height={94} />
+                    
             </div>
            </div>
         </div>
