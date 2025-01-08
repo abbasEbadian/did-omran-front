@@ -30,7 +30,8 @@ export default {
         secondary700: "rgb(var(--secondary700) / <alpha-value>)",
         accent: "rgb(var(--accent) / <alpha-value>)",
         did: "rgb(var(--did) / <alpha-value>)",
-        
+        yellow: "rgb(var(--yellow) / <alpha-value>)",
+
       },
       boxShadow: {
         'custom-drop-shadow': '0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
