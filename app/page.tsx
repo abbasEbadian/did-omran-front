@@ -4,6 +4,7 @@ import OnlineExam from "./components/online-exam/OnlineExam";
 import EducationSlider from "./components/education/EducationSlider";
 import FreeEducationSlider from "./components/free-education/FreeEducationSlider";
 import Comments from "./components/Comments/Comments";
+import Footer from "./components/footer/Footer";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <FreeEducationSlider/>
       <Comments/>
       </main>
+      <Footer/>
    </>
 
 
