@@ -6,6 +6,7 @@ import Telegram from '@/app/components/icons/Telegram.svg'
 import Youtube from '@/app/components/icons/Youtube.svg'
 import aparat from '@/app/components/icons/aparat1 copy 1.png'
 import Instagram from '@/app/components/icons/Instagram.svg'
+import enamad from '@/public/img/enamad.png'
 
 
 
@@ -15,7 +16,7 @@ function Footer() {
   <div className="bg-did py-8">
     <div className="grid grid-cols-4 container mx-auto gap-8">
             <div className="col-span-1">
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-col gap-5">
                   <div className="flex flex-col items-start gap-3">
                       <Link href="#" className="flex items-center gap-2 font-bold text-xl"> 
                       <Image
@@ -38,7 +39,7 @@ function Footer() {
                           width={24}
                           height={24} />
                       </div>
-                      <span className="">تماس با ما</span>
+                      <span className="">تماس باما</span>
                   </Link>
                   <div className="flex items-center  justify-between">
                   <Link href="#" className="">
@@ -76,17 +77,55 @@ function Footer() {
                 </div>
             </div>
             <div className="col-span-2">
-                <div className="flex ">
-                    <span className="">
+                <div className="flex  flex-col items-start px-8 gap-5 mb-5">
+                    <span className="text-white font-bold text-xl">
                     درباره ما
                     </span>
-                    <p className="">
+                    <p className="text-base text-white font-light text-justify">
                       با وجود آموزش‌های چندین ساله دانشگاهی هنوز هم ارتباط بین دانشگاه و صنعت ساختمان خلل‌هایی دارد که فارغ التحصیلان دانشگاهی به ویژه مهندسین عمران و معماری را سردرگم کرده است. ما در دید عمران این خلل‌ها را برطرف کرده و تا ورود شما به بازار کار حرفه‌ای مهندسی در کنارتان هستیم. آنچه در دید عمران بدست‌ می‌آورید دیدگاه و تخصص مهندسی است؛ نه صرفا یک پروانه مهندسی!
                     </p>
                 </div>
+                <div className="flex items-center justify-between px-8">
+                  <div className="flex flex-col gap-8">
+                    <div className="flex flex-col items-start gap-2">
+                      <span className="text-whie text-base">
+                         تلفن تماس 
+                      </span>
+                      <span className="text-whie text-xl font-bold">021-28429396</span>
+                    </div>
+                    <div className="flex flex-col items-start gap-2">
+                      <span className="text-whie text-base">
+                      ایمیل ارتباطی
+                      </span>
+                      <span className="text-whie text-xl font-bold">
+                      didomran@gmail.com
+                      </span>
+                    </div>
+                  </div>
+                  <div className="">
+                  <Link href="">
+                  <Image
+                    src={enamad}
+                    alt="Arrow Right"
+                    width={107}
+                    height={117} />
+                  </Link>
+                  </div>
+                </div>
             </div>
             <div className="col-span-1">
-                <div className="">
+                <div className="flex flex-col items-start gap-5">
+                    <span className="text-white font-bold text-xl">
+                    لینک های مفید
+                    </span>
+                    <div className="flex items-start flex-col gap-1">
+                      <Link href="#" className="text-white bg-did text-sm py-3 px-8 rounded-2xl">حساب من </Link>
+                      <Link href="#" className="text-white bg-did text-sm py-3 px-8 rounded-2xl">دوره های آموزشی </Link>
+                      <Link href="#" className="text-white bg-did text-sm py-3 px-8 rounded-2xl"> آزمون ها</Link>
+                      <Link href="#" className="text-white bg-did text-sm py-3 px-8 rounded-2xl">درباره ما </Link>
+                      <Link href="#" className="text-white bg-did text-sm py-3 px-8 rounded-2xl"> تماس باما</Link>
+
+                    </div>
 
                 </div>
             </div>
