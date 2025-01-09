@@ -6,23 +6,22 @@ function Consultation() {
   return (
     <>
    <div className="relative">
-  
-    <div className="absolute left-0 bottom-0 right-0">
+    <div className="bg-did/5 absolute bottom-0 right-0 z-40"></div>
+    <div className="absolute z-20">
         <Image
-            src={ConsultationImg}
-            alt="Consultation Img"
-            height={130} />
-    </div>
-    <div className="bg-did/5 absolute bottom-0 right-0"></div>
-    
-    <div className="">
+              src={ConsultationImg}
+              alt="Consultation Img"
+              height={130} />
+  </div>
+    <div className="flex flex-col items-center justify-center z-50">
+
         <span className="">
         لورم ایپسوم متن
         </span>
         <span className="">
         لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
         </span>
-        <Link href="#" className="text-dark text-sm hover:text-gray-900">ثبت نام </Link>
+        <Link href="#" className="bg-white text-sm text-darkk rounded-2xl ">ثبت نام </Link>
 
     </div>
    

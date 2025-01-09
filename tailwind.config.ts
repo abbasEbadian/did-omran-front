@@ -22,7 +22,7 @@ export default {
         blue500: "rgb(var(--blue500) / <alpha-value>)",
         purple: "rgb(var(--purple) / <alpha-value>)",
         green100: "rgb(var(--green100) / <alpha-value>)",
-        purple10: "rgb(var(--purple100) / <alpha-value>)",
+        purple100: "rgb(var(--purple100) / <alpha-value>)",
         dark: "rgb(var(--dark) / <alpha-value>)",
         secondary: "rgb(var(--secondary) / <alpha-value>)",
         secondary900: "rgb(var(--secondary900) / <alpha-value>)",

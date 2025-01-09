@@ -5,7 +5,7 @@ import UserComments from './UserComments'
 function Comments() {
   return (
     <>
-    <div className="bg-secondary700/25 py-24">
+    <div className="bg-secondary700/25 py-24 mt-32">
 
        <div className="container mx-auto">
         <div className="grid grid-cols-2">
