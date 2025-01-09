@@ -3,6 +3,8 @@ import Intro from "@/app/components/intro/Intro";
 import OnlineExam from "./components/online-exam/OnlineExam";
 import EducationSlider from "./components/education/EducationSlider";
 import FreeEducationSlider from "./components/free-education/FreeEducationSlider";
+import Comments from "./components/Comments/Comments";
+
 
 export default function Home() {
   return (
@@ -13,6 +15,7 @@ export default function Home() {
       <OnlineExam/>
       <EducationSlider/>
       <FreeEducationSlider/>
+      <Comments/>
       </main>
    </>
 
