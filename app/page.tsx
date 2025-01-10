@@ -14,8 +14,8 @@ export default function Home() {
       <Header/>
       <main className="flex flex-col gap-8">
       <Intro/>
-      <OnlineExam/>
       <EducationSlider/>
+      <OnlineExam/> 
       <FreeEducationSlider/>
       <ElectronicLibrary/>
       <Comments/>

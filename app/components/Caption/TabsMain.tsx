@@ -6,9 +6,12 @@ const Tabs = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
-    { id: 0, label: 'Tab 1', content: 'Content for Tab 1' },
-    { id: 1, label: 'Tab 2', content: 'Content for Tab 2' },
-    { id: 2, label: 'Tab 3', content: 'Content for Tab 3' },
+    { id: 0, label: 'همه', content: 'Content for Tab 1' },
+    { id: 1, label: 'نظام مهندسی', content: 'Content for Tab 2' },
+    { id: 2, label: 'کارشناسی رسمی', content: 'Content for Tab 3' },
+    { id: 3, label: 'نرم افزارهای عمرانی', content: 'Content for Tab 3' },
+    { id: 4, label: 'فنی ومهندسی    ', content: 'Content for Tab 3' },
+
   ];
 
   return (

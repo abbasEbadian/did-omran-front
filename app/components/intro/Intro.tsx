@@ -10,8 +10,8 @@ import InrtoBg from '@/public/img/bg-intro.png'
 function Intro() {
   return (
     <>
-      <div className="relative">
-        <div className="absolute left-0 bottom-0 right-0 -z-10">
+      <div className="relative min-h-[70vh] mb-36">
+        <div className="absolute inset-0 -z-10">
           <Image
               src={InrtoBg}
               alt="Consultation Img"
