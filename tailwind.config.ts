@@ -31,6 +31,7 @@ export default {
         accent: "rgb(var(--accent) / <alpha-value>)",
         did: "rgb(var(--did) / <alpha-value>)",
         yellow: "rgb(var(--yellow) / <alpha-value>)",
+        white100: "rgb(var(--white100) / <alpha-value>)",
 
       },
       boxShadow: {
