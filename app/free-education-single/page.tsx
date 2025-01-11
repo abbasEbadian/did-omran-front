@@ -16,6 +16,7 @@ import FaStar from '@/app/components/icons/FaStar.svg'
 import FiFilm from '@/app/components/icons/FiFilm.svg'
 import Download from '@/app/components/icons/download.svg'
 import Link from 'next/link'
+import QuestionBox from '../components/Comments/QuestionBox'
 
 
 
@@ -281,6 +282,8 @@ function page() {
             </div>
         </div>
        </div>
+      { /* گفتگو و سوالات شما*/}
+      <QuestionBox/>
         
    </div>
     </>
