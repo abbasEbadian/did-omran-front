@@ -5,6 +5,7 @@ import ContentCourse from '../components/training-courses/ContentCourse'
 import RequirementsCourse from '../components/training-courses/RequirementsCourse'
 import CourseInstructors from '../components/training-courses/CourseInstructors'
 import NewComment from '../components/Comments/NewComment'
+import CommentsChats from '../components/Comments/CommentsChats'
 
 function page() {
   return (
@@ -47,6 +48,7 @@ function page() {
                         {/*نظرات*/}
                         <div className="" id='NewComment'>
                             <NewComment/>
+                            <CommentsChats/>
                         </div>
 
                     </div>
