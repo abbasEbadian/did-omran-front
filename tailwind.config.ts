@@ -28,6 +28,7 @@ export default {
         secondary900: "rgb(var(--secondary900) / <alpha-value>)",
         secondary800: "rgb(var(--secondary800) / <alpha-value>)",
         secondary700: "rgb(var(--secondary700) / <alpha-value>)",
+        secondary600: "rgb(var(--secondary600) / <alpha-value>)",
         accent: "rgb(var(--accent) / <alpha-value>)",
         did: "rgb(var(--did) / <alpha-value>)",
         yellow: "rgb(var(--yellow) / <alpha-value>)",
@@ -37,7 +38,7 @@ export default {
       boxShadow: {
         'custom-drop-shadow': '0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
    
-        'custom-shadow': 'rgba(149, 157, 165, 0.2) 0px 8px 24px',
+        'custom-shadow': 'rgba(149, 157, 165, 0.1) 0px 8px 24px',
       },
     },
   },
