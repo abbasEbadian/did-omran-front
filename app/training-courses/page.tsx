@@ -3,6 +3,8 @@ import TitleTrainingCourses from '../components/training-courses/TitleTrainingCo
 import Link from 'next/link'
 import ContentCourse from '../components/training-courses/ContentCourse'
 import RequirementsCourse from '../components/training-courses/RequirementsCourse'
+import CourseInstructors from '../components/training-courses/CourseInstructors'
+import NewComment from '../components/Comments/NewComment'
 
 function page() {
   return (
@@ -16,8 +18,8 @@ function page() {
                             <Link href="#Decription" className="text-dark text-sm">توضیحات</Link>
                             <Link href="#CoursContent" className="text-dark text-sm">محتوای دوره</Link>
                             <Link href="#Requirements" className="text-dark text-sm">جزییات و ملزومات</Link>
-                            <Link href="#" className="text-dark text-sm">مدرسین</Link>
-                            <Link href="#" className="text-dark text-sm">نظرات</Link>
+                            <Link href="#CourseInstructors" className="text-dark text-sm">مدرسین</Link>
+                            <Link href="#NewComment" className="text-dark text-sm">نظرات</Link>
                         </div>
                         {/*توضیحات*/}
                         <div className="flex flex-col items-start gap-4 bg-white px-8 py-6 rounded-2xl border border-did/15 shadow-custom-shadow" id='Decription'>
@@ -31,17 +33,21 @@ function page() {
                             </p>
                         </div>
                         {/*محتوای دوره*/}
-                        <div className="">
-                            <ContentCourse/>
+                        <div className="" id="CoursContent">
+                            <ContentCourse />
                         </div>
                         {/*جزییات و ملزومات*/}
-                        <div className="">
+                        <div className="" id="Requirements">
                             <RequirementsCourse/>
                         </div>
                         {/*مدرسین*/}
-                        <div className=""></div>
+                        <div className="" id="CourseInstructorss">
+                            <CourseInstructors/>
+                        </div>
                         {/*نظرات*/}
-                        <div className=""></div>
+                        <div className="" id='NewComment'>
+                            <NewComment/>
+                        </div>
 
                     </div>
                 </div>
