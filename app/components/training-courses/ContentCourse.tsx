@@ -2,7 +2,6 @@ import IoPlayOutline from '@/app/components/icons/IoPlayOutline.svg'
 import BsFileEarmarkArrowDown from '@/app/components/icons/BsFileEarmarkArrowDown.svg'
 import Clock from '@/app/components/icons/clock.svg'
 import Download from '@/app/components/icons/download.svg'
-
 import AccordionCourses from './AccordionCourses';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -19,7 +18,7 @@ function ContentCourse() {
             محتوا و سرفصل های  دوره جامع ایلاستریتور (مقدماتی ، پیشرفته و استادی)
             </span>
         </div>
-        
+        { /*اکوردیون باز/*/}
         <div className="bg-secondary600 rounded-2xl py-3 px-4 flex flex-col gap-2">
             
             <div className="flex items-center justify-between mb-1">
@@ -67,6 +66,35 @@ function ContentCourse() {
                 </div>
             </div>
 
+        </div>
+        { /*اکوردیون بسته*/}
+        <div className="bg-did/15 rounded-2xl py-3 px-4 flex flex-col gap-2 justify-between w-full">
+            <div className="flex items-center justify-between mb-1">
+                <span className="text-dark text-base">جلسه اول - مقدمه</span>
+                <div className="flex gap-1  items-center px-2 bg-blue/15">
+                    <Image
+                        src={Clock}
+                        alt="left list icone"
+                        height={24} 
+                        width={24}
+                        />
+                    <span className="text-secondary text-xs"> 1 ساعت و 5 دقیقه</span>
+                </div>
+            </div>
+        </div>
+        <div className="bg-did/15 rounded-2xl py-3 px-4 flex flex-col gap-2 justify-between w-full">
+            <div className="flex items-center justify-between mb-1">
+                <span className="text-dark text-base">جلسه اول - مقدمه</span>
+                <div className="flex gap-1  items-center px-2 bg-blue/15">
+                    <Image
+                        src={Clock}
+                        alt="left list icone"
+                        height={24} 
+                        width={24}
+                        />
+                    <span className="text-secondary text-xs"> 1 ساعت و 5 دقیقه</span>
+                </div>
+            </div>
         </div>
     </div>
     </>
