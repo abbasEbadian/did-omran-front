@@ -6,6 +6,7 @@ import RequirementsCourse from '../components/training-courses/RequirementsCours
 import CourseInstructors from '../components/training-courses/CourseInstructors'
 import NewComment from '../components/Comments/NewComment'
 import CommentsChats from '../components/Comments/CommentsChats'
+import InformationCourse from '../components/training-courses/InformationCourse '
 
 function page() {
   return (
@@ -13,7 +14,7 @@ function page() {
         <div className="bg-white100">
             <div className="grid grid-cols-12 container mx-auto gap-4">
                 <div className="col-span-12 lg:col-span-8">
-                    <div className="flex flex-col gap-8">
+                    <div className="flex flex-col gap-8 mt-28">
                         <TitleTrainingCourses/>
                         <div className="bg-white rounded-2xl px-16 py-4 flex items-center justify-between shadow-custom-shadow">
                             <Link href="#Decription" className="text-dark text-sm">توضیحات</Link>
@@ -53,7 +54,9 @@ function page() {
 
                     </div>
                 </div>
-                <div className="col-span-12 lg:col-span-4"></div>
+                <div className="col-span-12 lg:col-span-4">
+                    <InformationCourse/>
+                </div>
             </div>
            
         </div>
