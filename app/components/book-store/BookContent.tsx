@@ -33,7 +33,7 @@ function BookContent() {
                 </div>
             </div>
            <div className="flex items-center justify-between">
-                <div className="">
+                <div className="flex flex-col items-start gap-1">
                     <div className="flex items-center gap-1">
                         <Image
                             src={ListRight}
