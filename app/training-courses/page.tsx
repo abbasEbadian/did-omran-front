@@ -7,12 +7,14 @@ import CourseInstructors from '../components/training-courses/CourseInstructors'
 import NewComment from '../components/Comments/NewComment'
 import CommentsChats from '../components/Comments/CommentsChats'
 import InformationCourse from '../components/training-courses/InformationCourse '
+import SocialMedia from '../components/training-courses/SocialMedia'
+import PreviewCourse from '../components/training-courses/PreviewCourse'
 
 function page() {
   return (
     <>
         <div className="bg-white100">
-            <div className="grid grid-cols-12 container mx-auto gap-4">
+            <div className="grid grid-cols-12 container mx-auto gap-8 ">
                 <div className="col-span-12 lg:col-span-8">
                     <div className="flex flex-col gap-8 mt-28">
                         <TitleTrainingCourses/>
@@ -56,6 +58,9 @@ function page() {
                 </div>
                 <div className="col-span-12 lg:col-span-4">
                     <InformationCourse/>
+                    <PreviewCourse/>
+                    <SocialMedia/>
+
                 </div>
             </div>
            

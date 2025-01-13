@@ -29,10 +29,13 @@ export default {
         secondary800: "rgb(var(--secondary800) / <alpha-value>)",
         secondary700: "rgb(var(--secondary700) / <alpha-value>)",
         secondary600: "rgb(var(--secondary600) / <alpha-value>)",
-        accent: "rgb(var(--accent) / <alpha-value>)",
+        accent: "rgb(var(--accent) / <alpha-value>)", 
+        accent100: "rgb(var(--accent100) / <alpha-value>)",
         did: "rgb(var(--did) / <alpha-value>)",
         yellow: "rgb(var(--yellow) / <alpha-value>)",
         white100: "rgb(var(--white100) / <alpha-value>)",
+       
+
 
       },
       boxShadow: {

@@ -15,7 +15,7 @@ import User3 from '@/public/img/user3.png'
 function InformationCourse () {
   return (
     <>
-    <div className="flex flex-col relative bg-did/10 rounded-2xl px-4 pb-5 gap-4 pt-28 mt-32">
+    <div className="flex flex-col relative bg-did/10 rounded-2xl px-6 pb-5 gap-4 pt-28 mt-32">
         <div className="flex flex-col items-center gap-4 bg-gradient-to-b from-[#8EBFFF] rounded-2xl mx-8 px-4 py-5 absolute -top-12 left-0 right-0">
             <div className="flex items-center justify-center">
                 <div className="rounded-full -mx-2">
