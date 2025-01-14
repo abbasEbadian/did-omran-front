@@ -20,6 +20,7 @@ export default {
         blue700: "rgb(var(--blue700) / <alpha-value>)",
         blue600: "rgb(var(--blue600) / <alpha-value>)",
         blue500: "rgb(var(--blue500) / <alpha-value>)",
+        blue400: "rgb(var(--blue400) / <alpha-value>)",
         purple: "rgb(var(--purple) / <alpha-value>)",
         green100: "rgb(var(--green100) / <alpha-value>)",
         purple100: "rgb(var(--purple100) / <alpha-value>)",
@@ -32,6 +33,9 @@ export default {
         accent: "rgb(var(--accent) / <alpha-value>)", 
         accent100: "rgb(var(--accent100) / <alpha-value>)",
         did: "rgb(var(--did) / <alpha-value>)",
+        did900: "rgb(var(--did900) / <alpha-value>)",
+        did800: "rgb(var(--did800) / <alpha-value>)",
+        did700: "rgb(var(--did700) / <alpha-value>)",
         yellow: "rgb(var(--yellow) / <alpha-value>)",
         white100: "rgb(var(--white100) / <alpha-value>)",
        
