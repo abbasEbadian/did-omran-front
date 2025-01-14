@@ -9,17 +9,14 @@ import ProfileImg from '@/public/img/profile.jpg'
 import FaInstagram from '@/app/components/icons/FaInstagram.svg'
 import FaTelegram from '@/app/components/icons/FaTelegramPlane.svg'
 import BsFacebook from '@/app/components/icons/BsFacebook.svg'
-import MdContentCopy from '@/app/components/icons/MdContentCopy.svg'
 import HiOutlineChartPie from '@/app/components/icons/HiOutlineChartPie.svg'
 import FaStar from '@/app/components/icons/FaStar.svg'
 import FiFilm from '@/app/components/icons/FiFilm.svg'
 import Download from '@/app/components/icons/download.svg'
 import Link from 'next/link'
 import QuestionBox from '../components/Comments/QuestionBox'
-
-
-
-
+import ShareBox from '../components/ShareBox'
+import CopyLink from '../components/CopyLink'
 
 function page() {
   return (
@@ -157,44 +154,8 @@ function page() {
                 <div className="col-span-4 lg:col-span-1">
                     <div className="flex flex-col gap-6">
                         <div className="flex flex-col gap-4">
-                            <div className="flex items-start gap-3">
-                                <span className="text-dark text-sm">
-                                اشتراک گذاری این صفحه
-                                </span>
-                                <Link href="#" className="">
-                                    <Image
-                                        src={BsFacebook}
-                                        alt="Profile Img"
-                                        height={24} 
-                                        width={24}/>
-                                </Link>
-                                <Link href="#" className="">
-                                    <Image
-                                        src={FaInstagram}
-                                        alt="Profile Img"
-                                        height={24} 
-                                        width={24}/>
-                                </Link>
-                                <Link href="#" className="">
-                                    <Image
-                                        src={FaTelegram}
-                                        alt="Profile Img"
-                                        height={24} 
-                                        width={24}/>
-                                </Link>
-                            </div>
-                            <div className="flex gap-4 bg-secondary700 rounded-2xl px-4 py-2 items-center justify-between">
-                                <span className="text-dark text-sm">
-                                    https://www.figma.com/design/U8jz...
-                                </span>
-                                <button>
-                                <Image
-                                        src={MdContentCopy}
-                                        alt="Profile Img"
-                                        height={24} 
-                                        width={24}/>
-                                </button>
-                            </div>
+                            <ShareBox/>
+                            <CopyLink/>
                         </div>
                         <div className="flex flex-col items-start gap-4 bg-did/15 p-4 rounded-2xl">
                             <div className="flex items-center">

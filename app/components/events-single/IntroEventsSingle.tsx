@@ -4,16 +4,19 @@ import IoTimeOutline from '@/app/components/icons/IoTimeOutline.svg'
 import CalendarCheck from '@/app/components/icons/calendar-check.svg'
 import FcInfo from '@/app/components/icons/FcInfo.svg'
 import FaUsers from '@/app/components/icons/FaUsers.svg'
+import Location1 from '@/app/components/icons/location-1.svg'
 import SkyRoom from '@/public/img/skyroom.png'
 import Counter from '../Counter'
 import Link from 'next/link'
+import ShareBox from '../ShareBox'
+import CopyLink from '../CopyLink'
 
 
 
 function IntroEventsSingle() {
   return (
     <>
-    <div className="grid grid-cols-12">
+    <div className="grid grid-cols-12 items-center py-4">
         <div className="lg:col-span-7 col-span-12">
             
             <div className="w-full rounded-2xl">
@@ -24,11 +27,15 @@ function IntroEventsSingle() {
                     width={180}
                     className='object-cover w-full rounded-2xl'/>
             </div>
+            <div className="flex items-center justify-between my-3">
+                <ShareBox/>
+                <CopyLink/>
+            </div>
             
         </div>
         <div className="lg:col-span-5 col-span-12">
             <div className="flex items-center flex-col gap-4">
-                <span className="text-dark text-xl">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</span>
+                <span className="text-dark text-xl mb-4">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</span>
                 <div className="flex lg:flex-row flex-col items-center gap-5">
                     <div className="flex flex-col items-start gap-2 border-e-2 border-dashed border-secondary700 pe-8">
                         <span className="text-dark text-sm">تاریخ برگزاری </span>
@@ -113,7 +120,7 @@ function IntroEventsSingle() {
                     </div>
                     <div className="flex items-center gap-2">
                         <Image
-                            src={FaUsers}
+                            src={Location1}
                             alt="CheckSmall icone"
                             height={24} 
                             width={24}
