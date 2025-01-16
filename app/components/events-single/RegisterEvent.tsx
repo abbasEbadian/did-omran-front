@@ -1,6 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
 import EventImg from "@/public/img/events.png"
+import Check from '@/app/components/icons/check.svg'
+import Link from 'next/link'
+
 function RegisterEvent() {
   return (
     <>
@@ -17,6 +20,7 @@ function RegisterEvent() {
             </div>
         </div>
         <div className="col-span-1">
+            {/* ثبت نام رایگان  */}
             <form action="">
                 <span className="text-dark text-base text-start">جهت شركت در وبينار لطفا فرم زير را تكميل كنيد</span>
                 <div className="my-5 w-full">
@@ -41,6 +45,44 @@ function RegisterEvent() {
                 </button>
                 
             </form>
+             {/* ثبت نام پولی  */}
+             <div className="flex flex-col items-start mt-4 ">
+                <span className="text-dark text-xl mb-4 font-black"> شركت در وبينار </span>
+                <span className="text-secondary text-sm mb-4">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</span>
+                <div className="flex items-center gap-2 mb-2">
+                    <Image
+                        src={Check}
+                        alt="CheckSmall icone"
+                        height={24} 
+                        width={24}
+                        />
+                    <span className="text-dark text-xs font-semibold"> رسیدن به درآمد ریالی و دلاری بالا</span>
+                </div>
+                <div className="flex items-center gap-2 mb-2">
+                    <Image
+                        src={Check}
+                        alt="CheckSmall icone"
+                        height={24} 
+                        width={24}
+                        />
+                    <span className="text-dark text-xs font-semibold"> رسیدن به درآمد ریالی و دلاری بالا</span>
+                </div> <div className="flex items-center gap-2 mb-2">
+                    <Image
+                        src={Check}
+                        alt="CheckSmall icone"
+                        height={24} 
+                        width={24}
+                        />
+                    <span className="text-dark text-xs font-semibold"> رسیدن به درآمد ریالی و دلاری بالا</span>
+                </div>
+                <div className="flex items-center justify-between w-full">
+                    <span className="text-secondary text-2xl font-bold">779هزارتومان</span>
+                   
+                        <Link href="#" className="text-whitw bg-did rounded-2xl text-sm px-6 py-3">
+                        دریافت بلیط وبینار   
+                        </Link>
+                </div>
+             </div>
         </div>
     </div>
     </>

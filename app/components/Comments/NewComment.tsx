@@ -4,13 +4,13 @@ import React from 'react'
 function NewComment() {
   return (
     <>
-    <div className="flex flex-col items-start gap-2 mb-4">
-        <span className="text-dark text-xl font-bold">
+    <div className="flex flex-col items-center gap-2 mb-4 mt-9" id="NewComment">
+        <span className="text-dark text-xl font-bold  ">
          نظرات شما
         </span>
         <p className="text-secondary text-sm">این بخش ویژه دانشجویان دوره می باشد. اگر سوالی قبل از تهیه دوره دارید میتوانید از تماس با ما اقدام کنید.</p>
     </div>
-    <div className="bg-white px-8 py-6 rounded-2xl border border-did/15 shadow-custom-shadow flex flex-col gap-2 ">
+    <div className="bg-white px-8 py-6 rounded-2xl border border-did/15 shadow-custom-shadow flex flex-col gap-2 max-w-[700px] mx-auto ">
         <span className="text-did text-xl font-bold text-right">دیدگاه تان را بنویسید!</span>
         <p className="text-secondary text-sm mb-3">برای ارسال دیدگاه لازم است به اکانتی که با آن دوره را تهیه کرده اید، وارد شوید. </p>
                                 
