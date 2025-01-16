@@ -6,7 +6,7 @@ import Image from 'next/image'
 function SupportTeam() {
   return (
     <>
-    <div className="grid grid-cols-5 gap-4">
+    <div className="grid grid-cols-5 gap-4" id='SupportTeam'>
         <div className="col-span-5 lg:col-span-3">
             <div className="flex flex-col items-start gap-4 grow">
                 <span className="text-did text-xl font-black  border-b-2 border-dashed border-secondary700 w-full pb-4">پشتیبانی و پاسخگویی در دید عمران</span>
