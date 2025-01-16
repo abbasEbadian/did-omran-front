@@ -3,6 +3,7 @@ import IntroEventsSingle from '../components/events-single/IntroEventsSingle'
 import IntroductionEvent from '../components/events-single/IntroductionEvent'
 import Link from 'next/link'
 import InstructorInfo from '../components/events-single/InstructorInfo'
+import SupportTeam from '../components/events-single/SupportTeam'
 
 function page() {
   return (
@@ -20,11 +21,12 @@ function page() {
                 <Link href="#NewComment" className="text-dark text-sm">دیدگاه ها</Link>
 
             </div> 
-             {/*آشنایی یا رویداد*/}
+            {/*آشنایی یا رویداد*/}
             <IntroductionEvent/>
             {/*  اطلاعات مدرس*/}
             <InstructorInfo/>
             {/* پشتیبانی و پاسخگویی */}
+            <SupportTeam/>
             {/*  ثبت نام در وبینار */}
             {/*  دیدگاه ها*/}
             {/* دیدگاه ها */}
