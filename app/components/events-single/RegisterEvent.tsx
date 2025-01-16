@@ -66,7 +66,8 @@ function RegisterEvent() {
                         width={24}
                         />
                     <span className="text-dark text-xs font-semibold"> رسیدن به درآمد ریالی و دلاری بالا</span>
-                </div> <div className="flex items-center gap-2 mb-2">
+                </div> 
+                <div className="flex items-center gap-2 mb-2">
                     <Image
                         src={Check}
                         alt="CheckSmall icone"
