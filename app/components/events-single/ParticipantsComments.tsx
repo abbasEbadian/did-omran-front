@@ -7,17 +7,18 @@ import Avater3 from '@/public/img/Avater1.png'
 function ParticipantsComments() {
   return (
     <>
-    <div className="" id="ParticipantsComments">
-        <span className="">نظرات شرکت کنندگان از رویدادهای برگزار شده</span>
-        <div className="grid grid-cols-3 gap-8">
+    <div className="flex flex-col items-center gap-12 my-24" id="ParticipantsComments">
+        <span className="text-dark text-2xl font-bold">نظرات شرکت کنندگان از رویدادهای برگزار شده</span>
+        <div className="grid grid-cols-3 gap-6">
             <div className="col-span-3 lg:col-span-1">
-                <div className="flex flex-col items-start gap-4 bg-white rounded-2xl border border-did/10  px-4 py-12 shadow-custom-shadow">
+                <div className="flex flex-col items-start gap-4 bg-did/0 rounded-2xl border border-did/10  px-4 py-12 shadow-custom-shadow
+                hover:bg-gradient-to-b from-white to-did">
                      <Image
                         src={VillIone}
                         alt="Profile Img"
                         height={60} 
                         width={86}/>
-                        <p className="text-secondary700 text-xs mb-6">
+                        <p className="text-secondary800 text-sm mb-6 mt-8">
                         پشتیبانی همکارانتون بی‌نظیر بود، من هفته آخر آخر کارشناس رسمی خیلی استرس  داشتم ولی تیم شما با دلسوزی و همدلی بالا ما رو حمایت کردند تا تونستیم بالاخره قبول بشیم؛ سلام ما رو به دکتر خلوتی عزیز برسونید👌😍
                         </p>
                         <div className="flex items-center gap-4 border-t border-secondary600 w-full py-4">

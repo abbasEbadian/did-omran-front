@@ -5,6 +5,7 @@ import Link from 'next/link'
 import InstructorInfo from '../components/events-single/InstructorInfo'
 import SupportTeam from '../components/events-single/SupportTeam'
 import ParticipantsComments from '../components/events-single/ParticipantsComments'
+import RegisterEvent from '../components/events-single/RegisterEvent'
 
 function page() {
   return (
@@ -17,10 +18,9 @@ function page() {
                 <Link href="#IntroductionEvent" className="text-dark text-sm">آشنایی یا رویداد</Link>
                 <Link href="#InstructorInfo" className="text-dark text-sm"> اطلاعات مدرس</Link>
                 <Link href="#SupportTeam" className="text-dark text-sm"> پشتیبانی و پاسخگویی</Link>
-                <Link href="#CourseInstructors" className="text-dark text-sm">ثبت نام در وبینار </Link>
+                <Link href="#RegisterEvent" className="text-dark text-sm">ثبت نام در وبینار </Link>
                 <Link href="#NewComment" className="text-dark text-sm">دیدگاه </Link>
                 <Link href="#NewComment" className="text-dark text-sm">دیدگاه ها</Link>
-
             </div> 
             {/*آشنایی یا رویداد*/}
             <IntroductionEvent/>
@@ -29,6 +29,7 @@ function page() {
             {/* پشتیبانی و پاسخگویی */}
             <SupportTeam/>
             {/*  ثبت نام در وبینار */}
+            <RegisterEvent/>
             {/*  دیدگاه ها*/}
             <ParticipantsComments/>
             {/* دیدگاه ها */}
