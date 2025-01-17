@@ -9,12 +9,12 @@ function FreeEducationItems() {
   return (
     <>
     <div className="flex flex-col bg-white shadow-custom-shadow rounded-2xl">
-        <div className="">
+       
         <Image
             src={FreeImg}
             alt="Consultation Img"
-            height={305}className="w-full" />
-        </div>
+            height={305}className="w-full object-cover" />
+    
         <div className="flex flex-col px-4 py-3 gap-4">
             <span className="text-dark text-sm">آموزش پلاگین Retouch4me در فتوشاپ، روتوش چهره در ۷ ثانیه</span>
             <div className="flex items-center">
