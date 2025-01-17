@@ -1,6 +1,6 @@
 import React from 'react'
 
-function price() {
+function Price() {
   return (
     <>
     <div className="flex items-center justify-between">
@@ -11,4 +11,4 @@ function price() {
   )
 }
 
-export default price
+export default Price
