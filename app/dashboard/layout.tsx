@@ -9,11 +9,13 @@ export default function DashboardLayout({
   return (
     <>
     <Header />  
-    <main className="grid grid-cols-12 container mx-auto">
-        <aside className="col-span-3"> <Sidbar/></aside>
-        <section className="col-span-9">
-            {children}
-        </section>
+    <main className="bg-white100 py-9">
+      <div className="grid grid-cols-12 container mx-auto">
+          <aside className="col-span-3"> <Sidbar/></aside>
+          <section className="col-span-9">
+              {children}
+          </section>
+      </div>
     </main>
     </>
   );

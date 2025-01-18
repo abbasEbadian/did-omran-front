@@ -21,6 +21,7 @@ export default {
         blue600: "rgb(var(--blue600) / <alpha-value>)",
         blue500: "rgb(var(--blue500) / <alpha-value>)",
         blue400: "rgb(var(--blue400) / <alpha-value>)",
+        blue300: "rgb(var(--blue300) / <alpha-value>)",
         purple: "rgb(var(--purple) / <alpha-value>)",
         green100: "rgb(var(--green100) / <alpha-value>)",
         purple100: "rgb(var(--purple100) / <alpha-value>)",
