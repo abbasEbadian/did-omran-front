@@ -32,7 +32,7 @@ function page() {
                         />
                         <small className="text-secondary800">مثلا:09141234567</small>
                     </div>
-                    <Link href="#" className="text-whitw bg-did rounded-2xl text-sm px-6 py-3 w-full text-center">
+                    <Link href="#" className="text-white bg-did rounded-2xl text-sm px-6 py-3 w-full text-center">
                     ورود به دید عمران
                     </Link>
                     <span className="text-xs text-secondary mt-1">
