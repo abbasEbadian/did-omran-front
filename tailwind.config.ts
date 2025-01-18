@@ -39,6 +39,9 @@ export default {
         did700: "rgb(var(--did700) / <alpha-value>)",
         yellow: "rgb(var(--yellow) / <alpha-value>)",
         white100: "rgb(var(--white100) / <alpha-value>)",
+        primary: "rgb(var(--primary) / <alpha-value>)",
+   
+
        
 
 
