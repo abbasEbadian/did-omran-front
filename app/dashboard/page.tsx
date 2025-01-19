@@ -8,7 +8,7 @@ import Link from "next/link"
 function page() {
   return (
     <>
-    <div className="bg-white rounded-e-2xl px-5 py-8 gap-4 flex flex-col">
+    <div className="gap-4 flex flex-col">
         <section className="grid grid-cols-2 gap-4 items-stretch">
           <div className="col-span-2 lg:col-span-1">
             <MyTiketsBox/>
