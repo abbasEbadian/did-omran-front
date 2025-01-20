@@ -13,7 +13,7 @@ function ShareBox() {
         <Link href="#" className="">
             <Image
                 src={FiShare2}
-                alt="Profile Img"
+                alt="FiShare2 Img"
                 height={24} 
                 width={24}/>
         </Link>
@@ -23,21 +23,21 @@ function ShareBox() {
         <Link href="#" className="">
             <Image
                 src={BsFacebook}
-                alt="Profile Img"
+                alt="BsFacebook Img"
                 height={24} 
                 width={24}/>
         </Link>
         <Link href="#" className="">
             <Image
                 src={FaInstagram}
-                alt="Profile Img"
+                alt="FaInstagram Img"
                 height={24} 
                 width={24}/>
         </Link>
         <Link href="#" className="">
             <Image
                 src={FaTelegram}
-                alt="Profile Img"
+                alt="FaTelegram Img"
                 height={24} 
                 width={24}/>
         </Link>

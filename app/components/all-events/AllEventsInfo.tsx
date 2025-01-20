@@ -54,7 +54,7 @@ function AllEventsInfo() {
                         <span className="text-dark text-sm">مدت زمان:</span>
                         <span className="text-blue text-sm font-black">50دقیقه </span>
                     </div>
-                    <Link href="#" className="text-whitw bg-blue700 rounded-2xl text-sm px-8 py-2 flex gap-1 items-center">
+                    <Link href="#" className="text-white bg-blue700 rounded-2xl text-sm px-8 py-2 flex gap-1 items-center">
                         مشاهده رویداد
                     </Link>
                 </div>
@@ -103,7 +103,7 @@ function AllEventsInfo() {
                         <span className="text-dark text-sm">مدت زمان:</span>
                         <span className="text-blue text-sm font-black">50دقیقه </span>
                     </div>
-                    <Link href="#" className="text-whitw bg-blue700 rounded-2xl text-sm px-8 py-2 flex gap-1 items-center">
+                    <Link href="#" className="text-white bg-blue700 rounded-2xl text-sm px-8 py-2 flex gap-1 items-center">
                         مشاهده رویداد
                     </Link>
                 </div>

@@ -10,7 +10,7 @@ function CaptionMain() {
           <span className="text-2xl text-dark font-bold ">
           دوره های آموزشی دید عمران
           </span>
-          <Link href="#" className="text-whitw bg-did rounded-2xl text-sm px-4 py-3">مشاهدهمه </Link>
+          <Link href="#" className="text-white bg-did rounded-2xl text-sm px-4 py-3">مشاهدهمه </Link>
       </div>
       <TabsMain/>
     </div>

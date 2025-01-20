@@ -55,7 +55,7 @@ function BookContent() {
                         <span className="text-secondary900 text-xs">1399</span>
                     </div>
                 </div>
-                <Link href="#" className="text-whitw bg-did rounded-2xl text-sm px-8 py-2 flex gap-1 items-center">
+                <Link href="#" className="text-white bg-did rounded-2xl text-sm px-8 py-2 flex gap-1 items-center">
                     <Image
                         src={HiOutlineFolderDownload}
                         alt="HiOutlineFolderDownload Img"

@@ -79,7 +79,7 @@ function RegisterEvent() {
                 <div className="flex items-center justify-between w-full">
                     <span className="text-secondary text-2xl font-bold">779هزارتومان</span>
                    
-                        <Link href="#" className="text-whitw bg-did rounded-2xl text-sm px-6 py-3">
+                        <Link href="#" className="text-white bg-did rounded-2xl text-sm px-6 py-3">
                         دریافت بلیط وبینار   
                         </Link>
                 </div>

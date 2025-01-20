@@ -30,7 +30,7 @@ function page() {
                                 placeholder="کد تخفیف"
                             />
                         </div>
-                        <Link href="#" className="text-whitw bg-blue rounded-2xl text-sm p-4 w-[20%] text-center">
+                        <Link href="#" className="text-white bg-blue rounded-2xl text-sm p-4 w-[20%] text-center">
                         اجرای کد   
                         </Link>
                     </div>

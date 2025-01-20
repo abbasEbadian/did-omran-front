@@ -30,7 +30,7 @@ function ElectronicLibrary() {
                     <p className="text-base text-secondary mb-6">
                     خدمات کتابخانه مجازی آنلاین موسسه دیدعمران شامل تمامی آیین‌نامه داخلی (مباحث 22 گانه، راهنمانی جوش، استاندارد 2800 و ...) و آیین‌نامه‌های بین‌المللی (ASCE7, ACI, AISC, JSCE, …) و نشریه‌های داخلی و خارجی (نشریه 543، IBS، FEMA و ...) است. تمامی مهندسین عمران و پژوهشگران در سراسر کشور این امکان را دارند تا از این کتابخانه در راستای آمادگی آزمون‌های نظام مهندسی نظارت-اجراء-محاسبات عمران، یادگیری و فعالیت پژوهشی خود استفاده نمایند.
                     </p>
-                    <Link href="#" className="text-whitw bg-did rounded-2xl text-sm px-4 py-3">مشاهده کتابخانه دید</Link>
+                    <Link href="#" className="text-white bg-did rounded-2xl text-sm px-4 py-3">مشاهده کتابخانه دید</Link>
 
                 </div>
             </div>

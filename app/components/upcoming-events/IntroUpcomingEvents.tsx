@@ -45,7 +45,7 @@ function IntroUpcomingEvents() {
                         <span className="text-blue text-sm">فروردین</span>
                     </div>
                                                     
-                    <Link href="#" className="text-whitw bg-secondary800 rounded-2xl text-sm px-8 py-2 flex gap-1 items-center">
+                    <Link href="#" className="text-white bg-secondary800 rounded-2xl text-sm px-8 py-2 flex gap-1 items-center">
                         مشاهده و رزرو   
                         <Image
                         src={ChevronSmallL}

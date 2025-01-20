@@ -10,7 +10,7 @@ function InstructorInfo() {
             <div className="w-full">
                 <Image
                     src={Profile}
-                    alt="CheckSmall icone"
+                    alt="Profile"
                     height={250} 
                     width={250}
                     className="object-cover w-full min-w-64 min-h-64"

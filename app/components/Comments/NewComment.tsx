@@ -15,7 +15,7 @@ function NewComment() {
         <p className="text-secondary text-sm mb-3">برای ارسال دیدگاه لازم است به اکانتی که با آن دوره را تهیه کرده اید، وارد شوید. </p>
                                 
        <div className="flex w-2/3 mx-auto">
-        <Link href="#" className="text-whitw bg-did rounded-2xl text-sm px-6 py-2 flex gap-1 items-center w-full justify-center">
+        <Link href="#" className="text-white bg-did rounded-2xl text-sm px-6 py-2 flex gap-1 items-center w-full justify-center">
             ثبت نام یا ورود به آکادمی دید عمران 
             </Link>
        </div>

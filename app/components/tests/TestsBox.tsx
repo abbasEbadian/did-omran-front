@@ -52,7 +52,7 @@ function TestsBox() {
                                     <span className="text-xs text-secondary"> 180دقیقه</span>
                             </div>
                     </div>
-                    <Link href="#" className="text-whitw bg-did rounded-2xl text-sm px-6 py-3">
+                    <Link href="#" className="text-white bg-did rounded-2xl text-sm px-6 py-3">
                     شروع آزمون   
                     </Link>
             </div>

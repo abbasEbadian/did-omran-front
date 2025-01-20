@@ -60,7 +60,7 @@ function InformationCourse () {
             میلیون تومان 8
             </span>
         </div>
-        <Link href="#" className="text-whitw bg-did rounded-2xl text-sm px-6 py-3 flex gap-1 items-center w-full justify-center">
+        <Link href="#" className="text-white bg-did rounded-2xl text-sm px-6 py-3 flex gap-1 items-center w-full justify-center">
             ثبت نام 
         </Link>
 

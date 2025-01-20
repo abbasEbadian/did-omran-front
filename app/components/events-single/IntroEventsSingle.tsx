@@ -136,7 +136,7 @@ function IntroEventsSingle() {
                     </div>
                 </div>
                 <Counter/>
-                <Link href="#" className="text-whitw bg-did rounded-2xl text-sm px-8 py-3  w-3/4 text-center">
+                <Link href="#" className="text-white bg-did rounded-2xl text-sm px-8 py-3  w-3/4 text-center">
                 ثبت نام در وبینار    
                     
                 </Link>

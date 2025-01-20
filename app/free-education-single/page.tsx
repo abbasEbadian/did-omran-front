@@ -180,7 +180,7 @@ function page() {
                             </div>
                             <div className="mt-2 ms-auto">
                                 
-                                <Link href="#" className="text-whitw bg-did rounded-2xl text-sm px-6 py-2 flex gap-1 items-center">
+                                <Link href="#" className="text-white bg-did rounded-2xl text-sm px-6 py-2 flex gap-1 items-center">
                                 <Image
                                     src={Download}
                                     alt="User Check Img"
