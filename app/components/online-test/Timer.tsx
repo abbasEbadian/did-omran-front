@@ -57,7 +57,7 @@ const Timer: React.FC = () => {
             />
             <span className="text-secondary text-sm">زمان باقی مانده:</span>
        </div>
-        <div className="flex justify-center items-center gap-2 bg-blue/10 p-6 rounded-2xl">
+        <div className="flex justify-center items-center gap-2 bg-blue/10 px-6 py-2 rounded-2xl">
             <div className="text-center">
                 <span className="text-4xl font-bold text-blue">
                 {time.seconds.toString().padStart(2, '0')} </span>

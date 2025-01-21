@@ -8,15 +8,16 @@ function page() {
   return (
     <>
     <section className="bg-white100">
-        <div className="container mx-auto py-12 grid grid-cols-12 gap-5">
-            <div className="col-span-12 lg:col-span-9">
-              <IntroOnlineTest/>
-              <OnlineExam/>
+        <div className="container mx-auto py-12">
+            <div className="grid grid-cols-12 gap-5">
+                <div className="col-span-12 lg:col-span-9">
+                <IntroOnlineTest/>
+                </div>
+                <div className="col-span-12 lg:col-span-3">
+                    <Timer/>
+                </div>
             </div>
-            <div className="col-span-12 lg:col-span-3">
-                <Timer/>
-            </div>
-          
+            <OnlineExam/>
         </div>
     </section>
   
