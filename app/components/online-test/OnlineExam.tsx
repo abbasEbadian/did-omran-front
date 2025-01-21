@@ -35,6 +35,12 @@ const questions: Question[] = [
     options: ['سبز', 'زرد', 'قرمز', 'آبی'],
     correctAnswer: 'زرد',
   },
+  {
+    id: 4,
+    text: 'رنگ برگ درختان در فصل پاییز معمولاً چیست؟',
+    options: ['سبز', 'زرد', 'قرمز', 'آبی'],
+    correctAnswer: 'زرد',
+  },
 ];
 
 const OnlineExam: React.FC = () => {
@@ -109,7 +115,8 @@ const OnlineExam: React.FC = () => {
   // تعداد سوالات پاسخ داده شده و پاسخ داده نشده
   const answeredQuestions = answers.filter((answer) => answer.selectedOption !== null).length;
   const unansweredQuestions = questions.length - answeredQuestions;
-
+  // محاسبه درصد پیشرفت
+  const progressPercentage = (answeredQuestions / questions.length) * 100;
   if (examFinished) {
     const result = calculateResult();
     return (
@@ -153,8 +160,8 @@ const OnlineExam: React.FC = () => {
                         answer.questionId === questions[currentQuestionIndex].id &&
                         answer.selectedOption === option
                     )
-                    ? 'bg-blue-500 text-white'
-                    : 'bg-gray-200 hover:bg-gray-300'
+                    ? 'text-dark'
+                    : 'bg-secondary700s hover:bg-gray-300'
                 }`}
                 >
                 {option}
@@ -170,14 +177,16 @@ const OnlineExam: React.FC = () => {
             disabled={currentQuestionIndex === 0}
             className="bg-secondary700 text-secondary800 px-6 py-2 rounded-2xl disabled:opacity-50  flex gap-1 items-center"
             >
-               <Image
+                <Image
               src={NavigateNext}
               alt="navigate_before icone"
               height={24} 
               width={24}
               />
-            قبلی
-            </button>
+              قبلی
+              </button>
+        <div className="flex gap-5 items-center">
+            
             <button
             onClick={handleSkipQuestion}
             className="bg-purple100/15 text-secondary800 px-6 py-2 rounded-2xl hover:bg-purple100/30 flex gap-1 items-center"
@@ -188,7 +197,7 @@ const OnlineExam: React.FC = () => {
               height={24} 
               width={24}
               />
-            رد شدن
+              رد شدن
             </button>
             <button
             onClick={() =>
@@ -207,38 +216,47 @@ const OnlineExam: React.FC = () => {
             </button>
         </div>
         </div>
+        {/* نوار پیشرفت */}
+        <div className="mt-6 w-full h-2 bg-gray-200 rounded-full">
+          <div
+            className="h-2 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+            style={{ width: `${progressPercentage}%` }}
+          >
+          </div>
+        </div>
+        </div>
         {/*  پاسخ نامه سوالات */}
         <div className="col-span-12 lg:col-span-3">
            <div className="bg-white rounded-2xl shadow-custom-shadow px-6 py-4">
                 <h3 className=" text-dark font-semibold mb-4 text-center">پاسخ نامه سوالات</h3>
-                <div className="space-y-2">
+                <div className="flex items-center gap-1 justify-center">
                     {questions.map((question, index) => (
                         <button
                         key={question.id}
                         onClick={() => setCurrentQuestionIndex(index)}
-                        className={`w-full text-left p-2 rounded-lg ${
+                        className={`flex items-center px-5 py-2 text-center rounded-full ${
                             currentQuestionIndex === index
-                            ? 'bg-blue-500 text-white'
+                            ? 'bg-purple text-white'
                             : getQuestionStatus(question.id) === 'پاسخ داده شده'
-                            ? 'bg-green-100 text-green-800'
-                            : 'bg-red-100 text-red-800'
+                            ? 'bg-did text-white'
+                            : 'bg-did/20 text-did'
                         }`}
                         >
-                        سوال {question.id}
+                         {question.id}
                         </button>
                     ))}
                 </div>
                 {/* تعداد سوالات پاسخ داده شده و پاسخ داده نشده */}
-                <div className="text-center mt-4">
-                    <p className="text-gray-700">
-                    تعداد سوالات پاسخ داده شده: <span className="font-bold">{answeredQuestions}</span>
+                <div className="text-center my-4">
+                    <p className="text-secondary900 text-sm gap-1 mb-5 before:content-[' '] before:bg-did before:rounded-full before:w-4 before:h-4 before:relative flex before:-right-1 before:top-1">
+                    تعداد سوالات پاسخ داده شده: <span className="font-bold text-dark">{answeredQuestions}</span>
                     </p>
-                    <p className="text-gray-700">
-                    تعداد سوالات پاسخ داده نشده: <span className="font-bold">{unansweredQuestions}</span>
+                    <p className="text-secondary900 text-sm gap-1 mb-5 before:content-[' '] before:bg-secondary700 before:rounded-full before:w-4 before:h-4 before:relative flex before:-right-1 before:top-1">
+                    تعداد سوالات پاسخ داده نشده: <span className="font-bold text-dark">{unansweredQuestions}</span>
                     </p>
                 </div>
                 {/* دکمه اتمام آزمون */}
-                <div className="text-center w-4/6 mx-auto my-2">
+                <div className="text-center w-4/6 mx-auto mt-8">
                     <button
                     onClick={handleFinishExam}
                     className="bg-blue text-white px-6 py-2 rounded-2xl w-full"
