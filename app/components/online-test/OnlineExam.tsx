@@ -219,7 +219,7 @@ const OnlineExam: React.FC = () => {
         {/* نوار پیشرفت */}
         <div className="mt-6 w-full h-2 bg-gray-200 rounded-full">
           <div
-            className="h-2 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+            className="h-2 rounded-full bg-gradient-to-r from-[#0578B9] via-[#C0BEFF] to-[#464E8C]"
             style={{ width: `${progressPercentage}%` }}
           >
           </div>

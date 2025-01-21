@@ -1,5 +1,6 @@
 import Link from "next/link"
-import ReportTable from "../components/report-card/Table"
+import ReportTable from "../components/report-card/ReportCard"
+import ReportCard from "../components/report-card/ReportCard"
 
 function page() {
   return (
@@ -17,6 +18,7 @@ function page() {
                           </Link>
                       </div>
                   </section>
+                  < ReportCard/>
                   
             </div>
        </div>
