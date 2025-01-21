@@ -3,7 +3,7 @@ import IntroLinks from './IntroLinks'
 import News from './News'
 import Calculator from './Calculator'
 import UpcomingEvent from './UpcomingEvent'
-import Consultation from '../Consultation'
+import Consultation from '../../Consultation'
 import Image from 'next/image'
 import InrtoBg from '@/public/img/bg-intro.png'
 

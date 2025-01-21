@@ -1,11 +1,11 @@
 import Header from "@/app/components/header/Header";
-import Intro from "@/app/components/intro/Intro";
-import OnlineExam from "./components/online-exam/OnlineExam";
+import Intro from "@/app/components/landing/intro/Intro";
+import OnlineExam from "./components/landing/online-exam/OnlineExam";
 import EducationSlider from "./components/education/EducationSlider";
 import FreeEducationSlider from "./components/free-education/FreeEducationSlider";
 import Comments from "./components/Comments/Comments";
 import Footer from "./components/footer/Footer";
-import ElectronicLibrary from "./components/electronic-library/ElectronicLibrary";
+import ElectronicLibrary from "./components/landing/electronic-library/ElectronicLibrary";
 
 
 export default function Home() {
