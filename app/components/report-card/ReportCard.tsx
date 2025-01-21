@@ -12,7 +12,7 @@ const Dashboard: React.FC = () => {
   ];
 
   return (
-    <div className="p-6 bg-gray-100 min-h-screen flex items-center justify-center">
+    <div className="p-6 flex items-center justify-center">
       <div className="max-w-4xl w-full bg-white p-6 rounded-lg shadow-md">
         <h1 className="text-2xl font-bold mb-6 text-center">کارنامه آزمون</h1>
         <table className="w-full">
