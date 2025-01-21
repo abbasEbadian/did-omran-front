@@ -3,6 +3,7 @@ import Image from "next/image"
 import Profile from '@/public/img/profile2.jpg' 
 import IntroOnlineTest from "@/app/components/online-test/IntroOnlineTest"
 import Timer from "@/app/components/online-test/Timer"
+import OnlineExam from "../components/online-test/OnlineExam"
 function page() {
   return (
     <>
@@ -10,6 +11,7 @@ function page() {
         <div className="container mx-auto py-12 grid grid-cols-12 gap-5">
             <div className="col-span-12 lg:col-span-9">
               <IntroOnlineTest/>
+              <OnlineExam/>
             </div>
             <div className="col-span-12 lg:col-span-3">
                 <Timer/>
