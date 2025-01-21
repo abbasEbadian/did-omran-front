@@ -1,7 +1,9 @@
 import Link from "next/link"
-import ReportTable from "../components/report-card/ReportCard"
-import ReportCard from "../components/report-card/ReportCard"
-import ReportTitle from "../components/report-card/ReportTitle"
+import BsPrinter from "@/app/components/icons/BsPrinter.svg"
+import BsTextIndentLeft from "@/app/components/icons/BsTextIndentLeft.svg"
+import ReportCard from "@/app/components/report-card/ReportCard"
+import ReportTitle from "@/app/components/report-card/ReportTitle"
+import Image from "next/image"
 
 function page() {
   return (
@@ -21,6 +23,26 @@ function page() {
         </section>
         <ReportTitle/>
         <ReportCard/>
+        <div className="flex items-end gap-9 justify-end">
+          <Link href="#" className="text-white bg-did rounded-2xl text-sm px-6 py-3 text-center flex items-center">
+            مشاهده پاسخ نامه
+            <Image
+              src={BsTextIndentLeft}
+              alt="BsTextIndentLeft icone"
+              height={24}   
+              width={24}
+              />
+          </Link>
+          <Link href="#" className="text-white bg-did rounded-2xl text-sm px-6 py-3 text-center flex items-center">
+          <Image
+              src={BsPrinter}
+              alt="BsTextIndentLeft icone"
+              height={24}   
+              width={24}
+              />
+          چاپ و خروجی
+          </Link>
+        </div>
       </div>
     </div>
     </>
