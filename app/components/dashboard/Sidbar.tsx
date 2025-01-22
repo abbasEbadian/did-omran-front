@@ -6,8 +6,8 @@ import SidbarLinks from './SidbarLinks'
 function Sidbar() {
   return (
     <>
-    <div className="bg-did/10 rounded-s-2xl py-4">
-        <div className="flex flex-col items-center gap-3 justify-center border-b-2 border-b-secondary700 border-dashed pb-4 mx-8">
+    <div className=" h-screen bg-did/10 rounded-s-2xl py-4 mb-3">
+        <div className="flex flex-col items-center gap-3 justify-center border-b-2 border-b-secondary800 border-dashed pb-4 mx-8">
             <span className="text-blue600 text-xl font-semibold mb-4">داشبورد</span>
             <Image
             src={profile2}
@@ -23,12 +23,12 @@ function Sidbar() {
             حساب کاربری
             </span>
             <div className="flex items-center justify-between w-full">
-                <span className="text-xs text-secondary900">ثبت نام</span>
-                <span className="text-sm text-blue">6 آبان 1401</span>
+                <span className="text-blue">ثبت نام</span>
+                <span className="font-semibold  text-blue800">6 آبان 1401</span>
             </div>
             <div className="flex items-center justify-between w-full">
-                <span className="text-xs text-secondary900">شماره موبایل</span>
-                <span className="text-sm text-blue">09141234546</span>
+                <span className="text-sm text-blue">شماره موبایل</span>
+                <span className="font-semibold  text-blue800">09141234546</span>
             </div>
         </div>
        <SidbarLinks/>
