@@ -5,14 +5,14 @@ import Link from 'next/link'
 
 function ReportTitle() {
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-between mt-4">
         <Link href="#1" className='flex items-center gap-2'>
           <Image
             src={Logo}
             alt="logo did omran"
             width={95}
             height={95} />
-            <span className="text-did font-bold">دیــد عمــران</span>
+            <span className="text-did font-black text-2xl">دیــد عمــران</span>
             
           </Link>
         <div className="  flex flex-col items-center">

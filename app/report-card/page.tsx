@@ -21,10 +21,12 @@ function page() {
               </Link>
           </div>
         </section>
-        <ReportTitle/>
-        <ReportCard/>
+        <section className="bg-white px-6 py-7 rounded-2xl my-4 shadow-custom-shadow">
+          <ReportTitle/>
+          <ReportCard/>
+        </section>
         <div className="flex items-end gap-9 justify-end">
-          <Link href="#" className="text-white bg-did rounded-2xl text-sm px-6 py-3 text-center flex items-center">
+          <Link href="#" className="text-white bg-blue700 rounded-2xl text-sm px-6 py-3 text-center flex items-center">
             مشاهده پاسخ نامه
             <Image
               src={BsTextIndentLeft}
@@ -34,13 +36,13 @@ function page() {
               />
           </Link>
           <Link href="#" className="text-white bg-did rounded-2xl text-sm px-6 py-3 text-center flex items-center">
+          چاپ و خروجی
           <Image
               src={BsPrinter}
               alt="BsTextIndentLeft icone"
               height={24}   
               width={24}
               />
-          چاپ و خروجی
           </Link>
         </div>
       </div>

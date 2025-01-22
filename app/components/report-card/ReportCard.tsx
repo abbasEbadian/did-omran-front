@@ -13,22 +13,21 @@ const Dashboard: React.FC = () => {
 
   return (
     <div className="p-6 flex items-center justify-center">
-      <div className="max-w-4xl w-full bg-white p-6 rounded-lg shadow-md">
-        <h1 className="text-2xl font-bold mb-6 text-center">کارنامه آزمون</h1>
+      <div className="max-w-4xl w-full bg-white p-6 ">
         <table className="w-full">
           <tbody>
             {tableData.map((row, index) => (
-              <tr key={index} className="border-b border-gray-300">
-                <td className="py-3 px-4 text-right">{row.label1}</td>
-                <td className="py-3 px-4 text-left">
+              <tr key={index} className="border border-secondary800">
+                <td className="py-3 px-4 text-right text-dark border-s border-secondary800 last:border-s-0">{row.label1}</td>
+                <td className="py-3 px-4 text-left text-secondary800">
                   {row.value1 === 'قبول' ? (
-                    <span className="font-bold text-green-600">{row.value1}</span>
+                    <span className="text-primary font-semibold">{row.value1}</span>
                   ) : (
                     row.value1
                   )}
                 </td>
-                <td className="py-3 px-4 text-right">{row.label2}</td>
-                <td className="py-3 px-4 text-left" colSpan={row.colSpan || 1}>
+                <td className="py-3 px-4 text-right text-dark border-s border-secondary800 last:border-s-0">{row.label2}</td>
+                <td className="py-3 px-4 text-left text-secondary800" colSpan={row.colSpan || 1}>
                   {row.value2}
                 </td>
               </tr>
