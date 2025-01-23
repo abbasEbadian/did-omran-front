@@ -1,7 +1,8 @@
 "use client";
-import EducationSlider from '@/app/components/landing/education/EducationSlider'
+import FreeBg from '@/public/img/freebg.png'
 import { useState } from 'react';
 import FreeEducationSlider from './FreeEducationSlider';
+import Image from 'next/image';
 
 const FreeEducationTabs = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -16,8 +17,19 @@ const FreeEducationTabs = () => {
   ];
 
   return (
-    <div>
+    <div className='relative'>
+      <div className="absolute right-1/3 bottom-72 -z-10">
+        <Image
+          src={FreeBg}
+          alt="FreeBg Animation"
+          height={394}
+          width={682}
+          quality={100}
+          priority
+            />
+      </div>
       {/* Tab Buttons (Horizontal) */}
+      
       <div className="flex items-center justify-center mb-10">
         {tabs.map((tab) => (
           <button
