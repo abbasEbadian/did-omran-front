@@ -1,7 +1,4 @@
 import Link from 'next/link'
-import React from 'react'
-import TabsMain from '@/app/components/landing/education/EducationTabs'
-
 function CaptionMain() {
   return (
     <>

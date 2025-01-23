@@ -48,7 +48,7 @@ const FreeEducationSlider: React.FC = () => {
           },
           // تنظیمات برای صفحات بزرگ (دسکتاپ)
           1024: {
-            slidesPerView: 3,
+            slidesPerView: 4,
           },
         }}
       >

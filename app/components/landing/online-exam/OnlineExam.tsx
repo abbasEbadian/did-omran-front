@@ -5,10 +5,13 @@ import Link from 'next/link'
 function OnlineExam() {
   return (
     <>
-    <div className="relative my-64 ">
-      <div className="grid grid-cols-8 container mx-auto">
+    <div className="relative my-64 py-28 ms-40  overflow-hidden ">
+      {/* گرادیانت و تصویر پس‌زمینه */}
+      <div className="absolute inset-0 bg-gradient-to-l from-[#9996fa6c] from-30% via-[#0578B9] via-90% to-[#0578B9] to-90% transform -skew-y-3 origin-top-right z-0">
+      </div>
+      <div className="grid grid-cols-8 container mx-auto relative z-20">
             <div className="col-span-5">
-                <div className="ms-10 ps-10 flex flex-col items-start ">
+                <div className="ms-10 ps-10 flex flex-col items-start z-50 ">
                     <span className="text-dark text-3xl mb-4">
                     آزمون آنلاین مهندسی
                     </span>
@@ -20,15 +23,18 @@ function OnlineExam() {
                 </div>
             </div>
             <div className="col-span-3"></div>
-      
         </div>
-        <div className="absolute left-[130px] top-0   ">
-            <Image
-            src={online}
-            alt="Consultation Img"
-            height={395} />
-        </div>
+
     </div>
+    <div className="absolute left-[130px] top-0   ">
+            <Image
+              src={online}
+              alt="آزمون آنلاین مهندسی"
+              width={500} // Adjust width as needed
+              height={395}
+              priority // Optional: if the image is above the fold
+            />
+        </div>
     </>
   )
 }

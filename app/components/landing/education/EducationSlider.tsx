@@ -29,10 +29,9 @@ const EducationSlider: React.FC = () => {
         slidesPerView={3} // تعداد آیتم‌ها در هر اسلاید
        // navigation  دکمه‌های ناوبری (چپ و راست)
         pagination={{
+          enabled: true,
           clickable: true,
-          el: '.custom-pagination', // کلاس سفارشی برای pagination
-          bulletClass: 'custom-bullet', // کلاس سفارشی برای نقاط pagination
-          bulletActiveClass: 'custom-bullet-active', // کلاس سفارشی برای نقطه فعال
+          el: '.custom-pagination', // کلاس سفارشی برای pagination  
         }}
         loop={true} // اسلایدر لوپ شود
          breakpoints={{
