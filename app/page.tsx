@@ -1,11 +1,12 @@
 import Header from "@/app/components/header/Header";
 import Intro from "@/app/components/landing/intro/Intro";
-import OnlineExam from "./components/landing/online-exam/OnlineExam";
-import EducationSlider from "./components/education/EducationSlider";
-import FreeEducationSlider from "./components/free-education/FreeEducationSlider";
-import Comments from "./components/Comments/Comments";
-import Footer from "./components/footer/Footer";
-import ElectronicLibrary from "./components/landing/electronic-library/ElectronicLibrary";
+import OnlineExam from "@/app/components/landing/online-exam/OnlineExam";
+import Comments from "@/app/components/Comments/Comments";
+import Footer from "@/app/components/footer/Footer";
+import ElectronicLibrary from "@/app/components/landing/electronic-library/ElectronicLibrary";
+import EducationTabs from "@/app/components/landing/education/EducationTabs";
+import CaptionMain from "@/app/components/landing/Caption/CaptionMain";
+import FreeEducationTabs from "@/app/components/landing/free-education/FreeEducationTabs";
 
 
 export default function Home() {
@@ -14,9 +15,11 @@ export default function Home() {
       <Header/>
       <main className="flex flex-col gap-8">
       <Intro/>
-      <EducationSlider/>
+      <CaptionMain/>
+      <EducationTabs/>
       <OnlineExam/> 
-      <FreeEducationSlider/>
+      <CaptionMain/>
+      <FreeEducationTabs/>
       <ElectronicLibrary/>
       <Comments/>
       </main>

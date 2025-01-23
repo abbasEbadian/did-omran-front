@@ -4,9 +4,9 @@ function Login() {
   return (
     <>
     {/* بخش فرم لاگین (نصف صفحه) */}
-    <div className="w-1/2 flex items-center justify-center bg-gray-50">
-        <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-6 text-center">ورود به سیستم</h2>
+    <div className="w-1/2 flex items-center justify-center bg-white">
+        <div className="w-full max-w-md p-8 rounded-lg">
+          <h2 className="text-2xl font-bold mb-6 text-center">ورود به دید عمران</h2>
           <form>
             <div className="mb-4">
               <label htmlFor="username" className="block text-sm font-medium text-gray-700">
