@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 function OnlineExam() {
   return (
-    <>
+    <div className='relative'>
     <div className="relative my-64 py-28 ms-40  overflow-hidden ">
       {/* گرادیانت و تصویر پس‌زمینه */}
       <div className="absolute inset-0 bg-gradient-to-l from-[#9996fa6c] from-30% via-[#0578B9] via-90% to-[#0578B9] to-90% transform -skew-y-3 origin-top-right z-0">
@@ -26,7 +26,7 @@ function OnlineExam() {
         </div>
 
     </div>
-    <div className="absolute left-[130px] top-0   ">
+    <div className="absolute left-[130px] top-64">
             <Image
               src={online}
               alt="آزمون آنلاین مهندسی"
@@ -35,7 +35,7 @@ function OnlineExam() {
               priority // Optional: if the image is above the fold
             />
         </div>
-    </>
+    </div>
   )
 }
 

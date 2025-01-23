@@ -6,9 +6,20 @@ import ElectronicLibraryBg from '@/public/img/Electronic-library-img.png';
 function ElectronicLibrary() {
   return (
 
-    <div className='flex flex-col'>
+    <div className='relative'>
+        {/* تصویر کتابخوان */}
+        <div className="absolute right-[130px] top-56 z-30">
+            <Image
+             src={bibliophile}
+             alt="Bibliophile Animation"
+             height={395}
+             width={540}
+            quality={100}
+             priority
+                />
+            </div>
         <div className="relative">
-            <div className="absolute left-[91px] top-16 ">
+            <div className="absolute left-[91px] top-16">
                 <Image
                 src={ElectronicLibraryBg}
                 alt="Electronic Library Background"
@@ -17,20 +28,9 @@ function ElectronicLibrary() {
                 priority />
             </div>
         </div>
-        <div className="relative my-56 py-28 me-40 rounded-se-[198px] overflow-hidden">
+        <div className="relative my-56 py-28 me-40 overflow-hidden">
             {/* گرادیانت و تصویر پس‌زمینه */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#9996fa6c] from-30% via-[#0578B9] via-90% to-[#0578B9] to-90% transform skew-y-3 origin-top-left">
-            </div>
-             {/* تصویر کتابخوان */}
-             <div className="absolute right-[130px] top-0">
-                <Image
-                src={bibliophile}
-                alt="Bibliophile Animation"
-                height={395}
-                width={540}
-                quality={100}
-                priority
-                />
             </div>
             {/* محتوای متن */}
             <div className="grid grid-cols-8 container mx-auto relative z-10">
