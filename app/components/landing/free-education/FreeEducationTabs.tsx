@@ -9,16 +9,16 @@ const FreeEducationTabs = () => {
   const tabs = [
     { id: 0, label: 'همه', content: <FreeEducationSlider/>},
     { id: 1, label: 'نظارت اجرا', content: ''},
-    { id: 2, label: 'محاسبات ', content: ''},
+    { id: 2, label: 'محاسبات ', content: <FreeEducationSlider/>},
     { id: 3, label: 'کارشناسی رسمی', content:''},
     { id: 4, label: 'نرم افزار', content:''},
     { id: 5, label: 'فنی و مهندسی', content:'' },
   ];
 
   return (
-    <div className="p-4">
+    <div>
       {/* Tab Buttons (Horizontal) */}
-      <div className="flex items-center justify-center my-10">
+      <div className="flex items-center justify-center mb-10">
         {tabs.map((tab) => (
           <button
             key={tab.id}

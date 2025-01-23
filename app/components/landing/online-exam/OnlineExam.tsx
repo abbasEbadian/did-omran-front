@@ -5,7 +5,7 @@ import Link from 'next/link'
 function OnlineExam() {
   return (
     <>
-    <div className="relative my-24 ">
+    <div className="relative my-64 ">
       <div className="grid grid-cols-8 container mx-auto">
             <div className="col-span-5">
                 <div className="ms-10 ps-10 flex flex-col items-start ">
