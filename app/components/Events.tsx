@@ -7,16 +7,16 @@ import eventsImg from '@/public/img/events.png';
 
 function Events() {
   return (
-<div className="bg-secondary700 rounded-2xl px-2 pb-4 mt-10 flex flex-col items-center">
+<div className="bg-secondary700 rounded-2xl px-1 pb-4 mt-10 flex flex-col items-center">
     <div className="bg-did text-white text-center py-2 rounded-2xl  z-10 text-2xl font-bold -mt-8 border-white border-2 mx-5 inline-table px-4">
       <span className="">
       وبینارهای پیش رو
       </span>
     </div>
     <div
-      className="grid grid-cols-3 bg-white rounded-lg shadow-lg mt-2">
+      className="flex items-center gap-1 bg-white rounded-lg shadow-lg mt-2 pb-1">
       {/* ستون اول: تاریخ و دکمه رزرو */}
-      <div className="col-span-1 flex flex-col gap-1 px-2">
+      <div className="flex flex-col gap-1 px-2">
         <div className="bg-blue700 text-white rounded-b-2xl flex flex-col items-center px-2 py-8">
           <span className="text-2xl font-bold">28</span>
           <span className="text-sm">فروردین</span>
@@ -32,7 +32,7 @@ function Events() {
       </div>
 
       {/* ستون دوم: توضیحات و تصویر رویداد */}
-      <div className="col-span-2 p-4">
+      <div className="px-1">
         <div className="flex flex-row gap-2 items-center">
           <span className="text-dark text-xs">
             لورم ایپسوم متن ساختگی با تولید سادگی
