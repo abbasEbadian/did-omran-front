@@ -8,7 +8,7 @@ import Education from '@/app/components/icons/Education.svg';
 
 function IntroLinks() {
   return (
-    <div className="flex items-center gap-4 lg:gap-8 flex-wrap justify-center py-7">
+    <div className="flex gap-4 lg:gap-8 flex-wrap justify-center py-7 h-64 mt-6">
       {introLinks.map((introLink, index) => (
         <Link
           key={introLink.id}
@@ -16,7 +16,7 @@ function IntroLinks() {
           className={`
             rounded-2xl min-w-40 text-white flex flex-col px-6 py-4 items-center gap-2
             transition-all duration-300
-            ${index % 2 === 0 ? 'self-start' : 'self-end'} // یک در میان بالا و پایین
+            ${index % 2 === 0 ? 'self-end' : 'self-start'} // یک در میان بالا و پایین
             bg-did/50 hover:bg-did // رنگ کم‌رنگ در حالت عادی و پررنگ در هاور
           `}
         >

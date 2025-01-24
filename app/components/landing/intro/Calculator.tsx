@@ -4,8 +4,8 @@ import Processor from '@/app/components/icons/processor.svg'
 function Calculator() {
   return (
     <>
-    <div className="relative">
-      <div className="bg-did text-white text-center py-2 rounded-2xl  z-10 text-2xl font-bold  border-white border-2">
+    <div className="flex items-center flex-col">
+      <div className="bg-did text-white text-center py-2 rounded-2xl  z-10 text-2xl font-bold  border-white border-2 mx-5 inline-table px-4">
         <span className="">
         محاسبه گر نمره آزمون
         </span>
