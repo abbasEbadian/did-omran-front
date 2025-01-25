@@ -1,33 +1,40 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import ConsultationImg from '@/public/img/Consultation-img.png'
+import Image from 'next/image';
+import Link from 'next/link';
+import ConsultationImg from '@/public/img/Consultation-img.png';
 
 function Consultation() {
   return (
-    <>
-   <div className="relative">
-    <div className="bg-did/5 absolute bottom-0 right-0 z-40"></div>
-    <div className="absolute z-20">
+    <div className="relative">
+      {/* Background Div */}
+      <div className="bg-did/35 absolute bottom-0 right-0 w-full h-full z-30 h-fit  "></div>
+
+      {/* Image */}
+      <div className="absolute z-20 w-full">
         <Image
-              src={ConsultationImg}
-              alt="Consultation Img"
-              height={130} />
-  </div>
-    <div className="flex flex-col items-center justify-center z-50">
+          src={ConsultationImg}
+          alt="Consultation Img"
+          width={200} // Add width
+          height={130}
+          className='object-cover w-full'
+        />
+      </div>
 
-        <span className="">
-        لورم ایپسوم متن
+      {/* Content */}
+      <div className="flex flex-col items-center justify-center z-50 relative">
+        <span className="text-center text-white font-semibold">
+          لورم ایپسوم متن
         </span>
-        <span className="">
-        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
+        <span className="text-center text-white text-sm">
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
         </span>
-        <Link href="#" className="bg-white text-sm text-darkk rounded-2xl ">ثبت نام </Link>
+        <Link href="#"
+          className="bg-white text-sm text-did rounded-2xl px-4 py-2 mt-4">
+            ثبت نام
 
+        </Link>
+      </div>
     </div>
-   
-    </div> 
-    </>
-  )
+  );
 }
 
-export default Consultation
+export default Consultation;
