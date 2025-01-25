@@ -1,14 +1,15 @@
 import React from 'react'
-import TitleTrainingCourses from '../components/training-courses/TitleTrainingCourses'
+import TitleTrainingCourses from '@/app/components/training-courses/TitleTrainingCourses'
 import Link from 'next/link'
-import ContentCourse from '../components/training-courses/ContentCourse'
-import RequirementsCourse from '../components/training-courses/RequirementsCourse'
-import CourseInstructors from '../components/training-courses/CourseInstructors'
-import NewComment from '../components/Comments/NewComment'
-import CommentsChats from '../components/Comments/CommentsChats'
-import InformationCourse from '../components/training-courses/InformationCourse '
-import SocialMedia from '../components/training-courses/SocialMedia'
-import PreviewCourse from '../components/training-courses/PreviewCourse'
+import ContentCourse from '@/app/components/training-courses/ContentCourse'
+import RequirementsCourse from '@/app/components/training-courses/RequirementsCourse'
+import CourseInstructors from '@/app/components/training-courses/CourseInstructors'
+import NewComment from '@/app/components/Comments/NewComment'
+import CommentsChats from '@/app/components/Comments/CommentsChats'
+import InformationCourse from '@/app/components/training-courses/InformationCourse '
+import SocialMedia from '@/app/components/training-courses/SocialMedia'
+import PreviewCourse from '@/app/components/training-courses/PreviewCourse'
+import Events from '@/app/components/Events'
 
 function page() {
   return (
@@ -59,6 +60,9 @@ function page() {
                 <div className="col-span-12 lg:col-span-4">
                     <InformationCourse/>
                     <PreviewCourse/>
+                    <div className="">
+                        <Events/>
+                    </div>
                     <SocialMedia/>
 
                 </div>

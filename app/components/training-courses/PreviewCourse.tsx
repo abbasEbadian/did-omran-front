@@ -7,7 +7,7 @@ import Preview from '@/public/img/course-preview-img.png'
 function PreviewCourse() {
   return (
     <>
-    <div className="relative flex flex-col items-center justify-center gap-4 mt-9">
+    <div className="relative flex flex-col items-center justify-center gap-4 mt-9 mb-56">
         <div className="bg-gradient-to-b from-did/35 to-secondary900/30 absolute z-20 inset-0 rounded-2xl"></div>
         <div className="absolute inset-0 z-10">
             <Image

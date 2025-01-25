@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import Youtube from '@/app/components/icons/Youtube.svg'
-import Instagram from '@/app/components/icons/Instagram.svg'
-import Telegram from '@/app/components/icons/Telegram.svg'
+import Telegram from '@/public/Telegram.png';
+import Youtube from '@/public/YT2OctDenoiserBeauty_002 copy.png';
+import Instagram from '@/public/Instagram.png';
 import Saly from '@/app/components/icons/Saly-24.svg'
 function SocialMedia() {
   return (
