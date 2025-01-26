@@ -55,5 +55,7 @@ body {
   .custom-bullet-active {
     @apply bg-did;
   }
-
+  html {
+    scroll-behavior: smooth;
+  }
 
