@@ -9,14 +9,9 @@ import ProfileImg from '@/public/img/profile.jpg'
 import FaInstagram from '@/app/components/icons/FaInstagram.svg'
 import FaTelegram from '@/app/components/icons/FaTelegramPlane.svg'
 import BsFacebook from '@/app/components/icons/BsFacebook.svg'
-import HiOutlineChartPie from '@/app/components/icons/HiOutlineChartPie.svg'
-import FaStar from '@/app/components/icons/FaStar.svg'
-import FiFilm from '@/app/components/icons/FiFilm.svg'
-import Download from '@/app/components/icons/download.svg'
 import Link from 'next/link'
-import QuestionBox from '../components/Comments/QuestionBox'
-import ShareBox from '../components/ShareBox'
-import CopyLink from '../components/CopyLink'
+import QuestionBox from '@/app/components/Comments/QuestionBox'
+import OnlineFreeFilm from '@/app/components/free-education-single/OnlineFreeFilm'
 
 function page() {
   return (
@@ -144,104 +139,7 @@ function page() {
             </div>
         </div>
        { /*مشاهده آنلاین فیلم*/}
-       <div className="bg-white py-8">
-        <div className="container mx-auto f">
-            <span className="text-dark font-bold">
-                مشاهده آنلاین فیلم آموزش پلاگین Retouch4me در فتوشاپ
-            </span>
-            <div className="grid grid-cols-4">
-                <div className="col-span-4 lg:col-span-3"></div>
-                <div className="col-span-4 lg:col-span-1">
-                    <div className="flex flex-col gap-6">
-                        <div className="flex flex-col gap-4">
-                            <ShareBox/>
-                            <CopyLink/>
-                        </div>
-                        <div className="flex flex-col items-start gap-4 bg-did/15 p-4 rounded-2xl">
-                            <div className="flex items-center">
-                                <Image
-                                    src={FiFilm}
-                                    alt="FiFilm Img"
-                                    height={24} 
-                                    width={24}/>
-                                    <span className="text-dark text-sm">
-                                    دانلود فیلم آموزش پلاگین Retouch4me در فتوشاپ
-                                    </span>
-                            </div>
-                            <div className="flex items-center">
-                                <Image
-                                    src={HiOutlineChartPie}
-                                    alt="Profile Img"
-                                    height={24} 
-                                    width={24}/>
-                                    <span className="text-secondary text-sm">
-                                    حجم: 164mb (مگابایت)
-                                    </span>
-                            </div>
-                            <div className="mt-2 ms-auto">
-                                
-                                <Link href="#" className="text-white bg-did rounded-2xl text-sm px-6 py-2 flex gap-1 items-center">
-                                <Image
-                                    src={Download}
-                                    alt="User Check Img"
-                                    width={24}
-                                    height={24} />
-                                    لینک دانلود
-                                </Link>
-                            </div>
-                        </div>
-                        <div className="flex  items-center gap-4 justify-between">
-                            <span className="text-dark ">
-                            امتیاز: 4 از ۵ - تعداد رای: 5
-                            </span>
-                            <div className="flex items-center gap-1">
-                                <Link href="#" className="">
-                                    <Image
-                                        src={FaStar }
-                                        alt="User Check Img"
-                                        width={24}
-                                        height={24} />
-                                    
-                                </Link>
-                                <Link href="#" className="">
-                                    <Image
-                                        src={FaStar }
-                                        alt="User Check Img"
-                                        width={24}
-                                        height={24} />
-                                    
-                                </Link>
-                                <Link href="#" className="">
-                                    <Image
-                                        src={FaStar }
-                                        alt="User Check Img"
-                                        width={24}
-                                        height={24} />
-                                    
-                                </Link>
-                                <Link href="#" className="">
-                                    <Image
-                                        src={FaStar }
-                                        alt="User Check Img"
-                                        width={24}
-                                        height={24} />
-                                    
-                                </Link>
-                                <Link href="#" className="">
-                                    <Image
-                                        src={FaStar }
-                                        alt="User Check Img"
-                                        width={24}
-                                        height={24} />
-                                    
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-       </div>
+        <OnlineFreeFilm/>
       { /* گفتگو و سوالات شما*/}
       <QuestionBox/>
         
