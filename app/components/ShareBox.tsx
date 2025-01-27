@@ -29,7 +29,7 @@ const ShareBox: React.FC = () => {
   ];
 
   return (
-    <div className="flex items-start gap-3">
+    <div className="flex items-center justify-between w-full gap-3 ">
       <div className="flex items-center gap-2">
         <Link href="#" className="flex items-center gap-2">
           <Image src={FiShare2} alt="FiShare2 Img" height={24} width={24} />

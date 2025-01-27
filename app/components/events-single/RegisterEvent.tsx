@@ -8,7 +8,7 @@ function RegisterEvent() {
   return (
     <>
     <div className="grid grid-cols-3 gap-8 my-20 items-center bg-white px-8 py-12 rounded-2xl" id="RegisterEvent">
-        <div className="col-span-2">
+        <div className="lg:col-span-2 col-span-3">
             <div className="lg:col-span-1 col-span-2 flex justify-center">
                     
                 <Image
@@ -19,7 +19,7 @@ function RegisterEvent() {
                     
             </div>
         </div>
-        <div className="col-span-1">
+        <div className="lg:col-span-1 col-span-3">
             {/* ثبت نام رایگان  */}
             <form action="">
                 <span className="text-dark text-base text-start">جهت شركت در وبينار لطفا فرم زير را تكميل كنيد</span>

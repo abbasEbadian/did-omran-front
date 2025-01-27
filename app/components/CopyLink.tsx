@@ -4,7 +4,7 @@ import MdContentCopy from '@/app/components/icons/MdContentCopy.svg'
 function CopyLink() {
   return (
     <>
-    <div className="flex gap-4 bg-secondary700 rounded-2xl px-4 py-2 items-center lg:justify-between justify-center">
+    <div className="flex gap-4 bg-secondary700 rounded-2xl px-4 py-2 items-center justify-between w-full">
         <span className="text-dark text-sm">
             https://www.figma.com/design/U8jz...
         </span>
