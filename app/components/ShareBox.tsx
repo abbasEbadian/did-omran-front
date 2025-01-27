@@ -1,49 +1,44 @@
-import Image from 'next/image'
-import FiShare2 from '@/app/components/icons/FiShare2.svg'
-import FaInstagram from '@/app/components/icons/FaInstagram.svg'
-import FaTelegram from '@/app/components/icons/FaTelegramPlane.svg'
-import BsFacebook from '@/app/components/icons/BsFacebook.svg'
-import Link from 'next/link'
+import Image from 'next/image';
+import Link from 'next/link';
+import FiShare2 from '@/app/components/icons/FiShare2.svg';
+import FaInstagram from '@/app/components/icons/FaInstagram.svg';
+import FaTelegram from '@/app/components/icons/FaTelegramPlane.svg';
+import BsFacebook from '@/app/components/icons/BsFacebook.svg';
+import SocialMediaIcon from './SocialMediaIcon';
 
+const ShareBox: React.FC = () => {
+  const socialMediaIcons = [
+    {
+      href: '#',
+      icon: BsFacebook,
+      alt: 'Facebook',
+      className: 'text-blue-600',
+    },
+    {
+      href: '#',
+      icon: FaInstagram,
+      alt: 'Instagram',
+      className: 'text-pink-500',
+    },
+    {
+      href: '#',
+      icon: FaTelegram,
+      alt: 'Telegram',
+      className: 'text-blue-400',
+    },
+  ];
 
-function ShareBox() {
   return (
-    <>
     <div className="flex items-start gap-3">
-        <Link href="#" className="">
-            <Image
-                src={FiShare2}
-                alt="FiShare2 Img"
-                height={24} 
-                width={24}/>
+      <div className="flex items-center gap-2">
+        <Link href="#" className="flex items-center gap-2">
+          <Image src={FiShare2} alt="FiShare2 Img" height={24} width={24} />
+          <span className="text-dark text-sm">اشتراک گذاری این صفحه</span>
         </Link>
-        <span className="text-dark text-sm">
-        اشتراک گذاری این صفحه
-        </span>
-        <Link href="#" className="">
-            <Image
-                src={BsFacebook}
-                alt="BsFacebook Img"
-                height={24} 
-                width={24}/>
-        </Link>
-        <Link href="#" className="">
-            <Image
-                src={FaInstagram}
-                alt="FaInstagram Img"
-                height={24} 
-                width={24}/>
-        </Link>
-        <Link href="#" className="">
-            <Image
-                src={FaTelegram}
-                alt="FaTelegram Img"
-                height={24} 
-                width={24}/>
-        </Link>
+      </div>
+      <SocialMediaIcon icons={socialMediaIcons} />
     </div>
-    </>
-  )
-}
+  );
+};
 
-export default ShareBox
+export default ShareBox;

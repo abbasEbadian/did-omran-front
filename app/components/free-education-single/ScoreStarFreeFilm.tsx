@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image'
 import FaStar from '@/app/components/icons/garystar.svg'
 function ScoreStarFreeFilm() {
-      // State برای مدیریت امتیاز
+  // State برای مدیریت امتیاز
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
 

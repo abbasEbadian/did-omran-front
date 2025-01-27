@@ -1,9 +1,6 @@
 
 import ShareBox from '../ShareBox'
 import CopyLink from '../CopyLink'
-import Image from 'next/image'
-
-import Link from 'next/link'
 import DownloadLinkFreeFilm from '@/app/components/free-education-single/DownloadLinkFreeFilm'
 import ScoreStarFreeFilm from './ScoreStarFreeFilm'
 function OnlineFreeFilm() {
