@@ -5,6 +5,7 @@ import MdAccessTime from '@/app/components/icons/MdAccessTime.svg'
 import banner from '@/public/img/banner1.png'
 import Price from '@/app/components/price'
 import Link from 'next/link'
+import ScoreStarFreeFilm from '../../free-education-single/ScoreStarFreeFilm'
 
 function EducationItems() {
   return (
@@ -41,7 +42,7 @@ function EducationItems() {
                         <span className="text-blue800">44 ساعت</span>
                     </div>
                 </div>
-                <div className="">امتیاز</div>
+                <ScoreStarFreeFilm/>
             </div>
             <div className="flex items-center justify-between">
                 

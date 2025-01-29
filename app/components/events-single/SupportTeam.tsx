@@ -6,10 +6,10 @@ import Image from 'next/image'
 function SupportTeam() {
   return (
     <>
-    <div className="grid grid-cols-5 gap-4" id='SupportTeam'>
+    <div className="grid grid-cols-5 gap-4 px-4 lg:px-0" id='SupportTeam'>
         <div className="col-span-5 lg:col-span-3">
-            <div className="flex flex-col items-start gap-4 grow">
-                <span className="text-did text-xl font-black  border-b-2 border-dashed border-secondary700 w-full pb-4">پشتیبانی و پاسخگویی در دید عمران</span>
+            <div className="flex flex-col lg:items-start items-center gap-4 grow">
+                <span className="text-did text-xl font-black text-center lg:text-start border-b-2 border-dashed border-secondary700 w-full pb-4">پشتیبانی و پاسخگویی در دید عمران</span>
                 <div className="flex flex-col items-start justify-start gap-4 bg-white rounded-2xl p-8 shadow-custom-shadow">
                     <p className="text-secondary text-sm mb-8">
                     اگر در زمان تهیه بلیط وبینار، با مشکلات فنی روبرو شدید حتما با مهندس زهرا دشتی از طریق شماره تماس 09336474385 (شنبه تا چهارشنبه از 8 تا 13 و پنج شنبه از 8 تا 10) در ارتباط باشید.
@@ -45,7 +45,7 @@ function SupportTeam() {
                 alt="Profile Img"
                 height={242} 
                 width={367}
-                className="object-cover w-[70%]"/>
+                className="object-cover lg:w-[70%] w-full"/>
         </div>
         </div>
        

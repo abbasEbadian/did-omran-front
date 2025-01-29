@@ -9,7 +9,7 @@ function Features() {
     <>
     <div className="container mx-auto grid grid-cols-4 gap-4 my-12">
         <div className="col-span-4 lg:col-span-1">
-            <div className="bg-white rounded-2xl px-8 py-20 flex flex-col items-center justify-center gap-2 shadow-custom-shadow">
+            <div className="bg-white rounded-2xl hover:bg-blue500 px-8 py-20 flex flex-col items-center justify-center gap-2 shadow-custom-shadow">
                 <Image
                         src={DataScreen}
                         alt="CheckSmall icone"
@@ -21,7 +21,7 @@ function Features() {
             </div>
         </div>
         <div className="col-span-4 lg:col-span-1">
-            <div className="bg-white rounded-2xl px-8 py-20 flex flex-col items-center justify-center gap-2 shadow-custom-shadow">
+            <div className="bg-white rounded-2xl hover:bg-blue500 px-8 py-20 flex flex-col items-center justify-center gap-2 shadow-custom-shadow">
                 <Image
                         src={Event2319}
                         alt="CheckSmall icone"
@@ -33,7 +33,7 @@ function Features() {
             </div>
         </div>
         <div className="col-span-4 lg:col-span-1">
-            <div className="bg-white rounded-2xl px-8 py-20 flex flex-col items-center justify-center gap-2 shadow-custom-shadow">
+            <div className="bg-white rounded-2xl hover:bg-blue500 px-8 py-20 flex flex-col items-center justify-center gap-2 shadow-custom-shadow">
                 <Image
                         src={Pencil2317}
                         alt="CheckSmall icone"
@@ -45,14 +45,14 @@ function Features() {
             </div>
         </div>
         <div className="col-span-4 lg:col-span-1">
-            <div className="bg-white rounded-2xl px-8 py-20 flex flex-col items-center justify-center gap-2 shadow-custom-shadow">
+            <div className="bg-white rounded-2xl hover:bg-blue500 px-8 py-20 flex flex-col items-center justify-center gap-2 shadow-custom-shadow">
                 <Image
                         src={Group}
                         alt="CheckSmall icone"
                         height={70} 
                         width={70}
                         />
-                <span className="text-did text-3xl font-semibold">+20s</span>
+                <span className="text-did text-3xl font-semibold">+20</span>
                 <span className="text-dark text-xl">کتاب</span>
             </div>
         </div>

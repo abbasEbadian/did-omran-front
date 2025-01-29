@@ -7,7 +7,7 @@ import Link from 'next/link'
 function RegisterEvent() {
   return (
     <>
-    <div className="grid grid-cols-3 gap-8 my-20 items-center bg-white px-8 py-12 rounded-2xl" id="RegisterEvent">
+    <div className="grid grid-cols-3 gap-8 my-20 items-center bg-white lg:px-8 px-2 py-12 rounded-2xl" id="RegisterEvent">
         <div className="lg:col-span-2 col-span-3">
             <div className="lg:col-span-1 col-span-2 flex justify-center">
                     
@@ -22,7 +22,7 @@ function RegisterEvent() {
         <div className="lg:col-span-1 col-span-3">
             {/* ثبت نام رایگان  */}
             <form action="">
-                <span className="text-dark text-base text-start">جهت شركت در وبينار لطفا فرم زير را تكميل كنيد</span>
+                <span className="text-dark text-base lg:text-start text-center block">جهت شركت در وبينار لطفا فرم زير را تكميل كنيد</span>
                 <div className="my-5 w-full">
                     <input
                         type="text"
@@ -46,7 +46,7 @@ function RegisterEvent() {
                 
             </form>
              {/* ثبت نام پولی  */}
-             <div className="flex flex-col items-start mt-4 ">
+             <div className="flex flex-col lg:items-start items-center mt-4 ">
                 <span className="text-dark text-xl mb-4 font-black"> شركت در وبينار </span>
                 <span className="text-secondary text-sm mb-4">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</span>
                 <div className="flex items-center gap-2 mb-2">
@@ -76,10 +76,10 @@ function RegisterEvent() {
                         />
                     <span className="text-dark text-xs font-semibold"> رسیدن به درآمد ریالی و دلاری بالا</span>
                 </div>
-                <div className="flex items-center justify-between w-full">
+                <div className="flex items-center justify-between w-full lg:flex-row flex-col gap-5">
                     <span className="text-secondary text-2xl font-bold">779هزارتومان</span>
                    
-                        <Link href="#" className="text-white bg-did rounded-2xl text-sm px-6 py-3">
+                        <Link href="#" className="text-white bg-did rounded-2xl text-sm px-6 py-3 w-full text-center">
                         دریافت بلیط وبینار   
                         </Link>
                 </div>

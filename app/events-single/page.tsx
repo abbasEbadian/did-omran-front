@@ -7,7 +7,6 @@ import SupportTeam from '../components/events-single/SupportTeam'
 import ParticipantsComments from '../components/events-single/ParticipantsComments'
 import RegisterEvent from '../components/events-single/RegisterEvent'
 import NewComment from '../components/Comments/NewComment'
-import Image from 'next/image'
 import MobileLinkks from '../components/events-single/MobileLinkks'
 
 

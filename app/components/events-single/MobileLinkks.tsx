@@ -47,12 +47,12 @@ function MobileLinkks() {
   ];
 
   return (
-    <div className="bg-white rounded-2xl lg:px-16 py-4 flex items-center gap-3 justify-between px-8 shadow-custom-shadow my-14 lg:hidden mx-4 lg:mx-0">
+    <div className="bg-white rounded-2xl lg:px-16 py-4 flex items-center gap-2 justify-between px-3 shadow-custom-shadow my-14 lg:hidden mx-4 lg:mx-0">
       {links.map((link, index) => (
         <Link
           key={index}
           href={link.href}
-          className="text-dark text-sm flex flex-col items-center gap-1"
+          className="text-dark text-xs flex flex-col items-center gap-1"
         >
           <Image
             src={link.icon}
