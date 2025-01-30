@@ -6,7 +6,7 @@ function Consultation() {
   return (
     <div className="relative">
       {/* Background Div */}
-      <div className="bg-did/35 absolute bottom-0 right-0 w-full h-full z-30 h-fit  "></div>
+      <div className="bg-did/35 absolute bottom-0 right-0 w-full h-full z-30 "></div>
 
       {/* Image */}
       <div className="absolute z-20 w-full">
