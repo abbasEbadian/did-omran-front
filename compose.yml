@@ -1,0 +1,12 @@
+name: 'didomran'
+
+services:
+  web: 
+    build: .
+    volumes:
+      - type: bind
+        source: .
+        target: /app
+        read_only: true
+    ports:
+      - "3000:3000"
