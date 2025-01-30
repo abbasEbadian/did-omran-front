@@ -12,8 +12,8 @@ function MyTiketsBox() {
         width={150}
         height={150} />
         <div className="flex flex-col items-start px-4 border-s-2 border-dashed border-s-secondary700 gap-1 py-5">
-            <span className="text-did text-2xl font-semibold">تیک های من</span>
-            <Link href="#" className="text-secondary text-sm font-medium">تیکت های ثبت شده</Link>
+            <span className="text-did text-2xl font-semibold">تیکت‌های من</span>
+            <Link href="#" className="text-secondary text-sm font-medium">تیکت‌های ثبت شده</Link>
         </div>
     </div>
     </>

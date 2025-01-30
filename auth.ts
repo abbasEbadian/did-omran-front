@@ -13,7 +13,7 @@ const setToken = async (token: string) => {
 };
 const getToken = async () => {
     const cookieStore = await cookies();
-    return cookieStore.get("token");
+    return cookieStore.get("token")?.value;
 };
 
 export { getToken, setToken };

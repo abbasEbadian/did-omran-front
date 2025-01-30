@@ -3,20 +3,15 @@ import { build_url } from "..";
 
 export const verify = async ({ mobile, otp }: { mobile: string, otp: string }) => {
     
-    const response = await fetch(build_url("/auth/verify/"), {
+    const response = await _fetch(build_url("/auth/verify/"), {
         method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
         body: JSON.stringify({ mobile, otp }),
     });
-    debugger
-    if (!response.ok && response.status !== 400) {
+    if (!response.result || response?.result !== 'ok') {
         return {
             result: "fail",
-            message: "خطا در ارتباط با سرور",
+            message: response?.message || "خطا در ارتباط با سرور",
         };
     }
-    const data = await response.json();
-    return data;
+    return response;
 };

@@ -5,6 +5,7 @@ import { _fetch } from "@/utils/fetch";
 import { login } from "@/api";
 import { toaster } from "@/utils/toaster";
 import { redirect } from "next/navigation";
+import { FormButton } from "../FormButton";
 
 function Login() {
     const [mobile, setMobile] = React.useState<string>("");
@@ -33,12 +34,11 @@ function Login() {
                             value={mobile}
                             setValue={setMobile}
                         />
-                        <button
-                            type="submit"
+                        <FormButton
                             className="w-full px-4 py-3 bg-did text-white rounded-2xl hover:bg-did/90 transition"
                         >
                             تایید و ادامه
-                        </button>
+                        </FormButton>
                     </form>
                 </div>
             </div>

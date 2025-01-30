@@ -6,6 +6,8 @@ import { login } from "@/api";
 import { toaster } from "@/utils/toaster";
 import { redirect, useSearchParams } from "next/navigation";
 import { verify } from "@/api/auth/verify";
+import { setToken } from "@/auth";
+import { FormButton } from "../FormButton";
 
 function OTP() {
     const searchParams = useSearchParams();
@@ -25,7 +27,9 @@ function OTP() {
         event.stopPropagation();
         const result = await verify({ mobile, otp });
         toaster(result);
-        if (result.result === "success") {
+        debugger
+        if (result.result === "ok") {
+            await setToken(result.access);
             redirect("/dashboard");
         }
     };
@@ -47,12 +51,11 @@ function OTP() {
                         <button className="text-gray-400 mb-6 mt-1 text-end w-full" onClick={resend}>
                             ارسال مجدد
                         </button>
-                        <button
-                            type="submit"
+                        <FormButton
                             className="w-full px-4 py-3 bg-did text-white rounded-2xl hover:bg-did/90 transition"
                         >
                             تایید و ادامه
-                        </button>
+                        </FormButton>
                     </form>
                 </div>
             </div>
