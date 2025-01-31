@@ -14,7 +14,7 @@ export default function AuthLayout({
                     alt="LogoLogin Img"
                     height={420}
                     width={420}
-                    className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2"
+                    className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 xl:w-100 w-60 h-60"
                 />
             </div>
 

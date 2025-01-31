@@ -1,17 +1,17 @@
 import { getToken } from "@/auth";
 
-export async function _fetch(url: string, options: RequestInit = {}) {
+export async function _fetch(url: string, options: RequestInit = {}, isMedia = false) {
     const token = await getToken();
     
     const headers = {
-        "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
+        ...(!isMedia? {'Content-Type':'application/json'}: {}),
         ...options.headers,
     };
-
+    
     console.log("Request:", url, options);
     try {
-        const _response = await fetch(url, { headers, cache: 'force-cache', ...options});
+        const _response = await fetch(url, { cache: 'force-cache', ...options, headers});
         const response = await _response.json();
         console.log(response);
         

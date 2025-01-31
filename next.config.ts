@@ -1,9 +1,15 @@
 import type { NextConfig } from "next";
-const withImages = require('next-images');
+const withImages = require("next-images");
 
-const nextConfig: NextConfig = withImages({
-  /* config options here */
-});
+const nextConfig: NextConfig = {
+    images: {
+        remotePatterns: [
+            {
+                protocol: "http",
+                hostname: "localhost",
+            },
+        ],
+    },
+};
 
-export default nextConfig;
-  
+export default withImages(nextConfig);

@@ -1,16 +1,15 @@
 import { _fetch } from "@/utils/fetch";
 import { build_url } from "..";
-
-export const getUser = async () => {
+export const updateUser = async (formdata: any) => {
+    console.log({formdata});
+    debugger
     const response = await _fetch(build_url("/users/me/"), {
-        method: "GET",
+        method: "PATCH",
         cache: 'no-cache',
-        next: {
-            tags: ['profile']
-        }
-    });
+        body: formdata, 
+    }, true);
     if (!response.result || response?.result !== 'ok') {
         return undefined
     }
-    return response.data;
-};
+    return response;
+}

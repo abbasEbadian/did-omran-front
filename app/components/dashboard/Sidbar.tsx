@@ -18,11 +18,11 @@ async function Sidebar() {
                         داشبورد
                     </span>
                     <Image
-                        src={profile2}
+                        src={user.avatar ?? profile2}
                         alt="profile2 Img"
-                        height={70}
-                        width={70}
-                        className="w-ful l object-cover rounded-full"
+                        height={1024}
+                        width={1024}
+                        className="object-cover rounded-full w-20 h-20"
                     />
                     <span className="text-dark text-xl">
                         {user.full_name || 'کاربر مهندس'}

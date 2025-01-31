@@ -1,6 +1,4 @@
 
-import Image from "next/image"
-import Profile from '@/public/img/profile2.jpg' 
 import IntroOnlineTest from "@/app/components/online-test/IntroOnlineTest"
 import Timer from "@/app/components/online-test/Timer"
 import OnlineExam from "../components/online-test/OnlineExam"

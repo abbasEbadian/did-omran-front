@@ -3,10 +3,17 @@ import React, { ComponentProps, useState } from "react";
 
 type Props = ComponentProps<"input"> & {
     label: string;
-    setValue: React.Dispatch<React.SetStateAction<string>>
+    error?: string;
+    setValue: React.Dispatch<React.SetStateAction<string>>;
 };
 
-const FloatingLabelInput = ({ label, value, setValue,  ...props }: Props) => {
+const FloatingLabelInput = ({
+    label,
+    value,
+    setValue,
+    error,
+    ...props
+}: Props) => {
     const [isFocused, setIsFocused] = useState<boolean>(false);
 
     const handleFocus = () => {
@@ -31,7 +38,11 @@ const FloatingLabelInput = ({ label, value, setValue,  ...props }: Props) => {
                 onChange={handleChange}
                 onFocus={handleFocus}
                 onBlur={handleBlur}
-                className={cn("w-full px-3 py-3 border border-did/30 rounded-2xl focus:outline-none focus:border-did/50 text-black", props.className)}
+                className={cn(
+                    "w-full px-3 py-3 border border-did/30 rounded-2xl focus:outline-none focus:border-did/50 text-black",
+                    props.className,
+                    error && "border-red-500"
+                )}
                 {...props}
             />
             <label
@@ -43,6 +54,11 @@ const FloatingLabelInput = ({ label, value, setValue,  ...props }: Props) => {
             >
                 {label}
             </label>
+            {error && (
+                <small className="text-xs text-red-500 absolute top-[110%] start-0 transition">
+                    {error}
+                </small>
+            )}
         </div>
     );
 };
