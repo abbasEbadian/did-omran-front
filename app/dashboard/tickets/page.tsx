@@ -16,7 +16,7 @@ function page() {
       <AccordionTickets/>
       <div className="flex items-center justify-start gap-1 my-8">
           <span className="text-accent text-sm font-semibold">مشکلی دیگری دارید؟  اقدام به ثبت تیکت جدید نمائید:</span>
-          <Link href="#" className="bg-blue700 rounded-2xl px-5 py-2 flex items-center gap-2 text-white">
+          <Link href="/dashboard/tickets/new" className="bg-blue700 rounded-2xl px-5 py-2 flex items-center gap-2 text-white">
               <Image
               src={IoAddSharp}
               alt="BsFacebook Img"

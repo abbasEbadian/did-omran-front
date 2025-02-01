@@ -1,7 +1,6 @@
 import { getUser } from "@/api/user";
 import Sidebar from "@/app/components/dashboard/Sidbar";
 import Header from "@/app/components/header/Header";
-import { redirect } from "next/navigation";
 
 export default async function DashboardLayout({
     children,
@@ -9,8 +8,8 @@ export default async function DashboardLayout({
     children: React.ReactNode;
 }>) {
     const user = await getUser();
-    if (!user) redirect("/auth");
-
+    console.log({user});
+    
     return (
         <>
             <Header />

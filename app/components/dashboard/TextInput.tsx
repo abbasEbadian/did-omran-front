@@ -11,7 +11,7 @@ const TextInput: React.FC<Props> = ({ className, ...rest }) => {
             <input
                 {...rest}
                 className={cn(
-                    "w-full px-4 py-3 bg-blue500 placeholder:text-did placeholder:text-xs rounded-2xl text-secondary focus:outline-none focus:border-blue-500",
+                    "h-12 w-full px-4 py-3 bg-blue500 placeholder:text-did/50 placeholder:text-xs rounded-2xl text-secondary focus:outline-none focus:border-blue-500",
                     className
                 )}
             />

@@ -7,7 +7,7 @@ function TicketsTitle() {
     <>
     <div className="flex items-center justify-between border-b-2 border-b-secondary700 border-dashed pb-3 ">
         <span className="text-secondary text-xl">ارسال تیکت جدید</span>
-        <Link href="#" className="bg-blue rounded-2xl px-5 py-2 flex items-center gap-2 text-white">
+        <Link href="/dashboard/tickets" className="bg-blue rounded-2xl px-5 py-2 flex items-center gap-2 text-white">
             <Image
             src={BsBoxSeam}
             alt="BsFacebook Img"
