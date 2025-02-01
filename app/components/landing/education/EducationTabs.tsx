@@ -16,14 +16,14 @@ const EducationTabs = () => {
   return (
     <div className="p-4">
       {/* Tab Buttons (Horizontal) */}
-      <div className="flex items-center justify-center">
+      <div className="flex lg:items-center justify-center lg:flex-row flex-col">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`relative px-4 py-2 ${
+            className={`relative px-4 py-2 text-sm ${
               activeTab === tab.id
-                ? 'text-did font-semibold'
+                ? 'text-did font-semibold bg-did/15 lg:bg-none rounded-e-lg'
                 : 'text-secondary hover:text-did transition-colors duration-200'
             } focus:outline-none`}
           >

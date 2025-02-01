@@ -1,4 +1,4 @@
-import Header from "@/app/components/header/Header";
+
 import Intro from "@/app/components/landing/intro/Intro";
 import OnlineExam from "@/app/components/landing/online-exam/OnlineExam";
 import Comments from "@/app/components/Comments/Comments";
@@ -15,7 +15,7 @@ export default async function Home() {
     
     return (
         <>
-            <Header />
+            
             <main className="flex flex-col gap-8">
                 <Intro />
                 <CaptionMain />
