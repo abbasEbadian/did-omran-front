@@ -4,7 +4,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
-import EducationItems from '@/app/components/landing/education/EducationItems'
+import EducationItems from '@/app/components/landing/education/EducationItems';
+import { useRef, useState } from 'react'; // برای استفاده از useRef و useState
+
 // نوع داده‌های آیتم‌ها
 interface Item {
   id: number;
@@ -14,27 +16,36 @@ interface Item {
 const EducationSlider: React.FC = () => {
   // داده‌های نمونه
   const items: Item[] = [
-    { id: 1 , content:<EducationItems/> },
-    { id: 2 , content:<EducationItems/> },
-    { id: 3 , content:<EducationItems/> },
-    { id: 4 , content:<EducationItems/> },
-    { id: 5 , content:<EducationItems/> },
+    { id: 1, content: <EducationItems /> },
+    { id: 2, content: <EducationItems /> },
+    { id: 3, content: <EducationItems /> },
+    { id: 4, content: <EducationItems /> },
+    { id: 5, content: <EducationItems /> },
   ];
 
+  // استفاده از useRef برای دسترسی به Swiper instance
+  const swiperRef = useRef<any>(null);
+  const [activeIndex, setActiveIndex] = useState(0); // برای ردیابی اسلاید فعال
+
+  // تابع برای رفتن به اسلاید خاص
+  const goToSlide = (index: number) => {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.slideTo(index); // رفتن به اسلاید مورد نظر
+      setActiveIndex(index); // به‌روزرسانی اسلاید فعال
+    }
+  };
+
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto px-4">
       <Swiper
-        modules={[Pagination]}
+        modules={[Navigation, Pagination]} // فعال‌سازی Navigation و Pagination
         spaceBetween={20} // فاصله بین آیتم‌ها
         slidesPerView={3} // تعداد آیتم‌ها در هر اسلاید
-       // navigation  دکمه‌های ناوبری (چپ و راست)
-        pagination={{
-          enabled: true,
-          clickable: true,
-          el: '.custom-pagination', // کلاس سفارشی برای pagination  
-        }}
+        navigation // فعال‌سازی دکمه‌های ناوبری (چپ و راست)
         loop={true} // اسلایدر لوپ شود
-         breakpoints={{
+        onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)} // به‌روزرسانی اسلاید فعال
+        onSwiper={(swiper) => (swiperRef.current = swiper)} // ذخیره Swiper instance
+        breakpoints={{
           // تنظیمات برای صفحات کوچک (موبایل)
           320: {
             slidesPerView: 1,
@@ -51,16 +62,25 @@ const EducationSlider: React.FC = () => {
       >
         {items.map((item) => (
           <SwiperSlide key={item.id}>
-            <div>
-              {item.content}
-            </div>
+            <div>{item.content}</div>
           </SwiperSlide>
         ))}
       </Swiper>
-        {/* Pagination سفارشی */}
-        <div className="custom-pagination items-center flex justify-center gap-1"></div>
+
+      {/* Slide Indicators (نشانگرهای اسلاید) */}
+      <div className="flex gap-2 justify-center">
+        {items.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+              index === activeIndex ? 'bg-did' : 'border border-secondary900'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
     </div>
-    
   );
 };
 

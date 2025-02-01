@@ -21,9 +21,9 @@ const EducationTabs = () => {
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`relative px-4 py-2 text-sm ${
+            className={`relative px-4 py-2 text-sm lg:text-base ${
               activeTab === tab.id
-                ? 'text-did font-semibold bg-did/15 lg:bg-none rounded-e-lg'
+                ? 'text-did font-semibold bg-did/15 lg:bg-transparent rounded-e-lg'
                 : 'text-secondary hover:text-did transition-colors duration-200'
             } focus:outline-none`}
           >

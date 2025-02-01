@@ -24,12 +24,12 @@ const FreeEducationSlider: React.FC = () => {
   ];
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto px-6">
       <Swiper
         modules={[Pagination]}
         spaceBetween={20} // فاصله بین آیتم‌ها
         slidesPerView={4} // تعداد آیتم‌ها در هر اسلاید
-       // navigation  دکمه‌های ناوبری (چپ و راست)
+        navigation 
         pagination={{
           clickable: true,
           el: '.custom-pagination', // کلاس سفارشی برای pagination
@@ -61,7 +61,7 @@ const FreeEducationSlider: React.FC = () => {
         ))}
       </Swiper>
          {/* Pagination سفارشی */}
-         <div className="custom-pagination flex justify-center gap-1"></div>
+         <div className="custom-pagination flex justify-center gap-1 mt-10"></div>
     </div>
     
   );

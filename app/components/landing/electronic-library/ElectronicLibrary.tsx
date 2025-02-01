@@ -8,7 +8,7 @@ function ElectronicLibrary() {
 
     <div className='relative my-12'>
         {/* تصویر کتابخوان */}
-        <div className="lg:absolute right-[130px] top-56 z-30">
+        <div className="lg:absolute right-[130px] bottom-[213px] z-30">
             <Image
              src={bibliophile}
              alt="Bibliophile Animation"
@@ -19,7 +19,7 @@ function ElectronicLibrary() {
              className='lg:w-full w-5/6 object-cover mx-auto'
                 />
         </div>
-        <div className="lg:relative hidden  ">
+        <div className="lg:relative hidden lg:block ">
             <div className="lg:absolute left-[91px] top-16">
                 <Image
                 src={ElectronicLibraryBg}
@@ -41,7 +41,7 @@ function ElectronicLibrary() {
                     <span className="text-dark text-3xl mb-4 font-bold">
                     کتابخانه الکترونیکی عمرانی
                     </span>
-                    <p className="text-base text-secondary mb-6 leading-relaxed font-semibold text-justify">
+                    <p className="text-base text-secondary mb-6 leading-relaxed font-medium text-justify">
                     خدمات کتابخانه مجازی آنلاین موسسه دیدعمران شامل تمامی آیین‌نامه داخلی (مباحث 22 گانه، راهنمای جوش، استاندارد 2800 و ...) و آیین‌نامه‌های بین‌المللی (ASCE7, ACI, AISC, JSCE, …) و نشریه‌های داخلی و خارجی (نشریه 543، IBS، FEMA و ...) است. تمامی مهندسین عمران و پژوهشگران در سراسر کشور این امکان را دارند تا از این کتابخانه در راستای آمادگی آزمون‌های نظام مهندسی نظارت-اجراء-محاسبات عمران، یادگیری و فعالیت پژوهشی خود استفاده نمایند.
                     </p>
                     <Link
