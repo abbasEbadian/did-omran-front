@@ -1,3 +1,5 @@
+export * from "./exam/types";
+
 export type User = {
     id: number;
     username: string;
@@ -9,4 +11,4 @@ export type User = {
     is_staff: boolean;
     date_joined: string;
     last_login: string;
-}
+};
