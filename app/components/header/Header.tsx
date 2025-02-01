@@ -40,7 +40,7 @@ async function Header() {
                                 کتاب های آموزشی
                             </Link>
                             <Link
-                                href="#"
+                                href="/exams/"
                                 className="text-dark text-sm hover:text-gray-900"
                             >
                                 آزمون ها
