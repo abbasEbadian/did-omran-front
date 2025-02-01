@@ -9,6 +9,8 @@ export const getUser = async () => {
             tags: ['profile']
         }
     });
+    console.log({response});
+    
     if (!response.result || response?.result !== 'ok') {
         return undefined
     }

@@ -82,7 +82,7 @@ function OTP() {
                         <button
                             className="text-gray-400 mb-6 mt-1 text-end w-full"
                             onClick={resend}
-                            disabled={isResendDisabled}
+                            // disabled={isResendDisabled}
                         >
                             {isResendDisabled
                                 ? `ارسال مجدد ${timer} ثانیه`

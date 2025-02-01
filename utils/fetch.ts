@@ -14,8 +14,10 @@ export async function _fetch(url: string, options: RequestInit = {}, isMedia = f
     console.log("Request:", url, options);
     try {
         const _response = await fetch(url, { cache: 'force-cache', ...options, headers});
+
         const response = await _response.json();
-        
+        console.log({response});
+
         if (_response.status === 401) {
             await (await cookies()).delete("token");
             window.location.href = "/auth";

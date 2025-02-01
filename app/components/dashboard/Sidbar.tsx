@@ -18,7 +18,7 @@ async function Sidebar() {
                         داشبورد
                     </span>
                     <Image
-                        src={user.avatar ?? profile2}
+                        src={user?.avatar ?? profile2}
                         alt="profile2 Img"
                         height={1024}
                         width={1024}

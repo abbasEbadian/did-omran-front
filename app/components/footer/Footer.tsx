@@ -12,7 +12,7 @@ import enamad from "@/public/img/enamad.png";
 import FooterBg from "@/public/img/footerBg.png";
 import { usePathname } from "next/navigation";
 
-const paths = ["online-exam", "auth"]
+const paths = ["online-exam", "auth", "dashboard"]
 function Footer() {
     const path = usePathname();
     for(let p of paths)

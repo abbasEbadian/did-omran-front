@@ -8,11 +8,14 @@ export default async function DashboardLayout({
     children: React.ReactNode;
 }>) {
     const user = await getUser();
-    console.log({user});
+    console.log(user);
+    
+    if(!user){
+        return null
+    }
     
     return (
         <>
-            <Header />
             <main className="bg-white100 py-9">
                 <div className="grid grid-cols-12 container mx-auto">
                     <aside className="col-span-3">
