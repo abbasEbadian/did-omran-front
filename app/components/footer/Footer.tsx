@@ -13,31 +13,28 @@ function Footer() {
   return (
     <>
 
-      <div className="relative mt-96">
+      <div className="relative mt-[500px]">
         <div className="absolute -bottom-20 w-full z-20">
         <Image
           src={FooterBg}
           alt="FooterBg"
           width={1432}
           height={66}
-          className="object-contain w-full"
+          className="object-contain w-full xl:translate-y-4"
         />
         </div>
-        {/* بخش گنبدی بالای فوتر */}
         <div
             className="absolute -top-40 left-0 w-full h-40 bg-did z-10"
             style={{
-              clipPath: 'ellipse(150% 100% at 50% 100%)', // ایجاد شکل گنبدی
+              clipPath: 'ellipse(150% 100% at 50% 100%)',
             }}
         ></div>
       </div>
       <div className="bg-gradient-to-b from-did to-[#023653] py-8">
 
         <div className="grid grid-cols-4 container mx-auto gap-8 px-4">
-          {/* Column 1: Logo, Address, Contact Button, Social Icons */}
           <div className="lg:col-span-1 col-span-4">
             <div className="flex flex-col gap-5">
-              {/* Logo and Address */}
               <div className="flex flex-col items-start gap-3">
                 <Link href="#" className="flex items-center gap-2 font-bold text-xl">
                   <Image src={LogoWhite} alt="DID Omran Logo" width={70} height={70} />
@@ -48,7 +45,6 @@ function Footer() {
                 </p>
               </div>
 
-              {/* Contact Button */}
               <Link
                 href="#"
                 className="flex items-center justify-between border border-white rounded-full ps-1 pe-4 py-1 hover:bg-white hover:text-did transition-all duration-300"
@@ -59,7 +55,6 @@ function Footer() {
                 <span className="text-white">تماس باما</span>
               </Link>
 
-              {/* Social Icons */}
               <div className="flex items-center justify-between">
                 <Link href="#">
                   <Image src={aparat} alt="Aparat" width={80} height={80} />
@@ -77,7 +72,6 @@ function Footer() {
             </div>
           </div>
 
-          {/* Column 2: About Us */}
           <div className="lg:col-span-2 col-span-4">
             <div className="flex flex-col items-start px-8 gap-5 mb-5">
               <span className="text-white font-bold text-xl">درباره ما</span>
@@ -86,7 +80,6 @@ function Footer() {
               </p>
             </div>
 
-            {/* Contact Info and Enamad */}
             <div className="flex items-center justify-between px-8">
               <div className="flex flex-col gap-8">
                 <div className="flex flex-col items-start gap-2">

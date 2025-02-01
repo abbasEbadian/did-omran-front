@@ -6,35 +6,63 @@
 
 
 :root {
-  --background: 255 255 255; /* #ffffff */
-  --foreground: 23 23 23; /* #171717 */
-  --did: 5 120 185; /* #0578B9 */
-  --did900: 4 93 144; /* #045D90 */
-  --did800: 130 166 203; /* #82A6CB */
-  --did700: 189 216 241; /* #BDD8F1 */
-  --blue: 41 71 169; /* #2947A9 */
-  --blue900: 18 18 224; /* #1212E0 */
-  --blue800: 18 84 224; /* #1254E0 */
-  --blue700: 93 135 224; /* #5D87E0 */
-  --blue600: 4 87 135; /* #045787 */
-  --blue500: 232 247 255; /* #E8F7FF */
-  --blue400: 216 226 235; /* #D8E2EB */
-  --blue300: 235 238 255; /* #EBEEFF */
-  --primary: 18 214 224; /* #12D6E0 */
-  --purple: 85 18 224; /* #5512E0 */
-  --purple100: 141 102 222; /* #8D66DE */
-  --dark: 33 33 33; /* #212121 */
-  --secondary: 89 89 89; /* #595959 */
-  --secondary900: 135 135 135; /* #878787 */
-  --secondary800: 176 176 176; /* #B0B0B0 */
-  --secondary700: 217 217 217; /* #D9D9D9 */
-  --secondary600: 235 235 235; /* #EBEBEB */
-  --accent: 244 78 119; /* #F44E77 */
-  --accent100: 239 184 200; /*#EFB8C8*/ 
-  --yellow: 255 188 71;/* #FFBC47 */ 
-  --white100:249 249 249; /*#F9F9F9*/ 
- 
+  --background: 255 255 255;
+  /* #ffffff */
+  --foreground: 23 23 23;
+  /* #171717 */
+  --did: 5 120 185;
+  /* #0578B9 */
+  --did900: 4 93 144;
+  /* #045D90 */
+  --did800: 130 166 203;
+  /* #82A6CB */
+  --did700: 189 216 241;
+  /* #BDD8F1 */
+  --blue: 41 71 169;
+  /* #2947A9 */
+  --blue900: 18 18 224;
+  /* #1212E0 */
+  --blue800: 18 84 224;
+  /* #1254E0 */
+  --blue700: 93 135 224;
+  /* #5D87E0 */
+  --blue600: 4 87 135;
+  /* #045787 */
+  --blue500: 232 247 255;
+  /* #E8F7FF */
+  --blue400: 216 226 235;
+  /* #D8E2EB */
+  --blue300: 235 238 255;
+  /* #EBEEFF */
+  --primary: 18 214 224;
+  /* #12D6E0 */
+  --purple: 85 18 224;
+  /* #5512E0 */
+  --purple100: 141 102 222;
+  /* #8D66DE */
+  --dark: 33 33 33;
+  /* #212121 */
+  --secondary: 89 89 89;
+  /* #595959 */
+  --secondary900: 135 135 135;
+  /* #878787 */
+  --secondary800: 176 176 176;
+  /* #B0B0B0 */
+  --secondary700: 217 217 217;
+  /* #D9D9D9 */
+  --secondary600: 235 235 235;
+  /* #EBEBEB */
+  --accent: 244 78 119;
+  /* #F44E77 */
+  --accent100: 239 184 200;
+  /*#EFB8C8*/
+  --yellow: 255 188 71;
+  /* #FFBC47 */
+  --white100: 249 249 249;
+  /*#F9F9F9*/
+
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #ffff;
@@ -46,17 +74,22 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+}
+
+html {
+  height: 100%;
 }
 
 
-  .custom-bullet {
-    @apply w-3 h-3 bg-white100 border border-secondary800 rounded-full transition-all duration-300 cursor-pointer;
-  }
-  .custom-bullet-active {
-    @apply bg-did;
-  }
-  html {
-    scroll-behavior: smooth;
-  }
+.custom-bullet {
+  @apply w-3 h-3 bg-white100 border border-secondary800 rounded-full transition-all duration-300 cursor-pointer;
+}
 
+.custom-bullet-active {
+  @apply bg-did;
+}
 
+html {
+  scroll-behavior: smooth;
+}

@@ -3,26 +3,20 @@ import MdTimer from "@/app/components/icons/MdTimer.svg";
 import FaUserGraduate from "@/app/components/icons/FaUserGraduate.svg";
 import BsTextIndentRight from "@/app/components/icons/BsTextIndentRight.svg";
 import Link from "next/link";
-import { ExamType } from "@/api/types";
 
-type Props = ExamType;
 
-const TestsBox = (props: Props) => {
+const TestsBoxSkeleton = () => {
     return (
         <>
             <div className="flex flex-col">
-                <Image
-                    src={props.image}
-                    alt={props.name}
-                    height={1024}
-                    width={1024}
-                    className="w-full object-cover rounded-t-2xl h-[247px]"
-                />
+                <div className="h-60">
+
+                </div>
 
                 <div className="bg-white rounded-b-2xl border border-did/10 px-4 py-2 pt-6">
                     <div className="flex items-center justify-between border-b-2 border-b-secondary700 border-dashed pb-4">
                         <span className="text-dark text-base">
-                            {props.name}
+                            test
                         </span>
                         <div className="flex items-center gap-1">
                             <span className="text-secondary800 text-sm">
@@ -49,7 +43,7 @@ const TestsBox = (props: Props) => {
                                     تعداد سوالات:
                                 </span>
                                 <span className="text-xs text-secondary">
-                                    {props.question_count}
+                                    2
                                 </span>
                             </div>
                             <div className="flex items-center gap-1">
@@ -64,12 +58,12 @@ const TestsBox = (props: Props) => {
                                     مدت زمان:
                                 </span>
                                 <span className="text-xs text-secondary">
-                                    {props.duration}دقیقه
+                                   2دقیقه
                                 </span>
                             </div>
                         </div>
                         <Link
-                            href={'/exams/' + props.id}
+                            href={'/exams/' }
                             className="text-white bg-did rounded-2xl text-sm px-6 py-3"
                         >
                             شروع آزمون
@@ -81,4 +75,4 @@ const TestsBox = (props: Props) => {
     );
 };
 
-export default TestsBox;
+export default TestsBoxSkeleton;

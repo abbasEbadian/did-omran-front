@@ -1,16 +1,12 @@
 "use client";
 import React, { useState } from 'react';
-import TotalCourses from './TotalCourses';
 
 function Tabs() {
-  // State برای مدیریت تب فعال
   const [activeTab, setActiveTab] = useState(0);
 
-  // داده‌های نمونه برای تب‌ها
   const tabsData = [
     {
       label: ' همه دوره ها',
-      content: <TotalCourses/>,
       bgColor: 'bg-blue-100', 
     },
     {

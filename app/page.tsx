@@ -26,7 +26,6 @@ export default async function Home() {
                 <ElectronicLibrary />
                 <Comments />
             </main>
-            <Footer />
         </>
     );
 }
