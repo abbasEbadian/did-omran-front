@@ -21,20 +21,20 @@ function UserComments() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col lg:gap-8 gap-6 mx-6">
       {/* Title and Description */}
-      <div className="flex flex-col items-start gap-3">
-        <span className="text-2xl text-dark font-bold">
+      <div className="flex flex-col lg:items-start gap-3">
+        <span className="text-2xl text-dark font-bold text-center lg:text-start">
           نظرات دانشجویان
         </span>
-        <p className="text-secondary text-sm">
+        <p className="text-secondary text-sm text-center">
           با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
         </p>
       </div>
 
       {/* User Comment */}
-      <div className="flex flex-col items-start gap-3">
-        <div>
+      <div className="flex flex-col items-start  gap-3">
+        <div className=''> 
           <Image
             src={Slash}
             alt="User Check Img"
@@ -42,7 +42,7 @@ function UserComments() {
             height={38}
           />
         </div>
-        <p className="text-secondary900 text-sm h-14">
+        <p className="text-secondary900 text-justify text-sm h-14">
           {userComments[activeIndex].comment}
         </p>
         <span className="text-secondary800 text-xl">
