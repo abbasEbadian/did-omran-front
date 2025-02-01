@@ -65,7 +65,7 @@ function Footer() {
 
                             <Link
                                 href="#"
-                                className="flex items-center justify-between border border-white rounded-full ps-1 pe-4 py-1 hover:bg-white hover:text-did transition-all duration-300"
+                                className="flex items-center justify-between border border-white rounded-full ps-1 pe-4 py-1 hover:bg-did/45 hover:text-blue700/90 transition-all duration-300"
                             >
                                 <div className="text-white bg-blue700 text-sm p-3 rounded-full">
                                     <Image
@@ -135,29 +135,30 @@ function Footer() {
                         <div className="flex items-center justify-between px-8">
                             <div className="flex flex-col gap-8">
                                 <div className="flex flex-col items-start gap-2">
-                                    <span className="text-white text-base">
+                                    <span className="text-white font-bold text-base">
                                         تلفن تماس
                                     </span>
-                                    <span className="text-white text-xl font-bold">
+                                    <span className="text-white text-sm hover:text-blue700 transition-all duration-300">
                                         021-28429396
                                     </span>
                                 </div>
                                 <div className="flex flex-col items-start gap-2">
-                                    <span className="text-white text-base">
+                                    <span className="text-white font-bold text-base">
                                         ایمیل ارتباطی
                                     </span>
-                                    <span className="text-white text-xl font-bold">
+                                    <span className="text-white text-sm hover:text-blue700 transition-all duration-300">
                                         didomran@gmail.com
                                     </span>
                                 </div>
                             </div>
                             <div>
-                                <Link href="#">
+                                <Link href="#" className="">
                                     <Image
                                         src={enamad}
                                         alt="Enamad"
                                         width={107}
                                         height={117}
+                                        className="bg-white rounded-2xl p-4 object-cover w-full"
                                     />
                                 </Link>
                             </div>
@@ -167,7 +168,7 @@ function Footer() {
                     {/* Column 3: Useful Links */}
                     <div className="lg:col-span-1 col-span-4">
                         <div className="flex flex-col items-center gap-5">
-                            <span className="text-white font-bold text-xl">
+                            <span className="text-white font-bold text-base">
                                 لینک های مفید
                             </span>
                             <div className="flex items-start flex-col gap-4">
