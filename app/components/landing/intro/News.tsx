@@ -55,7 +55,7 @@ function NewsSlider() {
         {/* Text Content */}
         <div className="flex flex-col gap-4 w-full md:w-2/3">
           {/* News Tag */}
-          <div className="bg-did rounded-xl px-4 py-2 inline-block me-auto min-w-24 text-center">
+          <div className="bg-blue700 rounded-xl px-4 py-2 inline-block me-auto min-w-24 text-center">
             <span className="text-base text-white">{newsItems[activeIndex].tag}</span>
           </div>
 
@@ -82,7 +82,8 @@ function NewsSlider() {
             src={ChevronRight}
             alt={"ChevronRight"}
             width={24}
-            height={24  }
+            height={24 }
+            className=''
           />{/* استفاده از آیکون قبلی */}
         </button>
         <button
@@ -94,7 +95,8 @@ function NewsSlider() {
             src={ChevronLeft}
             alt={"ChevronLeft"}
             width={24}
-            height={24  }
+            height={24}
+            className='text-did'
           /> {/* استفاده از آیکون بعدی */}
         </button>
       </div>

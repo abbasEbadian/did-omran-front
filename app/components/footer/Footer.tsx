@@ -13,8 +13,8 @@ function Footer() {
   return (
     <>
 
-      <div className="relative mt-[500px]">
-        <div className="absolute -bottom-20 w-full z-20">
+      <div className="relative lg:mt-96 mt-52">
+        <div className="absolute -bottom-20 w-full z-20 hidden lg:block">
         <Image
           src={FooterBg}
           alt="FooterBg"
@@ -35,9 +35,10 @@ function Footer() {
         <div className="grid grid-cols-4 container mx-auto gap-8 px-4">
           <div className="lg:col-span-1 col-span-4">
             <div className="flex flex-col gap-5">
-              <div className="flex flex-col items-start gap-3">
-                <Link href="#" className="flex items-center gap-2 font-bold text-xl">
-                  <Image src={LogoWhite} alt="DID Omran Logo" width={70} height={70} />
+              {/* Logo and Address */}
+              <div className="flex flex-col lg:items-start items-center gap-3">
+                <Link href="#" className="flex items-center gap-2 font-bold whitespace-nowrap text-2xl">
+                  <Image src={LogoWhite} alt="DID Omran Logo" width={70} height={70}  className='w-full object-cover'/>
                   دیــد عــمران
                 </Link>
                 <p className="text-white text-sm">

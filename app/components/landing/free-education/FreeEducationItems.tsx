@@ -1,19 +1,19 @@
 import Image from 'next/image'
 import star from '@/app/components/icons/star.svg'
 import eye from '@/app/components/icons/eye.svg'
-import FreeImg from '@/public/img/freeimg.png'
+import FreeImg from '@/public/img/tests.jpg'
 import profile from '@/public/img/profile.png'
 import Link from 'next/link'
 
 function FreeEducationItems() {
   return (
     <>
-    <div className="flex flex-col bg-white shadow-custom-shadow rounded-2xl">
+    <div className="flex flex-col bg-white shadow-custom-shadow rounded-2xl border border-did/10">
        
         <Image
             src={FreeImg}
             alt="Consultation Img"
-            height={305}className="w-full object-cover" />
+            height={305}className="w-full object-cover rounded-t-2xl" />
     
         <div className="flex flex-col px-4 py-3 gap-4">
             <span className="text-dark text-sm">آموزش پلاگین Retouch4me در فتوشاپ، روتوش چهره در ۷ ثانیه</span>

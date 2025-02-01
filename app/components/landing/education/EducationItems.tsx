@@ -5,7 +5,6 @@ import MdAccessTime from '@/app/components/icons/MdAccessTime.svg'
 import banner from '@/public/img/banner1.png'
 import Price from '@/app/components/price'
 import Link from 'next/link'
-import ScoreStarFreeFilm from '../../free-education-single/ScoreStarFreeFilm'
 import Score from '../../Score'
 
 function EducationItems() {
