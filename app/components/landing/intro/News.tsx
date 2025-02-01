@@ -1,6 +1,7 @@
 "use client";
 import Image from 'next/image';
-import Link from 'next/link';
+import ChevronLeft from '@/app/components/icons/chevron-left.svg';
+import ChevronRight from '@/app/components/icons/chevron-right.svg';
 import { useEffect, useState } from 'react';
 import NewsImg1 from '@/public/img/news.png';
 import NewsImg2 from '@/public/img/news2.jpeg';
@@ -70,21 +71,31 @@ function NewsSlider() {
         </div>
       </div>
 
-      {/* Navigation Buttons */}
-      <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 flex justify-between ps-60">
+  {/* Navigation Buttons */}
+  <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 flex justify-between px-4">
         <button
           onClick={goToPreviousSlide}
-          className="rounded-full p-2  text-secondary900 transition-colors duration-300"
+          className="hover:text-secondary900 transition-colors duration-300"
           aria-label="Previous Slide"
         >
-          &lt;
+          <Image
+            src={ChevronRight}
+            alt={"ChevronRight"}
+            width={24}
+            height={24  }
+          />{/* استفاده از آیکون قبلی */}
         </button>
         <button
           onClick={goToNextSlide}
-          className="rounded-full p-2  text-secondary900 transition-colors duration-300"
+          className="hover:text-secondary900 transition-colors duration-300"
           aria-label="Next Slide"
         >
-          &gt;
+          <Image
+            src={ChevronLeft}
+            alt={"ChevronLeft"}
+            width={24}
+            height={24  }
+          /> {/* استفاده از آیکون بعدی */}
         </button>
       </div>
 
@@ -95,7 +106,7 @@ function NewsSlider() {
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-              index === activeIndex ? 'bg-did' : 'bg-gray-300'
+              index === activeIndex ? 'bg-did' : ' border border-secondary900'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />

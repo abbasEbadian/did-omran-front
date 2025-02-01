@@ -9,10 +9,10 @@ function Comments() {
 
        <div className="container mx-auto">
         <div className="grid grid-cols-2">
-            <div className="col-span-1">
+            <div className="lg:col-span-1 col-span-2">
                 <AddComments/>
             </div>
-            <div className="col-span-1">
+            <div className="lg:col-span-1 col-span-2">
               <UserComments/>
             </div>
 

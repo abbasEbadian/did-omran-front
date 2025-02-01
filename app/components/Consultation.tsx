@@ -4,33 +4,35 @@ import ConsultationImg from '@/public/img/Consultation-img.png';
 
 function Consultation() {
   return (
-    <div className="relative">
-      {/* Background Div */}
-      <div className="bg-did/35 absolute bottom-0 right-0 w-full h-full z-30 "></div>
-
+    <div className="relative h-[130px] rounded-2xl overflow-hidden mb-4 py-8">
       {/* Image */}
-      <div className="absolute z-20 w-full">
+      <div className="absolute inset-0 z-10">
         <Image
           src={ConsultationImg}
           alt="Consultation Img"
-          width={200} // Add width
-          height={130}
-          className='object-cover w-full'
+            width={300}
+            height={130}
+            placeholder="blur"  
         />
       </div>
 
+      {/* Background Color Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-did/95 to-dark/0 z-20"></div>
+
       {/* Content */}
-      <div className="flex flex-col items-center justify-center z-50 relative">
-        <span className="text-center text-white font-semibold">
+      <div className="absolute inset-0 z-30 flex flex-col items-center justify-center text-white text-center p-4">
+        <span className="font-semibold text-sm">
           لورم ایپسوم متن
         </span>
-        <span className="text-center text-white text-sm">
+        <span className="text-xs mt-2">
           لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
         </span>
-        <Link href="#"
-          className="bg-white text-sm text-did rounded-2xl px-4 py-2 mt-4">
-            ثبت نام
-
+        <Link
+          href="#"
+          className="bg-white text-did text-sm md:text-base rounded-2xl px-6 py-2 mt-4 hover:bg-did hover:text-white transition-colors duration-300"
+          aria-label="ثبت نام"
+        >
+          ثبت نام
         </Link>
       </div>
     </div>
