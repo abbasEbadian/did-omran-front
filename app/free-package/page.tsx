@@ -56,7 +56,6 @@ function page() {
                                 >
                                 ثبت و دریافت ایمیل
                             </button>
-                            
                         </form>
                     </div>
                     <div className="lg:col-span-1 col-span-2 flex justify-center">
