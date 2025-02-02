@@ -28,7 +28,7 @@ function Counter() {
 
 // کامپوننت TimeBox برای نمایش هر بخش از زمان
 interface TimeBoxProps {
-  value: number;
+  value: number;  
   label: string;
 }
 
