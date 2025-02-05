@@ -6,6 +6,7 @@ import IoPlayOutline from '@/app/components/icons/IoPlayOutline.svg';
 import BsFileEarmarkArrowDown from '@/app/components/icons/BsFileEarmarkArrowDown.svg';
 import Clock from '@/app/components/icons/clock.svg';
 import Download from '@/app/components/icons/download.svg';
+import { CourseType } from '@/api/types';
 
 // نوع‌های TypeScript برای هر بخش اکوردیون
 interface Session {
@@ -15,27 +16,16 @@ interface Session {
   file?: string;
 }
 
-function ContentCourse() {
+function ContentCourse(course: CourseType) {
   // State برای مدیریت باز و بسته شدن هر بخش اکوردیون
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   // داده‌های نمونه برای بخش‌های اکوردیون
-  const sessions: Session[] = [
-    {
-      title: 'جلسه اول - مقدمه',
-      duration: '1 ساعت و 5 دقیقه',
-      description: 'نصب و راه اندازی، آشنایی با محیط کار با واحدها، بررسی آرت بوردها و سیو کردن',
-      file: 'فایل آموزشی جلسه 01',
-    },
-    {
-      title: 'جلسه دوم - مبانی طراحی',
-      duration: '1 ساعت و 20 دقیقه',
-    },
-    {
-      title: 'جلسه سوم - ابزارهای پیشرفته',
-      duration: '1 ساعت و 30 دقیقه',
-    },
-  ];
+  let sessions = course.topics?.map(t => ({
+    title: t.name,
+    duration: `${Math.floor(t.duration / 60)} ساعت و ${t.duration % 60} دقیقه`,
+    description: t.title,
+  }));
 
   // تابع برای تغییر وضعیت باز و بسته شدن هر بخش
   const toggleAccordion = (index: number) => {
@@ -53,7 +43,7 @@ function ContentCourse() {
       </div>
 
       {/* بخش‌های اکوردیون */}
-      {sessions.map((session, index) => (
+      {sessions?.map((session, index) => (
         <div
           key={index}
           className={`${

@@ -4,15 +4,11 @@ import { useState } from 'react';
 import Image from 'next/image'
 import FaStar from '@/app/components/icons/garystar.svg'
 function ScoreStarFreeFilm() {
-  // State برای مدیریت امتیاز
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
 
-  // تابع برای ثبت امتیاز
   const handleRating = (newRating: number) => {
     setRating(newRating);
-    // در اینجا می‌توانید امتیاز را به سرور ارسال کنید یا در state کلی برنامه ذخیره کنید.
-    console.log(`امتیاز ثبت شده: ${newRating}`);
   };
   return (
     <>

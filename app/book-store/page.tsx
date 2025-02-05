@@ -1,19 +1,23 @@
-import React from 'react'
-import BookContent from '../components/book-store/BookContent'
+"use client";
 
-function page() {
-  return (
-    <>
-    <div className="container mx-auto grid grid-cols-4">
-        <div className="col-span-4 lg:col-span-1">
-        <BookContent/>
-        </div>
-        <div className="col-span-4 lg:col-span-1"></div>
-        <div className="col-span-4 lg:col-span-1"></div>
-        <div className="col-span-4 lg:col-span-1"></div>
-    </div>
-    </>
-  )
+import React from "react";
+import BookContent from "../components/book-store/BookContent";
+import { getBooks } from "@/api";
+import { BookType } from "@/api/book/types";
+import useSWR from "swr";
+import ListWithTabs from "../components/ListWithTabs";
+
+function Page() {
+    const { data, isLoading, error } = useSWR<BookType[]>("get-books", getBooks);
+    
+    return (
+        <ListWithTabs<BookType>
+            data={data || []}
+            isLoading={isLoading}
+            error={error}
+            render={(item: BookType) => <BookContent {...item} />}
+        />
+    );
 }
 
-export default page
+export default Page;

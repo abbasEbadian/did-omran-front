@@ -1,5 +1,5 @@
 import { cn } from "@/utils/cn";
-import React, { ComponentProps, useState } from "react";
+import React, { ComponentProps, useState, forwardRef } from "react";
 
 type Props = ComponentProps<"input"> & {
     label: string;
@@ -7,13 +7,14 @@ type Props = ComponentProps<"input"> & {
     setValue: React.Dispatch<React.SetStateAction<string>>;
 };
 
-const FloatingLabelInput = ({
-    label,
-    value,
-    setValue,
-    error,
-    ...props
-}: Props) => {
+const FloatingLabelInput = forwardRef<HTMLInputElement, Props>((
+    {
+        label,
+        value,
+        setValue,
+        error,
+        ...props
+    }: Props, ref) => {
     const [isFocused, setIsFocused] = useState<boolean>(false);
 
     const handleFocus = () => {
@@ -33,6 +34,7 @@ const FloatingLabelInput = ({
     return (
         <div className="relative mt-4">
             <input
+                autoFocus
                 type="text"
                 value={value}
                 onChange={handleChange}
@@ -61,6 +63,6 @@ const FloatingLabelInput = ({
             )}
         </div>
     );
-};
+});
 
 export default FloatingLabelInput;

@@ -1,12 +1,19 @@
+"use client";
 import MyTiketsBox from "@/app/components/dashboard/home/MyTiketsBox";
 import MyEventsBox from "../components/dashboard/home/MyEventsBox";
 import Notification from "../components/dashboard/Notification";
 import Image from "next/image";
 import BsEmojiFrown from "@/app/components/icons/BsEmojiFrown.svg";
 import Link from "next/link";
+import useSWR from "swr";
+import { getUser } from "@/api";
+import { convertToJalali } from "@/utils/jalali";
 
-async function page() {
+function page() {
+    const { data: user } = useSWR("get-user", getUser);
+    console.log(user);
     
+
     return (
         <>
             <div className="gap-4 flex flex-col">
@@ -21,14 +28,13 @@ async function page() {
                 <section>
                     <div className="bg-blue300 rounded-2xl px-5 py-3 flex items-center justify-between ">
                         <span className="text-did text-base font-semibold">
-                            اطلاعیه ها{" "}
+                            اطلاعیه ها
                         </span>
                         <button className="">
                             <span className="bg-did text-white px-2 rounded-md">
                                 2
                             </span>
                             <span className="text-secondary900 text-sm">
-                                {" "}
                                 اطلاعیه جدید خوانده نشده{" "}
                             </span>
                         </button>
@@ -36,18 +42,12 @@ async function page() {
                     <div className="border-b-2 border-b-secondary700 border-dashed w-full my-4 px-5"></div>
                     <Notification
                         title="موفقیت"
-                        message="عملیات با موفقیت انجام شد."
-                        date="۱۴۰۲/۰۷/۲۵"
+                        message="ورود به سیستم."
+                        date={convertToJalali(user?.last_login, true)}
                         type="success"
                     />
-                    <Notification
-                        title="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ"
-                        message="لطفاً قبل از ارسال تیکت، سوالات متداول را در ادامه ....."
-                        date="۱۴۰۲/۰۷/۲۵"
-                        type="warning"
-                    />
                 </section>
-                <section className="flex flex-col items-center gap-3 justify-center my-10">
+                {!user?.first_name && <section className="flex flex-col items-center gap-3 justify-center my-10">
                     <Image
                         src={BsEmojiFrown}
                         alt="star Img"
@@ -55,16 +55,15 @@ async function page() {
                         height={100}
                     />
                     <span className="text-secondary text-2xl font-medium">
-                        برای استفاده از پنل,مشخصات خود را تکمیل کنید
+                        لطفا مشخصات خود را تکمیل کنید
                     </span>
                     <Link
-                        href="#"
+                        href="/dashboard/profile"
                         className="text-white bg-did rounded-2xl px-6 py-3 text-sm font-medium"
                     >
-                        {" "}
                         ویرایش اطلاعات
                     </Link>
-                </section>
+                </section>}
             </div>
         </>
     );

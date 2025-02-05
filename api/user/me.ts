@@ -2,17 +2,15 @@ import { _fetch } from "@/utils/fetch";
 import { build_url } from "..";
 
 export const getUser = async () => {
-    const response = await _fetch(build_url("/users/me/"), {
+    const { result, data } = await _fetch(build_url("/users/me/"), {
         method: "GET",
-        cache: 'no-cache',
+        cache: "no-cache",
         next: {
-            tags: ['profile']
-        }
+            tags: ["profile"],
+        },
     });
-    console.log({response});
-    
-    if (!response.result || response?.result !== 'ok') {
-        return undefined
+    if (result !== "ok") {
+        return undefined;
     }
-    return response.data;
+    return data;
 };

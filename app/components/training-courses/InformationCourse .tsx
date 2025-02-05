@@ -6,21 +6,21 @@ import User1 from '@/public/img/user1.png';
 import User2 from '@/public/img/user2.png';
 import User3 from '@/public/img/user3.png';
 import TrainingCoursesInfo from './TrainingCoursesInfo';
+import { CourseType } from '@/api/types';
 
 // لیست اساتید و تصاویر مربوطه
-const instructors = [
-  { name: 'ارسطو اعتمادی', image: User1 },
-  { name: 'علی محمدی', image: User2 },
-  { name: 'زهرا حسینی', image: User3 },
-];
 
-function InformationCourse() {
+
+function InformationCourse(course: CourseType) {
   const [activeIndex, setActiveIndex] = useState(0);
-
+  const instructors = course.tutors.map(q => ({
+    name: q.name,
+    image: q.user.avatar
+  }))
   useEffect(() => {
     // تنظیم تایمر برای تغییر استاد هر ۵ ثانیه
     const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % instructors.length);
+      setActiveIndex((prevIndex) => (prevIndex + 1) % course.tutors.length);
     }, 5000);
 
     // پاک کردن تایمر هنگام از بین رفتن کامپوننت
@@ -60,7 +60,7 @@ function InformationCourse() {
       {/* بخش قیمت دوره */}
       <div className="flex items-center justify-center gap-2 my-4">
         <span className="text-secondary900 text-sm">مبلغ دوره:</span>
-        <span className="text-dark text-xl font-black">میلیون تومان 8</span>
+        <span className="text-dark text-xl font-black">{Number(course.final_price).toLocaleString('fa')} تومان</span>
       </div>
 
       {/* دکمه ثبت نام */}
@@ -73,7 +73,7 @@ function InformationCourse() {
       </Link>
 
       {/* بخش اطلاعات دوره */}
-      <TrainingCoursesInfo />
+      <TrainingCoursesInfo {...course}/>
     </div>
   );
 }

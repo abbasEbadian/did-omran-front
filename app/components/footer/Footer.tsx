@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import LogoWhite from "@/app/components/icons/logo-white.svg";
@@ -10,24 +8,27 @@ import aparat from "@/public/aparat1 copy 1.png";
 import Instagram from "@/public/Instagram.png";
 import enamad from "@/public/img/enamad.png";
 import FooterBg from "@/public/img/footerBg.png";
-import { usePathname } from "next/navigation";
+import { headers } from "next/headers";
 
-const paths = ["online-exam", "auth", "dashboard"]
-function Footer() {
-    const path = usePathname();
-    for(let p of paths)
-      if (path.indexOf(p) > -1) {
-          return null;
-      }
+const paths = ["/online-exam", "/auth", "/dashboard"];
+async function Footer() {
+    const headerList = await headers();
+    const pathname = headerList.get("x-path");
+
+    for (let p of paths)
+        if (pathname?.startsWith(p)) {
+            return null;
+        }
+
     return (
         <>
-            <div className="relative lg:mt-96 mt-52">
+            <div className="relative 2xl:mt-[900px] lg:mt-[600px] mt-[400px]">
                 <div className="absolute -bottom-20 w-full z-20 hidden lg:block">
                     <Image
                         src={FooterBg}
                         alt="FooterBg"
                         width={1432}
-                        height={66}
+                        height={1000}
                         className="object-contain w-full xl:translate-y-4"
                     />
                 </div>

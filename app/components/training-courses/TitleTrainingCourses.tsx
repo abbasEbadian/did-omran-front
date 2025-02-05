@@ -8,25 +8,18 @@ import CalendarCheck from '@/app/components/icons/calendar-check.png';
 import Star1 from '@/app/components/icons/star-1.svg';
 import StarFilled from '@/app/components/icons/HiStar.svg';
 import Banner1 from '@/public/img/banner1.png';
+import { CourseType } from '@/api/types';
 
-function TitleTrainingCourses() {
-  // State برای مدیریت امتیاز
-  const [rating, setRating] = useState(0);
+function TitleTrainingCourses(course: CourseType) {
+  const [rating, setRating] = useState(4);
   const [hoverRating, setHoverRating] = useState(0);
 
-  // تابع برای ثبت امتیاز
-  const handleRating = (newRating: number) => {
-    setRating(newRating);
-    // در اینجا می‌توانید امتیاز را به سرور ارسال کنید یا در state کلی برنامه ذخیره کنید.
-    console.log(`امتیاز ثبت شده: ${newRating}`);
-  };
-
-  // داده‌های نمونه برای جزئیات دوره
+  const duration = Math.ceil(course.topics.map(q => q.duration).reduce((a, b) => a + b, 0) / 60)
   const courseDetails = [
-    { icon: ListLeft, text: 'بیش از +35 جلسه' },
-    { icon: MdAlarm, text: 'بیش از 44 ساعت' },
-    { icon: UserMore, text: '1903 دانشجو' },
-    { icon: CalendarCheck, text: 'آخرین آپدیت: نوروز1403' },
+    { icon: ListLeft, text: `${course?.topics?.length}  جلسه`},
+    { icon: MdAlarm, text: `بیش از ${duration} ساعت` },
+    { icon: UserMore, text: '190 دانشجو' },
+    { icon: CalendarCheck, text: 'آخرین آپدیت:  بهمن1403' },
   ];
 
   return (
@@ -34,10 +27,10 @@ function TitleTrainingCourses() {
       {/* بخش عنوان و توضیحات دوره */}
       <div className="flex flex-col items-start gap-2">
         <span className="text-dark text-xl font-extrabold">
-          دوره جامع افتر افکت (مقدماتی ، پیشرفته و استادی)
+          {course.name}
         </span>
         <span className="text-secondary text-sm">
-          دوره جامع افتر افکت (مقدماتی ، پیشرفته و استادی)
+          {course.title}
         </span>
       </div>
 
@@ -63,9 +56,6 @@ function TitleTrainingCourses() {
             return (
               <button
                 key={index}
-                onClick={() => handleRating(starValue)}
-                onMouseEnter={() => setHoverRating(starValue)}
-                onMouseLeave={() => setHoverRating(0)}
                 className="focus:outline-none"
               >
                 <Image
@@ -84,11 +74,11 @@ function TitleTrainingCourses() {
 
       <div className="w-full rounded-2xl overflow-hidden">
         <Image
-          src={Banner1}
+          src={course.banner}
           alt="Course banner"
-          height={667}
-          width={775}
-          className="w-full h-auto object-cover"
+          height={1500}
+          width={1000}
+          className=" object-contain max-h-[500px]"
         />
       </div>
     </div>

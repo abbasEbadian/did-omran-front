@@ -1,10 +1,5 @@
 import Image, { StaticImageData } from 'next/image';
-import IoRibbonOutline from '@/app/components/icons/IoRibbonOutline.svg';
-import BsPuzzle from '@/app/components/icons/BsPuzzle.svg';
-import Grid4 from '@/app/components/icons/grid-4.svg';
-import MessageSquareLines from '@/app/components/icons/message-square-lines.svg';
-import ChartVertical from '@/app/components/icons/chart-vertical.svg';
-import Dna from '@/app/components/icons/dna.svg';
+import { CourseType } from '@/api/types';
 
 interface CourseFeature {
   icon: StaticImageData;
@@ -12,16 +7,13 @@ interface CourseFeature {
   value: string;
 }
 
-const TrainingCoursesInfo: React.FC = () => {
+const TrainingCoursesInfo = (course: CourseType) => {
+  const courseFeatures: CourseFeature[] = course.attributes.map(q => ({
+    icon: q.attribute.icon ,
+    label: q.attribute.name,
+    value: q.name
+  }))
 
-  const courseFeatures: CourseFeature[] = [
-    { icon: Dna, label: 'نوع دوره', value: 'مجازی و دانلودی' },
-    { icon: ChartVertical, label: 'سطح دوره', value: 'مجازی و دانلودی' },
-    { icon: MessageSquareLines, label: 'ارتباط مستقیم با مدرس', value: 'دارد' },
-    { icon: Grid4, label: 'جعبه ابزار همراه دوره', value: 'ندارد' },
-    { icon: BsPuzzle, label: 'تعداد تمرین', value: 'دارد' },
-    { icon: IoRibbonOutline, label: 'گواهی پایان دوره', value: 'بله' },
-  ];
 
   return (
     <div className="space-y-3">

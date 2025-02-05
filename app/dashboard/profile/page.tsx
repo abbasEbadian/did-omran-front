@@ -1,5 +1,5 @@
 "use client";
-import { User } from "@/api/types";
+import { UserType } from "@/api/types";
 import { getUser } from "@/api/user";
 import { updateUser } from "@/api/user/update";
 import TextInput from "@/app/components/dashboard/TextInput";
@@ -8,8 +8,10 @@ import { toaster } from "@/utils/toaster";
 import Image from "next/image";
 import React, { useCallback, useEffect, useState } from "react";
 import { z } from "zod";
-import { HashLoader } from "react-spinners";
 import { useRouter } from "next/navigation";
+import * as motion from "motion/react-client";
+import Head from "next/head";
+import { usePageTitle } from '@/app/hooks/usePageTitle';
 
 type Profile = {
     first_name: string | undefined;
@@ -21,7 +23,8 @@ type Profile = {
 };
 
 function page() {
-    const router = useRouter()
+    usePageTitle("پروفایل");
+    const router = useRouter();
     const [user, setUser] = useState<Profile | undefined>(undefined);
     const [errors, setErrors] = useState<Record<string, string>>({});
 
@@ -34,11 +37,14 @@ function page() {
 
     const submit = async (formData: FormData) => {
         const fd = new FormData();
-        fd.append("first_name", formData.get("first_name") as string);
-        fd.append("last_name", formData.get("last_name") as string);
-        fd.append("email", formData.get("email") as string);
-        fd.append("avatar", formData.get("avatar") as string);
-
+        debugger;
+        for (let f of ["first_name", "last_name", "email"])
+            if (formData.get(f)) fd.append(f, formData.get(f) as string);
+        if (
+            typeof formData.get("avatar") === "object" &&
+            (formData.get("avatar") as File).size !== 0
+        )
+            fd.append("avatar", formData.get("avatar") as string);
         const validationResult = userSchema.safeParse({
             first_name: formData.get("first_name"),
             last_name: formData.get("last_name"),
@@ -56,12 +62,14 @@ function page() {
             return;
         }
         const result = await updateUser(fd);
-        toaster(result);
-        getUserData();
-        router.refresh();
+        if (result) {
+            toaster(result);
+            getUserData();
+            router.refresh();
+        }
     };
     const getUserData = useCallback(async () => {
-        const user: User = await getUser();
+        const user: UserType = await getUser();
         setUser({
             first_name: user.first_name,
             last_name: user.last_name,
@@ -70,30 +78,32 @@ function page() {
             avatar: user.avatar,
         });
     }, []);
+
     useEffect(() => {
         getUserData();
     }, []);
 
-    if (!user)
-        return (
-            <div className="w-full h-full flex items-center justify-center">
-                <HashLoader />
-            </div>
-        );
-    console.log({
-        test:
-            user.avatar ??
-            (user.file ? URL.createObjectURL(user.file) : undefined) ??
-            "/img/profile2.jpg",
-    });
+    if (!user) return null;
 
     return (
         <>
-            <form action={submit}>
+            <Head>
+                <title>دیدعمران | پروفایل</title>
+            </Head>
+            <motion.form
+                action={submit}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+            >
                 <div className="grid grid-cols-2 gap-8">
                     <div className="col-span-2  py-4 ">
                         <div>
-                            <label htmlFor="files" className="flex justify-center items-center flex-col gap-4 cursor-pointer text-blue400">
+                            <label
+                                htmlFor="files"
+                                className="flex justify-center items-center flex-col gap-4 cursor-pointer text-did/60"
+                            >
                                 <Image
                                     src={
                                         (user.file
@@ -183,7 +193,7 @@ function page() {
                         </FormButton>
                     </div>
                 </div>
-            </form>
+            </motion.form>
         </>
     );
 }

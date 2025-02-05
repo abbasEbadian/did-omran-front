@@ -16,11 +16,6 @@ interface Item {
 const EducationSlider: React.FC = () => {
   // داده‌های نمونه
   const items: Item[] = [
-    { id: 1, content: <EducationItems /> },
-    { id: 2, content: <EducationItems /> },
-    { id: 3, content: <EducationItems /> },
-    { id: 4, content: <EducationItems /> },
-    { id: 5, content: <EducationItems /> },
   ];
 
   // استفاده از useRef برای دسترسی به Swiper instance

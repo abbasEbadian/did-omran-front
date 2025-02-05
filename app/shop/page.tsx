@@ -1,7 +1,7 @@
 import React from 'react'
 import IntroShop from '@/app/components/shop/IntroShop'
 import Features from '@/app/components/shop/Features'
-import Tabs from '@/app/components/shop/Tabs'
+import Tabs from '../components/shop/Tabs'
 
 function page() {
   return (

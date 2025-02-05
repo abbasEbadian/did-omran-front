@@ -1,14 +1,11 @@
-import React from 'react'
+import React from "react";
 
-function Price() {
-  return (
-    <>
-    <div className="flex items-center justify-between">
-        <span className="text-dark text-xl">779 هزار</span>
-        <span className="text-dark text-base"> تومان</span>
-    </div>
-    </>
-  )
+function Price({ amount }: { amount: number }) {
+    return (
+        <>
+            <small className="text-secondary">{Number(amount).toLocaleString()} تومان</small>
+        </>
+    );
 }
 
-export default Price
+export default Price;

@@ -3,13 +3,13 @@ import profile2 from "@/public/img/profile2.jpg";
 import Link from "next/link";
 import SidebarLinks from "./SidebarLinks";
 import { getUser } from "@/api/user";
-import { User } from "@/api/types";
+import { UserType } from "@/api/types";
 import { convertToJalali } from "@/utils/jalali";
 import React from "react";
 
 async function Sidebar() {
-    const user: User = await getUser();
-
+    const user: UserType = await getUser();
+    
     return (
         <>
             <div className=" h-screen bg-did/10 rounded-s-2xl py-4 mb-3">
@@ -25,7 +25,7 @@ async function Sidebar() {
                         className="object-cover rounded-full w-20 h-20"
                     />
                     <span className="text-dark text-xl">
-                        {user.full_name || 'کاربر مهندس'}
+                        {user.full_name || "کاربر مهندس"}
                     </span>
                     <Link
                         href="/dashboard/profile"

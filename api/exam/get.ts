@@ -2,30 +2,23 @@ import { _fetch } from "@/utils/fetch";
 import { build_url } from "..";
 
 export const getExams = async () => {
-    const response = await _fetch(
-        build_url("/exams/"),
-        {
-            method: "GET",
-        },
-        true
-    );
-    if (!response.result || response?.result !== "ok") {
+    const { result, data } = await _fetch(build_url("/exams/"), {
+        method: "GET",
+        cache: "no-cache",
+    });
+    if (result !== "ok") {
         return undefined;
     }
-    return response;
+    return data;
 };
 
 export const getExam = async (id: number) => {
-    const response = await _fetch(
-        build_url("/exams/" + id),
-        {
-            method: "GET",
-            cache: "no-cache"
-        },
-        true
-    );
+    const response = await _fetch(build_url("/exams/" + id), {
+        method: "GET",
+        cache: "no-cache",
+    });
     if (!response.result || response?.result !== "ok") {
         return undefined;
     }
-    return response;
+    return response.data;
 };

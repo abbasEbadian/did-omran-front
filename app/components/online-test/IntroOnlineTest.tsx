@@ -1,36 +1,28 @@
 import Image from "next/image";
 import Profile from "@/public/img/profile2.jpg";
-import { ExamType, User } from "@/api/types";
+import { ExamType, UserType } from "@/api/types";
 
-const IntroOnlineTest = ({ exam, user }: { exam: ExamType; user: User }) => {
+const IntroOnlineTest = ({ exam, user }: { exam: ExamType; user: UserType }) => {
     return (
         <>
-            <section className="flex items-end gap-3">
-                <div className="flex items-center gap-4 border-b-2 border-b-secondary700 border-dashed grow pb-2">
+            <section className="flex items-end gap-3 flex-col">
+                <div className="flex items-center gap-4 border-b-2 border-b-secondary700 border-dashed grow pb-2 w-full justify-between">
                     <Image
                         src={user?.avatar ?? Profile}
                         alt="Profile"
-                        height={54}
-                        width={54}
-                        className="object-cover rounded-full"
+                        height={1024}
+                        width={1024}
+                        className="object-cover rounded-full w-16 h-16 border border-slate-200"
                     />
-                    <div className="flex-col items-start gap-2 flex">
-                        <div className="flex items-start gap-1">
-                            <span className="text-secondary whitespace-nowrap">
-                                دانشجو:
-                            </span>
-                            <span className="text-dark font-bold whitespace-nowrap">
-                                {user?.full_name}
-                            </span>
-                        </div>
-                        <span className="text-purple100">لورم ساز</span>
-                    </div>
+                    <span className="text-dark font-bold whitespace-nowrap">
+                        {user?.full_name}
+                    </span>
                 </div>
-                <div className="flex flex-col items-start gap-1">
+                <div className="flex items-center justify-between w-full">
                     <span className="text-secondary text-xs whitespace-nowrap">
                         عنوان آزمون:
                     </span>
-                    <span className="text-dark text-xl font-bold whitespace-nowrap">
+                    <span className="text-dark  font-bold whitespace-nowrap">
                         {exam?.name}
                     </span>
                 </div>

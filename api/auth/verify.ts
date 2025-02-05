@@ -1,17 +1,26 @@
 import { _fetch } from "@/utils/fetch";
 import { build_url } from "..";
 
-export const verify = async ({ mobile, otp }: { mobile: string, otp: string }) => {
-    
-    const response = await _fetch(build_url("/auth/verify/"), {
+export const verify = async ({
+    mobile,
+    otp,
+}: {
+    mobile: string;
+    otp: string;
+}) => {
+    const { data, result, message } = await _fetch(build_url("/auth/verify/"), {
         method: "POST",
         body: JSON.stringify({ mobile, otp }),
     });
-    if (!response.result || response?.result !== 'ok') {
+    if (result !== "ok") {
         return {
             result: "fail",
-            message: response?.message || "خطا در ارتباط با سرور",
+            message: message || "خطا در ارتباط با سرور",
         };
     }
-    return response;
+    return {
+        result,
+        data,
+        message,
+    };
 };

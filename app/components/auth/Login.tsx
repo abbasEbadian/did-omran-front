@@ -1,14 +1,15 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import FloatingLabelInput from "../FloatingLabelInput";
 import { _fetch } from "@/utils/fetch";
 import { login } from "@/api";
 import { toaster } from "@/utils/toaster";
-import { redirect } from "next/navigation";
+import { redirect, useSearchParams } from 'next/navigation';
 import { FormButton } from "../FormButton";
-import { set, z } from "zod";
+import { z } from "zod";
 
 function Login() {
+    const params = useSearchParams()
     const [mobile, setMobile] = React.useState<string>("");
     const [error, setError] = React.useState<string | undefined>(undefined);
 
@@ -27,7 +28,12 @@ function Login() {
         const response = await login({ mobile });
         toaster(response);
         if (response.result === "ok") {
-            redirect("/auth/otp?mobile=" + mobile);
+            let url = "/auth/otp?mobile="+mobile
+            const next = params.get('next')
+            if(next){
+                url += "&next=" + next
+            }
+            redirect(url);
         }
     };
 

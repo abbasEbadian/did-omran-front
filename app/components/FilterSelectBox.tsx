@@ -7,8 +7,6 @@ const FilterSelectBox: React.FC = () => {
 
   const handleFilterChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedFilter(event.target.value);
-    // شما می‌توانید عملیات فیلتر کردن را اینجا انجام دهید
-    console.log('Selected Filter:', event.target.value);
   };
 
   return (

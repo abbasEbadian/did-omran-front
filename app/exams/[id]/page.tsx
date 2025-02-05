@@ -4,7 +4,7 @@ import Link from "next/link";
 
 async function page({ params }: { params: { id: string } }) {
     const { id } = params;
-    const {result, data: exam}: {result: string, data: ExamType} = await getExam(+id);
+    const exam = await getExam(+id);
     
     return (
         <>
@@ -17,7 +17,7 @@ async function page({ params }: { params: { id: string } }) {
                         <div className="text-center my-4">
                             <p className="text-secondary900 text-sm gap-1 mb-5 before:content-[' '] before:bg-did before:rounded-full before:w-4 before:h-4 before:relative flex before:-right-1 before:top-0.5">
                                 تعداد سوالات: 
-                                <span className="font-bold text-dark">{exam.question_count}</span>
+                                <span className="font-bold text-dark">{exam?.question_count}</span>
                             </p>
                             <p className="text-secondary900 text-sm gap-1 mb-5 before:content-[' '] before:bg-did before:rounded-full before:w-4 before:h-4 before:relative flex before:-right-1 before:top-0.5">
                                 مدت زمان: 

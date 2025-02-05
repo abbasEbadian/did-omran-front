@@ -42,15 +42,16 @@ function OTP() {
             setError(validationResult.error.errors[0].message);
             return;
         }
-        
+
         const result = await verify({ mobile, otp });
         toaster(result);
-        debugger;
         if (result.result === "ok") {
-            await setToken(result.access);
-            redirect("/dashboard");
+            await setToken(result.data.access);
+            const next = searchParams.get("next") || "/dashboard";
+            return redirect(next);
         }
     };
+
     React.useEffect(() => {
         if (timer > 0) {
             const interval = setInterval(() => {
@@ -62,8 +63,8 @@ function OTP() {
         }
     }, [timer]);
     React.useEffect(() => {
-        if(otp.length === 4) setError(undefined)
-    }, [otp])
+        if (otp.length === 4) setError(undefined);
+    }, [otp]);
     return (
         <>
             <div className="w-1/2 flex items-center justify-center bg-white">
@@ -78,11 +79,12 @@ function OTP() {
                             value={otp}
                             setValue={setOtp}
                             error={error}
+                            autoFocus
                         />
                         <button
                             className="text-gray-400 mb-6 mt-1 text-end w-full"
                             onClick={resend}
-                            // disabled={isResendDisabled}
+                            disabled={isResendDisabled}
                         >
                             {isResendDisabled
                                 ? `ارسال مجدد ${timer} ثانیه`

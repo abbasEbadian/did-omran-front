@@ -59,7 +59,7 @@ const sidebarItems = [
         id: 3,
         text: "دوره های خریداری شده",
         icon: Bag,
-        url: "/dashboard/courses",
+        url: "/dashboard/orders",
     },
     { id: 4, text: "آمار آزمون", icon: Chart, url: "/dashboard/statistics" },
     {

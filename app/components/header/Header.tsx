@@ -6,9 +6,18 @@ import Cart from "@/app/components/icons/cart-1.svg";
 import User from "@/app/components/icons/user.svg";
 import Logo from "@/app/components/icons/Logo-blue.svg";
 import { getUser } from "@/api/user";
+import { UserType } from "@/api/types";
+import { cn } from "@/utils/cn";
+import { headers } from "next/headers";
 
 async function Header() {
-    const user = await getUser();
+    const headerList = await headers();
+    const pathname = headerList.get("x-path");
+    const user: UserType | null = await getUser();
+
+    if (pathname?.startsWith("/auth")) {
+        return null;
+    }
 
     return (
         <>
@@ -26,50 +35,42 @@ async function Header() {
                                 دیــد عمــران
                             </span>
                         </Link>
-                        <div className="flex  items-center gap-8">
-                            <Link
-                                href="#"
-                                className="text-dark text-sm hover:text-gray-900"
-                            >
-                                آموزش های رایگان
-                            </Link>
-                            <Link
-                                href="#"
-                                className="text-dark text-sm hover:text-gray-900"
-                            >
-                                کتاب های آموزشی
-                            </Link>
-                            <Link
-                                href="/exams/"
-                                className="text-dark text-sm hover:text-gray-900"
-                            >
-                                آزمون ها
-                            </Link>
-                            <Link
-                                href="#"
-                                className="text-dark text-sm hover:text-gray-900"
-                            >
-                                دوره های آموزشی
-                            </Link>
-                            <Link
-                                href="#"
-                                className="text-dark text-sm hover:text-gray-900"
-                            >
-                                تماس باما{" "}
-                            </Link>
+                        <div className="flex items-center gap-8">
+                            {links.map((item) => {
+                                const isActive =
+                                    pathname &&
+                                    pathname.indexOf(item.href) > -1;
+
+                                return (
+                                    <Link
+                                        key={item.href}
+                                        href={item.href}
+                                        className={cn(
+                                            "text-dark text-sm hover:text-gray-900",
+                                            isActive && "text-did"
+                                        )}
+                                    >
+                                        {item.text}
+                                    </Link>
+                                );
+                            })}
                         </div>
                         <div className="text-xl font-bold text-gray-800 flex items-center gap-3">
                             <div className="flex items-center gap-2">
-                                <Link href="#">
+                                <Link href="/dashboard/cart" className="relative">
                                     <Image
                                         src={Cart}
                                         alt="logo did omran"
                                         width={34}
                                         height={34}
                                     />
+                                    <span className="absolute top-0 right-0 bg-did text-white text-xs rounded-full bg-blue-500 w-4 h-4 text-center">
+                                        {user?.basket.lines.length || 0}
+                                    </span>
                                 </Link>
                                 <Link href="/">
                                     <Image
+
                                         src={Search}
                                         alt="logo did omran"
                                         width={34}
@@ -92,11 +93,11 @@ async function Header() {
                                 </Link>
                             ) : (
                                 <Link
+                                    role="button"
                                     href="/auth/"
-                                    className="bg-did text-white text-sm rounded-2xl px-4 py-2"
+                                    className="bg-did text-white text-sm rounded-2xl px-4 py-2 cursor-pointer"
                                 >
                                     ورود / ثبت نام
-                                    
                                 </Link>
                             )}
                         </div>
@@ -107,4 +108,12 @@ async function Header() {
     );
 }
 
-export default React.memo(Header);
+export default Header;
+
+const links = [
+    { href: "/free-package", text: "آموزش های رایگان" },
+    { href: "/book-store", text: "کتاب های آموزشی" },
+    { href: "/exams", text: "آزمون ها" },
+    { href: "/courses", text: "دوره های آموزشی" },
+    { href: "/about-us", text: "تماس باما" },
+];

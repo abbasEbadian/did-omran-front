@@ -1,6 +1,9 @@
-export * from "./exam/types";
+import { OrderType } from "./order/types";
 
-export type User = {
+export * from "./exam/types";
+export * from "./course/types";
+
+export type UserType = {
     id: number;
     username: string;
     email: string | undefined;
@@ -9,6 +12,7 @@ export type User = {
     full_name: string | undefined;
     avatar: string | undefined;
     is_staff: boolean;
-    date_joined: string;
-    last_login: string;
+    date_joined: number;
+    last_login: number;
+    basket: OrderType;
 };
