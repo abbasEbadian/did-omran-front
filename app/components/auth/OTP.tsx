@@ -67,7 +67,7 @@ function OTP() {
     }, [otp]);
     return (
         <>
-            <div className="w-1/2 flex items-center justify-center bg-white">
+            <div className="w-full flex items-center justify-center bg-white">
                 <div className="w-full max-w-md p-8 rounded-lg">
                     <h2 className="text-2xl font-bold mb-8 text-center text-secondary800">
                         ورود به دید عمران

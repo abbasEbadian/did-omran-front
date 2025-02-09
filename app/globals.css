@@ -94,3 +94,34 @@ html {
 html {
   scroll-behavior: smooth;
 }
+
+@keyframes float {
+  0% {
+    transform: translatey(0);
+  }
+  50% {
+    transform: translatey(-7px);
+  }
+  100% {
+    transform: translatey(0);
+  }
+}
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+.float:nth-of-type(1) {
+  animation-duration: 2s;
+}
+.float:nth-of-type(2) {
+  animation-duration: 3.2s;
+}
+.float:nth-of-type(3) {
+  animation-duration: 2.4s;
+}
+.float:nth-of-type(4) {
+  animation-duration: 3.6s;
+}
+.float:nth-of-type(5) {
+  animation-duration: 1.9s;
+}
+

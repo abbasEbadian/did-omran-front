@@ -15,9 +15,6 @@ async function Header() {
     const pathname = headerList.get("x-path");
     const user: UserType | null = await getUser();
 
-    if (pathname?.startsWith("/auth")) {
-        return null;
-    }
 
     return (
         <>
