@@ -44,7 +44,7 @@ const TicketsList = () => {
             </thead>
             <tbody>
               {tickets.map((ticket) => (
-                <tr key={ticket.id} className="border-b-2 border-dashed border-b-secondary700">
+                <tr key={ticket.id} className="border-b-2 border-dashed border-b-secondary700 last:border-b-0">
                   <td className="px-6 py-4 text-center text-secondary">{ticket.title}</td>
                   <td className="px-6 py-4 text-center justify-items-center">
                     <span className={`px-2 py-2 rounded-full text-sm text-white  max-w-32 w-32 min-w-32 block  ${getStatusColor(ticket.status)}`}>
