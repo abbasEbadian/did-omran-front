@@ -22,7 +22,7 @@ const TicketsList = () => {
       case 'بسته شده':
         return 'bg-blue600 text-secondary800';
       case 'در انتظار پاسخ':
-        return 'bg-accent text-yellow-800';
+        return 'bg-yellow text-yellow-800';
       case 'پاسخ داده شده':
         return 'bg-primary text-blue-800';
       default:
@@ -46,8 +46,8 @@ const TicketsList = () => {
               {tickets.map((ticket) => (
                 <tr key={ticket.id} className="border-b-2 border-dashed border-b-secondary700">
                   <td className="px-6 py-4 text-center text-secondary">{ticket.title}</td>
-                  <td className="px-6 py-4 text-center text-secondary">
-                    <span className={`px-3 py-1 rounded-full text-sm text-white ${getStatusColor(ticket.status)}`}>
+                  <td className="px-6 py-4 text-center justify-items-center">
+                    <span className={`px-2 py-2 rounded-full text-sm text-white  max-w-32 w-32 min-w-32 block  ${getStatusColor(ticket.status)}`}>
                       {ticket.status}
                     </span>
                   </td>
