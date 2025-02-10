@@ -39,6 +39,7 @@ const NewTicketForm: React.FC = () => {
                     onChange={(e) => setTitle(e.target.value)}
                     required
                     placeholder="عنوان تیکت را وارد کنید"
+                    className="placeholder:text-did/50 placeholder:text-sm"
                 />
             </div>
             <div className="col-span-2">
@@ -47,14 +48,14 @@ const NewTicketForm: React.FC = () => {
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                     required
-                    className="block w-full p-3 rounded-2xl bg-blue500 shadow-custom-shadow text-secondary text-sm placeholder:text-did/50 placeholder:text-xs focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                    className="block w-full p-3 rounded-2xl bg-blue500 shadow-custom-shadow text-secondary text-sm placeholder:text-did/50 placeholder:text-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                     placeholder="متن"
                     rows={6}
                 />
             </div>
             <div className="col-span-2 flex items-center gap-3">
                 <FormButton
-                    className="px-8 py-2 bg-blue text-white rounded-2xl hover:bg-indigo-700 focus:outline-none whitespace-nowrap"
+                    className="px-8 py-2 bg-did text-white rounded-2xl hover:bg-indigo-700 focus:outline-none whitespace-nowrap"
                 >
                     ثبت
                 </FormButton>
