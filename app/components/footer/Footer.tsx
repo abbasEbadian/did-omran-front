@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import LogoWhite from "@/app/components/icons/logo-white.svg";
@@ -8,13 +10,11 @@ import aparat from "@/public/aparat1 copy 1.png";
 import Instagram from "@/public/Instagram.png";
 import enamad from "@/public/img/enamad.png";
 import FooterBg from "@/public/img/footerBg.png";
-import { headers } from "next/headers";
+import { usePathname } from "next/navigation";
 
 const paths = ["/online-exam", "/auth", "/dashboard"];
-async function Footer() {
-    const headerList = await headers();
-    const pathname = headerList.get("x-path");
-
+function Footer() {
+    const pathname = usePathname()
     for (let p of paths)
         if (pathname?.startsWith(p)) {
             return null;

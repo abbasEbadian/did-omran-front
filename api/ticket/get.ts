@@ -1,8 +1,8 @@
 import { _fetch } from "@/utils/fetch";
 import { build_url } from "..";
 
-export const getCourses = async () => {
-    const { result, data } = await _fetch(build_url("/courses/"), {
+export const getTickets = async () => {
+    const { result, data } = await _fetch(build_url("/tickets/"), {
         method: "GET",
         cache: "no-cache",
     });
@@ -13,8 +13,8 @@ export const getCourses = async () => {
     return data;
 };
 
-export const getCourse = async (id: number) => {
-    const { data, result } = await _fetch(build_url("/courses/" + id + "/"), {
+export const getTicket = async (id: number) => {
+    const { result, data } = await _fetch(build_url("/tickets/" + id + "/"), {
         method: "GET",
         cache: "no-cache",
     });

@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
@@ -6,16 +8,16 @@ import Cart from "@/app/components/icons/cart-1.svg";
 import User from "@/app/components/icons/user.svg";
 import Logo from "@/app/components/icons/Logo-blue.svg";
 import { getUser } from "@/api/user";
-import { UserType } from "@/api/types";
 import { cn } from "@/utils/cn";
-import { headers } from "next/headers";
+import { usePathname } from "next/navigation";
+import useSWR from "swr";
 
-async function Header() {
-    const headerList = await headers();
-    const pathname = headerList.get("x-path");
-    const user: UserType | null = await getUser();
-
-
+function Header() {
+    const { data: user } = useSWR("get-user", getUser);
+    const pathname = usePathname();
+    if (pathname.startsWith("/auth")) {
+        return null;
+    }
     return (
         <>
             <div className="bg-white p-4">
@@ -54,7 +56,10 @@ async function Header() {
                         </div>
                         <div className="text-xl font-bold text-gray-800 flex items-center gap-3">
                             <div className="flex items-center gap-2">
-                                <Link href="/dashboard/cart" className="relative">
+                                <Link
+                                    href="/dashboard/cart"
+                                    className="relative"
+                                >
                                     <Image
                                         src={Cart}
                                         alt="logo did omran"
@@ -67,7 +72,6 @@ async function Header() {
                                 </Link>
                                 <Link href="/">
                                     <Image
-
                                         src={Search}
                                         alt="logo did omran"
                                         width={34}

@@ -67,35 +67,28 @@ function OTP() {
     }, [otp]);
     return (
         <>
-            <div className="w-full flex items-center justify-center bg-white">
-                <div className="w-full max-w-md p-8 rounded-lg">
-                    <h2 className="text-2xl font-bold mb-8 text-center text-secondary800">
-                        ورود به دید عمران
-                    </h2>
-                    <form onSubmit={(e) => submit(e)}>
-                        <FloatingLabelInput
-                            label={"کد یکبار مصرف"}
-                            dir="ltr"
-                            value={otp}
-                            setValue={setOtp}
-                            error={error}
-                            autoFocus
-                        />
-                        <button
-                            className="text-gray-400 mb-6 mt-1 text-end w-full"
-                            onClick={resend}
-                            disabled={isResendDisabled}
-                        >
-                            {isResendDisabled
-                                ? `ارسال مجدد ${timer} ثانیه`
-                                : "ارسال مجدد"}
-                        </button>
-                        <FormButton className="w-full px-4 py-3 bg-did text-white rounded-2xl hover:bg-did/90 transition">
-                            تایید و ادامه
-                        </FormButton>
-                    </form>
-                </div>
-            </div>
+            <form onSubmit={(e) => submit(e)} className="w-1/3">
+                <FloatingLabelInput
+                    label={"کد یکبار مصرف"}
+                    dir="ltr"
+                    value={otp}
+                    setValue={setOtp}
+                    error={error}
+                    autoFocus
+                />
+                <button
+                    className="text-gray-400 mb-6 mt-1 text-end w-full"
+                    onClick={resend}
+                    disabled={isResendDisabled}
+                >
+                    {isResendDisabled
+                        ? `ارسال مجدد ${timer} ثانیه`
+                        : "ارسال مجدد"}
+                </button>
+                <FormButton className="w-full px-4 py-3 bg-did text-white rounded-2xl hover:bg-did/90 transition">
+                    تایید و ادامه
+                </FormButton>
+            </form>
         </>
     );
 }

@@ -9,7 +9,7 @@ export default function Template({
         <motion.div
             initial={{y: -8, opacity: 0}}
             animate={{y: 0, opacity: 1}}
-            className="min-h-screen flex flex-row-reverse w-1/2"
+            className="w-full flex items-center justify-center"
         >
             {children}
         </motion.div>

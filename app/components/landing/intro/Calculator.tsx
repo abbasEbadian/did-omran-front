@@ -29,7 +29,7 @@ function Calculator() {
     return (
         <>
             <div className="flex items-center flex-col mt-6">
-                <div className="bg-blue700 text-white text-center py-2 rounded-2xl  z-10 text-2xl font-bold  border-white border-2 mx-5 inline-table px-4">
+                <div className="bg-blue700 text-white text-center py-2 rounded-2xl  z-10 text-lg font-bold  border-white border-2 mx-5 inline-table px-4">
                     <span className="">محاسبه گر نمره آزمون</span>
                 </div>
                 <div className="bg-secondary700 p-6 rounded-2xl z-0 -mt-4">
