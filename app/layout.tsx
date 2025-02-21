@@ -32,10 +32,9 @@ export default function RootLayout({
                 className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-clip`}
             >
                 <Header />
-                {children}
+                <main className="pt-[77px]">{children}</main>
                 <ToastContainer position="top-center" />
                 <Footer />
-
             </body>
         </html>
     );
