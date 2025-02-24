@@ -20,6 +20,8 @@ import { CourseType } from '@/api/types';
 function Page() {
   const { id } = useParams();
   const {data: course} = useSWR<CourseType>(`get-course`, () => getCourse(Number(id)))
+  console.log(course);
+  
   return (
     <div className="bg-white100">
       <div className="grid grid-cols-12 container mx-auto gap-8">

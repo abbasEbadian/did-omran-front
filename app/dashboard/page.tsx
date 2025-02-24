@@ -31,7 +31,7 @@ function page() {
                             اطلاعیه ها
                         </span>
                         <button className="">
-                            <span className="bg-did text-white px-2 rounded-md">
+                            <span className="bg-did text-white px-2 rounded-md mx-2">
                                 2
                             </span>
                             <span className="text-secondary900 text-sm">

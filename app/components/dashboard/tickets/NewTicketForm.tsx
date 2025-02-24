@@ -4,14 +4,14 @@ import TextInput from "../TextInput";
 import { createTicket } from "@/api";
 import { toaster } from "@/utils/toaster";
 import { FormButton } from "../../FormButton";
-import { redirect } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 
 const NewTicketForm: React.FC = () => {
     const [title, setTitle] = useState<string>("");
     const [description, setDescription] = useState<string>("");
     const [file, setFile] = useState<File | null>(null);
-
-    const handleSubmit = async (formdata: FormData) => {
+    const router = useRouter()
+    const handleSubmit   = async (formdata: FormData) => {
         const formData = new FormData();
         formData.append("title", title);
         formData.append("text", description);
@@ -25,7 +25,7 @@ const NewTicketForm: React.FC = () => {
             setTitle("");
             setDescription("");
             setFile(null);
-            redirect("/dashboard/ticktes")
+            router.push("/dashboard/tickets")
         } catch (error) {
             console.error("Error creating ticket:", error);
         }

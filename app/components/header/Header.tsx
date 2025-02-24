@@ -106,7 +106,7 @@ function Header() {
 export default Header;
 
 const links = [
-    { href: "/free-package", text: "آموزش های رایگان" },
+    { href: "#", text: "آموزش های رایگان" },
     { href: "/book-store", text: "کتاب های آموزشی" },
     { href: "/exams", text: "آزمون ها" },
     { href: "/courses", text: "دوره های آموزشی" },

@@ -14,6 +14,8 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 import { cn } from "@/utils/cn";
 import Modal from "@/app/components/Modal";
+import Link from "next/link";
+import ArrowRight from '@/app/components/icons/arrow-right.svg';
 
 function page() {
     const { mutate } = useSWRConfig();
@@ -93,13 +95,13 @@ function page() {
                 </div>
                 <TicketStatusBadge
                     status={ticket?.status}
-                    className="ms-auto me-2 text-white"
+                    className="ms-auto me-2"
                 />
                 {ticket?.status !== "CLOSED" ? (
                     <div>
                         <button
                             className={cn(
-                                "bg-did px-2 py-1 text-xs rounded w-20"
+                                "bg-blue px-2 py-1 text-xs rounded-lg w-20 border border-blue800"
                             )}
                             onClick={(e) => setWantToClose(true)}
                         >
@@ -107,6 +109,9 @@ function page() {
                         </button>
                     </div>
                 ) : null}
+                <Link href="/dashboard/tickets" className="border border-did text-did px-2 py-1 text-xs rounded-lg ms-2">
+                    بازگشت
+                </Link>
             </div>
             <div className="p-4 h-96 overflow-y-auto">
                 {ticket?.messages.map((message) => {

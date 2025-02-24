@@ -13,6 +13,7 @@ import { useRouter } from "next/navigation";
 import useSWR, { useSWRConfig } from "swr";
 import { getUser } from "@/api";
 import { revalidateTag } from "next/cache";
+import Link from "next/link";
 
 function EducationItems(course: CourseType) {
     const router = useRouter();
@@ -41,9 +42,9 @@ function EducationItems(course: CourseType) {
                 </div>
                 <div className="flex flex-col bg-white rounded-b-2xl  gap-2 px-4 py-6">
                     <div className=" flex flex-col items-start gap-2 justify-start mb-4">
-                        <span className="text-dark text-base font-medium">
+                        <Link href={"/courses/"+course.id} className="text-dark text-base font-medium">
                             {course.name}
-                        </span>
+                        </Link>
                         <span className="text-xs text-secondary">
                             {course.title}
                         </span>

@@ -28,7 +28,7 @@ function Consultation() {
           لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم
         </span>
         <Link
-          href="#"
+          href="/free-package"
           className="bg-white text-did text-sm md:text-base rounded-2xl px-6 py-2 mt-4 hover:bg-did hover:text-white transition-colors duration-300"
           aria-label="ثبت نام"
         >
