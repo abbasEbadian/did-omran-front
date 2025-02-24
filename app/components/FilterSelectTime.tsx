@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import filters1 from "@/app/components/icons/filters-1.svg"
 import Image from 'next/image';
-const FilterSelectBox: React.FC = () => {
+const FilterSelectTime: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState<string>('');
 
   const handleFilterChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -32,4 +32,4 @@ const FilterSelectBox: React.FC = () => {
   );
 };
 
-export default FilterSelectBox;
+export default FilterSelectTime;

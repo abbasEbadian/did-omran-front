@@ -1,5 +1,5 @@
 import Notification from '@/app/components/dashboard/Notification'
-import FilterSelectBox from '@/app/components/FilterSelectBox'
+import FilterSelectBox from '@/app/components/FilterSelectTime'
 import React from 'react'
 
 function page() {

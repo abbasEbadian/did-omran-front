@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import * as motion from "motion/react-client";
 import { MoonLoader } from "react-spinners";
 import { AnimatePresence } from "framer-motion";
+import Filter from "./Filter";
 
 type GenType = BookType | CourseType | ExamType;
 
@@ -64,8 +65,9 @@ const ListWithTabs = <T extends GenType>({
         animate: { opacity: 1 },
     };
     return (
-        <section className="relative">
-            <div className="flex gap-6 items-end justify-center border-b border-did/10 mb-8">
+        <section className="relative container mx-auto">
+            <Filter/>
+            <div className="flex gap-6 items-end justify-center border-b border-did/10 mb-8 mt-5">
                 {categories?.map((tab, i) => (
                     <motion.button
                         key={tab.id}
