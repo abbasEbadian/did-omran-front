@@ -21,9 +21,11 @@ export async function _fetch(
             ...options,
             headers,
         });
+        console.log({response});
 
         const res = await response.json();
 
+        
 
         switch (response.status) {
             case 401:

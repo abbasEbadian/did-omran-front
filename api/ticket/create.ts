@@ -7,7 +7,6 @@ export const createTicket = async (formdata: any) => {
         cache: 'no-cache',
         body: formdata, 
     }, true);
-    debugger
     if (!response.result || response?.result !== 'ok') {
         return undefined
     }

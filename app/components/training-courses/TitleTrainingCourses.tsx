@@ -7,7 +7,6 @@ import UserMore from '@/app/components/icons/users-more.svg';
 import CalendarCheck from '@/app/components/icons/calendar-check.png';
 import Star1 from '@/app/components/icons/star-1.svg';
 import StarFilled from '@/app/components/icons/HiStar.svg';
-import Banner1 from '@/public/img/banner1.png';
 import { CourseType } from '@/api/types';
 
 function TitleTrainingCourses(course: CourseType) {

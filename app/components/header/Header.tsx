@@ -77,7 +77,7 @@ function Header() {
                         {user ? (
                             <Link
                                 href="/dashboard/"
-                                className="bg-did text-white text-sm rounded-2xl px-4 py-2 flex gap-2"
+                                className="bg-did text-white text-sm rounded-2xl px-4 py-2 flex gap-2 align-center"
                             >
                                 {user.username}
                                 <Image

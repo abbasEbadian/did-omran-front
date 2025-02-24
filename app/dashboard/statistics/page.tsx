@@ -28,7 +28,7 @@ const Page = () => {
                                 تاریخ برگزاری{" "}
                             </th>
                             <th className="py-3 px-4 text-dark">وضعیت </th>
-                            <th className="py-3 px-4 text-dark">پاسخ نامه </th>
+                            {/* <th className="py-3 px-4 text-dark">پاسخ نامه </th> */}
                             <th className="py-3 px-4 text-dark rounded-e-2xl">
                                 کارنامه
                             </th>
@@ -62,7 +62,7 @@ const Page = () => {
                                         }
                                     />
                                 </td>
-                                <td className="py-3 px-4 text-center text-secondary">
+                                <td className="py-3 px-4 text-center text-secondary hidden">
                                     <Link
                                         href="#"
                                         className="text-did text-sm font-semibold hove:text-blue   "
@@ -75,7 +75,7 @@ const Page = () => {
                                         href={
                                             "/dashboard/statistics/" + sheet.id
                                         }
-                                        className="text-did text-sm font-semibold hove:text-blue   "
+                                        className="text-did text-sm font-semibold hove:text-blue"
                                     >
                                         مشاهده
                                     </Link>

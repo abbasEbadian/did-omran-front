@@ -4,6 +4,7 @@ import TextInput from "../TextInput";
 import { createTicket } from "@/api";
 import { toaster } from "@/utils/toaster";
 import { FormButton } from "../../FormButton";
+import { redirect } from "next/navigation";
 
 const NewTicketForm: React.FC = () => {
     const [title, setTitle] = useState<string>("");
@@ -24,6 +25,7 @@ const NewTicketForm: React.FC = () => {
             setTitle("");
             setDescription("");
             setFile(null);
+            redirect("/dashboard/ticktes")
         } catch (error) {
             console.error("Error creating ticket:", error);
         }

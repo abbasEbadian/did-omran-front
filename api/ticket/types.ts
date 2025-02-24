@@ -3,7 +3,8 @@ import { UserType } from "../types";
 export type TicketMessageType = {
     id: number;
     text: string;
-    user: UserType;
+    user: string;
+    create_date: number;
 };
 
 export type TicketType = {

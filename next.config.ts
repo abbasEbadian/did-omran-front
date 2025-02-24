@@ -4,7 +4,6 @@ const withImages = require("next-images");
 const nextConfig: NextConfig = {
     images: {
         remotePatterns: [
-            
             {
                 protocol: "http",
                 hostname: "localhost",
@@ -24,6 +23,10 @@ const nextConfig: NextConfig = {
                     name: "[path][name].[ext]",
                 },
             },
+        });
+        config.module.rules.push({
+            test: /\.svg$/,
+            use: ["@svgr/webpack"],
         });
         return config;
     },
