@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import FaBook from "@/app/components/icons/FaBook.svg";
-import FilterSelectTime from './FilterSelectTime';
+import FilterSelectTime from '@/app/components/FilterSelectTime';
+import FilterSelectDisplay from '@/app/components/FilterSelectDisplay';
 
 function Filter() {
   return (
@@ -15,7 +16,10 @@ function Filter() {
             />
             <span className="text-dark fot-bold">کتابخانه</span>
        </div>
-        <FilterSelectTime/>
+       <div className= "flex items-center gap-2">
+            <FilterSelectTime/>
+            <FilterSelectDisplay/>
+       </div>
     </div>
     
   )
