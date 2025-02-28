@@ -7,7 +7,7 @@ import Saly from '@/app/components/icons/Saly-24.svg'
 function SocialMedia() {
   return (
     <>
-    <div className="flex flex-col items-center gap-4 bg-gradient-to-b from-white to-accent100 rounded-2xl pb-6 px-4 relative pt-28 mt-48">
+    <div className="flex flex-col items-center gap-4 bg-gradient-to-b from-white to-accent100 rounded-2xl pb-6 px-4 relative pt-28 mt-56 translate-y-16 ">
         <div className="absolute right-[154px] -top-28">
             <Image
                 src={Saly}
@@ -17,10 +17,10 @@ function SocialMedia() {
                 />
         </div>
         <span className="text-dark text-xl font-semibold">
-        راه های ارتباطی با دید عمران
+        راه‌های ارتباطی با دید عمران
         </span>
         <span className="text-accent text-sm">
-        راه های ارتباطی با دید عمرانراه های ارتباطی با دید عمران
+        راه‌های ارتباطی با دید عمرانراه‌های ارتباطی با دید عمران
         </span>
         <div className="flex items-center gap-4">
             <Link href="#" className="">

@@ -36,7 +36,7 @@ function ContentCourse(course: CourseType) {
     <div className="bg-white px-8 py-6 rounded-2xl border border-did/15 shadow-custom-shadow flex flex-col gap-4">
       {/* عنوان دوره */}
       <div className="flex items-center justify-start gap-1">
-        <span className="text-xl font-black text-dark">محتوا و سرفصل های</span>
+        <span className="text-xl font-black text-dark">محتوا و سرفصل‌های</span>
         <span className="text-xl font-black text-did">
           دوره جامع ایلاستریتور (مقدماتی ، پیشرفته و استادی)
         </span>

@@ -77,7 +77,7 @@ function Header() {
                         {user ? (
                             <Link
                                 href="/dashboard/"
-                                className="bg-did text-white text-sm rounded-2xl px-4 py-2 flex gap-2 align-center"
+                                className="bg-did text-white text-sm rounded-2xl px-4 py-2 flex gap-2 items-center"
                             >
                                 {user.username}
                                 <Image
@@ -106,9 +106,9 @@ function Header() {
 export default Header;
 
 const links = [
-    { href: "#", text: "آموزش های رایگان" },
-    { href: "/book-store", text: "کتاب های آموزشی" },
+    { href: "/courses", text: "دوره‌های آموزشی" },
+    { href: "/book-store", text: "کتاب‌های آموزشی" },
     { href: "/exams", text: "آزمون ها" },
-    { href: "/courses", text: "دوره های آموزشی" },
+    { href: "#", text: "آموزش‌های رایگان" },
     { href: "/about-us", text: "تماس باما" },
 ];

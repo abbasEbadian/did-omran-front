@@ -82,7 +82,9 @@ html {
   overflow-x: hidden;
   font-size: 14px;
 }
-
+.swiper-wrapper{
+  padding-block: 8px;
+}
 
 .custom-bullet {
   @apply w-3 h-3 bg-white100 border border-secondary800 rounded-full transition-all duration-300 cursor-pointer;
@@ -100,30 +102,36 @@ html {
   0% {
     transform: translatey(0);
   }
+
   50% {
     transform: translatey(-7px);
   }
+
   100% {
     transform: translatey(0);
   }
 }
+
 .float {
   animation: float 3s ease-in-out infinite;
 }
+
 .float:nth-of-type(1) {
   animation-duration: 2s;
 }
+
 .float:nth-of-type(2) {
   animation-duration: 3.2s;
 }
+
 .float:nth-of-type(3) {
   animation-duration: 2.4s;
 }
+
 .float:nth-of-type(4) {
   animation-duration: 3.6s;
 }
+
 .float:nth-of-type(5) {
   animation-duration: 1.9s;
 }
-
-

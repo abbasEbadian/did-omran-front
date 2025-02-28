@@ -16,7 +16,7 @@ function BookContent(book: BookType) {
                         alt="BsPlayCircle Img"
                         height={800}
                         width={1200}
-                        className="object-contain h-[270px]"
+                        className="object-cover h-[270px] w-full"
                     />
                 </div>
                 <div className="flex flex-col gap-4 rounded-b-2xl border border-did/10 px-4 py-6">

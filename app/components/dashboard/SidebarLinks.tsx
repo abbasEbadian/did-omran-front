@@ -57,7 +57,7 @@ const sidebarItems = [
     { id: 2, text: "ویرایش اطلاعات", icon: Edit, url: "/dashboard/profile" },
     {
         id: 3,
-        text: "دوره های خریداری شده",
+        text: "دوره‌های خریداری شده",
         icon: Bag,
         url: "/dashboard/orders",
     },

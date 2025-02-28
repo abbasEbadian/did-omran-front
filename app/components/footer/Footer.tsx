@@ -14,7 +14,7 @@ import { usePathname } from "next/navigation";
 
 const paths = ["/online-exam", "/auth", "/dashboard"];
 function Footer() {
-    const pathname = usePathname()
+    const pathname = usePathname();
     for (let p of paths)
         if (pathname?.startsWith(p)) {
             return null;
@@ -44,10 +44,10 @@ function Footer() {
                     <div className="lg:col-span-1 col-span-4">
                         <div className="flex flex-col gap-5">
                             {/* Logo and Address */}
-                            <div className="flex flex-col lg:items-start items-center gap-3">
+                            <div className="flex flex-col lg:items-start items-center gap-3 text-white">
                                 <Link
                                     href="#"
-                                    className="flex items-center gap-2 font-bold whitespace-nowrap text-2xl"
+                                    className="flex items-center gap-2 font-bold whitespace-nowrap text-2xl "
                                 >
                                     <Image
                                         src={LogoWhite}
@@ -170,7 +170,7 @@ function Footer() {
                     <div className="lg:col-span-1 col-span-4">
                         <div className="flex flex-col items-center gap-5">
                             <span className="text-white font-bold text-base">
-                                لینک های مفید
+                                لینک‌های مفید
                             </span>
                             <div className="flex items-start flex-col gap-4">
                                 <Link
@@ -183,7 +183,7 @@ function Footer() {
                                     href="#"
                                     className="text-white text-sm hover:text-blue700 transition-all duration-300"
                                 >
-                                    دوره های آموزشی
+                                    دوره‌های آموزشی
                                 </Link>
                                 <Link
                                     href="#"

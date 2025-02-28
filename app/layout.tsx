@@ -29,10 +29,10 @@ export default function RootLayout({
     return (
         <html lang="fa" dir="rtl">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-clip`}
+                className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-clip bg-white100`}
             >
                 <Header />
-                <main className="pt-[77px]">{children}</main>
+                <main className="pt-[77px] max-w-[1440px] mx-auto ">{children}</main>
                 <ToastContainer position="top-center" />
                 <Footer />
             </body>

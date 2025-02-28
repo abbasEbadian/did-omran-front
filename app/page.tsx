@@ -19,10 +19,8 @@ export default function Home() {
         <>
             <main className="flex flex-col gap-8">
                 <Intro />
-                <CaptionMain />
                 <EducationTabs />
                 <OnlineExam />
-                <CaptionMain />
                 <FreeEducationTabs />
                 <ElectronicLibrary />
                 <Comments />

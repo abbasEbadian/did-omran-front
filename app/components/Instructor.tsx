@@ -22,7 +22,7 @@ function Instructor(tutor: { bio: string; course_count: number, slogan: string }
                     </span>
                 </div>
                 <p className="text-secondary text-sm">{tutor.bio}</p>
-                <p className="text-did text-xs">{tutor.slogan}</p>
+                <p className="text-did text-xs my-4">{tutor.slogan}</p>
                 <div className="flex items-center justify-end gap-4 mt-4">
                     <Link href="#Decription" className="text-dark text-sm">
                         <Image

@@ -11,8 +11,8 @@ function MyEventsBox() {
         width={120}
         height={104} />
         <div className="flex flex-col items-start px-4 border-s-2 border-dashed border-s-secondary700 gap-1 py-5">
-            <span className="text-did text-2xl font-semibold">دوره های من </span>
-            <Link href="#" className="text-secondary text-sm font-medium">دوره های ثبت نام شده</Link>
+            <span className="text-did text-2xl font-semibold">دوره‌های من </span>
+            <Link href="#" className="text-secondary text-sm font-medium">دوره‌های ثبت نام شده</Link>
         </div>
     </div>
     </>

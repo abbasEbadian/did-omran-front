@@ -85,7 +85,7 @@ function Page() {
         <div className="col-span-12 lg:col-span-4">
         {course && <InformationCourse {...course}/>}
           {course && <PreviewCourse {...course}/>}
-          <Events />
+          {/* <Events event={} /> */}
           <SocialMedia />
         </div>
       </div>

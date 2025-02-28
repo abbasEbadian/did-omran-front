@@ -15,10 +15,10 @@ function OnlineExam() {
                     <span className="text-dark text-3xl mb-4">
                     آزمون آنلاین مهندسی
                     </span>
-                    <p className="text-base text-secondary mb-6 text-justify  ">
+                    <p className="text-base text-secondary mb-6 text-justify w-4/5 ">
                     خدمات تخصصی آزمون آنلاین موسسه دیدعمران ویژه آمادگی آزمون‌های نظام مهندسی (نظارت-اجراء-محاسبات) و کارشناس رسمی دادگستری (راه و ساختمان) است. تمامی مهندسین این امکان را دارند که از آزمون‌های آزمایشی استاندارد، آزمون‌های ادواری، آزمون‌های تألیفی و بانک آزمون‌های تخصصی دیدعمران ویژه رشته عمران و معماری استفاده نمایند.
                     </p>
-                    <Link href="#" className="text-white bg-did rounded-2xl text-sm px-4 py-3">ورود به آزمون دید عمران </Link>
+                    <Link href="/exams" className="text-white bg-did rounded-2xl text-sm px-4 py-3">مشاهده آزمون‌های دید عمران</Link>
 
                 </div>
             </div>

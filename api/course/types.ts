@@ -1,5 +1,17 @@
 import Avater1 from "@/public/img/Avater1.png";
 import { StaticImageData } from "next/image";
+
+export type TutorType = {
+    id: number;
+    name: string;
+    bio: string;
+    course_count: number;
+    slogan: string;
+    title: string;
+    user: {
+        avatar: string;
+    };
+}
 export type CourseTopicType = {
     id: number;
     name: string;
@@ -19,17 +31,7 @@ export type CourseType = {
     description: string;
     price: number;
     image: string;
-    tutors: {
-        id: number;
-        name: string;
-        bio: string;
-        course_count: number;
-        slogan: string;
-        title: string;
-        user: {
-            avatar: string;
-        };
-    }[];
+    tutors: TutorType[];
     prerequisite: string;
     outcomes: string;
     discount: number;
