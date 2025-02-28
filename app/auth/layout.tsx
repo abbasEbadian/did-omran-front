@@ -11,9 +11,8 @@ export default function AuthLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <div className="h-screen flex flex-row-reverse -mt-[77px]">
-            <div className="w-[45%] bg-did flex items-center justify-center relative">
-                
+        <div className="h-screen flex flex-row-reverse -mt-[77px] overflow-clip">
+            <div className="w-[40%] bg-did flex items-center justify-center relative">
                 <Link
                     href={"/"}
                     className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 grid"
@@ -29,11 +28,11 @@ export default function AuthLayout({
                         alt="LogoLogin Img"
                         height={420}
                         width={420}
-                        className="size-80 scale-x-[-1] col-start-1 col-end-2 row-start-1 row-end-2 z-0"
+                        className="size-[330px] scale-x-[-1] col-start-1 col-end-2 row-start-1 row-end-2 z-0"
                     />
                 </Link>
             </div>
-            <div className="w-[55%] bg-white">
+            <div className="w-[60%] bg-white">
                 <div className="w-full p-8  rounded-lg flex items-center justify-center flex-col mx-auto h-full">
                     <h2 className="text-2xl mb-8 font-bold text-center text-secondary800 flex justify-center gap-6">
                         ورود به

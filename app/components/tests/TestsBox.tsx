@@ -69,7 +69,7 @@ const TestsBox = (props: Props) => {
                             </div>
                         </div>
                         <Link
-                            href={'/exams/' + props.id}
+                            href={"/exams/" + props.id}
                             className="text-white bg-did rounded-2xl text-sm px-6 py-3"
                         >
                             شروع آزمون
