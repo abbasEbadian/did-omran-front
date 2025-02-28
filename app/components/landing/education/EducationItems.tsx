@@ -12,26 +12,24 @@ import { FormButton } from "../../FormButton";
 import { useRouter } from "next/navigation";
 import useSWR, { useSWRConfig } from "swr";
 import { getUser } from "@/api";
-import { revalidateTag } from "next/cache";
 import Link from "next/link";
 
 function EducationItems(course: CourseType) {
     const router = useRouter();
-    const { mutate } = useSWRConfig()
+    const { mutate } = useSWRConfig();
 
     const addToCard = async (id: number) => {
         const response = await addToCart(id);
-        toaster(response)
-        mutate('get-user')
-        router.refresh()
+        toaster(response);
+        mutate("get-user");
+        router.refresh();
     };
 
-    const { data: user, error, isLoading } = useSWR<UserType>('get-user', getUser)
+    const { data: user } = useSWR<UserType>("get-user", getUser);
     return (
         <>
-            <div className="flex flex-col shadow-custom-shadow border border-did/15 rounded-2xl   container mx-auto">
-
-                <div className="">
+            <div className="flex flex-col shadow-custom-shadow border border-did/15 rounded-2xl container mx-auto hover:scale-[1.02] hover:border-did/50 transition overflow-hidden">
+                <Link href={"/courses/"+course.id}>
                     <Image
                         src={course.banner}
                         alt="Consultation Img"
@@ -39,10 +37,13 @@ function EducationItems(course: CourseType) {
                         width={1200}
                         className="w-full max-h-[270px] object-cover"
                     />
-                </div>
+                </Link>
                 <div className="flex flex-col bg-white rounded-b-2xl  gap-2 px-4 py-6">
                     <div className=" flex flex-col items-start gap-2 justify-start mb-4">
-                        <Link href={"/courses/"+course.id} className="text-dark text-base font-medium">
+                        <Link
+                            href={"/courses/" + course.id}
+                            className="text-dark text-base font-medium line-clamp-2 lg:min-h-[42px]"
+                        >
                             {course.name}
                         </Link>
                         <span className="text-xs text-secondary">
@@ -90,16 +91,23 @@ function EducationItems(course: CourseType) {
                             </span>
                             <span className="text-dark text-base"> تومان</span>
                         </div>
-                        {user?.basket.lines.find(q => q.course.id === course.id) ? <FormButton disabled
-                            className="text-white bg-did text-sm py-3 px-8 rounded-2xl hover:bg-did/80 transition-all "
-                        >
-                            در سبد
-                        </FormButton> : <FormButton 
-                            onClick={(_) => addToCard(course.id)}
-                            className="text-white bg-did text-sm py-3 px-8 rounded-2xl hover:bg-did/80 transition-all "
-                        >
-                            سبد خرید
-                        </FormButton>}
+                        {user?.basket.lines.find(
+                            (q) => q.course.id === course.id
+                        ) ? (
+                            <FormButton
+                                disabled
+                                className="text-white bg-did text-sm py-3 px-8 rounded-2xl hover:bg-did/80 transition-all "
+                            >
+                                در سبد
+                            </FormButton>
+                        ) : (
+                            <FormButton
+                                onClick={(_) => addToCard(course.id)}
+                                className="text-white bg-did text-sm py-3 px-8 rounded-2xl hover:bg-did/80 transition-all "
+                            >
+                                سبد خرید
+                            </FormButton>
+                        )}
                     </div>
                 </div>
             </div>

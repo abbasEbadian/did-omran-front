@@ -53,7 +53,7 @@ const introLinks = [
     },
     {
         id: 2,
-        url: "#",
+        url: "/exams",
         alt: "Test",
         src: Test,
         text: "آزمون",
@@ -62,7 +62,7 @@ const introLinks = [
     },
     {
         id: 3,
-        url: "#",
+        url: "/book-store",
         alt: "Library",
         src: Library,
         text: "کتابخانه",
@@ -71,7 +71,7 @@ const introLinks = [
     },
     {
         id: 4,
-        url: "#",
+        url: "/courses",
         alt: "Courses",
         src: Courses,
         text: "دوره ها",

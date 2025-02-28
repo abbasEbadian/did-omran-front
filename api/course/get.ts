@@ -23,4 +23,4 @@ export const getCourse = async (id: number) => {
         return undefined;
     }
     return data;
-};
+}
