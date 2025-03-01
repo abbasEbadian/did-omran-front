@@ -9,14 +9,14 @@ import { BookType } from "@/api/book/types";
 function BookContent(book: BookType) {
     return (
         <>
-            <div className=" bg-white shadow-custom-shadow rounded-b-2xl">
-                <div className="w-full">
+            <div className=" bg-white shadow-custom-shadow rounded-2xl">
+                <div className="w-full rounded-2xl">
                     <Image
                         src={book.image}
                         alt="BsPlayCircle Img"
                         height={800}
                         width={1200}
-                        className="object-cover h-[270px] w-full"
+                        className="object-contain h-[270px] w-full rounded-2xl"
                     />
                 </div>
                 <div className="flex flex-col gap-4 rounded-b-2xl border border-did/10 px-4 py-6">

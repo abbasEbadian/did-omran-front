@@ -5,7 +5,11 @@ import FaInstagram from "@/app/components/icons/FaInstagram.svg";
 import FaTelegramPlane from "@/app/components/icons/FaTelegramPlane.svg";
 import Link from "next/link";
 
-function Instructor(tutor: { bio: string; course_count: number, slogan: string }) {
+function Instructor(tutor: {
+    bio: string;
+    course_count: number;
+    slogan: string;
+}) {
     return (
         <>
             <div className="flex flex-col gap-3">
@@ -23,32 +27,7 @@ function Instructor(tutor: { bio: string; course_count: number, slogan: string }
                 </div>
                 <p className="text-secondary text-sm">{tutor.bio}</p>
                 <p className="text-did text-xs my-4">{tutor.slogan}</p>
-                <div className="flex items-center justify-end gap-4 mt-4">
-                    <Link href="#Decription" className="text-dark text-sm">
-                        <Image
-                            src={FaLinkedinIn}
-                            alt="FaLinkedinIn icone"
-                            height={24}
-                            width={24}
-                        />
-                    </Link>
-                    <Link href="#Decription" className="text-dark text-sm">
-                        <Image
-                            src={FaInstagram}
-                            alt="FaInstagram icone"
-                            height={24}
-                            width={24}
-                        />
-                    </Link>
-                    <Link href="#Decription" className="text-dark text-sm">
-                        <Image
-                            src={FaTelegramPlane}
-                            alt="FaTelegramPlane icone"
-                            height={24}
-                            width={24}
-                        />
-                    </Link>
-                </div>
+                
             </div>
         </>
     );

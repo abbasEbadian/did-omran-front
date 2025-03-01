@@ -52,7 +52,7 @@ function InformationCourse(course: CourseType) {
         <div className="flex items-center gap-2 justify-center">
           <span className="text-base text-dark">توسط</span>
           <span className="text-base text-blue font-semibold">
-            {instructors[activeIndex].name}
+            {instructors[activeIndex]?.name}
           </span>
         </div>
       </div>

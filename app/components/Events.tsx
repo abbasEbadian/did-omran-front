@@ -4,6 +4,7 @@ import React from "react";
 import ChevronLeft from "@/app/components/icons/chevron-left.svg";
 import Trophy from "@/app/components/icons/trophy.svg";
 import { EventType } from "@/api/event/types";
+import { ChevronLeftIcon } from "./icons/comp/Chevron";
 
 function Events({ event }: { event: EventType }) {
     return (
@@ -31,13 +32,14 @@ function Events({ event }: { event: EventType }) {
                         className="bg-secondary800 text-xs text-white px-2 rounded flex items-center justify-between py-1 hover:bg-secondary900 transition-all duration-300"
                     >
                         رزرو
-                        <Image
+                        <ChevronLeftIcon />
+                        {/* <Image
                             src={ChevronLeft}
                             alt="رزرو"
                             width={12}
                             height={12}
                             className="text-white fill-white"
-                        />
+                        /> */}
                     </Link>
                 </div>
 

@@ -3,6 +3,10 @@ import React from "react";
 import Profile from "@/public/img/profile.png";
 import Instructor from "@/app/components/Instructor";
 import { CourseType } from "@/api/types";
+import Link from "next/link";
+import FaLinkedinIn from '@/app/components/icons/FaLinkedinIn.svg';
+import FaInstagram from '@/app/components/icons/FaInstagram.svg';
+import FaTelegramPlane from '@/app/components/icons/FaTelegramPlane.svg';
 
 function CourseInstructors(course: CourseType) {
     return (
@@ -30,6 +34,41 @@ function CourseInstructors(course: CourseType) {
                             <span className="text-secondary text-xs whitespace-nowrap">
                                 {instructor.title}
                             </span>
+                            <div className="flex items-center justify-end gap-4 mt-4">
+                                <Link
+                                    href="#Decription"
+                                    className="text-dark text-sm"
+                                >
+                                    <Image
+                                        src={FaLinkedinIn}
+                                        alt="FaLinkedinIn icone"
+                                        height={24}
+                                        width={24}
+                                    />
+                                </Link>
+                                <Link
+                                    href="#Decription"
+                                    className="text-dark text-sm"
+                                >
+                                    <Image
+                                        src={FaInstagram}
+                                        alt="FaInstagram icone"
+                                        height={24}
+                                        width={24}
+                                    />
+                                </Link>
+                                <Link
+                                    href="#Decription"
+                                    className="text-dark text-sm"
+                                >
+                                    <Image
+                                        src={FaTelegramPlane}
+                                        alt="FaTelegramPlane icone"
+                                        height={24}
+                                        width={24}
+                                    />
+                                </Link>
+                            </div>
                         </div>
                         <Instructor {...instructor} />
                     </div>

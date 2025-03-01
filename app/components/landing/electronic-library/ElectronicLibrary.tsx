@@ -7,7 +7,7 @@ function ElectronicLibrary() {
     return (
         <div className="relative my-12">
             {/* تصویر کتابخوان */}
-            <div className="lg:absolute right-[130px] bottom-[213px] z-30">
+            <div className="lg:absolute right-[130px] bottom-[130px] z-30">
                 <Image
                     src={bibliophile}
                     alt="Bibliophile Animation"
