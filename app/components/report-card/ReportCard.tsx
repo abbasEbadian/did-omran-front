@@ -1,8 +1,8 @@
-import { getUser } from "@/api";
-import { ExamType, SheetType, UserType } from "@/api/types";
+
+import { SheetType, UserType } from "@/api/types";
 import React from "react";
 
-export const Dashboard = async ({
+export const Dashboard = ({
     user,
     sheet,
 }: {
@@ -37,7 +37,6 @@ export const Dashboard = async ({
                 (sheet.correct / sheet.exam.question_count) * 100
             ),
         },
-   
     ];
 
     return (
@@ -65,16 +64,16 @@ export const Dashboard = async ({
                                 <td className="py-3 px-4 text-right text-secondary800 border-s border-secondary800 last:border-s-0">
                                     {row.label2}
                                 </td>
-                                <td
-                                    className="py-3 px-4 text-left text-dark"
-                                >
+                                <td className="py-3 px-4 text-left text-dark">
                                     {row.value2}
                                 </td>
                             </tr>
                         ))}
                         <tr className="border border-secondary800">
                             <td className="text-center py-3" colSpan={4}>
-                                <span className="text-secondary900 text-font-extrabold">نتیجه آزمون: </span>
+                                <span className="text-secondary900 text-font-extrabold">
+                                    نتیجه آزمون:{" "}
+                                </span>
                                 <span className="text-primary font-semibold">
                                     {sheet.passed ? "قبول" : "مردود"}
                                 </span>

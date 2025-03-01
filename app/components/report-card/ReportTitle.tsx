@@ -5,8 +5,7 @@ import Link from "next/link";
 import { getUser } from "@/api";
 import { UserType } from "@/api/types";
 
-async function ReportTitle() {
-    const user: UserType = await getUser();
+function ReportTitle({ user }: { user: UserType }) {
     return (
         <div className="flex items-center justify-between mt-4">
             <Link href="#1" className="flex items-center gap-2">

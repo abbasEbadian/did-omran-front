@@ -101,7 +101,7 @@ function page() {
                     <div>
                         <button
                             className={cn(
-                                "bg-blue px-2 py-1 text-xs rounded-lg w-20 border border-blue800"
+                                "bg-blue px-2 py-1 text-xs rounded-lg w-20 border border-blue800 text-white text-nowrap"
                             )}
                             onClick={(e) => setWantToClose(true)}
                         >

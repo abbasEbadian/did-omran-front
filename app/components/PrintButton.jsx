@@ -2,29 +2,24 @@
 
 import Image from "next/image";
 import BsPrinter from "@/app/components/icons/BsPrinter.svg";
+import Link from "next/link";
 
-const PrintButton = () => {
-    const print = () => {
-        
-    }
+const PrintButton = ({ id }) => {
+
     return (
         <>
-            <button
-                onClick={print}
-                className="text-white bg-did rounded-2xl text-sm px-6 py-3 text-center flex items-center"
+            <Link
+                href={ "/result?id=" + id }
+                className="text-white bg-did rounded-2xl text-sm px-6 py-3 text-center flex items-center gap-2.5"
             >
-                چاپ و خروجی
+                چاپ
                 <Image
-                    src={BsPrinter}
+                    src={ BsPrinter }
                     alt="BsTextIndentLeft icone"
-                    height={24}
-                    width={24}
+                    height={ 24 }
+                    width={ 24 }
                 />
-            </button>
-            <iframe
-                id="ifmcontentstoprint"
-                style={{ height: 0, width: 0, position: "absolute" }}
-            ></iframe>
+            </Link>
         </>
     );
 };
