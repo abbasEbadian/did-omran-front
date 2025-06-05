@@ -52,7 +52,7 @@ const Sidebar = () => {
                 text: "اطلاعیه‌ها",
                 icon: Activity,
                 url: "/dashboard/notifications",
-                badge: user?.unseen_notifications ?? 0
+                badge: user?.unseen_notifications?.length ?? 0
             },
             { id: 7, text: "خروج", icon: IoExitOutline, url: "/logout" },
         ],

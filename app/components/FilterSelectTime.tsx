@@ -30,7 +30,7 @@ const FilterSelectBox: React.FC<FilterSelectBoxProps> = ({
                 className="block w-full pl-2 pr-1 py-1 text-base text-secondary focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
                 onChange={handleChange}
             >
-                {options.map((opt) => (
+                {options?.map((opt) => (
                     <option key={opt.value} value={opt.value}>
                         {opt.label}
                     </option>

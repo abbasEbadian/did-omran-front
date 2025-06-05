@@ -16,9 +16,6 @@ function NotificationsPage() {
     const [selectedFilter, setSelectedFilter] = useState<string>("all");
     const [showDetail, setShowDetail] = useState<NotificationType | null>();
 
-    const { mutate } = useSWRConfig();
-    mutate("get-user");
-    mutate("get-notifications");
 
     const {
         data: notifications,
@@ -42,6 +39,11 @@ function NotificationsPage() {
             }
         });
     }, [notifications, selectedFilter]);
+
+    const { mutate } = useSWRConfig();
+    mutate("get-user");
+    mutate("get-notifications");
+
 
     return (
         <>
@@ -80,17 +82,7 @@ function NotificationsPage() {
                     <div className="text-gray-500">اطلاعیه‌ای نداری !</div>
                 )}
             </div>
-            <Modal open={!!showDetail} onClose={() => setShowDetail(null)}>
-                {showDetail && (
-                    <div className="flex flex-col justify-between h-full">
-                        <h4 className="text-lg">{showDetail.title}</h4>
-                        <p className="text-did">{showDetail.message}</p>
-                        <p className="text-gray-400">
-                            {convertToJalali(showDetail.create_date, true)}
-                        </p>
-                    </div>
-                )}
-            </Modal>
+            
         </>
     );
 }

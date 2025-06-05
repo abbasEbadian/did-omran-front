@@ -6,6 +6,8 @@ import Image from "next/image";
 import Search from "@/app/components/icons/search.svg";
 import Cart from "@/app/components/icons/cart-1.svg";
 import User from "@/app/components/icons/user.svg";
+import Bell from "@/app/components/icons/bell.svg";
+import BellOn from "@/app/components/icons/bell-on.svg";
 import Logo from "@/app/components/icons/Logo-blue.svg";
 import { getUser } from "@/api/user";
 import { cn } from "@/utils/cn";
@@ -64,6 +66,14 @@ function Header() {
                                 <span className="absolute top-0 right-0 bg-did text-white text-xs rounded-full bg-blue-500 w-4 h-4 text-center">
                                     {user?.basket.lines.length || 0}
                                 </span>
+                            </Link>
+                            <Link href="/dashboard/notifications" className="relative">
+                                <Image
+                                    src={user?.unseen_notifications.length ? BellOn: Bell}
+                                    alt="bell"
+                                    width={34}
+                                    height={34}
+                                />
                             </Link>
                             <Link href="/">
                                 <Image

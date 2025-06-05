@@ -1,3 +1,4 @@
+import { NotificationType } from "./notification/types";
 import { OrderType } from "./order/types";
 
 export * from "./exam/types";
@@ -14,6 +15,6 @@ export type UserType = {
     is_staff: boolean;
     date_joined: number;
     last_login: number;
-    unseen_notifications: number;
+    unseen_notifications: NotificationType[];
     basket: OrderType;
 };
