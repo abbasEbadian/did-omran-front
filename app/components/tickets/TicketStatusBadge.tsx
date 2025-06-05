@@ -4,7 +4,7 @@ import React from "react";
 import { ComponentProps } from "react";
 
 type TicketStatusBadgeProps = ComponentProps<"span"> & {
-    status?: TicketType["status"];
+    status: TicketType["status"];
 };
 
 const TicketStatusBadge = ({ status, className }: TicketStatusBadgeProps) => {
@@ -14,7 +14,7 @@ const TicketStatusBadge = ({ status, className }: TicketStatusBadgeProps) => {
                 return "bg-blue600";
             case "PENDING":
                 return "bg-yellow";
-            case "ASNWERED":
+            case "ANSWERED":
                 return "bg-primary";
             default:
                 return "bg-secendary";
@@ -26,7 +26,7 @@ const TicketStatusBadge = ({ status, className }: TicketStatusBadgeProps) => {
                 return "بسته شده";
             case "PENDING":
                 return "در انتظار پاسخ";
-            case "ASNWERED":
+            case "ANSWERED":
                 return "پاسخ داده شده";
             default:
                 return "نامشخص";

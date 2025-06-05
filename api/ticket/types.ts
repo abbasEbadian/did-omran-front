@@ -5,12 +5,13 @@ export type TicketMessageType = {
     text: string;
     user: string;
     create_date: number;
+    from_support: boolean;
 };
 
 export type TicketType = {
     id: number;
     title: string;
-    status: "PENDING" | "ASNWERED" | "CLOSED";
+    status: "PENDING" | "ANSWERED" | "CLOSED";
     messages: TicketMessageType[];
     create_date: number;
     write_date: number;

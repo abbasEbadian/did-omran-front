@@ -93,10 +93,10 @@ function page() {
                         {ticket?.title}
                     </h2>
                 </div>
-                <TicketStatusBadge
-                    status={ticket?.status}
+                {ticket?.status && <TicketStatusBadge
+                    status={ticket.status}
                     className="ms-auto me-2"
-                />
+                />}
                 {ticket?.status !== "CLOSED" ? (
                     <div>
                         <button
@@ -121,7 +121,7 @@ function page() {
                             id={message.id}
                             message={message.text}
                             author={message.user ?? ""}
-                            sender={message.user === "مدیر"}
+                            sender={message.from_support}
                             time={new Date(
                                 message.create_date
                             ).toLocaleTimeString("fa")}
