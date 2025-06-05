@@ -6,6 +6,7 @@ export type TicketMessageType = {
     user: string;
     create_date: number;
     from_support: boolean;
+    file?: string;
 };
 
 export type TicketType = {

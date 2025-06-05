@@ -18,7 +18,7 @@ export const getTicket = async (id: number) => {
         method: "GET",
         cache: "no-cache",
     });
-
+    
     if (result !== "ok") {
         return undefined;
     }

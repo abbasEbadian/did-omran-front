@@ -1,4 +1,5 @@
 "use client";
+
 import { toast } from "react-toastify";
 
 export const toaster = (response: {
@@ -6,6 +7,11 @@ export const toaster = (response: {
     message: string | string[];
     data?: any;
 }) => {
+    console.log({response});
+    
+    if(!response?.message){
+        return
+    }
     let { message } = response;
     if (!Array.isArray(message)) {
         message = [message];
