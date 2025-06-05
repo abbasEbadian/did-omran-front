@@ -5,6 +5,7 @@ import { getCourses } from "@/api/course";
 import { CourseType } from "@/api/types";
 import EducationItems from "../components/landing/education/EducationItems";
 import ListWithTabs from "../components/ListWithTabs";
+import Filter from "../components/Filter";
 
 function page() {
     const { data, isLoading, error } = useSWR<CourseType[]>("get-courses", () =>
@@ -12,12 +13,16 @@ function page() {
     );
 
     return (
-        <ListWithTabs<CourseType>
-            data={data || []}
-            isLoading={isLoading}
-            error={error}
-            render={(item: CourseType) => <EducationItems {...item} />}
-        />
+        <>
+            <Filter title="دوره‌ها" />
+
+            <ListWithTabs<CourseType>
+                data={data || []}
+                isLoading={isLoading}
+                error={error}
+                render={(item: CourseType) => <EducationItems {...item} />}
+            />
+        </>
     );
 }
 

@@ -109,6 +109,6 @@ const links = [
     { href: "/courses", text: "دوره‌های آموزشی" },
     { href: "/book-store", text: "کتاب‌های آموزشی" },
     { href: "/exams", text: "آزمون ها" },
-    { href: "#", text: "آموزش‌های رایگان" },
+    { href: "/events", text: "رویدادها" },
     { href: "/about-us", text: "تماس باما" },
 ];

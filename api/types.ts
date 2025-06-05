@@ -14,5 +14,6 @@ export type UserType = {
     is_staff: boolean;
     date_joined: number;
     last_login: number;
+    unseen_notifications: number;
     basket: OrderType;
 };

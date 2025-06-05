@@ -66,7 +66,6 @@ const ListWithTabs = <T extends GenType>({
     };
     return (
         <section className="relative container mx-auto">
-            <Filter/>
             <div className="flex gap-6 items-end justify-center border-b border-did/10 mb-8 mt-5">
                 {categories?.map((tab, i) => (
                     <motion.button

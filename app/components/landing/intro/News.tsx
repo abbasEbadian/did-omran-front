@@ -17,7 +17,7 @@ function NewsSlider() {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <div className="relative w-full mx-auto p-4 bg-secondary600/30 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 min-h-[256px]">
+        <div className="mt-16 relative w-full mx-auto p-4 bg-secondary600/30 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 min-h-[256px]">
             {blogs && !isLoading && (
                 <Swiper
                     modules={[Pagination, Autoplay]}

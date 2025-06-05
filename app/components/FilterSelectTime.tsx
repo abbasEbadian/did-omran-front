@@ -1,35 +1,43 @@
+// components/FilterSelectBox.tsx
+
 "use client";
-import React, { useState } from 'react';
-import filters1 from "@/app/components/icons/filters-1.svg"
-import Image from 'next/image';
-const FilterSelectTime: React.FC = () => {
-  const [selectedFilter, setSelectedFilter] = useState<string>('');
+import React from "react";
+import Image from "next/image";
+import filters1 from "@/app/components/icons/filters-1.svg";
 
-  const handleFilterChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedFilter(event.target.value);
-  };
+export interface FilterOption {
+    label: string;
+    value: string;
+}
 
-  return (
-    <div className="flex items-center space-x-2 border border-did rounded-2xl px-2">
-        <Image
-        src={filters1}
-        alt="filters1 icone"
-        width={24}
-        height={24} />
-      <select
-        id="filter"
-        name="filter"
-        value={selectedFilter}
-        onChange={handleFilterChange}
-        className="block w-full pl-2 pr-1 py-1 text-base text-secondary focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-      >
-        <option value="">فیلترزمانی</option>
-        <option value="filter1">فیلتر ۱</option>
-        <option value="filter2">فیلتر ۲</option>
-        <option value="filter3">فیلتر ۳</option>
-      </select>
-    </div>
-  );
+interface FilterSelectBoxProps {
+    options: FilterOption[];
+    onChange: (value: string) => void;
+}
+
+const FilterSelectBox: React.FC<FilterSelectBoxProps> = ({
+    options,
+    onChange,
+}) => {
+    const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        onChange(e.target.value);
+    };
+
+    return (
+        <div className="flex items-center space-x-2 border border-did rounded-2xl px-2">
+            <Image src={filters1} alt="filters1 icon" width={24} height={24} />
+            <select
+                className="block w-full pl-2 pr-1 py-1 text-base text-secondary focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+                onChange={handleChange}
+            >
+                {options.map((opt) => (
+                    <option key={opt.value} value={opt.value}>
+                        {opt.label}
+                    </option>
+                ))}
+            </select>
+        </div>
+    );
 };
 
-export default FilterSelectTime;
+export default FilterSelectBox;

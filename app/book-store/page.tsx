@@ -6,17 +6,24 @@ import { getBooks } from "@/api";
 import { BookType } from "@/api/book/types";
 import useSWR from "swr";
 import ListWithTabs from "../components/ListWithTabs";
+import Filter from "../components/Filter";
 
 function Page() {
-    const { data, isLoading, error } = useSWR<BookType[]>("get-books", getBooks);
-    
+    const { data, isLoading, error } = useSWR<BookType[]>(
+        "get-books",
+        getBooks
+    );
+
     return (
-        <ListWithTabs<BookType>
-            data={data || []}
-            isLoading={isLoading}
-            error={error}
-            render={(item: BookType) => <BookContent {...item} />}
-        />
+        <>
+            <Filter title="کتابخانه" />
+            <ListWithTabs<BookType>
+                data={data || []}
+                isLoading={isLoading}
+                error={error}
+                render={(item: BookType) => <BookContent {...item} />}
+            />
+        </>
     );
 }
 

@@ -8,7 +8,7 @@ import useSWR from "swr";
 
 const Page = () => {
     const { data: orders, error, isLoading } = useSWR("get-orders", getOrders);
-    console.log(orders);
+
     
     return (
         <div className="p-6">

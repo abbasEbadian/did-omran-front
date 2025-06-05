@@ -48,7 +48,7 @@ function Calculator() {
                                         name="correct"
                                         value={data.correct}
                                         onChange={onChange}
-                                        className="w-full p-2 text-secondary border border-gray-300 rounded-lg"
+                                        className="w-full py-1 p-2 text-secondary border border-gray-300 rounded-lg"
                                         placeholder="0"
                                     />
                                 </div>
@@ -61,7 +61,7 @@ function Calculator() {
                                         name="wrong"
                                         value={data.wrong}
                                         onChange={onChange}
-                                        className="w-full p-2 text-secondary border border-gray-300 rounded-lg"
+                                        className="w-full py-1 p-2 text-secondary border border-gray-300 rounded-lg"
                                         placeholder="0"
                                     />
                                 </div>
@@ -74,7 +74,7 @@ function Calculator() {
                                     name="blank"
                                         value={data.blank}
                                         onChange={onChange}
-                                        className="w-full p-2 text-secondary border border-gray-300 rounded-lg"
+                                        className="w-full py-1 p-2 text-secondary border border-gray-300 rounded-lg"
                                         placeholder="0"
                                     />
                                 </div>
@@ -85,7 +85,7 @@ function Calculator() {
                                 <span className="text-xs text-dark">
                                     نمره اکتسابی شما:
                                 </span>
-                                <span className="text-white text-2xl bg-blue600 rounded-2xl font-medium px-4 py-1">
+                                <span className="text-white text-2xl bg-blue600 rounded-2xl font-medium px-4 py-1 min-w-[64px] text-center">
                                     {score || 0}
                                 </span>
                             </div>
