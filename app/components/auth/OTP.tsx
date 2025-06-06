@@ -82,7 +82,7 @@ function OTP() {
                     autoFocus
                 />
                 <div className="flex items-center justify-between mb-6 ">
-                    <Link href="/otp" className="text-did/60 text-nowrap">
+                    <Link href="/auth/otp" className="text-did/60 text-nowrap">
                         <small>ویرایش شماره</small>
                     </Link>
                     <button

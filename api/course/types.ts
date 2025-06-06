@@ -11,6 +11,12 @@ export type TutorType = {
     user: {
         avatar: string;
     };
+    telegram: string | undefined;
+    instagram: string | undefined;
+    linkedin: string | undefined;
+    courses?: CourseType[]
+    resume: string | TrustedHTML;
+
 }
 export type CourseTopicType = {
     id: number;

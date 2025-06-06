@@ -1,15 +1,9 @@
-import Image from "next/image";
+import { TutorType } from "@/api/types";
 import BsBox from "@/app/components/icons/BsBox.svg";
-import FaLinkedinIn from "@/app/components/icons/FaLinkedinIn.svg";
-import FaInstagram from "@/app/components/icons/FaInstagram.svg";
-import FaTelegramPlane from "@/app/components/icons/FaTelegramPlane.svg";
+import Image from "next/image";
 import Link from "next/link";
 
-function Instructor(tutor: {
-    bio: string;
-    course_count: number;
-    slogan: string;
-}) {
+function Instructor(tutor: TutorType) {
     return (
         <>
             <div className="flex flex-col gap-3">
@@ -21,13 +15,18 @@ function Instructor(tutor: {
                         width={24}
                     />
                     <span className="text-secondary900 text-sm">
-                        {" "}
                         {tutor.course_count} دوره
                     </span>
+                    -
+                    <Link
+                        className="text-did text-sm"
+                        href={"/tutors/" + tutor.id}
+                    >
+                        مشاهده رزومه
+                    </Link>
                 </div>
                 <p className="text-secondary text-sm">{tutor.bio}</p>
                 <p className="text-did text-xs my-4">{tutor.slogan}</p>
-                
             </div>
         </>
     );

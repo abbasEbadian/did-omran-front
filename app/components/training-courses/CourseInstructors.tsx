@@ -35,8 +35,8 @@ function CourseInstructors(course: CourseType) {
                                 {instructor.title}
                             </span>
                             <div className="flex items-center justify-end gap-4 mt-4">
-                                <Link
-                                    href="#Decription"
+                                {instructor.linkedin && <Link
+                                    href={instructor.linkedin}
                                     className="text-dark text-sm"
                                 >
                                     <Image
@@ -45,9 +45,9 @@ function CourseInstructors(course: CourseType) {
                                         height={24}
                                         width={24}
                                     />
-                                </Link>
-                                <Link
-                                    href="#Decription"
+                                </Link>}
+                                {instructor.instagram && <Link
+                                    href={instructor.instagram}
                                     className="text-dark text-sm"
                                 >
                                     <Image
@@ -56,9 +56,9 @@ function CourseInstructors(course: CourseType) {
                                         height={24}
                                         width={24}
                                     />
-                                </Link>
-                                <Link
-                                    href="#Decription"
+                                </Link>}
+                                {instructor.telegram && <Link
+                                    href={instructor.telegram}
                                     className="text-dark text-sm"
                                 >
                                     <Image
@@ -67,7 +67,7 @@ function CourseInstructors(course: CourseType) {
                                         height={24}
                                         width={24}
                                     />
-                                </Link>
+                                </Link>}
                             </div>
                         </div>
                         <Instructor {...instructor} />
