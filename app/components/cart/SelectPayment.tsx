@@ -1,12 +1,17 @@
 "use client";
-import Image from "next/image";
-import MdPayment from "@/app/components/icons/MdPayment.svg";
-import CircleCheck from "@/app/components/icons/CircleCheck.svg";
 import { payOrder } from "@/api/order";
+import MdPayment from "@/app/components/icons/MdPayment.svg";
+import Image from "next/image";
+import Checkbox from "../Checkbox";
 import { FormButton } from "../FormButton";
+import Link from "next/link";
+import { useState } from "react";
+import { cn } from "@/utils/cn";
 
 function SelectPayment() {
+    const [checked, setChecked] = useState(false);
     const pay = async (formdata: FormData) => {
+        if (!checked) return;
         const response = await payOrder();
         if (response.result === "ok") {
             window.location.href = response.data.url;
@@ -47,7 +52,21 @@ function SelectPayment() {
                         درگاه‌های آنلاین معتبر ما واریز کنید.
                     </p>
                 </div>
-                <FormButton className="text-white bg-did rounded-2xl text-sm px-6 py-3 flex gap-1 items-center w-full justify-center">
+                <Checkbox checked={checked} onChange={setChecked}>
+                    <small className="px-1">
+                        <Link href="/terms" target="_blank" className="text-did">
+                            قوانین
+                        </Link>{" "}
+                        را می‌پذیرم.
+                    </small>
+                </Checkbox>
+                <FormButton
+                    className={cn(
+                        "text-white bg-did rounded-2xl text-sm px-6 py-3 flex gap-1 items-center w-full justify-center",
+                        !checked && "opacity-50 pointer-events-none"
+                    )}
+                    disabled={!checked}
+                >
                     ثبت سفارش
                 </FormButton>
             </form>

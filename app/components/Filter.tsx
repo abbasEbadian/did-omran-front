@@ -10,10 +10,10 @@ function Filter({ title, src=FaBook }: { title: string, src?: string }) {
                 <Image src={src} alt="FaBook" width={24} height={24} />
                 <span className="text-dark text-lg">{title}</span>
             </div>
-            <div className="flex items-center gap-2">
+            {/* <div className="flex items-center gap-2">
                 <FilterSelectTime />
                 <FilterSelectDisplay />
-            </div>
+            </div> */}
         </div>
     );
 }
