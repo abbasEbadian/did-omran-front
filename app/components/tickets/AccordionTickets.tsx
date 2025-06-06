@@ -8,14 +8,9 @@ interface AccordionItem {
   content: string;
 }
 
-const AccordionTickets = () => {
+const AccordionTickets = ({items}: {items: AccordionItem[]}) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const items: AccordionItem[] = [
-    { title: 'لورم ایپسوم صنعت چاپ', content: 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد کتابهای زیادی در شصت و سه درصد گذشته حال و آینده }'},
-    { title: 'بخش ۲', content: 'محتوای بخش ۲' },
-    { title: 'بخش ۳', content: 'محتوای بخش ۳' },
-  ];
 
   const handleClick = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);

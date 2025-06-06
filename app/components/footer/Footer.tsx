@@ -192,17 +192,24 @@ function Footer() {
                                     آزمون ها
                                 </Link>
                                 <Link
+                                    href="/faq"
+                                    className="text-white text-sm hover:text-blue700 transition-all duration-300"
+                                >
+                                    سوالات متداول
+                                </Link>
+                                <Link
                                     href="#"
                                     className="text-white text-sm hover:text-blue700 transition-all duration-300"
                                 >
                                     درباره ما
                                 </Link>
                                 <Link
-                                    href="#"
+                                    href=""
                                     className="text-white text-sm hover:text-blue700 transition-all duration-300"
                                 >
                                     تماس باما
                                 </Link>
+                               
                             </div>
                         </div>
                     </div>
