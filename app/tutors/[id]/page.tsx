@@ -24,38 +24,41 @@ export default function TutorResume() {
         );
     }
     return (
-        <div className={`flex justify-center items-center p-4`}>
+        <div className={`flex  flex-col justify-center items-center p-4`}>
             <Head>
                 <title>رزومه مدرس - {tutor?.name}</title>
             </Head>
-            <div className="bg-white rounded-lg shadow-lg p-6 max-w-2xl w-full">
-                <div className="flex items-center mb-6">
-                    <img
+            <div className="flex  items-center bg-did/20 mb-36 w-full relative h-44 rounded-2xl ">
+                  <div className="absolute flex lg:flex-row flex-col items-end justify-end gap-3 right-20 top-0">
+                  <img
                         src={tutor?.user.avatar}
                         alt={tutor?.name}
-                        className="w-24 h-24 rounded-full ml-4"
+                        className="ml-4 h-[170px] w-[170px] items-center justify-center rounded-2xl mt-12"
                     />
                     <div>
-                        <h1 className="text-2xl font-bold text-gray-800">
+                        <h1 className="text-2xl font-bold text-dark">
                             {tutor?.name}
                         </h1>
-                        <p className="text-gray-600">{tutor?.title}</p>
+                        <p className="text-secondary900">{tutor?.title}</p>
                     </div>
+                  </div>
                 </div>
+            <div className=" p-6 w-full mt-10">
+               
                 <div className="mb-4">
-                    <h2 className="text-lg font-semibold text-gray-700">
+                    <h2 className="text-lg font-semibold text-dark">
                         درباره مدرس
                     </h2>
-                    <p className="text-gray-600 mt-2">{tutor?.bio}</p>
+                    <p className="text-secondary900 mt-2">{tutor?.bio}</p>
                 </div>
-                <div className="mb-4">
-                    <h2 className="text-lg font-semibold text-gray-700">
+                <div className="mb-4 border-dashed border-b-2 border-b-secondary700 pb-4">
+                    <h2 className="text-lg font-semibold text-dark">
                         شعار
                     </h2>
-                    <p className="text-gray-600 mt-2">{tutor?.slogan}</p>
+                    <p className="text-secondary900 mt-2">{tutor?.slogan}</p>
                 </div>
                 <div className="mb-4">
-                    <h2 className="text-lg font-semibold text-gray-700">
+                    <h2 className="text-lg font-semibold text-dark">
                         دوره‌ها
                     </h2>
                     {tutor?.courses?.length ? (
@@ -66,7 +69,7 @@ export default function TutorResume() {
                                         key={course.id}
                                         className="hover:text-did800"
                                     >
-                                        <Link href={"/course/" + course.id}>
+                                        <Link href={"/courses/" + course.id}>
                                             {course.name}
                                         </Link>
                                     </li>
@@ -74,7 +77,7 @@ export default function TutorResume() {
                             })}
                         </ul>
                     ) : (
-                        <p className="text-gray-600">به زودی منتظر می‌گردد</p>
+                        <p className="text-secondary900">به زودی منتظر می‌گردد</p>
                     )}
                 </div>
                 {[tutor?.telegram, tutor?.instagram, tutor?.linkedin].some(
