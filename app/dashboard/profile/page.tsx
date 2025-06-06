@@ -37,7 +37,6 @@ function page() {
 
     const submit = async (formData: FormData) => {
         const fd = new FormData();
-        debugger;
         for (let f of ["first_name", "last_name", "email"])
             if (formData.get(f)) fd.append(f, formData.get(f) as string);
         if (
@@ -139,7 +138,7 @@ function page() {
                     <div className="col-span-1">
                         <TextInput
                             type="text"
-                            value={user.first_name}
+                            value={user?.first_name}
                             onChange={(e) =>
                                 setUser({
                                     ...user,

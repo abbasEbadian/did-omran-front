@@ -39,7 +39,7 @@ const Page = () => {
                                     {convertToJalali(order.payment_date, true)}
                                 </td>
                                 <td className="py-3 px-4 text-center text-secondary">
-                                    <StatusBadge status="success" />
+                                    <StatusBadge status={order.status} />
                                 </td>
                                 <td className="py-3 px-4 text-center text-did font-semibold">
                                     <Price amount={Number(order.final_price)} />

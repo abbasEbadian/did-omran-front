@@ -39,7 +39,7 @@ function Login() {
 
     return (
         <>
-            <form className="space-y-8 w-1/3" onSubmit={(e) => submit(e)}>
+            <form className="space-y-8 sm:w-1/3 w-4/5" onSubmit={(e) => submit(e)}>
                 <FloatingLabelInput
                     label={"شماره موبایل"}
                     dir="ltr"

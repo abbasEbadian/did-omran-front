@@ -7,6 +7,7 @@ import EducationTabs from "@/app/components/landing/education/EducationTabs";
 import CaptionMain from "@/app/components/landing/Caption/CaptionMain";
 import FreeEducationTabs from "@/app/components/landing/free-education/FreeEducationTabs";
 import { useSearchParams } from "next/navigation";
+import AdvantagesEvents from "./components/upcoming-events/AdvantagesEvents";
 
 export default function Home() {
     const params = useSearchParams();

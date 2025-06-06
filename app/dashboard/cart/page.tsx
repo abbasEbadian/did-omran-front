@@ -46,15 +46,14 @@ function page() {
                                     <input
                                         type="text"
                                         className="w-full p-4 bg-blue500 placeholder:text-did placeholder:text-sm rounded-2xl text-secondary focus:outline-none focus:border-blue-500"
-                                        placeholder="اعمال"
+                                        placeholder="کد تخفیف"
                                     />
                                 </div>
-                                <Link
-                                    href="#"
+                                <button
                                     className="text-white bg-blue rounded-2xl text-sm p-4 w-[20%] text-center"
                                 >
-                                    اجرای کد
-                                </Link>
+                                    اعمال
+                                </button>
                             </div>
                             <div className="flex items-start p-4 rounded-2xl bg-blue700 text-white border border-did/10 gap-1">
                                 <span className="text-base font-semibold">

@@ -6,7 +6,7 @@ export type OrderType = {
     payment_date: number;
     price: number;
     final_price: number;
-    status: string;
+    status: "PAID" | "CANCELLED" | "PENDING";
     create_date: string;
     lines: OrderLineType[];
 

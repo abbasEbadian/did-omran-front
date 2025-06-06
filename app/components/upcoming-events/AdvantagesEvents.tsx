@@ -28,8 +28,7 @@ function AdvantagesEvents() {
                         />
                     </div>
                     <span className="text-secondary text-xl font-black">
-                        {" "}
-                        نکات طلایی{" "}
+                        انتقال تجربه
                     </span>
                 </div>
                 <div className="flex flex-col items-center gap-4">
@@ -43,7 +42,7 @@ function AdvantagesEvents() {
                         />
                     </div>
                     <span className="text-secondary text-xl font-black">
-                        کارنامه کامل
+                        به‌روزرسانی دانش مهندسی
                     </span>
                 </div>
                 <div className="flex flex-col items-center gap-4">
@@ -57,7 +56,7 @@ function AdvantagesEvents() {
                         />
                     </div>
                     <span className="text-secondary text-xl font-black">
-                        اساتید با تجربه
+                        آشنایی با اساتید برجسته{" "}
                     </span>
                 </div>
                 <div className="flex flex-col items-center gap-4">
