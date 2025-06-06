@@ -11,8 +11,8 @@ export interface FilterOption {
 }
 
 interface FilterSelectBoxProps {
-    options: FilterOption[];
-    onChange: (value: string) => void;
+    options?: FilterOption[];
+    onChange?: (value: string) => void;
 }
 
 const FilterSelectBox: React.FC<FilterSelectBoxProps> = ({
@@ -20,7 +20,7 @@ const FilterSelectBox: React.FC<FilterSelectBoxProps> = ({
     onChange,
 }) => {
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-        onChange(e.target.value);
+        onChange?.(e.target.value);
     };
 
     return (
