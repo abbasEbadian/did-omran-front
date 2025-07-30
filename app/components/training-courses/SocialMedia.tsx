@@ -1,8 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import Telegram from '@/public/Telegram.png';
-import Youtube from '@/public/YT2OctDenoiserBeauty_002 copy.png';
-import Instagram from '@/public/Instagram.png';
 import Saly from '@/app/components/icons/Saly-24.svg'
 function SocialMedia() {
   return (
@@ -25,21 +22,21 @@ function SocialMedia() {
         <div className="flex items-center gap-4">
             <Link href="#" className="">
                 <Image
-                    src={Instagram}
+                    src={'/Instagram.svg'}
                     alt="Instagram Img"
                     height={85} 
                     width={85}/>
             </Link>
             <Link href="#" className="">
                 <Image
-                    src={Youtube}
+                    src={"/youtube.png"}
                     alt="Youtube Img"
                     height={85} 
                     width={85}/>
             </Link>
             <Link href="#" className="">
                 <Image
-                    src={Telegram}
+                    src={"/Telegram.png"}
                     alt="Telegram Img"
                     height={85} 
                     width={85}/>

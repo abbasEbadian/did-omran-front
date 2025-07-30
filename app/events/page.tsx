@@ -3,7 +3,7 @@ import AllEventsInfo from '@components/all-events/AllEventsInfo'
 import AdvantagesEvents from '@components/upcoming-events/AdvantagesEvents'
 import { getEvents } from '@/api/event'
 
-async function page() {
+async function Page() {
   const events = await getEvents()
   return (
     <>
@@ -15,4 +15,4 @@ async function page() {
   )
 }
 
-export default page
+export default Page

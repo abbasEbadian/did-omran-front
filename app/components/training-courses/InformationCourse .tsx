@@ -2,9 +2,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import User1 from '@/public/img/user1.png';
-import User2 from '@/public/img/user2.png';
-import User3 from '@/public/img/user3.png';
 import TrainingCoursesInfo from './TrainingCoursesInfo';
 import { CourseType } from '@/api/types';
 

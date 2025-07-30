@@ -4,14 +4,14 @@ import UsersMore from "@/app/components/icons/users-more.svg";
 import IoTimeOutline from "@/app/components/icons/IoTimeOutline.svg";
 import Check from "@/app/components/icons/check.svg";
 import Link from "next/link";
-import { EventType } from "@/api/event/types";
+import {EventType} from "@/api/event/types";
 import React from "react";
 
 type Props = {
     events: EventType[];
 };
 
-function AllEventsInfo({ events }: Props) {
+const AllEventsInfo = ({ events }: Props)  =>{
     return (
         <>
             <div className="container mx-auto my-16 flex flex-col gap-4">

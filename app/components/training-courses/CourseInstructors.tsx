@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import Profile from "@/public/img/profile.png";
 import Instructor from "@/app/components/Instructor";
 import { CourseType } from "@/api/types";
 import Link from "next/link";
@@ -21,7 +20,7 @@ function CourseInstructors(course: CourseType) {
                         <div className="flex flex-col items-center gap-2">
                             <div className="w-full">
                                 <Image
-                                    src={instructor.user.avatar ?? Profile}
+                                    src={instructor.user.avatar ?? '/img/profile.png'}
                                     alt="Profile icone"
                                     height={100}
                                     width={100}

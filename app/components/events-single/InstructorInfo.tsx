@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Profile from "@/public/img/profile.png";
 import Instructor from "@/app/components/Instructor";
 import { TutorType } from "@/api/types";
 

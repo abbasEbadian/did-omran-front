@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useLayoutEffect } from "react";
+import {useLayoutEffect} from "react";
 
 export function usePageTitle(title: string) {
     useLayoutEffect(() => {

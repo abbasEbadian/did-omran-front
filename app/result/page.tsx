@@ -2,13 +2,12 @@
 
 import ReportCard from "@/app/components/report-card/ReportCard";
 import ReportTitle from "@/app/components/report-card/ReportTitle";
-import { getUser } from "@/api";
-import { getSheets } from "@/api/exam/getSheets";
-import { SheetType, UserType } from "@/api/types";
-import { cache, useEffect, useState } from "react";
+import {getUser} from "@/api";
+import {getSheets} from "@/api/exam/getSheets";
+import {SheetType, UserType} from "@/api/types";
+import {useEffect, useState} from "react";
 import useSWR from "swr";
-import { useSearchParams } from "next/navigation";
-import Link from "next/link";
+import {useSearchParams} from "next/navigation";
 
 function Page() {
     const [loading, setLoading] = useState(true);

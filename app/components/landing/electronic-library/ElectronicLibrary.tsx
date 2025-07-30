@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import bibliophile from "@/app/components/icons/moving/bibliophile-not-css.svg";
-import ElectronicLibraryBg from "@/public/img/Electronic-library-img.png";
 
 function ElectronicLibrary() {
     return (
@@ -21,7 +20,7 @@ function ElectronicLibrary() {
             <div className="lg:relative hidden lg:block ">
                 <div className="lg:absolute left-[91px] top-16">
                     <Image
-                        src={ElectronicLibraryBg}
+                        src={"/img/Electronic-library-img.png"}
                         alt="Electronic Library Background"
                         height={638}
                         quality={100}

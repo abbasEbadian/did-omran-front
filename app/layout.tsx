@@ -5,6 +5,7 @@ import Header from "@/app/components/header/Header";
 import { ToastContainer } from "react-toastify";
 import "react-loading-skeleton/dist/skeleton.css";
 import Footer from "./components/footer/Footer";
+import {Suspense} from "react";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -32,7 +33,9 @@ export default function RootLayout({
                 className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-clip bg-white100`}
             >
                 <Header />
+                <Suspense>
                 <main className="pt-[77px] max-w-[1440px] mx-auto ">{children}</main>
+                </Suspense>
                 <ToastContainer position="top-center" />
                 <Footer />
             </body>

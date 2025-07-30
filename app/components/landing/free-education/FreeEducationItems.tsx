@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import star from '@/app/components/icons/star.svg'
 import eye from '@/app/components/icons/eye.svg'
-import FreeImg from '@/public/img/tests.jpg'
-import profile from '@/public/img/profile.png'
 import Link from 'next/link'
 
 function FreeEducationItems() {
@@ -11,7 +9,7 @@ function FreeEducationItems() {
     <div className="flex flex-col bg-white shadow-custom-shadow rounded-2xl border border-did/10">
        
         <Image
-            src={FreeImg}
+            src={"/img/tests.jpg"}
             alt="Consultation Img"
             height={305}className="w-full object-cover rounded-t-2xl" />
     
@@ -42,7 +40,7 @@ function FreeEducationItems() {
                 <div className="flex gap-2 items-center">
                      <div className="rounded-full">
                      <Image
-                        src={profile}
+                        src={"/img/profile.png"}
                         alt="profile Img"
                         width={46}
                         height={46} />

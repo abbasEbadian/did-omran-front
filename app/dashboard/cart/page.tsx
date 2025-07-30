@@ -7,7 +7,7 @@ import useSWR from "swr";
 import { UserType } from "@/api/types";
 import { getUser } from "@/api";
 
-function page() {
+function Page() {
     const {
         data: user,
         error,
@@ -78,4 +78,4 @@ function page() {
     );
 }
 
-export default page;
+export default Page;

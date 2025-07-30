@@ -1,7 +1,6 @@
 import React from "react";
 import WarningCircle from "@/app/components/icons/warning-circle.svg";
 import Tell from "@/app/components/icons/tell.svg";
-import Support from "@/public/img/support.png";
 import Image from "next/image";
 function SupportTeam() {
     return (
@@ -52,7 +51,7 @@ function SupportTeam() {
                     </div>
                 </div>
                 <Image
-                    src={Support}
+                    src={"/img/support.png"}
                     alt="Profile Img"
                     height={242}
                     width={367}

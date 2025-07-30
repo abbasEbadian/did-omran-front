@@ -2,13 +2,13 @@
 
 import React from "react";
 import TestsBox from "../components/tests/TestsBox";
-import { getExams } from "@/api";
+import {getExams} from "@/api";
 import useSWR from "swr";
-import { ExamType } from "@/api/types";
+import {ExamType} from "@/api/types";
 import ListWithTabs from "../components/ListWithTabs";
 import Filter from "../components/Filter";
 
-function page() {
+function Page() {
     const { data, error, isLoading } = useSWR<ExamType[]>("get-exams", () =>
         getExams()
     );
@@ -26,4 +26,4 @@ function page() {
     );
 }
 
-export default page;
+export default Page;

@@ -21,7 +21,7 @@ function ContentCourse(course: CourseType) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   // داده‌های نمونه برای بخش‌های اکوردیون
-  let sessions = course.topics?.map(t => ({
+  let sessions: Session[] = course.topics?.map(t => ({
     title: t.name,
     duration: `${Math.floor(t.duration / 60)} ساعت و ${t.duration % 60} دقیقه`,
     description: t.title,

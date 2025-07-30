@@ -1,10 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, {useState} from "react";
 import TextInput from "../TextInput";
-import { createTicket } from "@/api";
-import { toaster } from "@/utils/toaster";
-import { FormButton } from "../../FormButton";
-import { redirect, useRouter } from "next/navigation";
+import {createTicket} from "@/api";
+import {toaster} from "@/utils/toaster";
+import {FormButton} from "../../FormButton";
+import {useRouter} from "next/navigation";
 
 const NewTicketForm: React.FC = () => {
     const [title, setTitle] = useState<string>("");
@@ -21,6 +21,7 @@ const NewTicketForm: React.FC = () => {
 
         try {
             const result = await createTicket(formData);
+            if(result)
             toaster(result);
             setTitle("");
             setDescription("");

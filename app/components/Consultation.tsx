@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import ConsultationImg from "@/public/img/Consultation-img.png";
 
 function Consultation() {
     return (
@@ -8,7 +7,7 @@ function Consultation() {
             {/* Image */}
             <div className="absolute inset-0 z-10">
                 <Image
-                    src={ConsultationImg}
+                    src={"/img/Consultation-img.png"}
                     alt="Consultation Img"
                     width={300}
                     height={130}

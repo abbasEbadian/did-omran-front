@@ -11,12 +11,12 @@ import RegisterEvent from "@components/events-single/RegisterEvent";
 import NewComment from "@components/Comments/NewComment";
 import MobileLinkks from "@components/events-single/MobileLinkks";
 import useSWR from "swr";
-import { getEvent } from "@/api/event";
-import { useParams } from "next/navigation";
-import { EventType } from "@/api/event/types";
-import { useScrollSpy } from "@mantine/hooks";
+import {getEvent} from "@/api/event";
+import {useParams} from "next/navigation";
+import {EventType} from "@/api/event/types";
+import {useScrollSpy} from "@mantine/hooks";
 
-function page() {
+function Page() {
     const spy = useScrollSpy({
         selector: ".spy",
         getValue: (element) => element.getAttribute("data-title") || "",
@@ -137,4 +137,4 @@ function page() {
     );
 }
 
-export default page;
+export default Page;

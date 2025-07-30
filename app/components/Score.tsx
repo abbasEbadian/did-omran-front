@@ -33,7 +33,7 @@ function Score({rating: defaultRating}: {rating?: number}) {
                 aria-label={`Rating: ${rating} out of 5`}
             >
                 {[...Array(totalStars)].map((_, index) => {
-                    const isFilled = (hoverRating || rating) > index;
+                    const isFilled = (hoverRating ?? rating ?? 0) > index;
                     return (
                         <button
                             key={index}
@@ -59,7 +59,7 @@ function Score({rating: defaultRating}: {rating?: number}) {
 
             {/* متن امتیاز و نظرات */}
             <span className="text-secondary900 text-xs">
-                ({rating > 0 ? `${rating.toFixed(1)} امتیاز` : "بدون امتیاز"}،
+                ({rating ?? 0 > 0 ? `${rating?.toFixed(1)} امتیاز` : "بدون امتیاز"}،
                 21 نظر)
             </span>
         </div>

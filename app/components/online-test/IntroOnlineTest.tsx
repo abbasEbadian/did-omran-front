@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Profile from "@/public/img/profile2.jpg";
 import { ExamType, UserType } from "@/api/types";
 
 const IntroOnlineTest = ({ exam, user }: { exam: ExamType; user: UserType }) => {
@@ -8,7 +7,7 @@ const IntroOnlineTest = ({ exam, user }: { exam: ExamType; user: UserType }) => 
             <section className="flex items-end gap-3 flex-col">
                 <div className="flex items-center gap-4 border-b-2 border-b-secondary700 border-dashed grow pb-2 w-full justify-between">
                     <Image
-                        src={user?.avatar ?? Profile}
+                        src={user?.avatar ?? '/img/profile2.jpg'}
                         alt="Profile"
                         height={1024}
                         width={1024}

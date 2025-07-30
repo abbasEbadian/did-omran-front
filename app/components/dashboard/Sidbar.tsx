@@ -1,5 +1,4 @@
 import Image from "next/image";
-import profile2 from "@/public/img/profile2.jpg";
 import Link from "next/link";
 import SidebarLinks from "./SidebarLinks";
 import { getUser } from "@/api/user";
@@ -18,7 +17,7 @@ async function Sidebar() {
                         داشبورد
                     </span>
                     <Image
-                        src={user?.avatar ?? profile2}
+                        src={user?.avatar ?? "/img/profile2.jpg"}
                         alt="profile2 Img"
                         height={1024}
                         width={1024}

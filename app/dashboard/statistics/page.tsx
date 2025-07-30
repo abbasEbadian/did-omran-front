@@ -57,8 +57,8 @@ const Page = () => {
                                     <StatusBadge
                                         status={
                                             sheet.passed
-                                                ? "accepted"
-                                                : "rejected"
+                                                ? "PAID"
+                                                : "CANCELLED"
                                         }
                                     />
                                 </td>

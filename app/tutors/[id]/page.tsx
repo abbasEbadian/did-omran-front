@@ -1,11 +1,11 @@
 "use client";
 
-import { getTutor } from "@/api";
-import { CourseType, TutorType } from "@/api/types";
+import {getTutor} from "@/api";
+import {TutorType} from "@/api/types";
 import Head from "next/head";
 import Link from "next/link";
-import { useParams } from "next/navigation";
-import { MoonLoader } from "react-spinners";
+import {useParams} from "next/navigation";
+import {MoonLoader} from "react-spinners";
 import useSWR from "swr";
 
 export default function TutorResume() {

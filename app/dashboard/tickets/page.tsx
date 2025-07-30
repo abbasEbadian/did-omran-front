@@ -3,7 +3,7 @@ import Link from "next/link";
 import IoAddSharp from "@/app/components/icons/IoAddSharp.svg";
 import TicketsList from "@/app/components/dashboard/tickets/TicketsList";
 
-function page() {
+function Page() {
     return (
         <>
             <div className="flex items-end justify-between pb-3">
@@ -26,4 +26,4 @@ function page() {
     );
 }
 
-export default page;
+export default Page;

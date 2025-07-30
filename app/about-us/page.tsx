@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import AboutUs from '@/app/components/icons/about-us.svg'
 
-function page() {
+function Page() {
   return (
     <>
   
@@ -82,4 +82,4 @@ function page() {
   )
 }
 
-export default page
+export default Page

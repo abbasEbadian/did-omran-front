@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import ChevronLeft from "@/app/components/icons/chevron-left.svg";
 import Trophy from "@/app/components/icons/trophy.svg";
 import { EventType } from "@/api/event/types";
 import { ChevronLeftIcon } from "./icons/comp/Chevron";

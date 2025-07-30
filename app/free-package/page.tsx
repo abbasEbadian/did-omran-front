@@ -5,7 +5,7 @@ import OnlineTest from "@/app/components/icons/undraw_online_test.svg";
 import AndrawAnalysis from "@/app/components/icons/undraw_detailed_analysis.svg";
 import Counter from "@components/Counter";
 
-function page() {
+function Page() {
     const date = new Date();
     date.setDate(new Date().getDate() + 5);
     const timestamp = date.getTime();
@@ -114,4 +114,4 @@ function page() {
     );
 }
 
-export default page;
+export default Page;

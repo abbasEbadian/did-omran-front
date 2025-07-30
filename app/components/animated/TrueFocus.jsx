@@ -1,26 +1,10 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import {useEffect, useRef, useState} from "react";
+import {motion} from "framer-motion";
 
-interface TrueFocusProps {
-    sentence?: string;
-    manualMode?: boolean;
-    blurAmount?: number;
-    borderColor?: string;
-    glowColor?: string;
-    animationDuration?: number;
-    pauseBetweenAnimations?: number;
-}
 
-interface FocusRect {
-    x: number;
-    y: number;
-    width: number;
-    height: number;
-}
-
-const TrueFocus: React.FC<TrueFocusProps> = ({
+const TrueFocus = ({
     sentence = "True Focus",
     manualMode = false,
     blurAmount = 5,
@@ -30,11 +14,11 @@ const TrueFocus: React.FC<TrueFocusProps> = ({
     pauseBetweenAnimations = 1,
 }) => {
     const words = sentence.split(" ");
-    const [currentIndex, setCurrentIndex] = useState<number>(0);
-    const [lastActiveIndex, setLastActiveIndex] = useState<number | null>(null);
-    const containerRef = useRef<HTMLDivElement | null>(null);
-    const wordRefs = useRef<(HTMLSpanElement | null)[]>([]);
-    const [focusRect, setFocusRect] = useState<FocusRect>({
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [lastActiveIndex, setLastActiveIndex] = useState(null);
+    const containerRef = useRef(null);
+    const wordRefs = useRef([]);
+    const [focusRect, setFocusRect] = useState({
         x: 0,
         y: 0,
         width: 0,
@@ -57,7 +41,7 @@ const TrueFocus: React.FC<TrueFocusProps> = ({
 
         const parentRect = containerRef.current.getBoundingClientRect();
         const activeRect =
-            wordRefs.current[currentIndex]!.getBoundingClientRect();
+            wordRefs.current[currentIndex].getBoundingClientRect();
 
         setFocusRect({
             x: activeRect.left - parentRect.left,
@@ -67,7 +51,7 @@ const TrueFocus: React.FC<TrueFocusProps> = ({
         });
     }, [currentIndex, words.length]);
 
-    const handleMouseEnter = (index: number) => {
+    const handleMouseEnter = (index) => {
         if (manualMode) {
             setLastActiveIndex(index);
             setCurrentIndex(index);
@@ -76,7 +60,7 @@ const TrueFocus: React.FC<TrueFocusProps> = ({
 
     const handleMouseLeave = () => {
         if (manualMode) {
-            setCurrentIndex(lastActiveIndex!);
+            setCurrentIndex(lastActiveIndex);
         }
     };
 
@@ -102,7 +86,7 @@ const TrueFocus: React.FC<TrueFocusProps> = ({
                                     ? `blur(0px)`
                                     : `blur(${blurAmount}px)`,
                                 transition: `filter ${animationDuration}s ease`,
-                            } as React.CSSProperties
+                            }
                         }
                         onMouseEnter={() => handleMouseEnter(index)}
                         onMouseLeave={handleMouseLeave}
@@ -128,7 +112,7 @@ const TrueFocus: React.FC<TrueFocusProps> = ({
                     {
                         "--border-color": borderColor,
                         "--glow-color": glowColor,
-                    } as React.CSSProperties
+                    }
                 }
             >
                 <span

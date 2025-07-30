@@ -3,8 +3,9 @@ import Image from "next/image";
 import LogoLogin from "@/app/components/icons/logo-login.svg";
 import Link from "next/link";
 import CircularText from "../components/animated/CircularText";
-import TrueFocus from "../components/animated/TrueFocus";
+import TrueFocus from "@components/animated/TrueFocus";
 import { cn } from "@/utils/cn";
+import { Suspense } from "react";
 
 export default function AuthLayout({
     children,
@@ -49,7 +50,9 @@ export default function AuthLayout({
                             pauseBetweenAnimations={0.5}
                         />
                     </h2>
+                    <Suspense>
                     {children}
+                    </Suspense>
                 </div>
             </div>
         </div>

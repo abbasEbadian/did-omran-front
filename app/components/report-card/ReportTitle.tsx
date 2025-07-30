@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Logo from "@/app/components/icons/Logo-blue.svg";
-import profile2 from "@/public/img/profile2.jpg";
 import Link from "next/link";
-import { getUser } from "@/api";
 import { UserType } from "@/api/types";
 
 function ReportTitle({ user }: { user: UserType }) {
@@ -22,7 +20,7 @@ function ReportTitle({ user }: { user: UserType }) {
                 <span className="text-secondary">رشته مهندسی عمران اجرا</span>
             </div>
             <Image
-                src={user.avatar ?? profile2}
+                src={user.avatar ?? "/img/profile2.jpg"}
                 alt="profile"
                 width={100}
                 height={100}

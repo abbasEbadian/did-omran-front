@@ -1,5 +1,4 @@
 import Image from "next/image";
-import online from "@/public/online-test.svg";
 import Link from "next/link";
 
 function OnlineExam() {
@@ -37,7 +36,7 @@ function OnlineExam() {
             </div>
             <div className="lg:absolute left-[130px] top-[253px]">
                 <Image
-                    src={online}
+                    src={'/online-test.svg'}
                     alt="آزمون آنلاین مهندسی"
                     width={500} // Adjust width as needed
                     height={395}

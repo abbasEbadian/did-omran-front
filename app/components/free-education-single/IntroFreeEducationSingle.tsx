@@ -1,7 +1,5 @@
 import Image from 'next/image';
-import FreeImg from '@/public/img/freeimg.png';
 import BsStack from '@/app/components/icons/BsStack.svg';
-import ProfileImg from '@/public/img/profile.jpg';
 import IntroContent from './IntroContent';
 import SocialMediaIcon from '@/app/components/SocialMediaIcon';
 import FaInstagram from '@/app/components/icons/FaInstagram.svg';
@@ -35,7 +33,7 @@ const IntroFreeEducationSingle: React.FC = () => {
       <div className="flex flex-col lg:flex-row gap-4">
         <div className="lg:w-1/2 w-full">
           <Image
-            src={FreeImg}
+            src={"/img/freeimg.png"}
             alt="Free Education Img"
             height={290}
             width={463}
@@ -61,7 +59,7 @@ const IntroFreeEducationSingle: React.FC = () => {
             <div className="flex items-center lg:gap-3 gap-1">
               <div className="rounded-full">
                 <Image
-                  src={ProfileImg}
+                  src={"/img/profile.jpg"}
                   alt="Profile Img"
                   height={60}
                   width={60}

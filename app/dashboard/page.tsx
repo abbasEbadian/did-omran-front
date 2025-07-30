@@ -10,7 +10,7 @@ import { getUser } from "@/api";
 import { convertToJalali } from "@/utils/jalali";
 import { UserType } from "@/api/types";
 
-function page() {
+function Page() {
     const { data: user } = useSWR<UserType>("get-user", getUser);
     console.log(user);
 
@@ -76,4 +76,4 @@ function page() {
     );
 }
 
-export default page;
+export default Page;

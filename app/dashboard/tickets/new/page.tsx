@@ -1,11 +1,8 @@
 import NewTicketForm from "@/app/components/dashboard/tickets/NewTicketForm";
 import TicketsTitle from "@/app/components/dashboard/tickets/TicketsTitle";
-import Image from "next/image";
-import Link from "next/link";
-import IoAddSharp from '@/app/components/icons/IoAddSharp.svg'
 import TabsWithAccordions from "@/app/components/tickets/TabsWithAccordions";
 
-function page() {
+function Page() {
     return (
         <>
             <TicketsTitle />
@@ -20,4 +17,4 @@ function page() {
     );
 }
 
-export default page;
+export default Page;

@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Saly1 from "@/public/Saly1.png";
-import Saly2 from "@/public/Saly2.png";
-import Saly3 from "@/public/Saly3.png";
-import Saly4 from "@/public/Saly4.png";
+import Saly1 from "/Saly1.png";
+import Saly2 from "/Saly2.png";
+import Saly3 from "/Saly3.png";
+import Saly4 from "/Saly4.png";
 import Link from "next/link";
 
 function AdvantagesEvents() {
@@ -21,7 +21,7 @@ function AdvantagesEvents() {
                     <div className="rounded-full w-36 h-36 relative bg-gradient-to-b from-did/5 to-did">
                         <Image
                             className="absolute -right-4 bottom-4"
-                            src={Saly4}
+                            src={"/Saly4.png"}
                             alt="eye icone"
                             height={100}
                             width={130}
@@ -35,7 +35,7 @@ function AdvantagesEvents() {
                     <div className="rounded-full w-36 h-36 relative bg-gradient-to-b from-did/5 to-[#A2B6F8]">
                         <Image
                             className="absolute -right-4 bottom-4"
-                            src={Saly3}
+                            src={"/Saly3.png"}
                             alt="eye icone"
                             height={130}
                             width={130}
@@ -49,7 +49,7 @@ function AdvantagesEvents() {
                     <div className="rounded-full w-36 h-36 relative bg-gradient-to-b from-did/5 to-[#71C9CE]">
                         <Image
                             className="absolute -right-4 bottom-4"
-                            src={Saly2}
+                            src={"/Saly2.png"}
                             alt="eye icone"
                             height={70}
                             width={130}
@@ -63,7 +63,7 @@ function AdvantagesEvents() {
                     <div className="rounded-full w-36 h-36 relative bg-gradient-to-b from-did/5 to-[#8D66DE]">
                         <Image
                             className="absolute -right-4 bottom-4"
-                            src={Saly1}
+                            src={"/Saly1.png"}
                             alt="eye icone"
                             height={120}
                             width={120}

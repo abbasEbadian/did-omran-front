@@ -1,9 +1,7 @@
 <svg class="animated" id="freepik_stories-bibliophile" xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 500 500" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:svgjs="http://svgjs.com/svgjs" width="500" height="500">
-    <style>
-    svg#freepik_stories-bibliophile:not(.animated) .animable {opacity: 0;}svg#freepik_stories-bibliophile.animated #freepik--Floor--inject-2 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideRight;animation-delay: 0s;}svg#freepik_stories-bibliophile.animated #freepik--Character--inject-2 {animation: 1.5s Infinite  linear wind;animation-delay: 0s;}svg#freepik_stories-bibliophile.animated #freepik--Glass--inject-2 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) zoomOut;animation-delay: 0s;}            @keyframes slideRight {                0% {                    opacity: 0;                    transform: translateX(30px);                }                100% {                    opacity: 1;                    transform: translateX(0);                }            }                    @keyframes wind {                0% {                    transform: rotate( 0deg );                }                25% {                    transform: rotate( 1deg );                }                75% {                    transform: rotate( -1deg );                }            }                    @keyframes zoomOut {                0% {                    opacity: 0;                    transform: scale(1.5);                }                100% {                    opacity: 1;                    transform: scale(1);                }            }        .animator-hidden { display: none; }
-    </style>
+    width="500" height="500">
+
     <g id="freepik--Floor--inject-2" class="animable" style="transform-origin: 248.635px 433.53px;">
         <path
             d="M476.58,433.53c0,.14-102.07.26-227.94.26s-227.95-.12-227.95-.26,102-.26,228-.26S476.58,433.38,476.58,433.53Z"
@@ -1243,26 +1241,5 @@
             </g>
         </g>
     </g>
-    <defs>
-        <filter id="active" height="200%">
-            <feMorphology in="SourceAlpha" result="DILATED" operator="dilate" radius="2"></feMorphology>
-            <feFlood flood-color="#32DFEC" flood-opacity="1" result="PINK"></feFlood>
-            <feComposite in="PINK" in2="DILATED" operator="in" result="OUTLINE"></feComposite>
-            <feMerge>
-                <feMergeNode in="OUTLINE"></feMergeNode>
-                <feMergeNode in="SourceGraphic"></feMergeNode>
-            </feMerge>
-        </filter>
-        <filter id="hover" height="200%">
-            <feMorphology in="SourceAlpha" result="DILATED" operator="dilate" radius="2"></feMorphology>
-            <feFlood flood-color="#ff0000" flood-opacity="0.5" result="PINK"></feFlood>
-            <feComposite in="PINK" in2="DILATED" operator="in" result="OUTLINE"></feComposite>
-            <feMerge>
-                <feMergeNode in="OUTLINE"></feMergeNode>
-                <feMergeNode in="SourceGraphic"></feMergeNode>
-            </feMerge>
-            <feColorMatrix type="matrix"
-                values="0   0   0   0   0                0   1   0   0   0                0   0   0   0   0                0   0   0   1   0 "></feColorMatrix>
-        </filter>
-    </defs>
+
 </svg>

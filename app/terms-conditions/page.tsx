@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function page() {
+export default function Page() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-12 text-right leading-loose">
     <h1 className="text-3xl font-bold text-center mb-8">قوانین و مقررات دیدعمران</h1>

@@ -1,17 +1,17 @@
 "use client";
-import { UserType } from "@/api/types";
-import { getUser } from "@/api/user";
-import { updateUser } from "@/api/user/update";
+import {UserType} from "@/api/types";
+import {getUser} from "@/api/user";
+import {updateUser} from "@/api/user/update";
 import TextInput from "@/app/components/dashboard/TextInput";
-import { FormButton } from "@/app/components/FormButton";
-import { toaster } from "@/utils/toaster";
+import {FormButton} from "@/app/components/FormButton";
+import {toaster} from "@/utils/toaster";
 import Image from "next/image";
-import React, { useCallback, useEffect, useState } from "react";
-import { z } from "zod";
-import { useRouter } from "next/navigation";
+import React, {useCallback, useEffect, useState} from "react";
+import {z} from "zod";
+import {useRouter} from "next/navigation";
 import * as motion from "motion/react-client";
 import Head from "next/head";
-import { usePageTitle } from '@/app/hooks/usePageTitle';
+import {usePageTitle} from '@/app/hooks/usePageTitle';
 
 type Profile = {
     first_name: string | undefined;
@@ -22,7 +22,7 @@ type Profile = {
     file?: File | undefined;
 };
 
-function page() {
+function Page() {
     usePageTitle("پروفایل");
     const router = useRouter();
     const [user, setUser] = useState<Profile | undefined>(undefined);
@@ -197,4 +197,4 @@ function page() {
     );
 }
 
-export default page;
+export default Page;

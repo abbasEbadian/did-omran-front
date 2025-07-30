@@ -1,9 +1,7 @@
 import Image from 'next/image'
-import Shop from '@/public/img/shop.jpg'
 import BsBook from '@/app/components/icons/BsBook.svg'
 import Check from '@/app/components/icons/check.svg'
 import MdAccessTime from '@/app/components/icons/MdAccessTime.svg'
-import Star1 from '@/app/components/icons/star-1.svg'
 import Link from 'next/link'
 function IntroShop() {
   return (
@@ -12,7 +10,7 @@ function IntroShop() {
         <div className="col-span-3">
             <Image
                     className="w-10/12"
-                    src={Shop}
+                    src={"/img/shop.jpg"}
                     alt="shop Img"
                     height={177} 
                     width={360}

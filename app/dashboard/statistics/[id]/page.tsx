@@ -5,7 +5,7 @@ import { getSheets } from "@/api/exam/getSheets";
 import { SheetType } from "@/api/types";
 import PrintButton from "@/app/components/PrintButton";
 
-async function page({ params }: { params: { id: string } }) {
+async function page({ params }: { params:  Promise<{ id: string }> }) {
     const user = await getUser();
     const { id } = await params;
     const sheets: SheetType[] = await getSheets();

@@ -4,13 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import LogoWhite from "@/app/components/icons/logo-white.svg";
 import ArrowRight from "@/app/components/icons/arrow-right.svg";
-import Telegram from "@/public/Telegram.png";
-import Youtube from "@/public/YT2OctDenoiserBeauty_002 copy.png";
-import aparat from "@/public/aparat1 copy 1.png";
-import Instagram from "@/public/Instagram.png";
-import enamad from "@/public/img/enamad.png";
-import FooterBg from "@/public/img/footerBg.png";
-import { usePathname } from "next/navigation";
+import {usePathname} from "next/navigation";
 
 const paths = ["/online-exam", "/auth", "/dashboard"];
 function Footer() {
@@ -25,7 +19,7 @@ function Footer() {
             <div className="relative 2xl:mt-[900px] lg:mt-[600px] mt-[400px]">
                 <div className="absolute -bottom-20 w-full z-20 hidden lg:block">
                     <Image
-                        src={FooterBg}
+                        src={"/footerBg.png"}
                         alt="FooterBg"
                         width={1432}
                         height={1000}
@@ -82,7 +76,7 @@ function Footer() {
                             <div className="flex items-center justify-between">
                                 <Link href="#">
                                     <Image
-                                        src={aparat}
+                                        src={"/aparat.png"}
                                         alt="Aparat"
                                         width={80}
                                         height={80}
@@ -90,7 +84,7 @@ function Footer() {
                                 </Link>
                                 <Link href="#">
                                     <Image
-                                        src={Instagram}
+                                        src={"/Instagram.svg"}
                                         alt="Instagram"
                                         width={80}
                                         height={80}
@@ -98,7 +92,7 @@ function Footer() {
                                 </Link>
                                 <Link href="#">
                                     <Image
-                                        src={Youtube}
+                                        src={"/youtube.png"}
                                         alt="Youtube"
                                         width={80}
                                         height={80}
@@ -106,7 +100,7 @@ function Footer() {
                                 </Link>
                                 <Link href="#">
                                     <Image
-                                        src={Telegram}
+                                        src={"/Telegram.png"}
                                         alt="Telegram"
                                         width={80}
                                         height={80}
@@ -155,7 +149,7 @@ function Footer() {
                             <div>
                                 <Link href="#" className="">
                                     <Image
-                                        src={enamad}
+                                        src={"/enamad.png"}
                                         alt="Enamad"
                                         width={107}
                                         height={117}

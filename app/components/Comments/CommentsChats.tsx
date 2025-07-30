@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import ProfileDemo from '@/app/components/icons/profile-demo.svg'
-import User2 from '@/public/img/user2.png'
 
 
 function CommentsChats() {
@@ -43,7 +42,7 @@ function CommentsChats() {
             <div className="flex items-center justify-start gap-2">
                 <div className="rounded-full">
                     <Image
-                        src={User2}
+                        src={"/img/user2.png"}
                         alt="CheckSmall icone"
                         height={80} 
                         width={80}

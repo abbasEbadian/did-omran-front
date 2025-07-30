@@ -7,7 +7,7 @@ import EducationItems from "../components/landing/education/EducationItems";
 import ListWithTabs from "../components/ListWithTabs";
 import Filter from "../components/Filter";
 
-function page() {
+function Page() {
     const { data, isLoading, error } = useSWR<CourseType[]>("get-courses", () =>
         getCourses()
     );
@@ -26,4 +26,4 @@ function page() {
     );
 }
 
-export default page;
+export default Page;

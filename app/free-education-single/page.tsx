@@ -1,10 +1,8 @@
-
-import Link from 'next/link'
 import QuestionBox from '@/app/components/Comments/QuestionBox'
 import OnlineFreeFilm from '@/app/components/free-education-single/OnlineFreeFilm'
 import IntroFreeEducationSingle from '../components/free-education-single/IntroFreeEducationSingle'
 
-function page() {
+function Page() {
   return (
     <>
    <div className="bg-white100 py-16 px-4 lg:px-0">
@@ -30,4 +28,4 @@ function page() {
   )
 }
 
-export default page
+export default Page

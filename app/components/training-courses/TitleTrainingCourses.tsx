@@ -5,7 +5,7 @@ import Image from "next/image";
 import MdAlarm from "@/app/components/icons/MdAlarm.svg";
 import ListLeft from "@/app/components/icons/list-left.svg";
 import UserMore from "@/app/components/icons/users-more.svg";
-import CalendarCheck from "@/app/components/icons/calendar-check.png";
+import CalendarCheck from "@/app/components/icons/calendar-check.svg";
 import Star1 from "@/app/components/icons/star.svg";
 import StarFilled from "@/app/components/icons/HiStar.svg";
 import { CourseType } from "@/api/types";

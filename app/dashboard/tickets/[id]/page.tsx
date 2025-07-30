@@ -1,22 +1,22 @@
 "use client";
 
-import { getTicket } from "@/api/ticket/get";
-import { TicketType } from "@/api/ticket/types";
-import { closeTicket, sendTicketMessage } from "@/api/ticket/update";
+import {getTicket} from "@/api/ticket/get";
+import {TicketType} from "@/api/ticket/types";
+import {closeTicket, sendTicketMessage} from "@/api/ticket/update";
 import IoAddSharp from "@/app/components/icons/message-square-lines.svg";
 import send from "@/app/components/icons/send-2.svg";
 import Modal from "@/app/components/Modal";
 import TicketStatusBadge from "@/app/components/tickets/TicketStatusBadge";
-import { cn } from "@/utils/cn";
+import {cn} from "@/utils/cn";
 import Image from "next/image";
 import Link from "next/link";
-import { redirect, useParams } from "next/navigation";
-import { useState } from "react";
-import { MoonLoader, SyncLoader } from "react-spinners";
-import { toast } from "react-toastify";
-import useSWR, { useSWRConfig } from "swr";
+import {redirect, useParams} from "next/navigation";
+import {useState} from "react";
+import {MoonLoader, SyncLoader} from "react-spinners";
+import {toast} from "react-toastify";
+import useSWR, {useSWRConfig} from "swr";
 
-function page() {
+function Page() {
     const { mutate } = useSWRConfig();
     const { id } = useParams();
     const { data: ticket, isLoading } = useSWR<TicketType>(
@@ -45,6 +45,7 @@ function page() {
                 mutate("get-ticket");
             })
             .catch((error) => {
+                console.log(error)
                 toast.error("خطا در بستن تیکت");
             })
             .finally(() => setClosing(false));
@@ -201,7 +202,7 @@ function page() {
     );
 }
 
-export default page;
+export default Page;
 
 type ChatBubbleProps = {
     id: number;

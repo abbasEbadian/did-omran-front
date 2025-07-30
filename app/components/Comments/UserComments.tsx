@@ -1,11 +1,6 @@
 "use client";
 import Image from 'next/image';
 import Slash from '@/app/components/icons/slash.svg';
-import User1 from '@/public/img/user1.png';
-import User2 from '@/public/img/user2.png';
-import User3 from '@/public/img/user3.png';
-import User4 from '@/public/img/user4.png';
-import User5 from '@/public/img/user5.png';
 import { useEffect, useState } from 'react';
 
 function UserComments() {
@@ -81,35 +76,35 @@ const userComments = [
   {
     id: 1,
     alt: 'profile img',
-    src: User1,
+    src: "/img/user1.png",
     comment: 'پشتیبانی همکارانتون بی‌نظیر بود، من هفته آخر آخر کارشناس رسمی خیلی استرس داشتم ولی تیم شما با دلسوزی و همدلی بالا ما رو حمایت کردند تا تونستیم بالاخره قبول بشیم؛ سلام ما رو به دکتر خلوتی عزیز برسونید👌😍',
     name: '_ Aria Zinanrio',
   },
   {
     id: 2,
     alt: 'profile img',
-    src: User2,
+    src: "/img/user2.png",
     comment: 'خیلی راضی بودم از خدماتتون، مخصوصاً آزمون‌های آزمایشی که خیلی بهم کمک کرد.',
     name: '_ Sara Mohammadi',
   },
   {
     id: 3,
     alt: 'profile img',
-    src: User3,
+    src: "/img/user3.png",
     comment: 'تیم پشتیبانی خیلی حرفه‌ای و دلسوز بودن، ممنون از زحماتتون.',
     name: '_ Ali Rezaei',
   },
   {
     id: 4,
     alt: 'profile img',
-    src: User4,
+    src: "/img/user4.png",
     comment: 'آزمون‌های شما واقعاً استاندارد و مفید بودن، به همه توصیه می‌کنم.',
     name: '_ Maryam Hosseini',
   },
   {
     id: 5,
     alt: 'profile img',
-    src: User5,
+    src: "/img/user5.png",
     comment: 'من با کمک آزمون‌های شما تونستم در آزمون نظام مهندسی قبول شم، ممنونم.',
     name: '_ Reza Karimi',
   },

@@ -1,12 +1,11 @@
 "use client";
-import React, { useRef } from "react";
+import React from "react";
 import FloatingLabelInput from "../FloatingLabelInput";
-import { _fetch } from "@/utils/fetch";
-import { login } from "@/api";
-import { toaster } from "@/utils/toaster";
-import { redirect, useSearchParams } from "next/navigation";
-import { FormButton } from "../FormButton";
-import { z } from "zod";
+import {login} from "@/api";
+import {toaster} from "@/utils/toaster";
+import {redirect, useSearchParams} from "next/navigation";
+import {FormButton} from "../FormButton";
+import {z} from "zod";
 
 function Login() {
     const params = useSearchParams();

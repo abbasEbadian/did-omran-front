@@ -1,4 +1,3 @@
-import LogoLogin from "@/app/components/icons/logo-login.svg";
 import * as motion from "motion/react-client";
 export default function Template({
     children,

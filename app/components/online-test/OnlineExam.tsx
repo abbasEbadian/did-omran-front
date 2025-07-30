@@ -34,8 +34,8 @@ const OnlineExam = ({ exam, ...rest }: { exam: ExamType }) => {
             answers: answers
         }
         const response = await applyAnswer(data)
-        toaster(response)
-        if(response.result === 'ok'){
+        response && toaster(response)
+        if(response?.result === 'ok'){
             redirect('/dashboard/statistics/')
         }
     };

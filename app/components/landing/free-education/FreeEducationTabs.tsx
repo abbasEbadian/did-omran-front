@@ -1,5 +1,4 @@
 "use client";
-import FreeBg from "@/public/img/freebg.png";
 import { useState } from "react";
 import FreeEducationSlider from "./FreeEducationSlider";
 import Image from "next/image";
@@ -33,7 +32,7 @@ const FreeEducationTabs = () => {
 
             <div className="absolute right-1/3 bottom-72 -z-10">
                 <Image
-                    src={FreeBg}
+                    src={"/img/freebg.png"}
                     alt="FreeBg Animation"
                     height={394}
                     width={682}

@@ -7,7 +7,7 @@ import Link from "next/link";
 import { getBook } from "@/api";
 import { notFound } from "next/navigation";
 
-async function page({ params }: { params: { id: string } }) {
+async function Page({ params }: { params: Promise<{ id: string }> }) {
 
     const { id } = await params;
     const book = await getBook(+id);
@@ -94,4 +94,6 @@ async function page({ params }: { params: { id: string } }) {
     );
 }
 
-export default page;
+
+
+export default Page;

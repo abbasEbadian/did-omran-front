@@ -3,7 +3,7 @@ import IntroUpcomingEvents from '../components/upcoming-events/IntroUpcomingEven
 import RecentEvents from '../components/upcoming-events/RecentEvents'
 import AdvantagesEvents from '../components/upcoming-events/AdvantagesEvents'
 
-function page() {
+function Page() {
   return (
     <div className='bg-white100'>
         <IntroUpcomingEvents/>
@@ -13,4 +13,4 @@ function page() {
   )
 }
 
-export default page
+export default Page

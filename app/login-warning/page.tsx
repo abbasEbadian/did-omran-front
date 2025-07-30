@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import FiCheckCircle from '@/app/components/icons/FiCheckCircle.svg'
 import Link from 'next/link'
-function page() {
+function Page() {
   return (
     <>
    <div className="bg-white100">
@@ -47,4 +47,4 @@ function page() {
   )
 }
 
-export default page
+export default Page

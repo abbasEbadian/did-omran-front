@@ -1,9 +1,11 @@
-import OTP from "@/app/components/auth/OTP";
 import Login from "../components/auth/Login";
+import {Suspense} from "react";
 
 const LoginPage: React.FC = () => {
     return (
-        <Login />
+        <Suspense>
+            <Login />
+        </Suspense>
     );
 };
 

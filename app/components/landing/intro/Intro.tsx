@@ -5,7 +5,6 @@ import Calculator from "./Calculator";
 import UpcomingEvent from "./UpcomingEvent";
 import Consultation from "../../Consultation";
 import Image from "next/image";
-import InrtoBg from "@/public/img/bg-intro.png";
 
 function Intro() {
     return (
@@ -16,7 +15,7 @@ function Intro() {
 
                 <div className="absolute inset-0 -z-10">
                     <Image
-                        src={InrtoBg}
+                        src={'/img/bg-intro.png"'}
                         alt="Consultation Img"
                         fill
                         className="object-cover"

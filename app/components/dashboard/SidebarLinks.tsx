@@ -9,7 +9,7 @@ import Home from "@/app/components/icons/Home.svg";
 import Chart from "@/app/components/icons/chart-vertical.svg";
 import Bag from "@/app/components/icons/Bag.svg";
 import MessageSquare from "@/app/components/icons/message-square.svg";
-import Edit from "@/app/components/icons/edit-2.png";
+import Edit from "@/app/components/icons/edit-2.svg";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import useSWR from "swr";

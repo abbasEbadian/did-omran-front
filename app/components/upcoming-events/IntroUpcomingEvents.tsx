@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Events from '@/public/img/events.png'
 import Trophy from '@/app/components/icons/trophy.svg'
 import CalendarCheck from '@/app/components/icons/calendar-check.svg'
 import ChevronSmallL from '@/app/components/icons/chevron-small-left.svg'
@@ -11,7 +10,7 @@ function IntroUpcomingEvents() {
         <div className="flex items-center justify-center gap-5">
             <div className="w-1/3 rounded-2xl">
                 <Image
-                    src={Events}
+                    src={"/img/events.png"}
                     alt="Events Img"
                     height={275} 
                     width={180}

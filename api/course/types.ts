@@ -1,4 +1,3 @@
-import Avater1 from "@/public/img/Avater1.png";
 import { StaticImageData } from "next/image";
 
 export type TutorType = {

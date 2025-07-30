@@ -1,11 +1,10 @@
 "use client";
-import { BookType } from "@/api/book/types";
-import { CourseType, ExamType } from "@/api/types";
-import React, { useEffect, useState } from "react";
+import {BookType} from "@/api/book/types";
+import {CourseType, ExamType} from "@/api/types";
+import React, {useEffect, useState} from "react";
 import * as motion from "motion/react-client";
-import { MoonLoader } from "react-spinners";
-import { AnimatePresence } from "framer-motion";
-import Filter from "./Filter";
+import {MoonLoader} from "react-spinners";
+import {AnimatePresence} from "framer-motion";
 
 type GenType = BookType | CourseType | ExamType;
 
@@ -73,7 +72,6 @@ const ListWithTabs = <T extends GenType>({
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{
-                            type: "easeInOut",
                             delay: 0.1 * (i + 1) + 0.2,
                         }}
                         onClick={() => setActiveCategory(tab)}
@@ -112,7 +110,6 @@ const ListWithTabs = <T extends GenType>({
                                 <motion.div
                                     layout
                                     transition={{
-                                        type: "easeInOut",
                                         delay: 0.1 * (i + 1) + 0.2,
                                     }}
                                     initial={{ opacity: 0, y: 25 }}

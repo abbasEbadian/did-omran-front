@@ -1,13 +1,13 @@
 "use client";
-import { Swiper, SwiperSlide } from "swiper/react";
+import {Swiper, SwiperSlide} from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
-import { useRef, useState } from "react";
-import { CourseType } from "@/api/types";
+import {Navigation, Pagination} from "swiper/modules";
+import {useRef, useState} from "react";
+import {CourseType} from "@/api/types";
 import useSWR from "swr";
-import { getCourses } from "@/api";
+import {getCourses} from "@/api";
 import EducationItems from "./EducationItems";
 
 interface Item {

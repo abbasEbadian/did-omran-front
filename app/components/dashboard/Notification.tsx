@@ -1,13 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React, {useState} from "react";
 import pin2 from "@/app/components/icons/pin-2.svg";
 import InfoCircle from "@/app/components/icons/info-circle.svg";
 import ShieldCross from "@/app/components/icons/shield-cross.svg";
 import Image from "next/image";
-import { NotificationType } from "@/api/notification/types";
+import {NotificationType} from "@/api/notification/types";
 import Modal from "../Modal";
-import { convertToJalali } from "@/utils/jalali";
 
 const Notification = ({ title, message, date, type }: NotificationProps) => {
     const [modal, setModal] = useState(false);

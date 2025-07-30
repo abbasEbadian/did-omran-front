@@ -4,10 +4,9 @@ import OnlineExam from "@/app/components/landing/online-exam/OnlineExam";
 import Comments from "@/app/components/Comments/Comments";
 import ElectronicLibrary from "@/app/components/landing/electronic-library/ElectronicLibrary";
 import EducationTabs from "@/app/components/landing/education/EducationTabs";
-import CaptionMain from "@/app/components/landing/Caption/CaptionMain";
 import FreeEducationTabs from "@/app/components/landing/free-education/FreeEducationTabs";
-import { useSearchParams } from "next/navigation";
-import AdvantagesEvents from "./components/upcoming-events/AdvantagesEvents";
+import {useSearchParams} from "next/navigation";
+import {Suspense} from "react";
 
 export default function Home() {
     const params = useSearchParams();
@@ -17,7 +16,7 @@ export default function Home() {
     }
 
     return (
-        <>
+        <Suspense>
             <main className="flex flex-col gap-8">
                 <Intro />
                 <EducationTabs />
@@ -26,6 +25,6 @@ export default function Home() {
                 <ElectronicLibrary />
                 <Comments />
             </main>
-        </>
+        </Suspense>
     );
 }
