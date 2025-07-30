@@ -1,12 +1,14 @@
-FROM node:20.13.1-bookworm-slim
+FROM node:22-alipine
 
 WORKDIR /app
 
+RUN npm install -g pnpm
+
 COPY package.json /app
 
-RUN npm install
+RUN pnpm install
 
 COPY . /app
 
-RUN npm run build && npm run start
+RUN pnpm build && pnpm start
 

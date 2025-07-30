@@ -218,7 +218,7 @@ function Footer() {
                 {/* Footer Bottom: Copyright */}
                 <div className="border-t border-secondary700 flex items-center justify-center pt-4 container mx-auto mt-9">
                     <span className="text-white text-sm">
-                        Copyright © 2012 - 2024 DID.ir All Rights Reserved.
+                        Copyright © 2012 - 2025 DIDomran.ir All Rights Reserved.
                     </span>
                 </div>
             </div>
