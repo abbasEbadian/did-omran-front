@@ -16,8 +16,9 @@ const EducationTabs = () => {
     ];
 
     return (
-        <div className="p-4">
-            <div className="flex items-center justify-center gap-16 mb-6">
+        <>
+        <div className="p-4 lg:max-w-[600px] mx-auto">
+            <div className="flex items-center justify-between gap-16 mb-6">
                 <span className="text-2xl text-dark font-bold ">
                     دوره‌های آموزشی دید عمران
                 </span>
@@ -30,7 +31,7 @@ const EducationTabs = () => {
             </div>
 
             {/* Tab Buttons (Horizontal) */}
-            <div className="flex lg:items-center justify-center lg:flex-row flex-col">
+            <div className="flex lg:items-center justify-between lg:flex-row flex-col">
                 {tabs.map((tab) => (
                     <button
                         key={tab.id}
@@ -44,15 +45,17 @@ const EducationTabs = () => {
                         {tab.label}
                         {/* Active Tab Indicator (Vertical Line) */}
                         {activeTab === tab.id && (
-                            <div className="absolute bottom-0 left-0 right-0 h-10 w-1 bg-did rounded"></div>
+                            <div className="absolute bottom-0 left-0 right-0 h-7 w-1 bg-did rounded"></div>
                         )}
                     </button>
                 ))}
             </div>
 
-            {/* Tab Content */}
-            <div className="mt-8">{tabs[activeTab].content}</div>
+           
         </div>
+         {/* Tab Content */}
+         <div className="mt-8">{tabs[activeTab].content}</div>
+        </>
     );
 };
 

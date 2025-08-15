@@ -3,7 +3,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Image from "next/image";
-import Search from "@/app/components/icons/search.svg";
+import SearchIcon from "@/app/components/icons/search.svg";
 import Cart from "@/app/components/icons/cart-1.svg";
 import User from "@/app/components/icons/user.svg";
 import Bell from "@/app/components/icons/bell.svg";
@@ -15,15 +15,26 @@ import { getUser } from "@/api/user";
 import { cn } from "@/utils/cn";
 import { usePathname } from "next/navigation";
 import useSWR from "swr";
+import { IconClose } from "../icons/comp/IconClose";
 
 function Header() {
     const { data: user } = useSWR("get-user", getUser);
     const pathname = usePathname();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    // ✅ مدیریت باز/بسته بودن جست‌وجوی تمام صفحه
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
+    const [searchValue, setSearchValue] = useState("");
+
     if (pathname.startsWith("/auth")) {
         return null;
     }
+
+    const handleSearch = () => {
+        console.log("جست‌وجو:", searchValue);
+        setIsSearchOpen(false);
+        // اینجا میتونی ریدایرکت یا API Call بزنی
+    };
 
     return (
         <header className="bg-white p-4 fixed top-0 z-50 inset-x-0 shadow-custom-shadow">
@@ -56,16 +67,9 @@ function Header() {
 
                     {/* Right Section */}
                     <div className="text-xl font-bold text-gray-800 flex items-center gap-3">
-                        {/* Mobile Hamburger */}
-                        <button
-                            className="md:hidden"
-                            onClick={() => setIsMenuOpen(true)}
-                        >
-                            <Image src={MenuIcon} alt="menu" width={28} height={28} />
-                        </button>
 
                         {/* Icons */}
-                        <div className="hidden md:flex items-center gap-2">
+                        <div className="flex items-center gap-2">
                             <Link href="/dashboard/cart" className="relative">
                                 <Image src={Cart} alt="cart" width={34} height={34} />
                                 <span className="absolute top-0 right-0 bg-did text-white text-xs rounded-full w-4 h-4 text-center">
@@ -80,10 +84,19 @@ function Header() {
                                     height={34}
                                 />
                             </Link>
-                            <Link href="/">
-                                <Image src={Search} alt="search" width={34} height={34} />
-                            </Link>
+
+                            {/* ✅ آیکون جستجو که مودال تمام صفحه باز می‌کند */}
+                            <button onClick={() => setIsSearchOpen(true)}>
+                                <Image src={SearchIcon} alt="search" width={34} height={34} />
+                            </button>
                         </div>
+                        {/* Mobile Hamburger */}
+                        <button
+                            className="md:hidden"
+                            onClick={() => setIsMenuOpen(true)}
+                        >
+                            <Image src={MenuIcon} alt="menu" width={28} height={28} />
+                        </button>
 
                         {/* User */}
                         {user ? (
@@ -159,12 +172,43 @@ function Header() {
                 </div>
             </div>
 
-            {/* Overlay */}
+            {/* Overlay منو */}
             {isMenuOpen && (
                 <div
                     className="fixed inset-0 bg-black bg-opacity-50 z-40"
                     onClick={() => setIsMenuOpen(false)}
                 />
+            )}
+
+
+            {isSearchOpen && (
+                <div className="fixed inset-0 bg-black bg-opacity-90 z-[100] flex items-center justify-center animate-fadeIn">
+                    {/* دکمه بستن */}
+                    <button
+                        className="absolute top-6 right-8"
+                        onClick={() => setIsSearchOpen(false)}
+                    >
+                        <IconClose className="text-white" />
+                    </button>
+
+                    {/* فرم جستجو */}
+                    <div className="flex items-center w-full max-w-2xl border-b-2 border-did px-2 pb-2">
+                        <input
+                            type="text"
+                            value={searchValue}
+                            onChange={(e) => setSearchValue(e.target.value)}
+                            placeholder="چی میخوای پیدا کنی؟"
+                            className="flex-1 bg-transparent outline-none text-white text-2xl placeholder-gray-400"
+                            autoFocus
+                        />
+                        <button
+                            onClick={handleSearch}
+                            className="bg-did700 rounded-full p-3 flex items-center justify-center hover:bg-did transition"
+                        >
+                            <Image src={SearchIcon} alt="search" width={24} height={24} />
+                        </button>
+                    </div>
+                </div>
             )}
         </header>
     );

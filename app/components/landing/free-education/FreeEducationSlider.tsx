@@ -29,7 +29,7 @@ const FreeEducationSlider: React.FC = () => {
         modules={[Pagination]}
         spaceBetween={20} // فاصله بین آیتم‌ها
         slidesPerView={4} // تعداد آیتم‌ها در هر اسلاید
-        navigation 
+         
         pagination={{
           clickable: true,
           el: '.custom-pagination', // کلاس سفارشی برای pagination
