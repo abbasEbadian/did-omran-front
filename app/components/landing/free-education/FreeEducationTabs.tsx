@@ -18,7 +18,7 @@ const FreeEducationTabs = () => {
 
     return (
         <div className="relative p-4">
-            <div className="flex items-center justify-center gap-16">
+            <div className="flex items-center justify-center gap-16 mb-7">
                 <span className="text-2xl text-dark font-bold ">
                     آموزش‌های دیدعمران
                 </span>
@@ -56,14 +56,14 @@ const FreeEducationTabs = () => {
                         {tab.label}
                         {/* Active Tab Indicator (Vertical Line) */}
                         {activeTab === tab.id && (
-                            <div className="absolute bottom-0 left-0 right-0 h-10 w-1 bg-did rounded"></div>
+                            <div className="absolute bottom-0 left-0 right-0 h-7 w-1 bg-did rounded"></div>
                         )}
                     </button>
                 ))}
             </div>
 
             {/* Tab Content */}
-            <div className="">{tabs[activeTab].content}</div>
+            {tabs[activeTab].content}
         </div>
     );
 };

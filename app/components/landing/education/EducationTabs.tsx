@@ -44,7 +44,7 @@ const EducationTabs = () => {
                         {tab.label}
                         {/* Active Tab Indicator (Vertical Line) */}
                         {activeTab === tab.id && (
-                            <div className="absolute bottom-0 left-0 right-0 h-10 w-1 bg-did rounded"></div>
+                            <div className="absolute bottom-0 left-0 right-0 h-7 w-1 bg-did rounded"></div>
                         )}
                     </button>
                 ))}

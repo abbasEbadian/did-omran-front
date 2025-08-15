@@ -3,7 +3,7 @@ function CaptionMain() {
   return (
     <>
     
-      <div className="flex items-center justify-center gap-16">
+      <div className="flex items-center justify-center gap-16 mb-6">
           <span className="text-2xl text-dark font-bold ">
           دوره‌های آموزشی دید عمران
           </span>
