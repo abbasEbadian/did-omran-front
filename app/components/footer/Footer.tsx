@@ -19,7 +19,7 @@ function Footer() {
             <div className="relative 2xl:mt-[900px] lg:mt-[600px] mt-[400px]">
                 <div className="absolute -bottom-20 w-full z-20 hidden lg:block">
                     <Image
-                        src={"/footerBg.png"}
+                        src={"/img/footerBg.png"}
                         alt="FooterBg"
                         width={1432}
                         height={1000}
@@ -84,7 +84,7 @@ function Footer() {
                                 </Link>
                                 <Link href="#">
                                     <Image
-                                        src={"/Instagram.svg"}
+                                        src={"/Instagram.png"}
                                         alt="Instagram"
                                         width={80}
                                         height={80}

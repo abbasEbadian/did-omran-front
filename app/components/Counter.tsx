@@ -3,7 +3,6 @@
 import React, {useState, useEffect, useCallback} from "react";
 
 function Counter({date}: { date: number }) {
-
     const calculateTimeLeft = useCallback(() => {
             const remainingMilliseconds = date - new Date().getTime();
             if (remainingMilliseconds <= 0) {

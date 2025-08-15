@@ -22,7 +22,7 @@ function SocialMedia() {
         <div className="flex items-center gap-4">
             <Link href="#" className="">
                 <Image
-                    src={'/Instagram.svg'}
+                    src={'/img/Instagram.png'}
                     alt="Instagram Img"
                     height={85} 
                     width={85}/>
