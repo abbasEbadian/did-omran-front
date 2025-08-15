@@ -67,16 +67,9 @@ function Header() {
 
                     {/* Right Section */}
                     <div className="text-xl font-bold text-gray-800 flex items-center gap-3">
-                        {/* Mobile Hamburger */}
-                        <button
-                            className="md:hidden"
-                            onClick={() => setIsMenuOpen(true)}
-                        >
-                            <Image src={MenuIcon} alt="menu" width={28} height={28} />
-                        </button>
 
                         {/* Icons */}
-                        <div className="hidden md:flex items-center gap-2">
+                        <div className="flex items-center gap-2">
                             <Link href="/dashboard/cart" className="relative">
                                 <Image src={Cart} alt="cart" width={34} height={34} />
                                 <span className="absolute top-0 right-0 bg-did text-white text-xs rounded-full w-4 h-4 text-center">
@@ -97,6 +90,13 @@ function Header() {
                                 <Image src={SearchIcon} alt="search" width={34} height={34} />
                             </button>
                         </div>
+                        {/* Mobile Hamburger */}
+                        <button
+                            className="md:hidden"
+                            onClick={() => setIsMenuOpen(true)}
+                        >
+                            <Image src={MenuIcon} alt="menu" width={28} height={28} />
+                        </button>
 
                         {/* User */}
                         {user ? (
@@ -180,7 +180,7 @@ function Header() {
                 />
             )}
 
-           
+
             {isSearchOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-90 z-[100] flex items-center justify-center animate-fadeIn">
                     {/* دکمه بستن */}
@@ -188,7 +188,7 @@ function Header() {
                         className="absolute top-6 right-8"
                         onClick={() => setIsSearchOpen(false)}
                     >
-                       <IconClose className="text-white"/>
+                        <IconClose className="text-white" />
                     </button>
 
                     {/* فرم جستجو */}
