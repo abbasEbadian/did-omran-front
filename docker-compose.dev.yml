@@ -1,0 +1,32 @@
+
+services:
+  web: 
+    build:
+      context: .
+      dockerfile: Dockerfile-development
+    volumes:
+      - type: bind
+        source: .
+        target: /app
+    ports:
+      - "3000:3000"
+    env_file:
+      - ".env"
+    working_dir: /app
+    command: pnpm run dev
+    develop:
+      watch:
+        - action: sync
+          path: .
+          target: /app
+          ignore:
+            - node_modules/
+            - docker*
+            - Docker*
+        - action: rebuild
+          path: package.json
+          target: /app/package.json
+        - action: sync+restart
+          path: next.config.ts
+          target: /app/next.config.ts
+    network_mode: host

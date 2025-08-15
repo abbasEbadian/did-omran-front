@@ -1,11 +1,15 @@
 
 services:
   web: 
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile-production
     volumes:
       - type: bind
         source: .
         target: /app
-        read_only: true
     ports:
       - "3000:3000"
+    env_file:
+      - ".env"
+    working_dir: /app

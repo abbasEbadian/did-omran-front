@@ -62,8 +62,9 @@ function NewsSlider() {
                                         <h2 className="text-dark text-xl font-bold">
                                             {blogs?.[activeIndex]?.title}
                                         </h2>
-                                        <p className="text-secondary text-xs leading-6 min-h-[80px]">
-                                            {blogs?.[activeIndex]?.text}
+                                        <p className="text-secondary text-xs leading-6 min-h-[80px]"  dangerouslySetInnerHTML={{
+                                            __html: blogs?.[activeIndex]?.text
+                                        }}>
                                         </p>
                                     </div>
                                 </div>

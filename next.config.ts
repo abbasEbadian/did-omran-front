@@ -1,10 +1,12 @@
-import type { NextConfig } from "next";
+import type {NextConfig} from "next";
+
 const withImages = require("next-images");
 
 const nextConfig: NextConfig = {
+    output: "standalone",
     eslint: {
-    ignoreDuringBuilds: true,
-  },
+        ignoreDuringBuilds: true,
+    },
     images: {
         remotePatterns: [
             {
@@ -14,6 +16,14 @@ const nextConfig: NextConfig = {
             {
                 protocol: "http",
                 hostname: "192.168.1.102",
+            },
+            {
+                protocol: "https",
+                hostname: "didomran.ir",
+            },
+            {
+                protocol: "http",
+                hostname: "didomran.ir",
             },
         ],
     },

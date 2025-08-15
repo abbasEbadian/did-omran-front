@@ -23,6 +23,7 @@ function ElectronicLibrary() {
                         src={"/img/Electronic-library-img.png"}
                         alt="Electronic Library Background"
                         height={638}
+                        width={638}
                         quality={100}
                         priority
                     />

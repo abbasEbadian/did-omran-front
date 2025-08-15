@@ -11,7 +11,6 @@ function Consultation() {
                     alt="Consultation Img"
                     width={300}
                     height={130}
-                    placeholder="blur"
                 />
             </div>
 
