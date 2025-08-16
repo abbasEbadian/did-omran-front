@@ -26,7 +26,7 @@ function Score({rating: defaultRating}: {rating?: number}) {
     };
 
     return (
-        <div className="flex items-center gap-2 flex-col">
+        <div className="flex items-center gap-1 flex-col">
             {/* ستاره‌ها */}
             <div
                 className="flex items-center"
@@ -40,7 +40,7 @@ function Score({rating: defaultRating}: {rating?: number}) {
                             onClick={() => handleRatingClick(index)}
                             onMouseEnter={() => handleRatingHover(index)}
                             onMouseLeave={handleRatingLeave}
-                            className="p-1 focus:outline-none"
+                            className="focus:outline-none"
                             aria-label={`Rate ${
                                 index + 1
                             } out of ${totalStars}`}
@@ -48,8 +48,8 @@ function Score({rating: defaultRating}: {rating?: number}) {
                             <Image
                                 src={isFilled ? StarFill : Star1}
                                 alt={isFilled ? "Filled Star" : "Empty Star"}
-                                height={24}
-                                width={24}
+                                height={20}
+                                width={20}
                                 className="transition-transform transform hover:scale-110"
                             />
                         </button>
