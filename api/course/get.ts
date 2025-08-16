@@ -6,7 +6,7 @@ export const getCourses = async () => {
         method: "GET",
         cache: "no-cache",
     });
-
+    
     if (result !== "ok") {
         return [];
     }
