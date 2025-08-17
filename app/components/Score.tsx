@@ -48,8 +48,8 @@ function Score({rating: defaultRating}: {rating?: number}) {
                             <Image
                                 src={isFilled ? StarFill : Star1}
                                 alt={isFilled ? "Filled Star" : "Empty Star"}
-                                height={15}
-                                width={15}
+                                height={20}
+                                width={20}
                                 className="transition-transform transform hover:scale-110"
                             />
                         </button>

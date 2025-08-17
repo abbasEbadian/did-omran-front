@@ -35,14 +35,14 @@ function EducationItems(course: CourseType) {
                         alt="Consultation Img"
                         height={800}
                         width={1200}
-                        className="w-full max-h-[270px] object-cover"
+                        className="w-full max-h-[260px] object-cover"
                     />
                 </Link>
                 <div className="flex flex-col bg-white rounded-b-2xl  gap-2 px-4 py-6">
                     <div className=" flex flex-col items-start gap-2 justify-start mb-4">
                         <Link
                             href={"/courses/" + course.id}
-                            className="text-dark text-base font-medium line-clamp-2 lg:min-h-[42px]"
+                            className="text-dark text-base font-medium line-clamp-2"
                         >
                             {course.name}
                         </Link>
