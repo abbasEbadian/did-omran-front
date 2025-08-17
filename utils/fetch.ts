@@ -20,14 +20,10 @@ export async function _fetch(
             cache: "force-cache",
             ...options,
             headers,
-            method: "GET",
         });
-        console.log({response, options  });
 
         const res = await response.json();
-        console.log({res});
-        
-        
+
 
         switch (response.status) {
             case 401:

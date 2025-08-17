@@ -15,7 +15,7 @@ function Intro() {
 
                 <div className="absolute inset-0 -z-10">
                     <Image
-                        src={'/img/bg-intro.png"'}
+                        src={'/img/bg-intro.png'}
                         alt="Consultation Img"
                         fill
                         className="object-cover"
