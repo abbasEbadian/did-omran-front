@@ -40,8 +40,8 @@ function BookContent(book: BookType) {
                             <Image
                                 src={Eye}
                                 alt="eye icone"
-                                height={24}
-                                width={24}
+                                height={20}
+                                width={20}
                             />
                             <span className="text-secondary900 text-xs">
                                 {book.download}
