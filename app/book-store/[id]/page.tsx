@@ -3,6 +3,8 @@ import React from "react";
 import ListRight from "@/app/components/icons/list-right.svg";
 import Edit from "@/app/components/icons/edit-3.svg";
 import HiOutlineFolderDownload from "@/app/components/icons/HiOutlineFolderDownload.svg";
+import CalendarTick from "@/app/components/icons/calendar-tick.svg";
+import HiOutlineNewspaper from "@/app/components/icons/HiOutlineNewspaper.svg";
 import Link from "next/link";
 import { getBook } from "@/api";
 import { notFound } from "next/navigation";
@@ -73,10 +75,38 @@ async function Page({ params }: { params: Promise<{ id: string }> }) {
                                         width={24}
                                     />
                                     <span className="text-secondary900 text-xs">
-                                        ویرایش:{" "}
+                                        مترجم:{" "}
+                                    </span>
+                                    <span className="text-secondary900 text-xs">
+                                        {book.translator}
+                                    </span>
+                                </div>
+                                <div className="flex items-center gap-1">
+                                    <Image
+                                        src={CalendarTick}
+                                        alt="CheckSmall icone"
+                                        height={24}
+                                        width={24}
+                                    />
+                                    <span className="text-secondary900 text-xs">
+                                    سال انتشار:{" "}
                                     </span>
                                     <span className="text-secondary900 text-xs">
                                         {book.year}
+                                    </span>
+                                </div>
+                                <div className="flex items-center gap-1">
+                                    <Image
+                                        src={HiOutlineNewspaper}
+                                        alt="CheckSmall icone"
+                                        height={24}
+                                        width={24}
+                                    />
+                                    <span className="text-secondary900 text-xs">
+                                    ناشر:{" "}
+                                    </span>
+                                    <span className="text-secondary900 text-xs">
+                                        {book.publisher}
                                     </span>
                                 </div>
                             </div>

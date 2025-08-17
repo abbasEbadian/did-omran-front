@@ -23,7 +23,7 @@ function BookContent(book: BookType) {
                 <div className="flex flex-col gap-4 rounded-b-2xl border border-did/10 px-4 py-6 ">
                     <div className="flex items-start justify-start gap-2 flex-col">
                         <span className="text-dark text-sm">
-                            عنوان: {book.title}
+                           {book.title}
                         </span>
                         <div className="flex items-center justify-start gap-2 flex-row">
                             <IconUser1 fill="none" />
