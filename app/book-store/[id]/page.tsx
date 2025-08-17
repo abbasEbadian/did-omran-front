@@ -6,6 +6,7 @@ import HiOutlineFolderDownload from "@/app/components/icons/HiOutlineFolderDownl
 import Link from "next/link";
 import { getBook } from "@/api";
 import { notFound } from "next/navigation";
+import { IconUser1 } from "@/app/components/icons/comp/IconUser1";
 
 async function Page({ params }: { params: Promise<{ id: string }> }) {
 
@@ -33,6 +34,13 @@ async function Page({ params }: { params: Promise<{ id: string }> }) {
                         <span className="text-dark text-xl font-black">
                             {book.title}
                         </span>
+                         <div className="flex items-center justify-start gap-2">
+                            <IconUser1  fill="none"/>
+                            <span className="text-secondary text-xs">
+                           
+                                {book.author}
+                            </span>
+                        </div>
                         {book && (
                             <div
                                 className="text-secondary text-justify text-sm border-b-2 border-dashed border-b-secondary700 pb-4"

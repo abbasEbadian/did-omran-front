@@ -21,15 +21,18 @@ function BookContent(book: BookType) {
                     />
                 </div>
                 <div className="flex flex-col gap-4 rounded-b-2xl border border-did/10 px-4 py-6 ">
-                   <div className="flex items-start justify-start gap-2 flex-col">
-                    <span className="text-dark text-sm">
-                        عنوان: {book.title}
-                    </span>
-                    <span className="text-secondary text-xs flex items-center justify-start">
-                       <IconUser1  fill="none"/>
-                        {book.author}
-                    </span>
-                   </div>
+                    <div className="flex items-start justify-start gap-2 flex-col">
+                        <span className="text-dark text-sm">
+                            عنوان: {book.title}
+                        </span>
+                        <div className="flex items-center justify-start gap-2 flex-row">
+                            <IconUser1 fill="none" />
+                            <span className="text-secondary text-xs">
+
+                                {book.author}
+                            </span>
+                        </div>
+                    </div>
 
                     <div className="flex items-center gap-3">
                         <div className="border-t-2 border-dashed border-secondary700 grow"></div>
