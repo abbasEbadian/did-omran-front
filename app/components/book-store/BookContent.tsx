@@ -5,6 +5,7 @@ import ListRight from "@/app/components/icons/list-right.svg";
 import Edit from "@/app/components/icons/edit-3.svg";
 import Link from "next/link";
 import { BookType } from "@/api/book/types";
+import { IconUser1 } from "../icons/comp/IconUser1";
 
 function BookContent(book: BookType) {
     return (
@@ -19,10 +20,17 @@ function BookContent(book: BookType) {
                         className="object-contain h-[270px] w-full rounded-2xl"
                     />
                 </div>
-                <div className="flex flex-col gap-4 rounded-b-2xl border border-did/10 px-4 py-6">
+                <div className="flex flex-col gap-4 rounded-b-2xl border border-did/10 px-4 py-6 ">
+                   <div className="flex items-start justify-start gap-2 flex-col">
                     <span className="text-dark text-sm">
                         عنوان: {book.title}
                     </span>
+                    <span className="text-secondary text-xs flex items-center justify-start">
+                       <IconUser1  fill="none"/>
+                        {book.author}
+                    </span>
+                   </div>
+
                     <div className="flex items-center gap-3">
                         <div className="border-t-2 border-dashed border-secondary700 grow"></div>
                         <div className="flex gap-1 items-center">
