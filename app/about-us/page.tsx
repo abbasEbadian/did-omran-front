@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import AboutUs from "@/app/components/icons/about-us.svg";
 import {sendContact, SendContactProps} from "@/api/contact";
 import {MouseEvent, useState} from "react";
 
@@ -49,7 +48,7 @@ function ContactUsPage() {
                     <div className="col-span-2 lg:col-span-1">
                         <div className="w-3/4 mx-auto">
                             <Image
-                                src={AboutUs}
+                                src={"/icons/about-us.svg"}
                                 alt="about us Img"
                                 height={30}
                                 width={306} className="w-full"/>

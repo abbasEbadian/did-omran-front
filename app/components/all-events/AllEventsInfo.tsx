@@ -1,8 +1,4 @@
 import Image from "next/image";
-import FaChalkboardTeacher from "@/app/components/icons/FaChalkboardTeacher.svg";
-import UsersMore from "@/app/components/icons/users-more.svg";
-import IoTimeOutline from "@/app/components/icons/IoTimeOutline.svg";
-import Check from "@/app/components/icons/check.svg";
 import Link from "next/link";
 import {EventType} from "@/api/event/types";
 import React from "react";
@@ -21,7 +17,7 @@ const AllEventsInfo = ({ events }: Props)  =>{
                             <div key={event.id} className="bg-did700 rounded-2xl pe-4 py-5 ps-12 flex flex-col items-starts justify-end gap-2 relative hover:bg-blue400 hover:transition-[0.2] hover:shadow-custom-shadow">
                                 <div className="absolute top-[15%] -right-9 shadow-custom-shadow bg-white rounded-full p-4">
                                     <Image
-                                        src={Check}
+                                        src={"/icons/check.svg"}
                                         alt="eye icone"
                                         height={34}
                                         width={34}
@@ -34,7 +30,7 @@ const AllEventsInfo = ({ events }: Props)  =>{
                                     <EventDate timestamp={event.start_date} />
                                     <div className="flex items-center gap-1">
                                         <Image
-                                            src={FaChalkboardTeacher}
+                                            src={"/icons/FaChalkboardTeacher.svg"}
                                             alt="CheckSmall icone"
                                             height={24}
                                             width={24}
@@ -48,7 +44,7 @@ const AllEventsInfo = ({ events }: Props)  =>{
                                     </div>
                                     <div className="flex items-center gap-1">
                                         <Image
-                                            src={UsersMore}
+                                            src={"/icons/users-more.svg"}
                                             alt="CheckSmall icone"
                                             height={24}
                                             width={24}
@@ -62,7 +58,7 @@ const AllEventsInfo = ({ events }: Props)  =>{
                                     </div>
                                     <div className="flex items-center gap-1">
                                         <Image
-                                            src={IoTimeOutline}
+                                            src={"/icons/IoTimeOutline.svg"}
                                             alt="CheckSmall icone"
                                             height={24}
                                             width={24}

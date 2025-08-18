@@ -1,6 +1,5 @@
 "use client";
 import { payOrder } from "@/api/order";
-import MdPayment from "@/app/components/icons/MdPayment.svg";
 import Image from "next/image";
 import Checkbox from "../Checkbox";
 import { FormButton } from "../FormButton";
@@ -41,7 +40,7 @@ function SelectPayment() {
                             </span>
                         </div>
                         <Image
-                            src={MdPayment}
+                            src={"/icons/MdPayment.svg"}
                             alt="MdPayment icon"
                             height={24}
                             width={24}

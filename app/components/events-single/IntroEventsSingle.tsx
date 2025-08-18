@@ -1,11 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import IoTimeOutline from "@/app/components/icons/IoTimeOutline.svg";
-import CalendarCheck from "@/app/components/icons/calendar-check.svg";
-import FcInfo from "@/app/components/icons/FcInfo.svg";
-import FaUsers from "@/app/components/icons/FaUsers.svg";
-import Location1 from "@/app/components/icons/location-1.svg";
 import Counter from "../Counter";
 import Link from "next/link";
 import ShareBox from "../ShareBox";
@@ -48,7 +43,7 @@ function IntroEventsSingle({ event }: { event: EventType }) {
                         {event.price === 0 && (
                             <div className="flex items-center gap-2">
                                 <Image
-                                    src={FcInfo}
+                                    src={"/icons/FcInfo.svg"}
                                     alt="CheckSmall icone"
                                     height={24}
                                     width={24}
@@ -61,7 +56,7 @@ function IntroEventsSingle({ event }: { event: EventType }) {
                         <div className="flex lg:flex-row flex-col lg:items-center items-start bg-secondary600 px-4 gap-2 lg:gap-12 py-1 rounded-2xl justify-between">
                             <div className="flex items-center gap-2">
                                 <Image
-                                    src={FaUsers}
+                                    src={"/icons/FaUsers.svg"}
                                     alt="CheckSmall icone"
                                     height={24}
                                     width={24}
@@ -75,7 +70,7 @@ function IntroEventsSingle({ event }: { event: EventType }) {
                             </div>
                             <div className="flex items-center gap-2">
                                 <Image
-                                    src={Location1}
+                                    src={"/icons/location-1.svg"}
                                     alt="CheckSmall icone"
                                     height={24}
                                     width={24}
@@ -151,7 +146,7 @@ const EventTime = ({
                 <div className="flex flex-col items-start gap-2">
                     <div className="flex items-center gap-2">
                         <Image
-                            src={CalendarCheck}
+                            src={"/icons/calendar-check.svg"}
                             alt="CheckSmall icone"
                             height={24}
                             width={24}
@@ -164,7 +159,7 @@ const EventTime = ({
                     </div>
                     <div className="flex items-center gap-2">
                         <Image
-                            src={IoTimeOutline}
+                            src={"/icons/IoTimeOutline.svg"}
                             alt="CheckSmall icone"
                             height={24}
                             width={24}

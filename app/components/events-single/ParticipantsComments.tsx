@@ -1,11 +1,10 @@
 import Image from 'next/image';
-import VillIone from '@/app/components/icons/vill.svg';
 
 function ParticipantsComments() {
   const comments = [
     {
       id: 1,
-      icon: VillIone,
+      icon: "/icons/vill.svg",
       text: 'پشتیبانی همکارانتون بی‌نظیر بود، من هفته آخر آخر کارشناس رسمی خیلی استرس داشتم ولی تیم شما با دلسوزی و همدلی بالا ما رو حمایت کردند تا تونستیم بالاخره قبول بشیم؛ سلام ما رو به دکتر خلوتی عزیز برسونید👌😍',
       avatar: "/img/Avater1.png'",
       name: '_ Aria Zinanrio',
@@ -13,7 +12,7 @@ function ParticipantsComments() {
     },
     {
       id: 2,
-      icon: VillIone,
+      icon: "/icons/vill.svg",
       text: 'نظر دوم اینجا قرار می‌گیرد...',
       avatar: "/img/Avater2.png'",
       name: '_ John Doe',
@@ -21,7 +20,7 @@ function ParticipantsComments() {
     },
     {
       id: 3,
-      icon: VillIone,
+      icon: "/icons/vill.svg",
       text: 'نظر سوم اینجا قرار می‌گیرد...',
       avatar: "/img/Avater3.png'",
       name: '_ Jane Doe',

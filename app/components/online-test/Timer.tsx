@@ -1,17 +1,16 @@
 "use client";
 import Image from "next/image";
-import MdOutlineTimer from "@/app/components/icons/MdOutlineTimer.svg";
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 
 const convertMinutesToTime = (totalMinutes: number) => {
-  const hours = Math.floor(totalMinutes / 60);
-  const minutes = totalMinutes % 60;
-  const seconds = 0; // Since we are converting from minutes, seconds will be 0
-  return { hours, minutes, seconds };
+    const hours = Math.floor(totalMinutes / 60);
+    const minutes = totalMinutes % 60;
+    const seconds = 0; // Since we are converting from minutes, seconds will be 0
+    return {hours, minutes, seconds};
 };
 
-const Timer = ({iniTime, ...rest}: {iniTime: number}) => {
-    const [time, setTime] = useState({ hours: 0, minutes: 0, seconds: 0 });
+const Timer = ({iniTime, ...rest}: { iniTime: number }) => {
+    const [time, setTime] = useState({hours: 0, minutes: 0, seconds: 0});
 
 
     useEffect(() => {
@@ -19,13 +18,13 @@ const Timer = ({iniTime, ...rest}: {iniTime: number}) => {
 
         const timer = setInterval(() => {
             setTime((prevTime) => {
-                let { hours, minutes, seconds } = prevTime;
+                let {hours, minutes, seconds} = prevTime;
 
                 if (seconds === 0) {
                     if (minutes === 0) {
                         if (hours === 0) {
                             clearInterval(timer);
-                            return { hours: 0, minutes: 0, seconds: 0 };
+                            return {hours: 0, minutes: 0, seconds: 0};
                         }
                         hours--;
                         minutes = 59;
@@ -37,7 +36,7 @@ const Timer = ({iniTime, ...rest}: {iniTime: number}) => {
                     seconds--;
                 }
 
-                return { hours, minutes, seconds };
+                return {hours, minutes, seconds};
             });
         }, 1000);
 
@@ -48,7 +47,7 @@ const Timer = ({iniTime, ...rest}: {iniTime: number}) => {
         <div className="flex flex-col items-center justify-center gap-2">
             <div className="flex items-center gap-1">
                 <Image
-                    src={MdOutlineTimer}
+                    src={"/icons/MdOutlineTimer.svg"}
                     alt="MdOutlineTimer"
                     height={24}
                     width={24}

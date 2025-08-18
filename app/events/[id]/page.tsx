@@ -9,7 +9,7 @@ import SupportTeam from "@components/events-single/SupportTeam";
 import ParticipantsComments from "@components/events-single/ParticipantsComments";
 import RegisterEvent from "@components/events-single/RegisterEvent";
 import NewComment from "@components/Comments/NewComment";
-import MobileLinkks from "@components/events-single/MobileLinkks";
+import MobileLinks from "@components/events-single/MobileLinks";
 import useSWR from "swr";
 import {getEvent} from "@/api/event";
 import {useParams} from "next/navigation";
@@ -86,7 +86,7 @@ function Page() {
                             دیدگاه ها
                         </Link>
                     </div>
-                    <MobileLinkks />
+                    <MobileLinks />
 
                     <section
                         id="IntroductionEvent"

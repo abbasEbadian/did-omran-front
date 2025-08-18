@@ -1,5 +1,4 @@
 import { TutorType } from "@/api/types";
-import BsBox from "@/app/components/icons/BsBox.svg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,7 +8,7 @@ function Instructor(tutor: TutorType) {
             <div className="flex flex-col gap-3">
                 <div className="flex items-center gap-2">
                     <Image
-                        src={BsBox}
+                        src={"/icons/BsBox.svg"}
                         alt="CheckSmall icone"
                         height={24}
                         width={24}

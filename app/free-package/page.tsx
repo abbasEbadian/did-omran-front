@@ -1,8 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import OnlineTest from "@/app/components/icons/undraw_online_test.svg";
-import AndrawAnalysis from "@/app/components/icons/undraw_detailed_analysis.svg";
 import Counter from "@components/Counter";
 
 function Page() {
@@ -65,7 +63,7 @@ function Page() {
                         </div>
                         <div className="lg:col-span-1 col-span-2 flex justify-center">
                             <Image
-                                src={OnlineTest}
+                                src={"/icons/undraw_online_test.svg"}
                                 alt="about us Img"
                                 height={261}
                                 width={301}
@@ -85,7 +83,7 @@ function Page() {
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
                     <div className="w-full">
                         <Image
-                            src={AndrawAnalysis}
+                            src={"/icons/undraw_detailed_analysis.svg"}
                             alt="AndrawAnalysis Img"
                             height={289}
                             width={467}

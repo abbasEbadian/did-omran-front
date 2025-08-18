@@ -1,28 +1,24 @@
 import Image from 'next/image';
-import BsStack from '@/app/components/icons/BsStack.svg';
 import IntroContent from './IntroContent';
 import SocialMediaIcon from '@/app/components/SocialMediaIcon';
-import FaInstagram from '@/app/components/icons/FaInstagram.svg';
-import FaTelegram from '@/app/components/icons/FaTelegramPlane.svg';
-import BsFacebook from '@/app/components/icons/BsFacebook.svg';
 
 const IntroFreeEducationSingle: React.FC = () => {
   const socialMediaIcons = [
     {
       href: '#',
-      icon: BsFacebook,
+      icon: "/icons/BsFacebook.svg",
       alt: 'Facebook',
       className: 'text-blue-600', 
     },
     {
       href: '#',
-      icon: FaInstagram,
+      icon: "/icons/FaInstagram.svg",
       alt: 'Instagram',
       className: 'text-pink-500',
     },
     {
       href: '#',
-      icon: FaTelegram,
+      icon: "/icons/FaTelegramPlane.svg",
       alt: 'Telegram',
       className: 'text-blue-400',
     },
@@ -46,7 +42,7 @@ const IntroFreeEducationSingle: React.FC = () => {
               آموزش پلاگین Retouch4me در فتوشاپ، روتوش چهره در ۷ ثانیه
             </span>
             <div className="flex items-start gap-2">
-              <Image src={BsStack} alt="BsStack Img" height={24} />
+              <Image src={"/icons/BsStack.svg"} alt="BsStack Img" height={24} />
               <span className="text-secondary">چیکیده آموزش</span>
             </div>
             <p className="text-secondary900 text-sm text-justify">

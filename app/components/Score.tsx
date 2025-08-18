@@ -1,9 +1,7 @@
 import Image from "next/image";
-import { useState } from "react";
-import Star1 from "@/app/components/icons/star-1.svg";
-import StarFill from "@/app/components/icons/StarFill.svg";
+import {useState} from "react";
 
-function Score({rating: defaultRating}: {rating?: number}) {
+function Score({rating: defaultRating}: { rating?: number }) {
     const [rating, setRating] = useState(defaultRating); // امتیاز فعلی
     const [hoverRating, setHoverRating] = useState(defaultRating); // امتیاز هنگام hover
 
@@ -17,12 +15,12 @@ function Score({rating: defaultRating}: {rating?: number}) {
 
     // تابع برای مدیریت hover روی ستاره‌ها
     const handleRatingHover = (index: number) => {
-        setHoverRating(defaultRating??index + 1);
+        setHoverRating(defaultRating ?? index + 1);
     };
 
     // تابع برای مدیریت خروج hover از ستاره‌ها
     const handleRatingLeave = () => {
-        setHoverRating(defaultRating?? 0);
+        setHoverRating(defaultRating ?? 0);
     };
 
     return (
@@ -46,7 +44,7 @@ function Score({rating: defaultRating}: {rating?: number}) {
                             } out of ${totalStars}`}
                         >
                             <Image
-                                src={isFilled ? StarFill : Star1}
+                                src={isFilled ? "/icons/StarFill.svg" : "/icons/star-1.svg"}
                                 alt={isFilled ? "Filled Star" : "Empty Star"}
                                 height={20}
                                 width={20}

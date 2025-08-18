@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from 'react';
-import filters3 from "@/app/components/icons/filters-3.svg"
 import Image from 'next/image';
 const FilterSelectDisplay: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState<string>('');
@@ -12,7 +11,7 @@ const FilterSelectDisplay: React.FC = () => {
   return (
     <div className="flex items-center space-x-2 border border-did rounded-2xl px-2">
         <Image
-        src={filters3}
+        src={"/icons/filters-3.svg"}
         alt="filters1 icone"
         width={24}
         height={24} />

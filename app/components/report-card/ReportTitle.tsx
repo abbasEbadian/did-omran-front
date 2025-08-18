@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Logo from "@/app/components/icons/Logo-blue.svg";
 import Link from "next/link";
 import { UserType } from "@/api/types";
 
@@ -7,7 +6,7 @@ function ReportTitle({ user }: { user: UserType }) {
     return (
         <div className="flex items-center justify-between mt-4">
             <Link href="#1" className="flex items-center gap-2">
-                <Image src={Logo} alt="logo did omran" width={95} height={95} />
+                <Image src={"/icons/Logo-blue.svg"} alt="logo did omran" width={95} height={95} />
                 <span className="text-did font-black text-2xl">
                     دیــد عمــران
                 </span>

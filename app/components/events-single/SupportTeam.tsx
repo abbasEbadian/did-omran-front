@@ -1,6 +1,4 @@
 import React from "react";
-import WarningCircle from "@/app/components/icons/warning-circle.svg";
-import Tell from "@/app/components/icons/tell.svg";
 import Image from "next/image";
 function SupportTeam() {
     return (
@@ -23,7 +21,7 @@ function SupportTeam() {
                             </p>
                             <div className="flex items-center  justify-start gap-1  ">
                                 <Image
-                                    src={WarningCircle}
+                                    src={"/icons/warning-circle.svg"}
                                     alt="Profile Img"
                                     height={24}
                                     width={24}
@@ -35,7 +33,7 @@ function SupportTeam() {
                             </div>
                             <div className="flex items-center justify-start gap-1   ">
                                 <Image
-                                    src={Tell}
+                                    src={"/icons/tell.svg"}
                                     alt="Profile Img"
                                     height={24}
                                     width={24}

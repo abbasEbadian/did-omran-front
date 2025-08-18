@@ -1,7 +1,5 @@
-import Image from 'next/image'
-import star from '@/app/components/icons/star.svg'
-import eye from '@/app/components/icons/eye.svg'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
 
 function FreeEducationItems() {
     return (
@@ -23,7 +21,7 @@ function FreeEducationItems() {
                             <div className="flex items-center gap-1">
                                 <span className="text-yellow text-base">3.0</span>
                                 <Image
-                                    src={star}
+                                    src={"/icons/star.svg"}
                                     alt="star Img"
                                     width={20}
                                     height={20}/>
@@ -31,7 +29,7 @@ function FreeEducationItems() {
                             <div className="flex items-center gap-1">
                                 <span className="text-secondary800 text-base">128</span>
                                 <Image
-                                    src={eye}
+                                    src={"/icons/eye.svg"}
                                     alt="eye Img"
                                     width={20}
                                     height={20}/>
@@ -58,7 +56,7 @@ function FreeEducationItems() {
                 </div>
             </div>
         </>
-    )
+    );
 }
 
-export default FreeEducationItems
+export default FreeEducationItems;

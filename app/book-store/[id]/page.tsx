@@ -1,10 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import ListRight from "@/app/components/icons/list-right.svg";
-import Edit from "@/app/components/icons/edit-3.svg";
-import HiOutlineFolderDownload from "@/app/components/icons/HiOutlineFolderDownload.svg";
-import CalendarTick from "@/app/components/icons/calendar-tick.svg";
-import HiOutlineNewspaper from "@/app/components/icons/HiOutlineNewspaper.svg";
 import Link from "next/link";
 import { getBook } from "@/api";
 import { notFound } from "next/navigation";
@@ -55,7 +50,7 @@ async function Page({ params }: { params: Promise<{ id: string }> }) {
                             <div className="flex items-center gap-4">
                                 <div className="flex items-center gap-1">
                                     <Image
-                                        src={ListRight}
+                                        src={"/icons/list-right.svg"}
                                         alt="CheckSmall icone"
                                         height={24}
                                         width={24}
@@ -69,7 +64,7 @@ async function Page({ params }: { params: Promise<{ id: string }> }) {
                                 </div>
                                 <div className="flex items-center gap-1">
                                     <Image
-                                        src={Edit}
+                                        src={"/icons/edit-3.svg"}
                                         alt="CheckSmall icone"
                                         height={24}
                                         width={24}
@@ -83,7 +78,7 @@ async function Page({ params }: { params: Promise<{ id: string }> }) {
                                 </div>
                                 <div className="flex items-center gap-1">
                                     <Image
-                                        src={CalendarTick}
+                                        src={"/icons/calendar-tick.svg"}
                                         alt="CheckSmall icone"
                                         height={24}
                                         width={24}
@@ -97,7 +92,7 @@ async function Page({ params }: { params: Promise<{ id: string }> }) {
                                 </div>
                                 <div className="flex items-center gap-1">
                                     <Image
-                                        src={HiOutlineNewspaper}
+                                        src={"/icons/HiOutlineNewspaper.svg"}
                                         alt="CheckSmall icone"
                                         height={24}
                                         width={24}
@@ -117,7 +112,7 @@ async function Page({ params }: { params: Promise<{ id: string }> }) {
                                 className="text-white bg-did rounded-2xl text-sm px-8 py-2 flex gap-1 items-center"
                             >
                                 <Image
-                                    src={HiOutlineFolderDownload}
+                                    src={"/icons/HiOutlineFolderDownload.svg"}
                                     alt="HiOutlineFolderDownload Img"
                                     width={24}
                                     height={24}

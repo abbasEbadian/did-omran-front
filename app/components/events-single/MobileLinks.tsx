@@ -1,46 +1,40 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import messageSquareDots from '@/app/components/icons/message-square-dots.svg';
-import user1 from '@/app/components/icons/user-1.svg';
-import ListCenter from '@/app/components/icons/list-center.svg';
-import Mail from '@/app/components/icons/mail.svg';
-import Settings from '@/app/components/icons/settings.svg';
-import Basket from '@/app/components/icons/basket.svg';
-function MobileLinkks() {
+function MobileLinks() {
   const links = [
     {
       href: '#IntroductionEvent',
-      icon: ListCenter,
+      icon: "/icons/list-center.svg",
       alt: 'Introduction',
       text: 'آشنایی',
     },
     {
       href: '#InstructorInfo',
-      icon: user1,
+      icon: "/icons/user-1.svg",
       alt: 'Instructor',
       text: 'مدرس',
     },
     {
       href: '#SupportTeam',
-      icon: Settings,
+      icon: "/icons/settings.svg",
       alt: 'Support',
       text: 'پشتیبانی',
     },
     {
       href: '#RegisterEvent',
-      icon: Basket,
+      icon: "/icons/basket.svg",
       alt: 'Register',
       text: 'ثبت نام',
     },
     {
       href: '#NewComment',
-      icon: messageSquareDots,
+      icon: "/icons/message-square-dots.svg",
       alt: 'Comments',
       text: 'دیدگاه',
     },
     {
         href: '#NewComment',
-        icon: Mail,
+        icon: "/icons/mail.svg",
         alt: 'Comments',
         text: 'دیدگاه',
       },
@@ -67,4 +61,4 @@ function MobileLinkks() {
   );
 }
 
-export default MobileLinkks;
+export default MobileLinks;

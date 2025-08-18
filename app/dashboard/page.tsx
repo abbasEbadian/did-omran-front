@@ -1,9 +1,8 @@
 "use client";
-import MyTiketsBox from "@/app/components/dashboard/home/MyTiketsBox";
-import MyEventsBox from "../components/dashboard/home/MyEventsBox";
-import Notification from "../components/dashboard/Notification";
+import MyTicketsBox from "@components/dashboard/home/MyTicketsBox";
+import MyEventsBox from "@components/dashboard/home/MyEventsBox";
+import Notification from "@components/dashboard/Notification";
 import Image from "next/image";
-import BsEmojiFrown from "@/app/components/icons/BsEmojiFrown.svg";
 import Link from "next/link";
 import useSWR from "swr";
 import { getUser } from "@/api";
@@ -19,7 +18,7 @@ function Page() {
             <div className="gap-4 flex flex-col">
                 <section className="grid grid-cols-2 gap-4 items-stretch">
                     <div className="col-span-2 lg:col-span-1">
-                        <MyTiketsBox />
+                        <MyTicketsBox />
                     </div>
                     <div className="col-span-2 lg:col-span-1">
                         <MyEventsBox />
@@ -55,7 +54,7 @@ function Page() {
                 {!user?.first_name && (
                     <section className="flex flex-col items-center gap-3 justify-center my-10">
                         <Image
-                            src={BsEmojiFrown}
+                            src={"/icons/BsEmojiFrown.svg"}
                             alt="star Img"
                             width={100}
                             height={100}

@@ -1,8 +1,6 @@
 "use client";
-import StarFilled from '@/app/components/icons/FaStar.svg';
 import { useState } from 'react';
 import Image from 'next/image'
-import FaStar from '@/app/components/icons/garystar.svg'
 function ScoreStarFreeFilm() {
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
@@ -31,7 +29,7 @@ function ScoreStarFreeFilm() {
                 className="focus:outline-none"
               >
                 <Image
-                  src={starValue <= (hoverRating || rating) ? StarFilled : FaStar}
+                  src={starValue <= (hoverRating || rating) ? "/icons/FaStar.svg" : "/icons/garystar.svg"}
                   alt={`Star ${starValue}`}
                   height={24}
                   width={24}

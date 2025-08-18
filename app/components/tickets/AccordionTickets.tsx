@@ -1,7 +1,5 @@
 "use client";
 import { useState } from 'react';
-import CheckDown from '@/app/components/icons/check-down.svg'
-import ChevronUp from '@/app/components/icons/chevron-up.svg'
 import Image from 'next/image';
 interface AccordionItem {
   title: string;
@@ -27,9 +25,9 @@ const AccordionTickets = ({items}: {items: AccordionItem[]}) => {
             <span className="text-dark font-semibold">{item.title}</span>
             <span>
             {activeIndex === index ? (
-                <Image src={CheckDown} alt="بستن" width={24} height={24} />
+                <Image src={"/icons/check-down.svg"} alt="بستن" width={24} height={24} />
             ) : (
-                <Image src={ChevronUp} alt="باز کردن" width={24} height={24} />
+                <Image src={"/icons/chevron-up.svg"} alt="باز کردن" width={24} height={24} />
             )}
             </span>
           </button>

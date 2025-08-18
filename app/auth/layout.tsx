@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
-import LogoLogin from "@/app/components/icons/logo-login.svg";
 import Link from "next/link";
-import CircularText from "../components/animated/CircularText";
+import CircularText from "@components/animated/CircularText";
 import TrueFocus from "@components/animated/TrueFocus";
 import { cn } from "@/utils/cn";
 import { Suspense } from "react";
@@ -29,7 +28,7 @@ export default function AuthLayout({
                         className="sm:g-[col-start-1,col-end-2,row-start-1,row-end-2,-top-3,relative,left-2] z-10"
                     />
                     <Image
-                        src={LogoLogin}
+                        src={"/icons/logo-login.svg"}
                         alt="LogoLogin Img"
                         height={420}
                         width={420}

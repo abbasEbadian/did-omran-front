@@ -3,8 +3,6 @@
 import {getTicket} from "@/api/ticket/get";
 import {TicketType} from "@/api/ticket/types";
 import {closeTicket, sendTicketMessage} from "@/api/ticket/update";
-import IoAddSharp from "@/app/components/icons/message-square-lines.svg";
-import send from "@/app/components/icons/send-2.svg";
 import Modal from "@/app/components/Modal";
 import TicketStatusBadge from "@/app/components/tickets/TicketStatusBadge";
 import {cn} from "@/utils/cn";
@@ -82,7 +80,7 @@ function Page() {
             <div className="flex items-center justify-between border-b-2 border-dashed border-b-secondary800 pb-3 select-none">
                 <div className="flex items-center gap-1">
                     <Image
-                        src={IoAddSharp}
+                        src={"/icons/message-square-lines.svg"}
                         alt="BsFacebook Img"
                         height={24}
                         width={24}
@@ -163,7 +161,7 @@ function Page() {
                                 <>
                                     ارسال
                                     <Image
-                                        src={send}
+                                        src={"/icons/send-2.svg"}
                                         alt="BsFacebook Img"
                                         height={24}
                                         width={24}

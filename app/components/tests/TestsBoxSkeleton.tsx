@@ -1,7 +1,4 @@
 import Image from "next/image";
-import MdTimer from "@/app/components/icons/MdTimer.svg";
-import FaUserGraduate from "@/app/components/icons/FaUserGraduate.svg";
-import BsTextIndentRight from "@/app/components/icons/BsTextIndentRight.svg";
 import Link from "next/link";
 
 
@@ -23,7 +20,7 @@ const TestsBoxSkeleton = () => {
                                 12
                             </span>
                             <Image
-                                src={FaUserGraduate}
+                                src={"/icons/FaUserGraduate.svg"}
                                 alt="CheckSmall icone"
                                 height={20}
                                 width={20}
@@ -34,7 +31,7 @@ const TestsBoxSkeleton = () => {
                         <div className="flex flex-col items-start gap-1 mt-2">
                             <div className="flex items-center gap-1">
                                 <Image
-                                    src={BsTextIndentRight}
+                                    src={'/icons/BsTextIndentRight.svg'}
                                     alt="CheckSmall icone"
                                     height={24}
                                     width={24}
@@ -48,7 +45,7 @@ const TestsBoxSkeleton = () => {
                             </div>
                             <div className="flex items-center gap-1">
                                 <Image
-                                    src={MdTimer}
+                                    src={"/icons/MdTimer.svg"}
                                     alt="CheckSmall icone"
                                     height={24}
                                     width={24}

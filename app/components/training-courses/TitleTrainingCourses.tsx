@@ -2,12 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import MdAlarm from "@/app/components/icons/MdAlarm.svg";
-import ListLeft from "@/app/components/icons/list-left.svg";
-import UserMore from "@/app/components/icons/users-more.svg";
-import CalendarCheck from "@/app/components/icons/calendar-check.svg";
-import Star1 from "@/app/components/icons/star.svg";
-import StarFilled from "@/app/components/icons/HiStar.svg";
 import { CourseType } from "@/api/types";
 
 function TitleTrainingCourses(course: CourseType) {
@@ -18,10 +12,10 @@ function TitleTrainingCourses(course: CourseType) {
         course.topics.map((q) => q.duration).reduce((a, b) => a + b, 0) / 60
     );
     const courseDetails = [
-        { icon: ListLeft, text: `${course?.topics?.length}  جلسه` },
-        { icon: MdAlarm, text: `بیش از ${duration} ساعت` },
-        { icon: UserMore, text: "190 دانشجو" },
-        { icon: CalendarCheck, text: "آخرین آپدیت:  بهمن1403" },
+        { icon: "/icons/list-left.svg", text: `${course?.topics?.length}  جلسه` },
+        { icon: "/icons/MdAlarm.svg", text: `بیش از ${duration} ساعت` },
+        { icon: "/icons/users-more.svg", text: "190 دانشجو" },
+        { icon: "/icons/calendar-check.svg", text: "آخرین آپدیت:  بهمن1403" },
     ];
 
     return (
@@ -60,8 +54,8 @@ function TitleTrainingCourses(course: CourseType) {
                                 <Image
                                     src={
                                         starValue <= (hoverRating || rating)
-                                            ? StarFilled
-                                            : Star1
+                                            ? "/icons/HiStar.svg"
+                                            : "/icons/star.svg"
                                     }
                                     alt={`Star ${starValue}`}
                                     height={24}

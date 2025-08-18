@@ -2,8 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import LogoWhite from "@/app/components/icons/logo-white.svg";
-import ArrowRight from "@/app/components/icons/arrow-right.svg";
 import {usePathname} from "next/navigation";
 
 const paths = ["/online-exam", "/auth", "/dashboard"];
@@ -44,7 +42,7 @@ function Footer() {
                                     className="flex items-center gap-2 font-bold whitespace-nowrap text-2xl "
                                 >
                                     <Image
-                                        src={LogoWhite}
+                                        src={"/icons/logo-white.svg"}
                                         alt="DID Omran Logo"
                                         width={70}
                                         height={70}
@@ -64,7 +62,7 @@ function Footer() {
                             >
                                 <div className="text-white bg-blue700 text-sm p-3 rounded-full">
                                     <Image
-                                        src={ArrowRight}
+                                        src={"/icons/arrow-right.svg"}
                                         alt="Arrow Right"
                                         width={24}
                                         height={24}

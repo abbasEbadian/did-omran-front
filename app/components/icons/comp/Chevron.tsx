@@ -1,6 +1,3 @@
-import Chevron from "../chevron-left.svg";
-import ChevronLeft from "@/app/components/icons/chevron-left.svg";
-
 export const ChevronLeftIcon = ({fill}: {fill?: string}) => {
     return (
         <span>

@@ -1,11 +1,7 @@
 import Image from "next/image";
-import HiOutlineFolderDownload from "@/app/components/icons/HiOutlineFolderDownload.svg";
-import Eye from "@/app/components/icons/eye.svg";
-import ListRight from "@/app/components/icons/list-right.svg";
-import Edit from "@/app/components/icons/edit-3.svg";
 import Link from "next/link";
-import { BookType } from "@/api/book/types";
-import { IconUser1 } from "../icons/comp/IconUser1";
+import {BookType} from "@/api/book/types";
+import {IconUser1} from "../icons/comp/IconUser1";
 
 function BookContent(book: BookType) {
     return (
@@ -26,7 +22,7 @@ function BookContent(book: BookType) {
                             {book.title}
                         </span>
                         <div className="flex items-center justify-start gap-2 flex-row">
-                            <IconUser1 fill="none" />
+                            <IconUser1 fill="none"/>
                             <span className="text-secondary text-xs">
 
                                 {book.author}
@@ -38,7 +34,7 @@ function BookContent(book: BookType) {
                         <div className="border-t-2 border-dashed border-secondary700 grow"></div>
                         <div className="flex gap-1 items-center">
                             <Image
-                                src={Eye}
+                                src={"/icons/eye.svg"}
                                 alt="eye icone"
                                 height={20}
                                 width={20}
@@ -53,7 +49,7 @@ function BookContent(book: BookType) {
                         <div className="flex flex-col items-start gap-1">
                             <div className="flex items-center gap-1">
                                 <Image
-                                    src={ListRight}
+                                    src={"/icons/list-right.svg"}
                                     alt="CheckSmall icone"
                                     height={24}
                                     width={24}
@@ -67,7 +63,7 @@ function BookContent(book: BookType) {
                             </div>
                             <div className="flex items-center gap-1">
                                 <Image
-                                    src={Edit}
+                                    src={"/icons/edit-3.svg"}
                                     alt="CheckSmall icone"
                                     height={24}
                                     width={24}
@@ -85,7 +81,7 @@ function BookContent(book: BookType) {
                             className="text-white bg-did rounded-2xl text-sm px-8 py-2 flex gap-1 items-center"
                         >
                             <Image
-                                src={HiOutlineFolderDownload}
+                                src={"/icons/HiOutlineFolderDownload.svg"}
                                 alt="HiOutlineFolderDownload Img"
                                 width={24}
                                 height={24}

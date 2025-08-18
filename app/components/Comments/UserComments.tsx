@@ -1,6 +1,5 @@
 "use client";
 import Image from 'next/image';
-import Slash from '@/app/components/icons/slash.svg';
 import { useEffect, useState } from 'react';
 
 function UserComments() {
@@ -31,7 +30,7 @@ function UserComments() {
       <div className="flex flex-col items-start  gap-3">
         <div className=''> 
           <Image
-            src={Slash}
+            src={"/icons/slash.svg"}
             alt="User Check Img"
             width={45}
             height={38}

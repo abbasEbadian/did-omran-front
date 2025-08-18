@@ -1,14 +1,11 @@
 "use client";
 
 import React, {useState} from "react";
-import pin2 from "@/app/components/icons/pin-2.svg";
-import InfoCircle from "@/app/components/icons/info-circle.svg";
-import ShieldCross from "@/app/components/icons/shield-cross.svg";
 import Image from "next/image";
 import {NotificationType} from "@/api/notification/types";
 import Modal from "../Modal";
 
-const Notification = ({ title, message, date, type }: NotificationProps) => {
+const Notification = ({title, message, date, type}: NotificationProps) => {
     const [modal, setModal] = useState(false);
 
     const getNotificationClass = () => {
@@ -24,13 +21,12 @@ const Notification = ({ title, message, date, type }: NotificationProps) => {
     const getNotificationIcon = () => {
         switch (type) {
             case "SUCCESS":
-                return ShieldCross;
+                return "/icons/shield-cross.svg";
             case "WARNING":
-                return InfoCircle;
+                return "/icons/info-circle.svg";
             case "INFO":
-                return pin2;
             case "FAILURE":
-                return pin2;
+                return "/icons/pin-2.svg";
         }
     };
 
@@ -65,10 +61,12 @@ const Notification = ({ title, message, date, type }: NotificationProps) => {
         </>
     );
 };
+
 interface NotificationProps {
     title: string;
     message: string;
     date: string;
     type: NotificationType["type"];
 }
+
 export default Notification;

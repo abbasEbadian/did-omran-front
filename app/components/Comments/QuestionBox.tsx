@@ -1,6 +1,5 @@
 import Image from 'next/image'
-import Link from 'next/link'
-import ProfileDemo from '@/app/components/icons/profile-demo.svg'
+import Link from 'next/link';
 
 function QuestionBox() {
   return (
@@ -27,7 +26,7 @@ function QuestionBox() {
             <div className="flex items-center gap-4 lg:flex-row  flex-col">
                 <div className="flex flex-col gap-3 items-center justify-center">
                     <Image
-                        src={ProfileDemo}
+                        src={"/icons/profile-demo.svg"}
                         alt="Profile Img"
                         height={100} 
                         width={100}/>

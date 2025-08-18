@@ -1,22 +1,21 @@
 "use client";
 import Image from "next/image";
-import Trash2 from "@/app/components/icons/trash-2.svg";
 
 import Price from "../price";
-import { OrderLineType } from "@/api/order/types";
-import { toaster } from "@/utils/toaster";
-import { removeCartItem } from "@/api/order";
-import { useRouter } from "next/navigation";
-import { useSWRConfig } from "swr/_internal";
+import {OrderLineType} from "@/api/order/types";
+import {toaster} from "@/utils/toaster";
+import {removeCartItem} from "@/api/order";
+import {useRouter} from "next/navigation";
+import {useSWRConfig} from "swr/_internal";
 
 function CartBox(line: OrderLineType) {
-    const router = useRouter()
-    const { mutate } = useSWRConfig()
+    const router = useRouter();
+    const {mutate} = useSWRConfig();
     const removeFromCart = async (id: number) => {
         const response = await removeCartItem(id);
         toaster(response);
-        mutate('get-user')
-        router.refresh()
+        mutate("get-user");
+        router.refresh();
     };
 
 
@@ -37,7 +36,7 @@ function CartBox(line: OrderLineType) {
                         <span className="text-did text-base font-semibold">
                             {line.course.name}
                         </span>
-                        <Price amount={Number(line.course.final_price)} />
+                        <Price amount={Number(line.course.final_price)}/>
                     </div>
                     <div className="flex items-end justify-between">
                         <div className="flex items-center gap-2">
@@ -61,7 +60,7 @@ function CartBox(line: OrderLineType) {
                         </div>
                         <button onClick={() => removeFromCart(line.course.id)}>
                             <Image
-                                src={Trash2}
+                                src={"/icons/trash-2.svg"}
                                 alt="trash icone"
                                 height={24}
                                 width={24}

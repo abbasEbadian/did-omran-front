@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import IoAddSharp from "@/app/components/icons/IoAddSharp.svg";
 import TicketsList from "@/app/components/dashboard/tickets/TicketsList";
 
 function Page() {
@@ -13,7 +12,7 @@ function Page() {
                     className="bg-blue700 rounded-2xl px-5 py-2 flex items-center gap-2 text-white"
                 >
                     <Image
-                        src={IoAddSharp}
+                        src={"/icons/IoAddSharp.svg"}
                         alt="BsFacebook Img"
                         height={24}
                         width={24}

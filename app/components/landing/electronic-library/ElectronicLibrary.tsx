@@ -1,14 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import bibliophile from "@/app/components/icons/moving/bibliophile-not-css.svg";
 
 function ElectronicLibrary() {
     return (
         <div className="relative my-12">
-            {/* تصویر کتابخوان */}
             <div className="lg:absolute right-[130px] bottom-[130px] z-30">
                 <Image
-                    src={bibliophile}
+                    src={"/icons/moving/bibliophile-not-css.svg"}
                     alt="Bibliophile Animation"
                     height={395}
                     width={540}

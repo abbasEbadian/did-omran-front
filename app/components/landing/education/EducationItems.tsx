@@ -2,8 +2,6 @@
 
 import Image from "next/image";
 import React from "react";
-import BsBook from "@/app/components/icons/BsBook.svg";
-import MdAccessTime from "@/app/components/icons/MdAccessTime.svg";
 import Score from "../../Score";
 import { CourseType, UserType } from "@/api/types";
 import { toaster } from "@/utils/toaster";
@@ -54,7 +52,7 @@ function EducationItems(course: CourseType) {
                         <div className="flex flex-col gap-1">
                             <div className="flex items-center gap-2">
                                 <Image
-                                    src={BsBook}
+                                    src={"/icons/BsBook.svg"}
                                     alt="Consultation Img"
                                     width={20}
                                     height={20}
@@ -65,7 +63,7 @@ function EducationItems(course: CourseType) {
                             </div>
                             <div className="flex items-center gap-2">
                                 <Image
-                                    src={MdAccessTime}
+                                    src={"/icons/MdAccessTime.svg"}
                                     alt="Consultation Img"
                                     width={20}
                                     height={24}

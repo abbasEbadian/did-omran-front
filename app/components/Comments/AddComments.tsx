@@ -1,4 +1,3 @@
-import UserCheck from "@/app/components/icons/user-check.svg";
 import Image from "next/image";
 import Link from "next/link";
 function AddComments() {
@@ -35,7 +34,7 @@ function AddComments() {
 
                 <div className="flex items-center gap-1 mt-2">
                     <Image
-                        src={UserCheck}
+                        src={"/icons/user-check.svg"}
                         alt="User Check Img"
                         width={20}
                         height={24}

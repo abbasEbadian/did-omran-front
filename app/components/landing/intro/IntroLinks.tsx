@@ -1,11 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import Courses from "@/app/components/icons/Courses.svg";
-import Test from "@/app/components/icons/test.svg";
-import Library from "@/app/components/icons/library.svg";
-import EducationBook from "@/app/components/icons/EducationalBooks.svg";
-import Education from "@/app/components/icons/Education.svg";
 
 function IntroLinks() {
     return (
@@ -46,7 +41,7 @@ const introLinks = [
         id: 1,
         url: "#",
         alt: "Education",
-        src: Education,
+        src: "/icons/Education.svg",
         text: "آموزش",
         width: 65,
         height: 65,
@@ -55,7 +50,7 @@ const introLinks = [
         id: 2,
         url: "/exams",
         alt: "Test",
-        src: Test,
+        src: "/icons/test.svg",
         text: "آزمون",
         width: 65,
         height: 65,
@@ -64,7 +59,7 @@ const introLinks = [
         id: 3,
         url: "/book-store",
         alt: "Library",
-        src: Library,
+        src: "/icons/library.svg",
         text: "کتابخانه",
         width: 65,
         height: 65,
@@ -73,7 +68,7 @@ const introLinks = [
         id: 4,
         url: "/courses",
         alt: "Courses",
-        src: Courses,
+        src: "/icons/Courses.svg",
         text: "دوره ها",
         width: 65,
         height: 65,
@@ -82,7 +77,7 @@ const introLinks = [
         id: 5,
         url: "#",
         alt: "Education Book",
-        src: EducationBook,
+        src: "/icons/EducationalBooks.svg",
         text: "کتب آموزشی",
         width: 65,
         height: 65,

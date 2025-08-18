@@ -1,5 +1,4 @@
 import Image from "next/image";
-import MdContentCopy from "@/app/components/icons/MdContentCopy.svg";
 
 function CopyLink() {
     return (
@@ -10,7 +9,7 @@ function CopyLink() {
                 </span>
                 <button>
                     <Image
-                        src={MdContentCopy}
+                        src={"/icons/MdContentCopy.svg"}
                         alt="Profile Img"
                         height={24}
                         width={24}
