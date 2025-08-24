@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import { EducationType } from "@/api/education/types";
 
-function DownloadLinkFreeFilm() {
+function DownloadLinkFreeFilm(education: EducationType) {
     return (
         <>
             <div className="flex flex-col items-start gap-4 bg-did/15 p-4 rounded-2xl">
@@ -12,7 +13,7 @@ function DownloadLinkFreeFilm() {
                         height={24}
                         width={24}/>
                     <span className="text-dark text-sm">
-                دانلود فیلم آموزش پلاگین Retouch4me در فتوشاپ
+                {education.title}
                 </span>
                 </div>
                 <div className="flex items-center">
@@ -22,12 +23,14 @@ function DownloadLinkFreeFilm() {
                         height={24}
                         width={24}/>
                     <span className="text-secondary text-sm">
-                حجم: 164mb (مگابایت)
+                حجم: {education.video?.size}
                 </span>
                 </div>
-                <div className="mt-2 ms-auto">
+                {education.video?.url &&<div className="mt-2 ms-auto">
 
-                    <Link href="#" className="text-white bg-did rounded-2xl text-sm px-6 py-2 flex gap-1 items-center">
+                    <Link href={education.video?.url}
+                          download
+                          className="text-white bg-did rounded-2xl text-sm px-6 py-2 flex gap-1 items-center" >
                         <Image
                             src={"/icons/download.svg"}
                             alt="User Check Img"
@@ -35,7 +38,7 @@ function DownloadLinkFreeFilm() {
                             height={24}/>
                         لینک دانلود
                     </Link>
-                </div>
+                </div>}
             </div>
         </>
     );

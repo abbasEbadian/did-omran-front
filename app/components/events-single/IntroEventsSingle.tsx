@@ -95,7 +95,7 @@ function IntroEventsSingle({ event }: { event: EventType }) {
                 <div className="lg:col-span-4 col-span-8">
                     <div className="flex items-center justify-between my-3 lg:flex-row flex-col gap-3 w-full">
                         <ShareBox />
-                        <CopyLink />
+                        <CopyLink id={event.id} code={"events"}/>
                     </div>
                 </div>
                 <div className="lg:col-span-4 col-span-8">

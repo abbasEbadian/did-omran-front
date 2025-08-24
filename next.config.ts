@@ -25,6 +25,10 @@ const nextConfig: NextConfig = {
                 protocol: "http",
                 hostname: "didomran.ir",
             },
+            {
+                protocol: "https",
+                hostname: "abbasebadian.storage.c2.liara.space",
+            },
         ],
     },
     webpack: (config) => {

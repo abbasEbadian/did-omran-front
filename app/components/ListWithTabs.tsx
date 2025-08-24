@@ -5,8 +5,9 @@ import React, {useEffect, useState} from "react";
 import * as motion from "motion/react-client";
 import {MoonLoader} from "react-spinners";
 import {AnimatePresence} from "framer-motion";
+import { EducationType } from "@/api/education/types";
 
-type GenType = BookType | CourseType | ExamType;
+type GenType = BookType | CourseType | ExamType | EducationType;
 
 type ListWithTabsProps<T extends GenType> = {
     data: T[];

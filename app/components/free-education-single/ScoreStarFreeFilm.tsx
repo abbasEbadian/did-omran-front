@@ -10,7 +10,7 @@ function ScoreStarFreeFilm() {
   };
   return (
     <>
-    <div className="flex  items-center gap-4 justify-between">
+    <div className="flex  items-center gap-4 justify-end">
         <span className="text-dark ">
             امتیاز ثبت شده
         ( {rating} امتیاز)

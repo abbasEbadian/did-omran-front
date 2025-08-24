@@ -1,33 +1,53 @@
 "use client";
-import { useState } from "react";
-import FreeEducationSlider from "./FreeEducationSlider";
+import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import useSWR from "swr";
+import { EducationType } from "@/api/education/types";
+import { getEducations } from "@/api";
+import FreeEducationSlider from "@components/landing/free-education/FreeEducationSlider";
 
+const grouped = (data: EducationType[]): Record<string, EducationType[]> => {
+    return data.reduce((acc, item) => {
+        const key = item.category.name;
+        (acc[key] ??= []).push(item);
+        return acc;
+    }, {} as Record<string, EducationType[]>);
+};
 const FreeEducationTabs = () => {
-    const [activeTab, setActiveTab] = useState(0);
+    const [activeTab, setActiveTab] = useState<string>("all");
 
-    const tabs = [
-        { id: 0, label: "همه", content: <FreeEducationSlider /> },
-        { id: 1, label: "نظارت اجرا", content: "" },
-        { id: 2, label: "محاسبات ", content: <FreeEducationSlider /> },
-        { id: 3, label: "کارشناسی رسمی", content: "" },
-        { id: 4, label: "نرم افزار", content: "" },
-        { id: 5, label: "فنی و مهندسی", content: "" },
-    ];
+    const {data: educations, isLoading, error} = useSWR<EducationType[]>(
+        "get-educations",
+        getEducations
+    );
+
+    const tabs = useMemo(() => {
+        if (!educations) return [];
+        return grouped(educations);
+    }, [educations]);
+
+    const items = useMemo(() => {
+        if (activeTab === "all") {
+            return educations;
+        }
+
+        // @ts-ignore
+        return tabs[activeTab];
+    }, [tabs, activeTab, educations]);
 
     return (
         <>
             <div className="relative p-4 lg:max-w-[600px] mx-auto">
                 <div className="flex items-center justify-between gap-16 mb-8">
                     <span className="text-2xl text-dark font-bold ">
-                        آموزش‌های دیدعمران
+                        آموزش‌های رایگان دیدعمران
                     </span>
                     <Link
-                        href="/"
+                        href="/free-educations"
                         className="text-white bg-did rounded-2xl text-sm px-6 py-2 "
                     >
-                        مشاهده همه{" "}
+                        مشاهده همه
                     </Link>
                 </div>
 
@@ -41,31 +61,40 @@ const FreeEducationTabs = () => {
                         priority
                     />
                 </div>
-                {/* Tab Buttons (Horizontal) */}
-
                 <div className="flex lg:flex-row flex-col lg:items-center justify-between mb-10">
-                    {tabs.map((tab) => (
+                    <button
+                        onClick={() => setActiveTab("all")}
+                        className={`relative px-4 py-2 text-sm lg:text-base ${activeTab === "all"
+                            ? "text-did font-semibold bg-did/15 lg:bg-transparent rounded-e-lg"
+                            : "text-secondary hover:text-did transition-colors duration-200"
+                        } focus:outline-none`}
+                    >
+                        همه
+                        {activeTab === "all" && (
+                            <div className="absolute bottom-0 left-0 right-0 h-7 w-1 bg-did rounded"></div>
+                        )}
+                    </button>
+                    {Object.keys(tabs).map((tab) => (
                         <button
-                            key={tab.id}
-                            onClick={() => setActiveTab(tab.id)}
-                            className={`relative px-4 py-2 text-sm lg:text-base ${activeTab === tab.id
-                                    ? "text-did font-semibold bg-did/15 lg:bg-transparent rounded-e-lg"
-                                    : "text-secondary hover:text-did transition-colors duration-200"
-                                } focus:outline-none`}
+                            key={tab}
+                            onClick={() => setActiveTab(tab)}
+                            className={`relative px-4 py-2 text-sm lg:text-base ${activeTab === tab
+                                ? "text-did font-semibold bg-did/15 lg:bg-transparent rounded-e-lg"
+                                : "text-secondary hover:text-did transition-colors duration-200"
+                            } focus:outline-none`}
                         >
-                            {tab.label}
+                            {tab}
                             {/* Active Tab Indicator (Vertical Line) */}
-                            {activeTab === tab.id && (
+                            {activeTab === tab && (
                                 <div className="absolute bottom-0 left-0 right-0 h-7 w-1 bg-did rounded"></div>
                             )}
                         </button>
                     ))}
                 </div>
 
-                {/* Tab Content */}
 
             </div>
-            {tabs[activeTab].content}
+            {items && <FreeEducationSlider items={items}/>}
         </>
 
     );
