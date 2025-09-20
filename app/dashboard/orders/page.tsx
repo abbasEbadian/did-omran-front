@@ -11,8 +11,9 @@ const Page = () => {
 
     
     return (
-        <div className="p-6">
-            <div className="overflow-x-auto">
+        <div className="">
+            <b className={"text-lg ps-2"}>دوره‌های من</b>
+            <div className="overflow-x-auto mt-4">
                 <table className="w-full">
                     <thead>
                         <tr className="bg-white100 rounded-2xl">

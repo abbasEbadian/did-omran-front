@@ -11,7 +11,7 @@ function MyTicketsBox() {
                 <Image src={"/icons/Feature.svg"} alt="star Img" width={150} height={150}/>
                 <div
                     className="flex flex-col items-start px-4 border-s-2 border-dashed border-s-secondary700 gap-1 py-5">
-                    <span className="text-did text-2xl font-semibold">
+                    <span className="text-did text-xl lg:text-2xl font-semibold whitespace-nowrap">
                         تیکت‌های من
                     </span>
                     <span className="text-secondary text-sm font-medium">

@@ -1,15 +1,18 @@
 "use client";
 
-import React, {useMemo} from "react";
+import React, { useMemo } from "react";
 import Image from "next/image";
 
 import Link from "next/link";
-import {usePathname} from "next/navigation";
+import { usePathname } from "next/navigation";
 import useSWR from "swr";
-import {UserType} from "@/api/types";
-import {getUser} from "@/api";
+import { UserType } from "@/api/types";
+import { getUser } from "@/api";
 
-const Sidebar = () => {
+type SidebarProps = {
+    closeSidebar: () => void
+}
+const Sidebar = ({closeSidebar}: SidebarProps) => {
     const pathname = usePathname();
     const {data: user} = useSWR<UserType>("get-user", getUser);
 
@@ -59,6 +62,7 @@ const Sidebar = () => {
                 <Link
                     key={item.id}
                     href={item.url}
+                    onClick={closeSidebar}
                     className={`flex items-center p-3 my-2 rounded-lg transition-all duration-200 relative ${
                         activeItem === item.id
                             ? "bg-blue500/50 opacity-100"

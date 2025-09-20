@@ -40,7 +40,8 @@ function EducationItems(course: CourseType) {
                     <div className=" flex flex-col items-start gap-2 justify-start mb-4">
                         <Link
                             href={"/courses/" + course.id}
-                            className="text-dark text-base font-medium line-clamp-2"
+                            title={course.name}
+                            className="text-dark text-base font-medium text-ellipsis text-nowrap w-full overflow-hidden"
                         >
                             {course.name}
                         </Link>

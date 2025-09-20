@@ -125,7 +125,7 @@ const ListWithTabs = <T extends GenType>({
                         })
                     ) : (
                         <motion.div
-                            className="col-span-4"
+                            className="col-span-full"
                             transition={{ delay: 1 }}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: !isLoading ? 1 : 0 }}

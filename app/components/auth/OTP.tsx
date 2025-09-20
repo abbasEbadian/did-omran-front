@@ -68,7 +68,7 @@ function OTP() {
     }, [otp]);
     return (
         <>
-            <form onSubmit={(e) => submit(e)} className="w-1/3">
+            <form onSubmit={(e) => submit(e)} className="lg:w-1/3 w-full">
                 <div className="flex items-center gap-2 justify-center text-gray-600">
                     <small>کد ارسال شده به:</small>
                     <span>{mobile}</span>
@@ -81,7 +81,7 @@ function OTP() {
                     error={error}
                     autoFocus
                 />
-                <div className="flex items-center justify-between mb-6 ">
+                <div className="flex items-center justify-between mb-6 mt-4 ">
                     <Link href="/auth/otp" className="text-did/60 text-nowrap">
                         <small>ویرایش شماره</small>
                     </Link>
