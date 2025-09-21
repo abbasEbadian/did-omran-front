@@ -17,7 +17,7 @@ function UserComments() {
   return (
     <div className="flex flex-col lg:gap-8 gap-6 mx-6">
       {/* Title and Description */}
-      <div className="flex flex-col lg:items-start gap-3">
+      <div className="flex flex-col lg:items-center gap-3">
         <span className="text-2xl text-dark font-bold text-center lg:text-start">
           نظرات دانشجویان
         </span>
@@ -27,7 +27,7 @@ function UserComments() {
       </div>
 
       {/* User Comment */}
-      <div className="flex flex-col items-start  gap-3">
+      <div className="flex flex-col items-center  gap-3">
         <div className=''> 
           <Image
             src={"/icons/slash.svg"}
