@@ -66,7 +66,7 @@ const ListWithTabs = <T extends GenType>({
     };
     return (
         <section className="relative container mx-auto">
-            <div className="flex gap-6 items-end justify-center border-b border-did/10 mb-8 mt-5">
+            <div className="flex gap-6 lg:items-end  items-center justify-center border-b border-did/10 mb-8 mt-5 flex-wrap lg:flex-row  ">
                 {categories?.map((tab, i) => (
                     <motion.button
                         key={tab.id}
@@ -76,7 +76,7 @@ const ListWithTabs = <T extends GenType>({
                             delay: 0.1 * (i + 1) + 0.2,
                         }}
                         onClick={() => setActiveCategory(tab)}
-                        className={`lg:px-6 lg:py-2 px-3 py-1 rounded-t-2xl transition-all duration-300 min-w-24 lg:min-w-40 ${
+                        className={`lg:px-6 lg:py-2 px-3 py-1 rounded-t-2xl transition-all duration-300 min-w-36 lg:min-w-40 ${
                             activeCategory.id === tab.id
                                 ? "bg-did/25 text-did h-14"
                                 : "bg-did/10 text-did/40 "

@@ -29,12 +29,12 @@ function Page() {
             <div className="grid grid-cols-12 container mx-auto gap-8">
                 {/* Left Column (Main Content) */}
                 <div className="col-span-12 lg:col-span-8">
-                    <div className="flex flex-col gap-8 mt-28">
+                    <div className="flex flex-col gap-8 lg:mt-28 mt-6 px-4 lg:px-0">
                         {/* Course Title */}
                         {course && <TitleTrainingCourses {...course} />}
 
                         {/* Navigation Links */}
-                        <div className="bg-white rounded-2xl px-16 py-4 flex items-center justify-between shadow-custom-shadow">
+                        <div className="bg-white rounded-2xl lg:px-16 px-2 py-4 flex lg:items-center items-start gap-4 justify-between shadow-custom-shadow lg:flex-row flex-col">
                             <Link
                                 href="#Description"
                                 className="text-dark text-sm hover:text-did transition-colors"

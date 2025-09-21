@@ -10,12 +10,12 @@ type Props = {
 const AllEventsInfo = ({ events }: Props)  =>{
     return (
         <>
-            <div className="container mx-auto my-16 flex flex-col gap-4">
+            <div className="container lg:mx-auto my-16 flex flex-col gap-4 ">
                 {events ? (
                     events.map((event) => {
                         return (
-                            <div key={event.id} className="bg-did700 rounded-2xl pe-4 py-5 ps-12 flex flex-col items-starts justify-end gap-2 relative hover:bg-blue400 hover:transition-[0.2] hover:shadow-custom-shadow">
-                                <div className="absolute top-[15%] -right-9 shadow-custom-shadow bg-white rounded-full p-4">
+                            <div key={event.id} className=" mx-5 lg:mx-0 bg-did700 rounded-2xl lg:pe-4 py-5 lg:ps-12 px-2 flex flex-col items-starts justify-end gap-2 relative hover:bg-blue400 hover:transition-[0.2] hover:shadow-custom-shadow">
+                                <div className="lg:absolute lg:top-[15%] lg:-right-9 shadow-custom-shadow bg-white rounded-full p-4 mx-auto flex">
                                     <Image
                                         src={"/icons/check.svg"}
                                         alt="eye icone"
@@ -23,10 +23,10 @@ const AllEventsInfo = ({ events }: Props)  =>{
                                         width={34}
                                     />
                                 </div>
-                                <span className="text-dark text-sm font-semibold">
+                                <span className="text-dark text-sm font-semibold text-center lg:text-start mt-8 lg:mt-0">
                                     {event.title}
                                 </span>
-                                <div className="flex items-center justify-between">
+                                <div className="flex items-center justify-between flex-col lg:flex-row gap-4">
                                     <EventDate timestamp={event.start_date} />
                                     <div className="flex items-center gap-1">
                                         <Image
@@ -72,7 +72,7 @@ const AllEventsInfo = ({ events }: Props)  =>{
                                     </div>
                                     <Link
                                         href={"events/" + event.id}
-                                        className="text-white bg-blue700 rounded-2xl text-sm px-8 py-2 flex gap-1 items-center"
+                                        className="text-white bg-blue700 rounded-2xl text-sm px-8 py-2 flex gap-1 items-center mt-4 lg:mt"
                                     >
                                         مشاهده رویداد
                                     </Link>

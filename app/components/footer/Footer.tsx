@@ -109,7 +109,7 @@ function Footer() {
                     </div>
 
                     <div className="lg:col-span-2 col-span-4">
-                        <div className="flex flex-col lg:items-start items-center px-8 gap-5 mb-5">
+                        <div className="flex flex-col lg:items-start items-center lg:px-8 px-2 gap-5 mb-5">
                             <span className="text-white font-bold text-xl text-start">
                                 درباره ما
                             </span>
@@ -160,11 +160,11 @@ function Footer() {
 
                     {/* Column 3: Useful Links */}
                     <div className="lg:col-span-1 col-span-4">
-                        <div className="flex flex-col gap-5 items-center">
+                        <div className="flex flex-col gap-5 items-center mt-6 lg:mt-0">
                             <span className="text-white font-bold text-base">
                                 لینک‌های مفید
                             </span>
-                            <div className="flex-row items-start gap-4 lg:flex-col justify-between flex">
+                            <div className=" gap-4 flex-col justify-between flex items-center">
                                 <Link
                                     href="#"
                                     className="text-white text-sm hover:text-blue700 transition-all duration-300"
