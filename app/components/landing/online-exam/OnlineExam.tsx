@@ -41,7 +41,7 @@ function OnlineExam() {
                     width={500} // Adjust width as needed
                     height={395}
                     priority // Optional: if the image is above the fold
-                    className="object-cover lg:w-full w-4/5 mx-auto "
+                    className="object-cover lg:w-full w-3/5 mx-auto "
                 />
             </div>
         </div>

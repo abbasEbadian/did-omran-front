@@ -39,7 +39,7 @@ function Tabs() {
           <button
             key={index}
             onClick={() => setActiveTab(index)} // تغییر تب فعال
-            className={`px-6 py-2 rounded-t-2xl transition-all duration-300 min-w-40 ${
+            className={`lg:px-6 lg:py-2 px-3 py-1  rounded-t-2xl transition-all duration-300 lg:min-w-40 ${
               activeTab === index ? 'bg-did/25 text-did h-14' : 'bg-did/10 text-did/40 '
             }`}
           >

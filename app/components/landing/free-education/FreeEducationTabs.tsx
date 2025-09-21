@@ -40,12 +40,12 @@ const FreeEducationTabs = () => {
         <>
             <div className="relative p-4 lg:max-w-[600px] mx-auto">
                 <div className="flex items-center justify-between gap-16 mb-8">
-                    <span className="text-2xl text-dark font-bold ">
+                    <span className="whitespace-nowrap text-lg lg:text-2xl text-dark font-bold ">
                         آموزش‌های رایگان دیدعمران
                     </span>
                     <Link
                         href="/free-educations"
-                        className="text-white bg-did rounded-2xl text-sm px-6 py-2 "
+                        className="text-white bg-did rounded-2xl text-sm px-6 py-2 whitespace-nowrap"
                     >
                         مشاهده همه
                     </Link>
