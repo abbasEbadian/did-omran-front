@@ -66,7 +66,7 @@ function Header() {
                                     {user?.basket.lines.length || 0}
                                 </span>
                             </Link>
-                            <Link href="/dashboard/notifications" className="relative">
+                            {user && <Link href="/dashboard/notifications" className="relative">
                                 <Image
                                     src={user?.unseen_notifications.length ? "/icons/bell-on.svg" : "/icons/bell.svg"}
                                     alt="bell"
@@ -74,7 +74,7 @@ function Header() {
                                     height={100}
                                     className={"size-7 lg:size-8"}
                                 />
-                            </Link>
+                            </Link>}
 
                             {/* ✅ آیکون جستجو که مودال تمام صفحه باز می‌کند */}
                             <button onClick={() => setIsSearchOpen(true)}>

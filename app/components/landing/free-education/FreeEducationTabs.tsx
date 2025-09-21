@@ -14,6 +14,7 @@ const grouped = (data: EducationType[]): Record<string, EducationType[]> => {
         return acc;
     }, {} as Record<string, EducationType[]>);
 };
+
 const FreeEducationTabs = () => {
     const [activeTab, setActiveTab] = useState<string>("all");
 

@@ -32,8 +32,11 @@ export default function FreeEducationSlider({items}: { items: EducationType[] })
                         slidesPerView: 2,
                     },
                     1024: {
-                        slidesPerView: 4,
+                        slidesPerView: 3,
                     },
+                     1440:{
+                        slidesPerView: 4,
+                    }
                 }}
             >
                 {items?.map((item) => (

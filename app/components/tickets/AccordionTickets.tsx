@@ -22,7 +22,7 @@ const AccordionTickets = ({items}: {items: AccordionItem[]}) => {
             onClick={() => handleClick(index)}
             className="flex justify-between w-full px-4 py-2 text-sm font-medium text-left text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none"
           >
-            <span className="text-dark font-semibold">{item.title}</span>
+            <span className="text-dark font-semibold content-center">{item.title}</span>
             <span>
             {activeIndex === index ? (
                 <Image src={"/icons/check-down.svg"} alt="بستن" width={24} height={24} />

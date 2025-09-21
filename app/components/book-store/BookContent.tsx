@@ -7,24 +7,23 @@ function BookContent(book: BookType) {
     return (
         <>
             <div className=" bg-white shadow-custom-shadow rounded-2xl">
-                <div className="w-full rounded-2xl">
+                <div className="w-full rounded-t-2xl overflow-hidden">
                     <Image
                         src={book.image}
                         alt="BsPlayCircle Img"
                         height={800}
                         width={1200}
-                        className="object-contain h-[270px] w-full rounded-2xl"
+                        className="object-contain h-[270px] w-full rounded-2xl scale-[1.1]"
                     />
                 </div>
                 <div className="flex flex-col gap-4 rounded-b-2xl border border-did/10 px-4 py-6 ">
                     <div className="flex items-start justify-start gap-2 flex-col">
-                        <span className="text-dark text-sm">
+                        <span className="text-dark text-sm  truncate text-ellipsis w-full" title={book.title}>
                             {book.title}
                         </span>
                         <div className="flex items-center justify-start gap-2 flex-row">
                             <IconUser1 fill="none"/>
                             <span className="text-secondary text-xs">
-
                                 {book.author}
                             </span>
                         </div>
@@ -78,7 +77,7 @@ function BookContent(book: BookType) {
                         </div>
                         <Link
                             href={"/book-store/" + book.id}
-                            className="text-white bg-did rounded-2xl text-sm px-8 py-2 flex gap-1 items-center"
+                            className="text-white bg-did rounded-2xl text-sm px-4 py-2 flex gap-1 items-center"
                         >
                             <Image
                                 src={"/icons/HiOutlineFolderDownload.svg"}
