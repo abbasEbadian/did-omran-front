@@ -41,7 +41,7 @@ function Events({event}: { event: EventType }) {
                     </Link>
                 </div>
 
-                <div className="px-2">
+                <div className="px-2 flex-grow">
                     <div className="flex flex-row gap-2 items-center">
                         <span className="text-dark text-xs">{event.title}</span>
                         <Image
@@ -51,7 +51,7 @@ function Events({event}: { event: EventType }) {
                             height={24}
                         />
                     </div>
-                    <div className="w-full h-24 relative mt-4">
+                    <div className="w-full lg:h-24 h-48 relative mt-4">
                         <Image
                             src={event.cover}
                             alt="تصویر رویداد"

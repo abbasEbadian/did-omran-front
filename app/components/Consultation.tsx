@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Consultation() {
     return (
-        <div className="relative h-[130px] rounded-2xl overflow-hidden mb-4 py-8 shadow-lg">
+        <div className="relative lg:h-[130px] h-[150px] rounded-2xl overflow-hidden mb-4 py-8 shadow-lg">
             {/* Image */}
             <div className="absolute inset-0 z-10">
                 <Image

@@ -71,7 +71,7 @@ function Footer() {
                                 <span className="text-white">تماس باما</span>
                             </Link>
 
-                            <div className="flex items-center justify-between">
+                            <div className="flex items-center lg:justify-between justify-center gap-1">
                                 <Link href="#">
                                     <Image
                                         src={"/aparat.png"}
@@ -109,8 +109,8 @@ function Footer() {
                     </div>
 
                     <div className="lg:col-span-2 col-span-4">
-                        <div className="flex flex-col items-start px-8 gap-5 mb-5">
-                            <span className="text-white font-bold text-xl">
+                        <div className="flex flex-col lg:items-start items-center px-8 gap-5 mb-5">
+                            <span className="text-white font-bold text-xl text-start">
                                 درباره ما
                             </span>
                             <p className="text-base text-white font-light text-justify">
@@ -160,11 +160,11 @@ function Footer() {
 
                     {/* Column 3: Useful Links */}
                     <div className="lg:col-span-1 col-span-4">
-                        <div className="flex flex-col items-center gap-5">
+                        <div className="flex flex-col gap-5 items-center">
                             <span className="text-white font-bold text-base">
                                 لینک‌های مفید
                             </span>
-                            <div className="flex items-start flex-col gap-4">
+                            <div className="flex-row items-start gap-4 lg:flex-col justify-between flex">
                                 <Link
                                     href="#"
                                     className="text-white text-sm hover:text-blue700 transition-all duration-300"
