@@ -68,6 +68,7 @@ const Sidebar = ({closeSidebar}: SidebarProps) => {
                             ? "bg-blue500/50 opacity-100"
                             : "opacity-50 hover:opacity-75"
                     }`}
+                    prefetch={item.url !== "/logout"}
                 >
                     <div className="w-6 h-6 relative">
                         <Image
