@@ -42,7 +42,7 @@ function Footer() {
                                     className="flex items-center gap-2 font-bold whitespace-nowrap text-2xl  text-did"
                                 >
                                     <Image
-                                        src={"/icons/logo-blue.svg"}
+                                        src={"/icons/Logo-blue.svg"}
                                         alt="DID Omran Logo"
                                         width={70}
                                         height={70}
@@ -147,7 +147,7 @@ function Footer() {
                             <div>
                                 <Link href="#" className="">
                                     <Image
-                                        src={"/enamad.png"}
+                                        src={"/img/enamad.png"}
                                         alt="Enamad"
                                         width={107}
                                         height={117}

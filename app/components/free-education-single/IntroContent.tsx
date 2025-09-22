@@ -21,7 +21,7 @@ function IntroContent(item: EducationType) {
                 <span className="text-blue text-xs">امتیاز: {item.points}</span>
             </div>
             <div className="flex items-center gap-1">
-                <Image src={"/icons/eye.svg'"} alt="eye icon" height={15} width={15}/>
+                <Image src={"/icons/eye.svg"} alt="eye icon" height={15} width={15}/>
                 <span className="text-blue text-xs">تعداد مشاهده: {item.views}</span>
             </div>
         </div>

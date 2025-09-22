@@ -47,7 +47,7 @@ function ContentCourse(course: CourseType) {
                     >
                         <span className="text-dark text-base">{session.title}</span>
                         <div className="flex gap-1 items-center px-2 bg-blue/15">
-                            <Image src={"/icons/clock.svg'"} alt="Clock icon" height={24} width={24}/>
+                            <Image src={"/icons/clock.svg"} alt="Clock icon" height={24} width={24}/>
                             <span className="text-secondary text-xs">{session.duration}</span>
                         </div>
                     </div>
@@ -73,7 +73,7 @@ function ContentCourse(course: CourseType) {
                                         href="#"
                                         className="text-white bg-did rounded-2xl text-sm px-6 py-2 flex gap-1 items-center"
                                     >
-                                        <Image src={"/icons/download.svg'"} alt="Download icon" width={24} height={24}/>
+                                        <Image src={"/icons/download.svg"} alt="Download icon" width={24} height={24}/>
                                         لینک دانلود
                                     </Link>
                                 </div>
