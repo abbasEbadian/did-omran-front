@@ -11,7 +11,6 @@ import { UserType } from "@/api/types";
 
 function Page() {
     const { data: user } = useSWR<UserType>("get-user", getUser);
-
     return (
         <>
             <div className="gap-4 flex flex-col">

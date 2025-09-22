@@ -27,6 +27,14 @@ const nextConfig: NextConfig = {
             },
             {
                 protocol: "https",
+                hostname: "didomran.com",
+            },
+            {
+                protocol: "http",
+                hostname: "didomran.com",
+            },
+            {
+                protocol: "https",
                 hostname: "abbasebadian.storage.c2.liara.space",
             },
             {

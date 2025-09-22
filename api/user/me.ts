@@ -9,6 +9,7 @@ export const getUser = async () => {
             tags: ["profile"],
         },
     });
+    console.log(build_url("/users/me/"));
     if (result !== "ok") {
         return undefined;
     }

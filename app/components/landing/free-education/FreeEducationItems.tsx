@@ -15,7 +15,7 @@ function FreeEducationItems(item: EducationType) {
                     className="w-full object-cover rounded-t-2xl"/>
 
                 <div className="flex flex-col px-4 py-3 gap-4">
-                    <span className="text-dark text-sm">{item.title}</span>
+                    <span className="text-dark text-sm truncate" title={item.title}>{item.title}</span>
                     <div className="flex items-center">
                         <div className="flex-grow border border-dashed border-secondary700 px-4"></div>
                         <div className="flex items-center gap-2">

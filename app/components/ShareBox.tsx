@@ -12,7 +12,7 @@ const ShareBox: React.FC = () => {
     },
     {
       href: '#',
-      icon: "icons/FaInstagram.svg",
+      icon: "/icons/FaInstagram.svg",
       alt: 'Instagram',
       className: 'text-pink-500',
     },
