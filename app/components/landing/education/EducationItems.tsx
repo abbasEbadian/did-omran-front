@@ -7,7 +7,7 @@ import { CourseType, UserType } from "@/api/types";
 import { toaster } from "@/utils/toaster";
 import { addToCart } from "@/api/order";
 import { FormButton } from "../../FormButton";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import useSWR, { useSWRConfig } from "swr";
 import { getUser } from "@/api";
 import Link from "next/link";
@@ -15,8 +15,12 @@ import Link from "next/link";
 function EducationItems(course: CourseType) {
     const router = useRouter();
     const { mutate } = useSWRConfig();
-
+    const pathname = usePathname()
     const addToCard = async (id: number) => {
+                if(!user){
+            router.push("/auth?next="+pathname)
+            return
+        }
         const response = await addToCart(id);
         toaster(response);
         await mutate("get-user");

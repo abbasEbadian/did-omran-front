@@ -6,7 +6,7 @@ import { EventType } from "@/api/event/types";
 import { addToCart, getOrders } from "@/api/order";
 import { toaster } from "@/utils/toaster";
 import useSWR, { useSWRConfig } from "swr";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import { Button } from "@mantine/core";
 import { UserType } from "@/api/types";
@@ -21,13 +21,17 @@ function RegisterEvent({event}: { event: EventType }) {
 
     const in_basket = user?.basket.lines.filter(q => q.event && q.event.id === event.id);
     const purchased = orders?.some(q => q.lines.find(f => f.event && f.event.id === event.id));
-
+    const pathname = usePathname();
 
     const addToCard = async (id: number) => {
+        if (!user) {
+            router.push("/auth?next=" + pathname);
+            return;
+        }
         setLoading(true);
-        if(in_basket || purchased){
-            toast.warning("قبلا خریداری شده است")
-            return
+        if (in_basket || purchased) {
+            toast.warning("قبلا خریداری شده است");
+            return;
         }
         try {
             const response = await addToCart(id, "event");

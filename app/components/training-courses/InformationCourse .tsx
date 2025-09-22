@@ -7,7 +7,7 @@ import { addToCart } from "@/api/order";
 import { toaster } from "@/utils/toaster";
 import { toast } from "react-toastify";
 import useSWR, { useSWRConfig } from "swr";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Button } from "@mantine/core";
 import { getUser } from "@/api";
 
@@ -23,7 +23,7 @@ function InformationCourse(course: CourseType) {
     const {data: user} = useSWR<UserType>("get-user", getUser);
     const {mutate} = useSWRConfig();
     const router = useRouter();
-
+    const pathname = usePathname();
     useEffect(() => {
         const interval = setInterval(() => {
             setActiveIndex((prevIndex) => (prevIndex + 1) % course.tutors.length);
@@ -33,6 +33,10 @@ function InformationCourse(course: CourseType) {
     }, []);
     const [loading, setLoading] = useState(false);
     const addToCard = async () => {
+        if (!user) {
+            router.push("/auth?next=" + pathname);
+            return;
+        }
         setLoading(true);
         try {
             const response = await addToCart(course.id);
@@ -46,7 +50,7 @@ function InformationCourse(course: CourseType) {
         }
 
     };
-    console.log(user?.basket.lines.filter(q => q.course && q.course.id === course.id));
+    const in_basket = user && user.basket.lines.some(q => q.course && q.course.id === course.id);
     return (
         <div className="flex flex-col relative bg-did/10 rounded-2xl px-6 pb-5 gap-4 pt-28 mt-32 mx-4 lg:mx-0">
             {/* بخش اساتید */}
@@ -84,19 +88,20 @@ function InformationCourse(course: CourseType) {
                     className="text-dark text-xl font-black">{Number(course.final_price).toLocaleString("fa")} تومان</span>
             </div>
             {
-                !user?.basket.lines.filter(q => q.course && q.course.id === course.id) ? <Button
-                        onClick={addToCard}
-                        className="text-white bg-did rounded-2xl text-sm px-6 py-3 flex gap-1 items-center w-full justify-center"
-                        aria-label="ثبت نام در دوره"
-                    >
-                        افزودن به سبد خرید
-                    </Button> :
-                    <Button
-                        className="text-white bg-did rounded-2xl text-sm px-6 py-3 flex gap-1 items-center w-full justify-center"
-                        aria-label="ثبت نام در دوره"
-                    >
-                        در سبد خرید
-                    </Button>
+                in_basket ? <Button
+                    className="text-white bg-did rounded-2xl text-sm px-6 py-3 flex gap-1 items-center w-full justify-center"
+                    aria-label="ثبت نام در دوره"
+                >
+                    در سبد خرید
+                </Button> : <Button
+                    loading={loading}
+                    onClick={addToCard}
+                    className="text-white bg-did rounded-2xl text-sm px-6 py-3 flex gap-1 items-center w-full justify-center"
+                    aria-label="ثبت نام در دوره"
+                >
+                    افزودن به سبد خرید
+                </Button>
+
             }
 
             {/* بخش اطلاعات دوره */}
