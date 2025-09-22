@@ -25,7 +25,7 @@ export default function RootLayout({
         <Header/>
         <Suspense>
             <MantineProvider>
-                <main className="pt-[77px] max-w-[1440px] mx-auto ">{children}</main>
+                <main className="pt-[77px] max-w-[1440px] mx-auto">{children}</main>
             </MantineProvider>
         </Suspense>
         <ToastContainer position="top-center"/>
