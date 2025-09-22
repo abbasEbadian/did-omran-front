@@ -30,7 +30,7 @@ function Header() {
 
     return (
         <header className="bg-white p-2 fixed top-0 z-50 inset-x-0 shadow-custom-shadow">
-            <div className="container mx-auto">
+            <div className="container mx-auto max-w-[1440px]">
                 <div className="flex justify-between items-center">
                     <Link href="/" className="flex items-center gap-2">
                         <Image src={"/icons/Logo-blue.svg"} alt="logo did omran" width={46} height={46}/>

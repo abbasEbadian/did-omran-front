@@ -74,7 +74,7 @@ function IntroShop() {
                             <span className="text-dark text-2xl font-bold">779هزارتومان</span>
                             <div className="w-2/6">
                                 <Link href="#"
-                                      className="text-white bg-did rounded-2xl text-sm px-6 py-3 flex gap-1 items-center w-full justify-center">
+                                      className="text-white bg-did rounded-2xl text-base px-6 py-3 flex gap-1 items-center w-full justify-center">
                                     ثبت نام
                                 </Link>
                             </div>
