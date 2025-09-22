@@ -27,14 +27,14 @@ export const IntroFreeEducationSingle = (education: EducationType) => {
 
     return (
         <>
-            <div className="flex flex-col lg:flex-row gap-4">
-                <div className="lg:w-1/2 w-full">
+            <div className="flex flex-col lg:flex-row gap-6 items-center">
+                <div className="lg:w-1/2 w-full h-96">
                     <Image
                         src={education.cover.url}
                         alt={education.title}
                         height={290}
                         width={463}
-                        className="object-cover"
+                        className="object-cover h-full w-full object-center rounded-2xl"
                     />
                 </div>
                 <div className="flex flex-col items-start gap-4">

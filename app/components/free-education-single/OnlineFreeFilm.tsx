@@ -6,8 +6,8 @@ import { EducationType } from "@/api/education/types";
 
 function OnlineFreeFilm(education: EducationType) {
     return (
-        <div className="bg-white py-8">
-            <div className="container mx-auto f">
+        <div className="bg-white py-8 px-6 rounded-2xl shadow-custom-shadow">
+            <div className="container mx-auto">
                 <span className="text-dark font-bold">
                     {education.title}
                 </span>

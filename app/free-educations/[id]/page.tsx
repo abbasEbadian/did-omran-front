@@ -14,10 +14,10 @@ async function EducationSinglePage({params}: { params: Promise<{ id: string }> }
     }
     return (
         <div className="bg-white100 py-16 px-4 lg:px-0">
-            <div className="container mx-auto  py-12">
+            <div className="container mx-auto  pb-12">
                 <IntroFreeEducationSingle {...education}/>
 
-                <div className="flex flex-col items-start gap-4 mt-16">
+                <div className="flex flex-col items-start gap-4 mt-8 text-justify ">
                 <div dangerouslySetInnerHTML={{
                     __html: education.description
                 }} />
