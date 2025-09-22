@@ -11,11 +11,11 @@ function IntroLinks() {
                     href={introLink.url}
                     className={`
                       float
-            rounded-2xl min-w-40 text-white flex flex-col px-6 py-4 items-center gap-2
+            rounded-2xl min-w-40 text-white flex flex-col px-6 py-4 items-center gap-2 backdrop-blur-sm
             ${
                 index % 2 === 0 ? "self-end" : "self-start"
             } 
-            bg-did/50 hover:bg-did transition
+            bg-did/30 hover:bg-did transition
           `}
                 >
                     <Image

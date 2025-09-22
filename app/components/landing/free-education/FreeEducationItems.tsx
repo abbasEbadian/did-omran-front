@@ -5,7 +5,7 @@ import { EducationType } from "@/api/education/types";
 function FreeEducationItems(item: EducationType) {
     return (
         <>
-            <div className="flex flex-col bg-white shadow-custom-shadow rounded-2xl border border-did/10">
+            <div className="flex flex-col bg-white shadow-custom-shadow rounded-2xl border border-did/10 hover:scale-[1.02] hover:border-did/50 transition overflow-hidden">
 
                 <Image
                     src={item.cover.url}
@@ -39,12 +39,13 @@ function FreeEducationItems(item: EducationType) {
                     </div>
                     <div className="flex items-center justify-between">
                         <div className="flex gap-2 items-center">
-                            <div className="rounded-full">
+                            <div className="rounded-full h-12 w-12">
                                 <Image
                                     src={item.tutor.user.avatar}
                                     alt="profile Img"
                                     width={46}
-                                    height={46}/>
+                                    height={46}
+                                    className="object-cover rounded-full"/> 
                             </div>
                             <div className="flex flex-col items-start justify-start gap-1">
                                 <span className="text-secondary text-xs font-normal"> مدرس:</span>

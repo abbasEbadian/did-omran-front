@@ -38,7 +38,7 @@ const EducationTabs = () => {
 
     return (
         <>
-            <div className="p-4 lg:max-w-[600px] mx-auto">
+            <div className="p-4 lg:max-w-[650px] lg:min-w-[650px] mx-auto">
                 <div className="flex items-center justify-between gap-16 mb-6">
                 <span className="text-lg whitespace-nowrap lg:text-2xl text-dark font-bold ">
                     دوره‌های آموزشی دید عمران
@@ -59,9 +59,9 @@ const EducationTabs = () => {
                             : "text-secondary hover:text-did transition-colors duration-200"
                         } focus:outline-none`}
                     >
-                        همه
+                        هــمه
                         {activeTab === "all" && (
-                            <div className="absolute bottom-0 left-0 right-0 h-7 w-1 bg-did rounded"></div>
+                            <div className="absolute bottom-0 left-0 right-6 h-[2px] w-4/5 bg-did rounded"></div>
                         )}
                     </button>
                     {Object.keys(tabs).map((tab) => (
@@ -76,7 +76,7 @@ const EducationTabs = () => {
                             {tab}
                             {/* Active Tab Indicator (Vertical Line) */}
                             {activeTab === tab && (
-                                <div className="absolute bottom-0 left-0 right-0 h-7 w-1 bg-did rounded"></div>
+                                <div className="absolute bottom-0 left-0 right-6 h-[2px] w-4/5 bg-did rounded"></div>
                             )}
                         </button>
                     ))}
