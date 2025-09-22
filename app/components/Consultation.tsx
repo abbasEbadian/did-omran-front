@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Consultation() {
     return (
-        <div className="relative lg:h-[130px] h-[150px] rounded-2xl overflow-hidden mb-4 py-8 shadow-lg">
+        <div className="relative lg:h-[165px] h-[150px] rounded-2xl overflow-hidden mb-4 py-8 shadow-lg mx-3 lg:mx-0">
             {/* Image */}
             <div className="absolute inset-0 z-10">
                 <Image
@@ -14,22 +14,22 @@ function Consultation() {
                 />
             </div>
 
-            <div className="absolute inset-0 bg-gradient-to-b from-did/95 to-dark/0 z-20"></div>
+            <div className="absolute inset-0 bg-did/15 backdrop-blur-sm z-20"></div>
 
             {/* Content */}
-            <div className="absolute inset-0 z-30 flex flex-col items-center justify-center text-white text-center p-4 ">
-                <span className="font-semibold text-sm">
-                    دریافت مشاوره رایگان
+            <div className="absolute inset-0 z-30 flex flex-col items-center justify-cente text-center p-4">
+                <span className="font-black  text-xl text-white py-1 rounded px-2">
+                فرصت ویژه
                 </span>
-                <span className="text-xs mt-2">
-                  به‌صرفه‌ترین پکیج آموزشی
+                <span className="text-base mt-2 text-white font-medium">
+                مشاوره رایگان | مقرون‌به‌صرفه‌ترین پکیج آموزشی
                 </span>
                 <Link
                     href="/free-package"
-                    className="bg-white text-did text-sm md:text-base rounded-2xl px-6 py-2 mt-4 hover:bg-did hover:text-white transition-colors duration-300"
+                    className="bg-did text-white text-sm md:text-base rounded-2xl px-6 py-2 mt-4 transition-colors duration-300"
                     aria-label="ثبت نام"
                 >
-                    ثبت نام
+                    همین حالا ثبت‌نام کنید
                 </Link>
             </div>
         </div>

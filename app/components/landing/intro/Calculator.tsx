@@ -28,12 +28,12 @@ function Calculator() {
     }, [data]);
     return (
         <>
-            <div className="flex items-center flex-col mt-6">
-                <div className="bg-blue700 text-white text-center py-2 rounded-2xl  z-10 text-lg font-bold  border-white border-2 mx-5 inline-table px-4">
-                    <span className="">محاسبه گر نمره آزمون</span>
+            <div className="flex items-center flex-col mt-2 px-3 lg:px-0">
+                <div className="  text-center py-2 text-lg font-bold mx-5 px-4">
+                    <span className="text-gray-700">محاسبه گر نمره آزمون</span>
                 </div>
-                <div className="bg-secondary700 p-6 rounded-2xl z-0 -mt-4">
-                    <h2 className="font-semibold mb-4 text-dark text-xs">
+                <div className="bg-white p-6 rounded-2xl shadow-custom-shadow">
+                    <h2 className="font-medium mb-4 text-secondary text-sm">
                         جهت محاسبه نمره لطفا موارد زیر را تکمیل نمایید
                     </h2>
 
@@ -41,40 +41,40 @@ function Calculator() {
                         <div className="col-span-1">
                             <div className=" flex flex-col gap-1">
                                 <div className="flex items-center  gap-2">
-                                    <label className="text-dark whitespace-nowrap text-xs mb-2 min-w-16">
+                                    <label className="text-secondary800 font-normal whitespace-nowrap text-xs mb-2 min-w-16">
                                         پاسخ صحیح
                                     </label>
                                     <input
                                         name="correct"
                                         value={data.correct}
                                         onChange={onChange}
-                                        className="w-full py-1 p-2 text-secondary border border-gray-300 rounded-lg"
+                                        className="w-full py-1 p-2 text-secondary border border-gray-300 rounded-xl"
                                         placeholder="0"
                                     />
                                 </div>
 
                                 <div className="flex items-center  gap-2">
-                                    <label className="text-dark whitespace-nowrap text-xs mb-2 min-w-16">
+                                    <label className="text-secondary800 font-normal whitespace-nowrap text-xs mb-2 min-w-16">
                                         پاسخ غلط
                                     </label>
                                     <input
                                         name="wrong"
                                         value={data.wrong}
                                         onChange={onChange}
-                                        className="w-full py-1 p-2 text-secondary border border-gray-300 rounded-lg"
+                                        className="w-full py-1 p-2 text-secondary border border-gray-300 rounded-xl"
                                         placeholder="0"
                                     />
                                 </div>
 
                                 <div className="flex items-center  gap-2">
-                                    <label className="text-dark whitespace-nowrap text-xs mb-2 min-w-16">
+                                    <label className="text-secondary800 font-normal whitespace-nowrap text-xs mb-2 min-w-16">
                                         سفید
                                     </label>
                                     <input
                                     name="blank"
                                         value={data.blank}
                                         onChange={onChange}
-                                        className="w-full py-1 p-2 text-secondary border border-gray-300 rounded-lg"
+                                        className="w-full py-1 p-2 text-secondary border border-gray-300 rounded-xl"
                                         placeholder="0"
                                     />
                                 </div>
@@ -82,7 +82,7 @@ function Calculator() {
                         </div>
                         <div className="col-span-1 content-center">
                             <div className="flex flex-col items-center gap-2">
-                                <span className="text-xs text-dark">
+                                <span className="text-xs text-secondary900">
                                     نمره اکتسابی شما:
                                 </span>
                                 <span className="text-white text-2xl bg-blue600 rounded-2xl font-medium px-4 py-1 min-w-[64px] text-center">

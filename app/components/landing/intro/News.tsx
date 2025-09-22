@@ -17,7 +17,7 @@ function NewsSlider() {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <div className="mt-16 relative w-full mx-auto p-4 bg-secondary600/30 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 min-h-[256px]">
+        <div className="mt-16 relative w-full mx-auto p-4 bg-white/5 backdrop-blur-sm rounded-2xl shadow-custom-shadow hover:shadow-xl transition-shadow duration-300 min-h-[256px] lg:flex hidden">
             {blogs && !isLoading && (
                 <Swiper
                     modules={[Pagination, Autoplay]}
@@ -51,18 +51,18 @@ function NewsSlider() {
                                     )}
                                 </div>
 
-                                <div className="flex flex-col gap-4 w-full md:w-2/3">
-                                    <div className="bg-blue700 rounded-xl px-4 py-2 inline-block me-auto min-w-24 text-center">
-                                        <span className="text-base text-white">
+                                <div className="flex flex-col gap-2 w-full md:w-2/3">
+                                    <div className="me-auto min-w-24 text-center">
+                                        <span className="text-2xl text-gray-700 font-thin">
                                             {blogs?.[activeIndex]?.headline}
                                         </span>
                                     </div>
 
                                     <div className="flex flex-col gap-2">
-                                        <h2 className="text-dark text-xl font-bold">
+                                        <h2 className="text-dark text-xl font-medium">
                                             {blogs?.[activeIndex]?.title}
                                         </h2>
-                                        <p className="text-secondary text-xs leading-6 min-h-[80px]"  dangerouslySetInnerHTML={{
+                                        <p className="text-gray-800 text-sm font-normal leading-6 min-h-[80px]"  dangerouslySetInnerHTML={{
                                             __html: blogs?.[activeIndex]?.text
                                         }}>
                                         </p>
