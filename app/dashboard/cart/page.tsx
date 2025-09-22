@@ -1,11 +1,11 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import CartBox from "@/app/components/cart/CartBox";
 import SelectPayment from "@/app/components/cart/SelectPayment";
-import Link from "next/link";
 import useSWR from "swr";
 import { UserType } from "@/api/types";
 import { getUser } from "@/api";
+import { cn } from "@/utils/cn";
 
 function Page() {
     const {
@@ -13,6 +13,7 @@ function Page() {
         error,
         isLoading,
     } = useSWR<UserType>("get-user", getUser);
+    const [code, setCode] = useState("")
     if (!isLoading && user?.basket.lines.length === 0) {
         return (
             <>
@@ -45,12 +46,17 @@ function Page() {
                                 <div className="grow">
                                     <input
                                         type="text"
-                                        className="w-full p-4 bg-blue500 placeholder:text-did placeholder:text-sm rounded-2xl text-secondary focus:outline-none focus:border-blue-500"
+                                        value={code}
+                                        onChange={(e) => setCode(e.target.value)}
+                                        className={cn("w-full p-4 bg-blue500 placeholder:text-did placeholder:text-sm rounded-2xl text-secondary focus:outline-none focus:border-blue-500 transition",)}
                                         placeholder="کد تخفیف"
                                     />
                                 </div>
                                 <button
-                                    className="text-white bg-blue rounded-2xl text-sm p-4 w-[20%] text-center"
+                                    disabled={!code}
+
+                                    className={cn("text-white bg-blue rounded-2xl text-sm p-4 w-[20%] text-center",
+                                        !code && "opacity-50 pointer-events-none")}
                                 >
                                     اعمال
                                 </button>
