@@ -17,11 +17,11 @@ const IntroOnlineTest = ({ exam, user }: { exam: ExamType; user: UserType }) => 
                         {user?.full_name}
                     </span>
                 </div>
-                <div className="flex items-center justify-between w-full">
-                    <span className="text-secondary text-xs whitespace-nowrap">
+                <div className="flex items-start justify-between w-full flex-col space-y-2  ">
+                    <span className="text-secondary text-xs whitespace-nowrap ">
                         عنوان آزمون:
                     </span>
-                    <span className="text-dark  font-bold whitespace-nowrap">
+                    <span className="text-dark font-bold ">
                         {exam?.name}
                     </span>
                 </div>

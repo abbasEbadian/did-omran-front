@@ -18,7 +18,7 @@ const TestsBox = (props: Props) => {
 
                 <div className="bg-white rounded-b-2xl border border-did/10 px-4 py-2 pt-6">
                     <div className="flex items-center justify-between border-b-2 border-b-secondary700 border-dashed pb-4">
-                        <span className="text-dark text-base">
+                        <span className="text-dark text-base truncate">
                             {props.name}
                         </span>
                         <div className="flex items-center gap-1">

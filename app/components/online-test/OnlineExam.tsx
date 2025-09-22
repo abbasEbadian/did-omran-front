@@ -43,7 +43,7 @@ const OnlineExam = ({ exam, ...rest }: { exam: ExamType }) => {
         <div className=" grid grid-cols-12 gap-5 my-4 container py-8 mx-auto">
             <div className="col-span-12 lg:col-span-9">
                 <iframe
-                    src={"/api/pdf?url=" + exam.file}
+                    src={"/pdf/pdf?url=" + exam.file}
                     width={"100%"}
                     height={"100%"}
                     allowFullScreen={true}
