@@ -52,7 +52,7 @@ function ElectronicLibrary() {
                             </p>
                             <Link
                                 href="/books"
-                                className="text-white bg-did rounded-2xl text-sm px-6 py-3 hover:bg-[#0578B9] transition-colors duration-300 mx-auto"
+                                className="hover:text-white hovrt:bg-did border-did border text-did  rounded-2xl text-sm px-6 py-3 hover:bg-[#0578B9] transition-colors duration-300 ms-auto"
                             >
                                 مشاهده کتابخانه دید
                             </Link>

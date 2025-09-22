@@ -31,7 +31,7 @@ function Footer() {
                     }}
                 ></div>
             </div> */}
-            <div className="pt-20 bg-white shadow-custom-shadow">
+            <div className="pt-20 bg-white shadow-custom-shadow mt-16">
                 <div className="grid grid-cols-4 container mx-auto gap-8 px-4">
                     <div className="lg:col-span-1 col-span-4">
                         <div className="flex flex-col gap-5">
@@ -50,7 +50,7 @@ function Footer() {
                                     />
                                     دیــد عــمران
                                 </Link>
-                                <p className="text-gray-500 text-base">
+                                <p className="text-gray-500 text-base text-center lg:text-start">
                                     تهران ، پونک ، باغ فیض ، عدل جنوبی ساختمان
                                     رویال رزیدنس ، واحد ۱۷
                                 </p>
@@ -108,7 +108,7 @@ function Footer() {
                         </div>
                     </div>
 
-                    <div className="lg:col-span-2 col-span-4">
+                    <div className="lg:col-span-2 col-span-4 lg:order-1 order-2">
                         <div className="flex flex-col lg:items-start items-center lg:px-8 px-2 gap-5 mb-5">
                             <span className="text-gray-700100 font-medium text-xl text-start">
                                 درباره ما
@@ -159,7 +159,7 @@ function Footer() {
                     </div>
 
                     {/* Column 3: Useful Links */}
-                    <div className="lg:col-span-1 col-span-4">
+                    <div className="lg:col-span-1 col-span-4 lg:order-2 order-1">
                         <div className="flex flex-col gap-5 items-center mt-6 lg:mt-0">
                             <span className="text-gray-700100 font-medium text-xl text-start">
                                 لینک‌های مفید

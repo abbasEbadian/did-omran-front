@@ -13,7 +13,7 @@ function OnlineExam() {
                             <span className="text-dark text-3xl mb-4">
                                 آزمون آنلاین مهندسی
                             </span>
-                            <p className="text-base text-secondary mb-6 text-justify w-4/5 ">
+                            <p className="lg:text-base text-sm text-secondary mb-6 text-justify lg:w-4/5 w-full  ">
                                 خدمات تخصصی آزمون آنلاین موسسه دیدعمران ویژه
                                 آمادگی آزمون‌های نظام مهندسی
                                 (نظارت-اجراء-محاسبات) و کارشناس رسمی دادگستری
@@ -25,7 +25,7 @@ function OnlineExam() {
                             </p>
                             <Link
                                 href="/exams"
-                                className="text-white bg-did rounded-2xl text-sm px-4 py-3"
+                                className="hover:text-white hover:bg-did border-did border text-did  text rounded-2xl text-sm px-4 py-3"
                             >
                                 مشاهده آزمون‌های دید عمران
                             </Link>

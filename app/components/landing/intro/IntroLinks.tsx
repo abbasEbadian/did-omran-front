@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function IntroLinks() {
     return (
-        <div className="flex gap-4 lg:gap-8 flex-wrap justify-center py-7 h-[265px] mt-6 ">
+        <div className="flex gap-4 lg:gap-8 flex-wrap justify-center lg:py-7 py-0 lg:h-[265px] lg:mt-6 mt-4 ">
             {introLinks.map((introLink, index) => (
                 <Link
                     key={introLink.id}
@@ -15,7 +15,7 @@ function IntroLinks() {
             ${
                 index % 2 === 0 ? "self-end" : "self-start"
             } 
-            bg-did/30 hover:bg-did transition
+            bg-did/20 hover:bg-did transition
           `}
                 >
                     <Image

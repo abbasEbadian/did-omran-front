@@ -5,6 +5,7 @@ import { useMemo, useState } from "react";
 import useSWR from "swr";
 import { CourseType } from "@/api/course/types";
 import { getCourses } from "@/api";
+import { ChevronLeftIcon } from "@components/icons/comp/Chevron";
 
 const grouped = (data: CourseType[]): Record<string, CourseType[]> => {
     return data.reduce((acc, item) => {
@@ -40,14 +41,15 @@ const EducationTabs = () => {
         <>
             <div className="p-4 lg:max-w-[650px] lg:min-w-[650px] mx-auto">
                 <div className="flex items-center justify-between gap-16 mb-6">
-                <span className="text-lg whitespace-nowrap lg:text-2xl text-dark font-bold ">
+                <span className="whitespace-nowrap text-base lg:text-2xl text-dark font-bold ">
                     دوره‌های آموزشی دید عمران
                 </span>
                     <Link
                         href="/courses"
-                        className="text-white bg-did rounded-2xl text-sm px-6 py-2 "
+                        className="text-did rounded-2xl text-sm px-6 py-2 whitespace-nowrap flex items-center border-did border hover:bg-did hover:text-white"
                     >
                         مشاهده همه
+                        <ChevronLeftIcon/>
                     </Link>
                 </div>
 
@@ -55,13 +57,13 @@ const EducationTabs = () => {
                     <button
                         onClick={() => setActiveTab("all")}
                         className={`relative px-4 py-2 text-sm lg:text-base ${activeTab === "all"
-                            ? "text-did font-semibold bg-did/15 lg:bg-transparent rounded-e-lg"
+                            ? "text-did font-semibold bg-did/15 lg:bg-transparent rounded-xl"
                             : "text-secondary hover:text-did transition-colors duration-200"
                         } focus:outline-none`}
                     >
                         هــمه
                         {activeTab === "all" && (
-                            <div className="absolute bottom-0 left-0 right-6 h-[2px] w-4/5 bg-did rounded"></div>
+                            <div className="absolute bottom-0 left-0 right-6 h-[2px] w-4/5 bg-did rounded hidden lg:block"></div>
                         )}
                     </button>
                     {Object.keys(tabs).map((tab) => (
@@ -69,14 +71,14 @@ const EducationTabs = () => {
                             key={tab}
                             onClick={() => setActiveTab(tab)}
                             className={`relative px-4 py-2 text-sm lg:text-base ${activeTab === tab
-                                ? "text-did font-semibold bg-did/15 lg:bg-transparent rounded-e-lg"
+                                ? "text-did font-semibold bg-did/15 lg:bg-transparent rounded-xl"
                                 : "text-secondary hover:text-did transition-colors duration-200"
                             } focus:outline-none`}
                         >
                             {tab}
                             {/* Active Tab Indicator (Vertical Line) */}
                             {activeTab === tab && (
-                                <div className="absolute bottom-0 left-0 right-6 h-[2px] w-4/5 bg-did rounded"></div>
+                                <div className="absolute bottom-0 left-0 right-6 h-[2px] w-4/5 bg-did rounded hidden lg:block"></div>
                             )}
                         </button>
                     ))}

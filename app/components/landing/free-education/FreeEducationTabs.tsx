@@ -6,6 +6,7 @@ import useSWR from "swr";
 import { EducationType } from "@/api/education/types";
 import { getEducations } from "@/api";
 import FreeEducationSlider from "@components/landing/free-education/FreeEducationSlider";
+import { ChevronLeftIcon } from "@components/icons/comp/Chevron";
 
 const grouped = (data: EducationType[]): Record<string, EducationType[]> => {
     return data.reduce((acc, item) => {
@@ -40,15 +41,16 @@ const FreeEducationTabs = () => {
     return (
         <>
             <div className="p-4 lg:max-w-[650px] lg:min-w-[650px] mx-auto relative">
-                <div className="flex items-center justify-between gap-16 mb-8">
-                    <span className="whitespace-nowrap text-lg lg:text-2xl text-dark font-bold ">
+                <div className="flex items-center justify-between gap-16 mb-8 z-10 relative">
+                    <span className=" text-base whitespace-nowrap lg:text-2xl text-dark font-bold ">
                         آموزش‌های رایگان دیدعمران
                     </span>
                     <Link
                         href="/free-educations"
-                        className="text-white bg-did rounded-2xl text-sm px-6 py-2 whitespace-nowrap"
+                        className="text-did rounded-2xl text-sm px-6 py-2 whitespace-nowrap flex items-center border-did border hover:bg-did hover:text-white"
                     >
                         مشاهده همه
+                        <ChevronLeftIcon/>
                     </Link>
                 </div>
 
@@ -62,17 +64,17 @@ const FreeEducationTabs = () => {
                         priority
                     />
                 </div>
-                <div className="flex lg:flex-row flex-col lg:items-center justify-between mb-10 z-40">
+                <div className="flex lg:flex-row flex-col lg:items-center justify-between mb-10 z-10">
                     <button
                         onClick={() => setActiveTab("all")}
                         className={`relative px-4 py-2 text-sm lg:text-base ${activeTab === "all"
-                            ? "text-did font-semibold bg-did/15 lg:bg-transparent rounded-e-lg"
+                            ? "text-did font-semibold bg-did/15 lg:bg-transparent rounded-xl"
                             : "text-secondary hover:text-did transition-colors duration-200"
                         } focus:outline-none`}
                     >
                         هــمه
                         {activeTab === "all" && (
-                            <div className="absolute bottom-0 left-0 right-6 h-[2px] w-4/5 bg-did rounded"></div>
+                            <div className="absolute bottom-0 left-0 right-6 h-[2px] w-4/5 bg-did rounded-xl hidden lg:block"></div>
                         )}
                     </button>
                     {Object.keys(tabs).map((tab) => (
@@ -80,14 +82,14 @@ const FreeEducationTabs = () => {
                             key={tab}
                             onClick={() => setActiveTab(tab)}
                             className={`relative px-4 py-2 text-sm lg:text-base ${activeTab === tab
-                                ? "text-did font-semibold bg-did/15 lg:bg-transparent rounded-e-lg"
+                                ? "text-did font-semibold bg-did/15 lg:bg-transparent rounded-xl"
                                 : "text-secondary hover:text-did transition-colors duration-200"
                             } focus:outline-none`}
                         >
                             {tab}
                             {/* Active Tab Indicator (Vertical Line) */}
                             {activeTab === tab && (
-                                <div className="absolute bottom-0 left-0 right-6 h-[2px] w-4/5 bg-did rounded"></div>
+                                <div className="absolute bottom-0 left-0 right-6 h-[2px] w-4/5 bg-did rounded lg:block hidden"></div>
                             )}
                         </button>
                     ))}

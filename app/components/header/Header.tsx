@@ -103,7 +103,7 @@ function Header() {
                             <Link
                                 role="button"
                                 href="/auth/"
-                                className="hidden md:flex bg-did text-white text-sm rounded-2xl px-4 py-2 cursor-pointer"
+                                className="hidden md:flex bg-did text-white text-sm rounded-xl px-4 py-2 cursor-pointer"
                             >
                                 ورود / ثبت نام
                             </Link>
@@ -219,6 +219,7 @@ export default Header;
 const links = [
     {href: "/courses", text: "دوره‌های آموزشی"},
     {href: "/book-store", text: "کتاب‌های آموزشی"},
+    {href: "/free-educations", text: "آموزش رایگان"},
     {href: "/exams", text: "آزمون ها"},
     {href: "/events", text: "رویدادها"},
     {href: "/about-us", text: "تماس باما"},
