@@ -19,7 +19,7 @@ function RegisterEvent({event}: { event: EventType }) {
     const {data: user} = useSWR<UserType>("get-user", getUser);
     const {data: orders, error, isLoading} = useSWR("get-orders", getOrders);
 
-    const in_basket = user?.basket.lines.filter(q => q.event && q.event.id === event.id);
+    const in_basket = user?.basket.lines.some(q => q.event && q.event.id === event.id);
     const purchased = orders?.some(q => q.lines.find(f => f.event && f.event.id === event.id));
     const pathname = usePathname();
 
@@ -28,11 +28,11 @@ function RegisterEvent({event}: { event: EventType }) {
             router.push("/auth?next=" + pathname);
             return;
         }
-        setLoading(true);
         if (in_basket || purchased) {
             toast.warning("قبلا خریداری شده است");
             return;
         }
+        setLoading(true);
         try {
             const response = await addToCart(id, "event");
             toaster(response);
