@@ -27,7 +27,7 @@ const Sidebar = ({closeSidebar}: SidebarProps) => {
             },
             {
                 id: 3,
-                text: "دوره‌های خریداری شده",
+                text: "خرید‌های من",
                 icon: "/icons/Bag.svg",
                 url: "/dashboard/orders",
             },

@@ -23,6 +23,7 @@ function Page() {
         `get-course${id}`,
         () => getCourse(Number(id))
     );
+    console.log({course});
 
     return (
         <div className="bg-white100">

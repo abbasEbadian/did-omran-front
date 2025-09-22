@@ -15,3 +15,16 @@ export const getOrders = async (): Promise<OrderType[] | undefined> => {
     }
     return data;
 };
+
+
+export const getOrder: (uuid:string) => Promise<OrderType> = async (uuid: string) => {
+    const response = await _fetch(build_url("/orders/" + uuid + "/"), {
+        method: "GET",
+        cache: "no-cache",
+    });
+    console.log(build_url("/orders/" + uuid + "/")  );
+    if (!response.result || response?.result !== "ok") {
+        return undefined;
+    }
+    return response.data;
+};

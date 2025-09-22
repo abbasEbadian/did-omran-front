@@ -1,0 +1,1 @@
+export const CoverPlaceholder = "/cover-avatar.svg"

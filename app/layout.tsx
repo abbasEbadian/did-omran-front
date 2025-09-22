@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/app/components/header/Header";
 import { ToastContainer } from "react-toastify";
 import "react-loading-skeleton/dist/skeleton.css";
 import Footer from "./components/footer/Footer";
-import {Suspense} from "react";
+import { Suspense } from "react";
+import { MantineProvider } from "@mantine/core";
 
 export const metadata: Metadata = {
     title: "دید عمران",
@@ -13,22 +13,24 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-    children,
-}: Readonly<{
+                                       children,
+                                   }: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
         <html lang="fa" dir="rtl">
-            <body
-                className={` antialiased overflow-x-clip bg-white100`}
-            >
-                <Header />
-                <Suspense>
+        <body
+            className={` antialiased overflow-x-clip bg-white100`}
+        >
+        <Header/>
+        <Suspense>
+            <MantineProvider>
                 <main className="pt-[77px] max-w-[1440px] mx-auto ">{children}</main>
-                </Suspense>
-                <ToastContainer position="top-center" />
-                <Footer />
-            </body>
+            </MantineProvider>
+        </Suspense>
+        <ToastContainer position="top-center"/>
+        <Footer/>
+        </body>
         </html>
     );
 }

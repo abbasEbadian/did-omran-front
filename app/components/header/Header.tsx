@@ -115,7 +115,7 @@ function Header() {
             {/* Mobile Sidebar */}
             <div
                 className={cn(
-                    "fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300",
+                    "fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 overflow-y-auto",
                     isMenuOpen ? "translate-x-0" : "translate-x-full"
                 )}
             >

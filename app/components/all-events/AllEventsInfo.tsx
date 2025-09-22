@@ -97,12 +97,12 @@ export const EventDate = React.memo(({ timestamp }: { timestamp: number }) => {
     return (
         <span className="flex gap-1 items-center">
             <b className="text-blue text-xl">
-                {date.toLocaleDateString("fa", {
+                {date.toLocaleDateString("fa-IR", {
                     day: "2-digit",
                 })}
             </b>
             <span className="text-blue text-sm font-medium" dir="ltr">
-                {date.toLocaleDateString("fa", {
+                {date.toLocaleString("fa-IR", {
                     "year": "numeric",
                     "month": "long"
                 })}

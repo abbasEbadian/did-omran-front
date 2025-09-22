@@ -19,11 +19,17 @@ function EducationItems(course: CourseType) {
     const addToCard = async (id: number) => {
         const response = await addToCart(id);
         toaster(response);
-        mutate("get-user");
+        await mutate("get-user");
         router.refresh();
     };
 
     const { data: user } = useSWR<UserType>("get-user", getUser);
+    let is_in_basket = false;
+    if(user?.basket?.lines) {
+        is_in_basket = !!user?.basket.lines.find(
+            (q) => q.course?.id === course.id
+        )
+    }
     return (
         <>
             <div className="flex flex-col shadow-custom-shadow border border-did/15 rounded-2xl container mx-auto hover:scale-[1.02] hover:border-did/50 transition overflow-hidden">
@@ -90,9 +96,7 @@ function EducationItems(course: CourseType) {
                             </span>
                             <span className="text-dark text-base"> تومان</span>
                         </div>
-                        {user?.basket.lines.find(
-                            (q) => q.course.id === course.id
-                        ) ? (
+                        {is_in_basket ? (
                             <FormButton
                                 disabled
                                 className="text-white bg-did text-sm py-3 px-8 rounded-2xl hover:bg-did/80 transition-all "
@@ -104,7 +108,7 @@ function EducationItems(course: CourseType) {
                                 onClick={(_) => addToCard(course.id)}
                                 className="text-white bg-did text-sm py-3 px-8 rounded-2xl hover:bg-did/80 transition-all "
                             >
-                                سبد خرید
+                                سبد خرید +
                             </FormButton>
                         )}
                     </div>

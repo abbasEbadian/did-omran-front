@@ -5,48 +5,59 @@ import StatusBadge from "@/app/components/dashboard/StatusBadge";
 import Price from "@/app/components/price";
 import { convertToJalali } from "@/utils/jalali";
 import useSWR from "swr";
+import Link from "next/link";
+import { Button } from "@mantine/core";
 
 const Page = () => {
-    const { data: orders, error, isLoading } = useSWR("get-orders", getOrders);
+    const {data: orders, error, isLoading} = useSWR("get-orders", getOrders);
 
-    
     return (
         <div className="">
             <b className={"text-lg ps-2"}>دوره‌های من</b>
             <div className="overflow-x-auto mt-4">
                 <table className="w-full">
                     <thead>
-                        <tr className="bg-white100 rounded-2xl">
-                            <th className="py-3 px-4 text-dark rounded-s-2xl">
-                                عنوان
-                            </th>
-                            <th className="py-3 px-4 text-dark">تاریخ </th>
-                            <th className="py-3 px-4 text-dark">وضعیت</th>
-                            <th className="py-3 px-4 text-dark rounded-e-2xl">
-                                مبلغ دوره
-                            </th>
-                        </tr>
+                    <tr className="bg-white100 rounded-2xl">
+                        <th className="py-3 px-4 text-dark rounded-s-2xl">
+                            عنوان
+                        </th>
+                        <th className="py-3 px-4 text-dark">تاریخ</th>
+                        <th className="py-3 px-4 text-dark">وضعیت</th>
+                        <th className="py-3 px-4 text-dark rounded-e-2xl">
+                            مبلغ دوره
+                        </th>
+                        <th className="py-3 px-4 text-dark rounded-e-2xl">
+
+                        </th>
+                    </tr>
                     </thead>
                     <tbody>
-                        {orders?.map((order) => (
-                            <tr
-                                key={order.id}
-                                className="hover:bg-gray-50 border-b-2 border-dashed border-b-secondary700"
-                            >
-                                <td className="py-3 px-4 text-center text-secondary">
-                                    {order.code}
-                                </td>
-                                <td className="py-3 px-4 text-center text-secondary">
-                                    {convertToJalali(order.payment_date, true)}
-                                </td>
-                                <td className="py-3 px-4 text-center text-secondary">
-                                    <StatusBadge status={order.status} />
-                                </td>
-                                <td className="py-3 px-4 text-center text-did font-semibold">
-                                    <Price amount={Number(order.final_price)} />
-                                </td>
-                            </tr>
-                        ))}
+                    {orders?.sort((a,b) => b.id-a.id).map((order) => (
+                        <tr
+                            key={order.id}
+                            className="hover:bg-gray-50 border-b-2 border-dashed border-b-secondary700"
+                        >
+                            <td className="py-3 px-4 text-center text-secondary">
+                                {order.code}
+                            </td>
+                            <td className="py-3 px-4 text-center text-secondary">
+                                {convertToJalali(order.payment_date, true)}
+                            </td>
+                            <td className="py-3 px-4 text-center text-secondary">
+                                <StatusBadge status={order.status}/>
+                            </td>
+                            <td className="py-3 px-4 text-center text-did font-semibold">
+                                <Price amount={Number(order.final_price)}/>
+                            </td>
+                            <td className="py-3 px-4 text-center text-did font-semibold">
+                                <Button>
+                                    <Link href={`/dashboard/orders/${order.uuid}/`}>
+                                        جزئیات
+                                    </Link>
+                                </Button>
+                            </td>
+                        </tr>
+                    ))}
                     </tbody>
                 </table>
             </div>

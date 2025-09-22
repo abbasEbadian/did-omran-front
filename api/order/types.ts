@@ -1,7 +1,9 @@
 import { CourseType } from "../types";
+import { EventType } from "@/api/event/types";
 
 export type OrderType = {
     id: number;
+    uuid: string;
     code: string;
     payment_date: number;
     price: number;
@@ -15,5 +17,7 @@ export type OrderType = {
 export type OrderLineType = {
     id: number;
     course: CourseType;
+    event: EventType;
     price: number;
+    license_key?: string;
 }

@@ -37,8 +37,8 @@ export type CourseType = {
     price: number;
     image: string;
     tutors: TutorType[];
-    prerequisite: string;
-    outcomes: string;
+    prerequisites: string[];
+    outcomes: string[];
     discount: number;
     final_price: number;
     attributes: {

@@ -14,15 +14,14 @@ function RequirementsCourse(course: CourseType) {
                                 alt="left list icone"
                                 height={24}
                                 width={24}
+                                className={"size-4"}
                             />
                             <span className="text-dark text-base">
                                 {" "}
                                 ملزومات دوره
                             </span>
                         </div>
-                        {course.prerequisite
-                            ?.split("--")
-                            .filter((q) => q.trim() !== "")
+                        {course.prerequisites
                             .map((q) => (
                                 <div
                                     className="flex items-center gap-1"
@@ -33,6 +32,7 @@ function RequirementsCourse(course: CourseType) {
                                         alt="CheckSmall icone"
                                         height={24}
                                         width={24}
+                                        className={"size-4"}
                                     />
                                     <span className="text-secondary  text-base">
                                         {q}
@@ -48,14 +48,13 @@ function RequirementsCourse(course: CourseType) {
                                 alt="left list icone"
                                 height={24}
                                 width={24}
+                                className={"size-4"}
                             />
                             <span className="text-dark text-base">
                                 سرانجام دوره
                             </span>
                         </div>
                         {course.outcomes
-                            ?.split("--")
-                            .filter((q) => q.trim() !== "")
                             .map((q) => (
                                 <div className="flex items-center gap-1" key={q}>
                                     <Image
@@ -63,6 +62,7 @@ function RequirementsCourse(course: CourseType) {
                                         alt="left list icone"
                                         height={24}
                                         width={24}
+                                        className={"size-4"}
                                     />
                                     <span className="text-secondary text-sm">
                                         {q}
