@@ -71,13 +71,13 @@ function TitleTrainingCourses(course: CourseType) {
                 </div>
             </div>
 
-            <div className="w-full rounded-2xl overflow-hidden">
+            <div className="w-full rounded-2xl overflow-hidden  max-h-[500px]">
                 <Image
                     src={course.banner}
                     alt="Course banner"
                     height={2000}
                     width={1000}
-                    className=" object-contain max-h-[500px]"
+                    className=" object-cover w-full h-full object-center"
                 />
             </div>
         </div>

@@ -63,11 +63,11 @@ function InformationCourse(course: CourseType) {
       {/* دکمه ثبت نام */}
       <Link
         href="#"
-        className="text-white bg-did rounded-2xl text-sm px-6 py-3 flex gap-1 items-center w-full justify-center"
+        className="text-white bg-did rounded-2xl text-xl px-6 py-3 font-medium flex gap-1 items-center w-full justify-center"
         aria-label="ثبت نام در دوره"
       >
-        ثبت نام
-      </Link>
+      ثبت نام 
+        </Link>
 
       {/* بخش اطلاعات دوره */}
       <TrainingCoursesInfo {...course}/>
